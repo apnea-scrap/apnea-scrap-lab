@@ -1,2 +1,24 @@
+# Project information
 site_name: ApneaScrap Lab
-site_description: DIY freediving gear — methods, builds, and test results
+site_url: https://lab.apneascrap.com
+site_author: Julian Ghionoiu
+site_description: >-
+  DIY Freediving gear
+
+# Repository
+repo_url: https://github.com/USERNAME/REPO
+repo_name: TODO_Link_repo
+
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.sections
+    - content.action.edit
+
+nav:
+  - Home: index.md
+  - Projects: projects/index.md
