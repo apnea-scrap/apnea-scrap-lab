@@ -36,12 +36,11 @@ jobs:
           SAFE_REF="$(printf '%s' "$REF" \
             | sed 's,[/],-,g' | tr ' ' '-' | sed 's,[^A-Za-z0-9._-],-,g')"
           if [ "$REF" = "main" ]; then
-            DEST="."
+            DEST_URL="."
           else
-            DEST="preview/${SAFE_REF}"
+            DEST_URL="preview/${SAFE_REF}"
           fi
-          echo "DEST_URL=$DEST" >> $GITHUB_ENV
-          echo "dest=$DEST" >> $GITHUB_OUTPUT
+          echo "DEST_URL=$DEST_URL" >> $GITHUB_ENV
           echo "safe_ref=$SAFE_REF" >> $GITHUB_OUTPUT
 
       - name: Build MkDocs (inherit base)
@@ -50,7 +49,7 @@ jobs:
             echo "Using mkdocs.main.yml"
             mkdocs build -f mkdocs.main.yml --site-dir site
           else
-            export MKDOCS_SITE_URL="https://lab.apneascrap.com/${env.DEST_URL}"
+            export MKDOCS_SITE_URL="https://lab.apneascrap.com/${DEST_URL}"
             echo "Using mkdocs.preview.yml with MKDOCS_SITE_URL=${MKDOCS_SITE_URL}"
             mkdocs build -f mkdocs.preview.yml --site-dir site
           fi
