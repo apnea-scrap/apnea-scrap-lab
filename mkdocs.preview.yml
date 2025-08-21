@@ -1,5 +1,8 @@
 INHERIT: mkdocs.base.yml
 
+# Set by CI to the preview subpath so assets and links work under /preview/<branch>/
+site_url: !ENV [MKDOCS_SITE_URL, 'preview/something']
+
 # Override main to add a no-robots
 theme:
   custom_dir: overrides

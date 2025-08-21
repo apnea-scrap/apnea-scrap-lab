@@ -27,18 +27,8 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Build MkDocs (inherit base)
-        run: |
-          echo "GITHUB_REF_NAME=${GITHUB_REF_NAME}"
-          echo "github.ref_name=${{ github.ref_name }}"
-          if [ "${GITHUB_REF_NAME}" = "main" ]; then
-            echo "Using mkdocs.main.yml"
-            mkdocs build -f mkdocs.main.yml --site-dir site
-          else
-            echo "Using mkdocs.preview.yml"
-            mkdocs build -f mkdocs.preview.yml --site-dir site
-          fi
         
+
       - name: Compute destination
         id: meta
         run: |
@@ -53,7 +43,17 @@ jobs:
           echo "dest=$DEST" >> $GITHUB_OUTPUT
           echo "safe_ref=$SAFE_REF" >> $GITHUB_OUTPUT
 
-        
+      - name: Build MkDocs (inherit base)
+        run: |
+          if [ "${GITHUB_REF_NAME}" = "main" ]; then
+            echo "Using mkdocs.main.yml"
+            mkdocs build -f mkdocs.main.yml --site-dir site
+          else
+            MKDOCS_SITE_URL="https://lab.apneascrap.com/{DEST}"
+            echo "Using mkdocs.preview.yml with MKDOCS_SITE_URL=${MKDOCS_SITE_URL}"
+            mkdocs build -f mkdocs.preview.yml --site-dir site
+          fi
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

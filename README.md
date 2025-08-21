@@ -38,102 +38,15 @@ DIY freediving gear knowledge base. Methods, builds, materials and test procedur
 
 3. Preview locally
    ```bash
-   mkdocs serve
+   mkdocs serve -f mkdocs.local.yml -a 127.0.0.1:8000
    ```
    Open http://127.0.0.1:8000 to view the site.
 
 4. Build the static site
    ```bash
-   mkdocs build --strict
+   mkdocs build -f mkdocs.main.yml --site-dir site
    ```
    The generated HTML goes into the `site/` folder.
-
----
-
-## Publish on GitHub Pages
-
-This repo contains a workflow at `.github/workflows/pages.yml` that builds and deploys on every push to `main`.
-
-Steps:
-1. Push to GitHub
-   ```bash
-   git add .
-   git commit -m "Initial site"
-   git push origin main
-   ```
-2. In GitHub, open Settings → Pages and keep Source set to GitHub Actions.
-3. Wait for the workflow to pass. Your site will be available at:
-   - `https://apnea-scrap.github.io/apnea-scrap-lab/` by default
-   - Or your custom domain if configured
-
----
-
-## Use a custom domain
-
-If you own `apneascrap.com`:
-1. Put a file `docs/CNAME` with this exact content:
-   ```
-   apneascrap.com
-   ```
-2. In GitHub → Settings → Pages → Custom domain, enter `apneascrap.com` and save.
-3. DNS records at your registrar:
-   - Apex A records to GitHub Pages
-     ```
-     @  185.199.108.153
-     @  185.199.109.153
-     @  185.199.110.153
-     @  185.199.111.153
-     ```
-   - Optional `www` CNAME
-     ```
-     www  apnea-scrap.github.io
-     ```
-4. Enable Enforce HTTPS after the certificate is issued.
-
----
-
-## Project structure
-
-```
-mkdocs.yml                 # Site configuration
-main.py                    # MkDocs macros
-requirements.txt           # Python deps
-.github/workflows/pages.yml
-shared/variants/fins.yml   # Short, medium, long size data
-docs/
-  index.md
-  methods/
-    acrylic-base/
-      index.md
-      v1-wood-support.md
-      v2-acrylic-wedges.md
-    carbon-layup/
-      index.md
-      v1.md
-    glue-fin-rails/
-      index.md
-      v1.md
-    surface-finish/
-      index.md
-      v1.md
-    neck-weight/
-      index.md
-      v1-shot-inner-tube.md
-      v2-molded-sleeve.md
-  projects/
-    fins-monofins/
-      README.md
-      builds/
-        index.md
-        pool.md
-        max.md
-    neck-weight/
-      README.md
-      builds/
-        index.md
-  tests/flex-test-rig.md
-  materials/suppliers.md
-```
 
 ---
 
