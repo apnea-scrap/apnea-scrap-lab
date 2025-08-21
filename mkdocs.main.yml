@@ -4,4 +4,3 @@ INHERIT: mkdocs.base.yml
 site_url: https://lab.apneascrap.com/
 plugins:
   - search
-  - sitemap
