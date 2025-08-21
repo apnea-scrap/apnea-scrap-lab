@@ -29,9 +29,13 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build MkDocs (inherit base)
         run: |
+          echo "GITHUB_REF_NAME=${GITHUB_REF_NAME}"
+          echo "github.ref_name=${{ github.ref_name }}"
           if [ "${GITHUB_REF_NAME}" = "main" ]; then
+            echo "Using mkdocs.main.yml"
             mkdocs build -f mkdocs.main.yml --site-dir site
           else
+            echo "Using mkdocs.preview.yml"
             mkdocs build -f mkdocs.preview.yml --site-dir site
           fi
         
