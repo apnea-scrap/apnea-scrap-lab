@@ -1,0 +1,81 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - "**"
+
+permissions:
+  pages: write
+  id-token: write
+  contents: read
+
+jobs:
+  # Single deploy job since we're just deploying
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      dest: ${{ steps.meta.outputs.dest }}
+      safe_ref: ${{ steps.meta.outputs.safe_ref }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Build MkDocs (inherit base)
+        run: |
+          if [ "${GITHUB_REF_NAME}" = "main" ]; then
+            mkdocs build -f mkdocs.main.yml --site-dir site
+          else
+            mkdocs build -f mkdocs.preview.yml --site-dir site
+          fi
+        
+      - name: Compute destination
+        id: meta
+        run: |
+          REF="${GITHUB_REF_NAME}"
+          SAFE_REF="$(printf '%s' "$REF" \
+            | sed 's,[/],-,g' | tr ' ' '-' | sed 's,[^A-Za-z0-9._-],-,g')"
+          if [ "$REF" = "main" ]; then
+            DEST="."
+          else
+            DEST="preview/${SAFE_REF}"
+          fi
+          echo "dest=$DEST" >> $GITHUB_OUTPUT
+          echo "safe_ref=$SAFE_REF" >> $GITHUB_OUTPUT
+
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './site'
+          
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    # Use environments only here so branch rules apply at deploy time
+    environment:
+      name: ${{ github.ref_name == 'main' && 'github-pages' || 'previews' }}
+      url:  ${{ steps.link.outputs.final_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Compute final URL
+        id: link
+        run: |
+          BASE="${{ steps.deploy.outputs.page_url }}"
+          REF="${{ needs.build.outputs.safe_ref }}"
+          if [ "${GITHUB_REF_NAME}" = "main" ]; then
+            echo "final_url=${BASE%/}/" >> $GITHUB_OUTPUT
+          else
+            echo "final_url=${BASE%/}/preview/${REF}/" >> $GITHUB_OUTPUT
+          fi

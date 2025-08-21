@@ -1,13 +1,12 @@
 # Project information
 site_name: ApneaScrap Lab
-site_url: https://lab.apneascrap.com
 site_author: Julian Ghionoiu
 site_description: >-
   DIY Freediving gear
 
 # Repository
-repo_url: https://github.com/USERNAME/REPO
-repo_name: TODO_Link_repo
+repo_url: https://github.com/apnea-scrap/apnea-scrap-lab
+repo_name: apnea-scrap-lab
 
 edit_uri: edit/main/docs/
 
@@ -22,3 +21,6 @@ theme:
 nav:
   - Home: index.md
   - Projects: projects/index.md
+    
+plugins:
+  - search

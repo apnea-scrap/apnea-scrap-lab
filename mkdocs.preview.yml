@@ -1,0 +1,14 @@
+INHERIT: mkdocs.base.yml
+
+# Override main to add a no-robots
+theme:
+  custom_dir: overrides
+
+# No site_url so we don't mint preview canonicals or sitemaps
+extra_javascript:
+  - js/preview-banner.js
+extra_css:
+  - css/preview-banner.css
+
+plugins:
+  - search
