@@ -49,7 +49,7 @@ jobs:
             echo "Using mkdocs.main.yml"
             mkdocs build -f mkdocs.main.yml --site-dir site
           else
-            MKDOCS_SITE_URL="https://lab.apneascrap.com/{DEST}"
+            export MKDOCS_SITE_URL="https://lab.apneascrap.com/{DEST}"
             echo "Using mkdocs.preview.yml with MKDOCS_SITE_URL=${MKDOCS_SITE_URL}"
             mkdocs build -f mkdocs.preview.yml --site-dir site
           fi
