@@ -27,9 +27,13 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Build site
-        run: mkdocs build --site-dir site
-        
+      - name: Build MkDocs (prod on main, preview otherwise)
+        run: |
+          if [ "${GITHUB_REF_NAME}" = "main" ]; then
+            mkdocs build -f mkdocs.yml -f mkdocs.prod.yml --site-dir site
+          else
+            mkdocs build -f mkdocs.yml -f mkdocs.preview.yml --site-dir site
+          fi
         
       - name: Compute destination
         id: meta

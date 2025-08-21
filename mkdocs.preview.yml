@@ -1,0 +1,7 @@
+# No site_url so we don't mint preview canonicals or sitemaps
+plugins:
+  - search
+extra_javascript:
+  - js/preview-banner.js
+extra_css:
+  - css/preview-banner.css
