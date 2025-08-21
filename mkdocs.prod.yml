@@ -1,5 +1,0 @@
-# Canonicals + sitemap only in production
-site_url: https://<org>.github.io/<repo>/   # or your custom domain, e.g. https://lab.apneascrap.com/
-plugins:
-  - search
-  - sitemap

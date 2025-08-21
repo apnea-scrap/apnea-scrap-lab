@@ -1,3 +1,5 @@
+INHERIT: mkdocs.base.yml
+
 # No site_url so we don't mint preview canonicals or sitemaps
 plugins:
   - search
