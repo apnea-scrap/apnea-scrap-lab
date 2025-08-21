@@ -40,6 +40,7 @@ jobs:
           else
             DEST="preview/${SAFE_REF}"
           fi
+          echo "DEST_URL=$DEST" >> $GITHUB_ENV
           echo "dest=$DEST" >> $GITHUB_OUTPUT
           echo "safe_ref=$SAFE_REF" >> $GITHUB_OUTPUT
 
@@ -49,7 +50,7 @@ jobs:
             echo "Using mkdocs.main.yml"
             mkdocs build -f mkdocs.main.yml --site-dir site
           else
-            export MKDOCS_SITE_URL="https://lab.apneascrap.com/${DEST}"
+            export MKDOCS_SITE_URL="https://lab.apneascrap.com/${env.DEST_URL}"
             echo "Using mkdocs.preview.yml with MKDOCS_SITE_URL=${MKDOCS_SITE_URL}"
             mkdocs build -f mkdocs.preview.yml --site-dir site
           fi
