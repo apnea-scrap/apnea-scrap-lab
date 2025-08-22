@@ -24,6 +24,10 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Set MKDOCS_SITE_URL for preview
+        run: |
+          PREVIEW_PATH="pr-preview/pr-${{ github.event.pull_request.number }}/"
+          echo "MKDOCS_SITE_URL=https://lab.apneascrap.com/${PREVIEW_PATH}" >> "$GITHUB_ENV"
       - name: Build MkDocs (preview)
         run: |
           mkdocs build -f mkdocs.preview.yml --site-dir site
