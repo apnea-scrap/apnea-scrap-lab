@@ -50,8 +50,10 @@ jobs:
             mkdocs build -f mkdocs.main.yml --site-dir site
           else
             export MKDOCS_SITE_URL="https://lab.apneascrap.com/${DEST_URL}"
-            echo "Using mkdocs.preview.yml with MKDOCS_SITE_URL=${MKDOCS_SITE_URL}"
-            mkdocs build -f mkdocs.preview.yml --site-dir site
+            OUT_DIR="site/${DEST_URL}"
+            echo "Using mkdocs.preview.yml with MKDOCS_SITE_URL=${MKDOCS_SITE_URL}, output at ${OUT_DIR}"
+            mkdir -p "${OUT_DIR}"
+            mkdocs build -f mkdocs.preview.yml --site-dir "${OUT_DIR}"
           fi
       
       - name: Setup Pages
