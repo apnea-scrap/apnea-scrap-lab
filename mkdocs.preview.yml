@@ -12,6 +12,3 @@ extra_javascript:
   - js/preview-banner.js
 extra_css:
   - css/preview-banner.css
-
-plugins:
-  - search

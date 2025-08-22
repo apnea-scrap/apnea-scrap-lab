@@ -1,6 +1,4 @@
 INHERIT: mkdocs.base.yml
 
 # Canonicals + sitemap only in production
-site_url: https://lab.apneascrap.com/
-plugins:
-  - search
+site_url: https://apneascrap.com/
