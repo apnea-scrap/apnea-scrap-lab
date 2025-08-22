@@ -1,1 +1,9 @@
 INHERIT: mkdocs.base.yml
+
+site_url: !ENV [MKDOCS_SITE_URL, 'http://127.0.0.1:8000/local/something']
+
+# add a banner
+extra_javascript:
+  - js/local-banner.js
+extra_css:
+  - css/local-banner.css

@@ -27,18 +27,8 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Build MkDocs (inherit base)
-        run: |
-          echo "GITHUB_REF_NAME=${GITHUB_REF_NAME}"
-          echo "github.ref_name=${{ github.ref_name }}"
-          if [ "${GITHUB_REF_NAME}" = "main" ]; then
-            echo "Using mkdocs.main.yml"
-            mkdocs build -f mkdocs.main.yml --site-dir site
-          else
-            echo "Using mkdocs.preview.yml"
-            mkdocs build -f mkdocs.preview.yml --site-dir site
-          fi
         
+
       - name: Compute destination
         id: meta
         run: |
@@ -46,14 +36,26 @@ jobs:
           SAFE_REF="$(printf '%s' "$REF" \
             | sed 's,[/],-,g' | tr ' ' '-' | sed 's,[^A-Za-z0-9._-],-,g')"
           if [ "$REF" = "main" ]; then
-            DEST="."
+            DEST_URL="."
           else
-            DEST="preview/${SAFE_REF}"
+            DEST_URL="preview/${SAFE_REF}"
           fi
-          echo "dest=$DEST" >> $GITHUB_OUTPUT
+          echo "DEST_URL=$DEST_URL" >> $GITHUB_ENV
           echo "safe_ref=$SAFE_REF" >> $GITHUB_OUTPUT
 
-        
+      - name: Build MkDocs (inherit base)
+        run: |
+          if [ "${GITHUB_REF_NAME}" = "main" ]; then
+            echo "Using mkdocs.main.yml"
+            mkdocs build -f mkdocs.main.yml --site-dir site
+          else
+            export MKDOCS_SITE_URL="https://lab.apneascrap.com/${DEST_URL}"
+            OUT_DIR="site/${DEST_URL}"
+            echo "Using mkdocs.preview.yml with MKDOCS_SITE_URL=${MKDOCS_SITE_URL}, output at ${OUT_DIR}"
+            mkdir -p "${OUT_DIR}"
+            mkdocs build -f mkdocs.preview.yml --site-dir "${OUT_DIR}"
+          fi
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
