@@ -1,13 +1,13 @@
 # ApneaScrap Lab
 
-DIY freediving gear knowledge base. Methods, builds, materials and test procedures for fins, monofins and neck weights. Built with MkDocs Material and deployed on GitHub Pages.
+DIY freediving gear knowledge base. Techniques, builds, and test procedures for fins, monofins and neck weights. Built with MkDocs Material and deployed on GitHub Pages.
 
 ---
 
 ## Features
 
-- Clean documentation site with tabs for Methods, Projects, Tests and Materials
-- Versioned methods with labels like use_case and maturity
+- Clean documentation site with tabs for Projects and Techniques
+- Versioned techniques with labels like use_case and maturity
 - Pool vs Max variants captured per version
 - Shared size variants for fins (short, medium, long) from a single YAML file
 - Macros for reusable tables and YouTube embeds
@@ -74,10 +74,10 @@ its own preview site. The production site updates when changes land on `main`.
 ### Edit navigation
 Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
 
-### Add a new method version
-1. Create a new file under the method folder, for example:
+### Add a new technique version
+1. Create a new file under the technique folder, for example:
    ```
-   docs/methods/carbon-layup/v2-max.md
+   docs/techniques/carbon-layup/v2-max.md
    ```
 2. Add labels at the top using front matter:
    ```markdown
@@ -93,11 +93,11 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
    date: 2025-08-13
    ---
    ```
-3. Update the comparison table in `docs/methods/carbon-layup/index.md` to include the new version.
+3. Update the comparison table in `docs/techniques/carbon-layup/index.md` to include the new version.
 4. Commit and push. The site will rebuild automatically.
 
 ### Pool vs Max labeling
-Use the `use_case:` label in front matter and reflect it in the method index comparison table.
+Use the `use_case:` label in front matter and reflect it in the technique index comparison table.
 
 ### Short, Medium, Long variants
 The table is generated from a single YAML file using a macro.

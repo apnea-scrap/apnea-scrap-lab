@@ -1,5 +1,5 @@
 site_name: ApneaScrap Lab
-site_description: DIY freediving gear — methods, builds, and test results
+site_description: DIY freediving gear — techniques, builds, and test results
 repo_url: https://github.com/apnea-scrap/apnea-scrap-lab
 repo_name: apnea-scrap/apnea-scrap-lab
 edit_uri: edit/main/docs/
@@ -21,40 +21,27 @@ theme:
 
 nav:
   - Home: index.md
-  - Methods:
-      - Overview: methods/index.md
-      - Acrylic base:
-          - Compare versions: methods/acrylic-base/index.md
-          - v2 acrylic + wedges (pool): methods/acrylic-base/v2-acrylic-wedges.md
-          - v1 wood support (pool): methods/acrylic-base/v1-wood-support.md
-      - Carbon layup:
-          - Compare versions: methods/carbon-layup/index.md
-          - v1: methods/carbon-layup/v1.md
-      - Glue fin rails:
-          - Compare versions: methods/glue-fin-rails/index.md
-          - v1: methods/glue-fin-rails/v1.md
-      - Surface finish:
-          - Compare versions: methods/surface-finish/index.md
-          - v1: methods/surface-finish/v1.md
-      - Neck weight method:
-          - Compare versions: methods/neck-weight/index.md
-          - v2 molded sleeve (pool): methods/neck-weight/v2-molded-sleeve.md
-          - v1 shot in inner tube (pool): methods/neck-weight/v1-shot-inner-tube.md
   - Projects:
-      - Overview: projects/index.md
       - Fins & Monofins:
-          - Project intro: projects/fins-monofins/README.md
-          - Builds (pool): projects/fins-monofins/builds/pool.md
-          - Builds (max): projects/fins-monofins/builds/max.md
-          - All builds: projects/fins-monofins/builds/index.md
+          - Builds: projects/fins-monofins/builds/index.md
       - Neck Weights:
-          - Project intro: projects/neck-weight/README.md
           - Builds: projects/neck-weight/builds/index.md
-  - Tests:
-      - Flex test rig: tests/flex-test-rig.md
-  - Materials:
-      - Suppliers: materials/suppliers.md
-      - Datasheets: materials/datasheets/index.md
+      - (future gear): projects/future-gear.md
+  - Techniques:
+      - Acrylic base:
+          - "v1: wood support": techniques/acrylic-base/v1-wood-support.md
+          - "v2: acrylic + wedges": techniques/acrylic-base/v2-acrylic-wedges.md
+      - Carbon layup:
+          - "v1: linear taper": techniques/carbon-layup/v1.md
+          - "v2: (future variants)": techniques/carbon-layup/v2.md
+      - Glue fin rails:
+          - "v1: PU adhesive": techniques/glue-fin-rails/v1.md
+      - Surface finish:
+          - "v1: peel-ply texture": techniques/surface-finish/v1.md
+      - Flex test rig:
+          - "v1: basic rig": techniques/flex-test-rig/v1-basic-rig.md
+      - Buoyancy test:
+          - "v1: pool setup": techniques/buoyancy-test/v1-pool-setup.md
 
 markdown_extensions:
   - admonition
