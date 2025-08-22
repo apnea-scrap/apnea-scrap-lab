@@ -4,81 +4,53 @@
 
 ## 1) Requirements
 
-* Python 3.12 or newer installed and on PATH
+* Python 3.12 or newer (must be on PATH)
 * Git installed
 
 ---
 
-## 2) Create or refresh the virtual environment
-
-If `.venv` already exists, skip to **Activate the venv**.
+## 2) Quickstart setup
 
 ```bash
 # from the repo root
 python -m venv .venv
+. .venv/bin/activate
 
-# Upgrade pip and wheel inside the venv (recommended)
-. .venv/bin/activate  # see Windows below
 python -m pip install --upgrade pip wheel
 pip install -r requirements.txt
 ```
 
 ---
 
-## 3) Activate the venv
+## 3) Local preview
 
-Activation ensures `python`, `pip`, and CLI tools resolve from `.venv`.
-
-macOS or Linux (bash/zsh):
+Run the MkDocs development server:
 
 ```bash
-. .venv/bin/activate
+mkdocs serve -f mkdocs.local.yml -a 127.0.0.1:8000
 ```
 
----
-
-## 4) Commands agents should use
-
-All commands in this section assume the venv is active.
-
-### 4.1 Run the MkDocs dev server
-
-```bash
-mkdocs serve
-```
-
-Local preview: [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
-### 4.2 Build the site
-
-```bash
-mkdocs build --clean
-```
-
-Artifacts: `site/`
+Preview at: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ---
 
-## 5) Typical agent flows
+## 4) Build & deploy
 
-### Agent
-
-1. Activate venv
-2. `mkdocs serve` for local preview at [http://127.0.0.1:8000](http://127.0.0.1:8000)
-3. `mkdocs build --clean` for CI artifacts
+**Do not build manually.**  
+Production builds and deployment are handled by GitHub Actions in [`.github/workflows/pages.yml`](.github/workflows/pages.yml).
 
 ---
 
-## 6) Troubleshooting
+## 5) Troubleshooting
 
-* **`mkdocs: command not found`**: The venv is not active or MkDocs is not installed in it. Activate `.venv` and reinstall requirements.
-* **SSL or network issues** during `pip install`: retry with `--retries 5` or use a mirror via `PIP_INDEX_URL`.
+* **`mkdocs: command not found`** → venv not active or MkDocs not installed. Activate `.venv` and reinstall requirements.
+* **SSL/network issues during `pip install`** → retry with `--retries 5` or use a mirror via `PIP_INDEX_URL`.
 
 ---
 
-## 7) Conventions
+## 6) Conventions
 
-* Never install global packages for this project. Always use `.venv`.
-* Scripts and CLIs are expected to run with the venv activated.
-* Keep `requirements.txt` minimal and pinned to compatible major versions when possible.
+* Always work inside `.venv`.
+* Never install packages globally.
+* Keep `requirements.txt` minimal and pinned where possible.
 
