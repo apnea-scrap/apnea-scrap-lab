@@ -1,2 +1,2 @@
 # Fins & Monofins
-Covers all blade‑based propulsion. Methods: layup, rails, finish.
+Covers all blade‑based propulsion. Techniques: layup, rails, finish.
