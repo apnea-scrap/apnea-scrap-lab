@@ -48,6 +48,25 @@ DIY freediving gear knowledge base. Methods, builds, materials and test procedur
    ```
    The generated HTML goes into the `site/` folder.
 
+## GitHub workflow & environments
+
+Every push runs the GitHub Actions workflow at
+`.github/workflows/pages.yml`, which builds and deploys the site.
+The deploy job uses **GitHub Environments** so branch rules apply:
+`github-pages` for production and `previews` for all other branches.
+
+All builds publish to the same GitHub Pages root. The workflow simply
+changes the path: `main` writes to `/` while other branches go under
+`/preview/<branch>`.
+
+| Branch         | MkDocs config        | Environment    | Published URL                                     |
+| -------------- | -------------------- | -------------- | ------------------------------------------------- |
+| `main`         | `mkdocs.main.yml`    | `github-pages` | <https://lab.apneascrap.com/>                     |
+| any other      | `mkdocs.preview.yml` | `previews`     | <https://lab.apneascrap.com/preview/<branch>/>    |
+
+Preview URLs use a sanitized branch name (slashes → dashes), so each push has
+its own preview site. The production site updates when changes land on `main`.
+
 ---
 
 ## How to modify content
