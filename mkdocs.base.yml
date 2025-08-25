@@ -16,8 +16,17 @@ theme:
     - search.suggest
     - content.code.copy
     - toc.integrate
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
   icon:
     repo: fontawesome/brands/github
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+    - scheme: slate
+      primary: blue
+      accent: indigo
 
 nav:
   - Home: index.md
