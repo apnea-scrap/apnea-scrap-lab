@@ -44,7 +44,7 @@ nav:
           - "v2: acrylic + wedges": techniques/acrylic-base/v2-acrylic-wedges.md
       - Carbon layup:
           - "v1: linear taper": techniques/carbon-layup/v1.md
-          - "v2: (future variants)": techniques/carbon-layup/v2.md
+          - "v2: (future project)": techniques/carbon-layup/v2.md
       - Glue fin rails:
           - "v1: PU adhesive": techniques/glue-fin-rails/v1.md
       - Surface finish:
