@@ -57,6 +57,7 @@ nav:
           - "v1: basic rig": techniques/flex-test-rig/v1-basic-rig.md
       - Buoyancy test:
           - "v1: pool setup": techniques/buoyancy-test/v1-pool-setup.md
+  - Blog: blog/index.md
 
 markdown_extensions:
   - admonition
@@ -70,3 +71,5 @@ markdown_extensions:
 plugins:
   - search
   - macros
+  - blog:
+      blog_dir: blog
