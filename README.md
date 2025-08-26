@@ -8,8 +8,7 @@ DIY freediving gear knowledge base. Techniques, builds, and test procedures for 
 
 - Clean documentation site with tabs for Projects and Techniques
 - Versioned techniques with labels like use_case and maturity
-- Pool vs Max variants captured per version
-- Shared size variants for fins (short, medium, long) from a single YAML file
+- Pool vs Max use cases captured per version
 - Macros for reusable tables and YouTube embeds
 - GitHub Actions that build and publish automatically on every push to main
 
@@ -99,18 +98,6 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
 ### Pool vs Max labeling
 Use the `use_case:` label in front matter and reflect it in the technique index comparison table.
 
-### Short, Medium, Long variants
-The table is generated from a single YAML file using a macro.
-
-- Data file: `shared/variants/fins.yml`
-- Use in any Markdown page:
-  ```markdown
-  ## Variants
-  {{ fins_variants() }}
-  ```
-
-To add a new size, edit `shared/variants/fins.yml` and rebuild or push to main.
-
 ### Embed a YouTube video
 Use the `yt` macro defined in `main.py`.
 ```markdown
@@ -123,7 +110,6 @@ Use the `yt` macro defined in `main.py`.
 
 Macros live in `main.py`.
 
-- `{{ fins_variants() }}` renders a table based on `shared/variants/fins.yml`
 - `{{ yt("VIDEO_ID", "Title") }}` embeds a responsive privacy friendly YouTube iframe
 
 Restart `mkdocs serve` if you modify `main.py` to reload macros.

@@ -10,6 +10,4 @@ time_level: short
 date: 2025-08-13
 ---
 # Acrylic base v2 — acrylic + plastic wedges
-Process is the same for all fin sizes. Only dimensions change.
-## Variants
-{{ fins_variants() }}
+Process is the same for all fin sizes. Dimensions depend on the specific project.

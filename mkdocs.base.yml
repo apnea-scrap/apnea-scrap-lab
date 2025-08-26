@@ -31,8 +31,12 @@ theme:
 nav:
   - Home: index.md
   - Projects:
-      - Fins:
-          - Builds: projects/fins/builds/index.md
+      - Short fins:
+          - Builds: projects/short-fins/builds/index.md
+      - Medium fins:
+          - Builds: projects/medium-fins/builds/index.md
+      - Long fins:
+          - Builds: projects/long-fins/builds/index.md
       - Monofins:
           - Builds: projects/monofins/builds/index.md
       - Neck Weights:
@@ -44,7 +48,7 @@ nav:
           - "v2: acrylic + wedges": techniques/acrylic-base/v2-acrylic-wedges.md
       - Carbon layup:
           - "v1: linear taper": techniques/carbon-layup/v1.md
-          - "v2: (future variants)": techniques/carbon-layup/v2.md
+          - "v2: (future project)": techniques/carbon-layup/v2.md
       - Glue fin rails:
           - "v1: PU adhesive": techniques/glue-fin-rails/v1.md
       - Surface finish:
