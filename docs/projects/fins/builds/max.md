@@ -1,3 +1,3 @@
 # Max attempt builds
-| Build ID | Date | Variant | Notes |
-|---|---:|---|---|
+| Build ID | Date | Notes |
+|---|---:|---|
