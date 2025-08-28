@@ -15,6 +15,9 @@ theme:
     - search.highlight
     - search.suggest
     - content.code.copy
+    - content.action.edit
+    - content.action.discuss
+    - content.action.issue
     - toc.integrate
   logo: assets/logo.svg
   favicon: assets/favicon.png
@@ -27,6 +30,12 @@ theme:
     - scheme: slate
       primary: blue
       accent: indigo
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/apnea-scrap/apnea-scrap-lab/discussions
+      name: GitHub discussions
 
 nav:
   - Home: index.md
@@ -59,6 +68,7 @@ nav:
           - "Surface finish v1 — peel‑ply texture": techniques/surface-finish/v1.md
       - Vacuum gauge:
           - "Vacuum gauge v1 — syringe gauge": techniques/vacuum-gauge/v1-syringe-gauge.md
+  - Contact: contact.md
 
 markdown_extensions:
   - admonition
