@@ -44,20 +44,21 @@ nav:
       - (future gear): projects/future-gear.md
   - Techniques:
       - Acrylic base:
-          - "v1: wood support": techniques/acrylic-base/v1-wood-support.md
-          - "v2: acrylic + wedges": techniques/acrylic-base/v2-acrylic-wedges.md
-      - Carbon layup:
-          - "v1: linear taper": techniques/carbon-layup/v1.md
-          - "v2: (future project)": techniques/carbon-layup/v2.md
-      - Glue fin rails:
-          - "v1: PU adhesive": techniques/glue-fin-rails/v1.md
-      - Surface finish:
-          - "v1: peel-ply texture": techniques/surface-finish/v1.md
-      - Flex test rig:
-          - "v1: basic rig": techniques/flex-test-rig/v1-basic-rig.md
+          - "Acrylic base v1 — wood support": techniques/acrylic-base/v1-wood-support.md
+          - "Acrylic base v2 — acrylic + plastic wedges": techniques/acrylic-base/v2-acrylic-wedges.md
       - Buoyancy test:
-          - "v1: pool setup": techniques/buoyancy-test/v1-pool-setup.md
-  - Blog: blog/index.md
+          - "Buoyancy test v1: pool setup": techniques/buoyancy-test/v1-pool-setup.md
+      - Carbon layup:
+          - "Carbon layup v1 — linear taper": techniques/carbon-layup/v1.md
+          - "Carbon layup v2: future project": techniques/carbon-layup/v2.md
+      - Flex test rig:
+          - "Flex test rig v1: basic rig": techniques/flex-test-rig/v1-basic-rig.md
+      - Glue fin rails:
+          - "Glue fin rails v1 — polyurethane adhesive": techniques/glue-fin-rails/v1.md
+      - Surface finish:
+          - "Surface finish v1 — peel‑ply texture": techniques/surface-finish/v1.md
+      - Vacuum gauge:
+          - "Vacuum gauge v1 — syringe gauge": techniques/vacuum-gauge/v1-syringe-gauge.md
 
 markdown_extensions:
   - admonition
