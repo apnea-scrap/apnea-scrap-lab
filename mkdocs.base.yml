@@ -57,6 +57,8 @@ nav:
           - "v1: basic rig": techniques/flex-test-rig/v1-basic-rig.md
       - Buoyancy test:
           - "v1: pool setup": techniques/buoyancy-test/v1-pool-setup.md
+      - Vacuum gauge:
+          - "v1: DIY syringe gauge": techniques/vacuum-gauge/v1-diy-syringe-gauge.md
   - Blog: blog/index.md
 
 markdown_extensions:

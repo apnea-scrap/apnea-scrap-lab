@@ -7,3 +7,4 @@ Versioned recipes with Pool / Max labels. Pick a technique, compare versions, an
 - [Surface finish](surface-finish/index.md)
 - [Flex test rig](flex-test-rig/v1-basic-rig.md)
 - [Buoyancy test](buoyancy-test/v1-pool-setup.md)
+- [Vacuum gauge](vacuum-gauge/v1-diy-syringe-gauge.md)
