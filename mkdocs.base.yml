@@ -61,7 +61,7 @@ nav:
           - "Carbon layup v1 — linear taper": techniques/carbon-layup/v1.md
           - "Carbon layup v2: future project": techniques/carbon-layup/v2.md
       - Flex test rig:
-          - "Flex test rig v1: basic rig": techniques/flex-test-rig/v1-basic-rig.md
+          - "Flex test rig v1: weight belt test": techniques/flex-test-rig/v1-weight-belt-test.md
       - Glue fin rails:
           - "Glue fin rails v1 — polyurethane adhesive": techniques/glue-fin-rails/v1.md
       - Surface finish:
