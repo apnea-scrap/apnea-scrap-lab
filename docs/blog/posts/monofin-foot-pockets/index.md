@@ -2,7 +2,7 @@
 title: "Research Notes: Monofin Foot Pockets"
 date: 2025-09-14
 authors:
-  - apnea
+  - julian-g
 summary: Exploring dedicated monofin foot pockets versus adapted bifin pockets, plus training options and references for DIY builds.
 ---
 
