@@ -6,8 +6,10 @@ authors:
 summary: Bill of materials and design notes for building a carbon monofin blade.
 ---
 
-After mapping out bifins, I want to gather materials and design notes for **building a monofin blade**.  
+After mapping out bifins, I want to gather materials and design notes for **building a monofin blade**.
 This will be a bit more complex than bifins because monofins need more lateral stability and usually use internal reinforcements.
+
+<!-- more -->
 
 The problems I need to solve are:
 1. Which materials carry over from the bifin build
