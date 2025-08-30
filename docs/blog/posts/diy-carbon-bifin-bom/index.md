@@ -9,6 +9,8 @@ summary: Bill of materials and layering notes for building a short carbon bifin 
 Now that I’ve mapped out the foot pockets, I want to gather everything I need for actually **building a short carbon bifin blade**.
 This is basically my BOM (bill of materials) plus a few notes on layering and finishing.
 
+<!-- more -->
+
 The problems I need to solve here are:
 1. Which carbon fabrics and resin to use
 2. How to prepare and laminate properly

@@ -6,11 +6,13 @@ authors:
 summary: Exploring dedicated monofin foot pockets versus adapted bifin pockets, plus training options and references for DIY builds.
 ---
 
-This is the second half of my research — this time looking at **monofin foot pockets**.  
-Most DIY monofins seem to either use dedicated monofin pockets or just adapt bifin pockets.  
-I want to collect the options here to see which direction makes sense for a DIY build.  
+This is the second half of my research — this time looking at **monofin foot pockets**.
+Most DIY monofins seem to either use dedicated monofin pockets or just adapt bifin pockets.
+I want to collect the options here to see which direction makes sense for a DIY build.
 
-The main problems I need to solve are:  
+<!-- more -->
+
+The main problems I need to solve are:
 1. What dedicated monofin pockets exist  
 2. How bifin pockets get adapted for monofins  
 3. Which options make sense for training vs. performance  
