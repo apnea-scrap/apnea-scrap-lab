@@ -2,7 +2,7 @@
 title: "Research Notes: Foot Pockets for a Short Carbon Training Fin"
 date: 2025-08-30
 authors:
-  - apnea
+  - julian-g
 summary: Collecting references on foot pockets for a short carbon bifin, covering popular models, DIY blade fit, angle and rail considerations, and technical resources.
 ---
 

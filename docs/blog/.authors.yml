@@ -1,6 +1,6 @@
 authors:
-  apnea:
-    name: "ApneaScrap"
-    description: "DIY freediving gear tinkerer"
-    avatar: blog/authors/apnea-avatar.svg
-    url: /blog/authors/apnea/
+  julian-g:
+    name: "Julian G."
+    description: "Technologist. Fabricator. Freediver."
+    avatar: authors/julian-g-avatar.svg
+    url: authors/julian-g/

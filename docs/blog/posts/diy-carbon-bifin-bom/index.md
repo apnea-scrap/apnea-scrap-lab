@@ -2,7 +2,7 @@
 title: "Research Notes: DIY Carbon Bifin BOM"
 date: 2025-09-23
 authors:
-  - apnea
+  - julian-g
 summary: Bill of materials and layering notes for building a short carbon bifin blade.
 ---
 
