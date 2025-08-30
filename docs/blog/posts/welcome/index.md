@@ -2,7 +2,7 @@
 title: "Welcome to the ApneaScrap Lab Blog"
 date: 2024-08-20
 authors:
-  - apnea
+  - julian-g
 summary: Launching the blog to share progress on DIY freediving gear and testing.
 ---
 

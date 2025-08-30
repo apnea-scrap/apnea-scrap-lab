@@ -2,7 +2,7 @@
 title: "Research Notes: DIY Carbon Monofin BOM"
 date: 2025-09-26
 authors:
-  - apnea
+  - julian-g
 summary: Bill of materials and design notes for building a carbon monofin blade.
 ---
 
