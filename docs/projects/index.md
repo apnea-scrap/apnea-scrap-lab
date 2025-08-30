@@ -1,9 +1,11 @@
 # Projects
-Browse complete builds and compare outcomes across use cases.
+Browse complete versions and compare outcomes across use cases.
 
-- [Short fins](short-fins/builds/index.md)
-- [Medium fins](medium-fins/builds/index.md)
-- [Long fins](long-fins/builds/index.md)
-- [Monofins](monofins/builds/index.md)
-- [Neck Weights](neck-weight/builds/index.md)
-- [Future gear](future-gear.md)
+| Project | Version | Status |
+|---|---|---|
+| [Short fins](short-fins/versions/index.md) | v1 | Completed |
+| [Monofin](monofin/versions/index.md) | v1 | Research started |
+| [Neck weight](neck-weight/versions/index.md) | v1 | Completed |
+| [Neck weight](neck-weight/versions/index.md) | c2 | Completed |
+
+See [Future gear](future-gear/index.md) for upcoming projects.

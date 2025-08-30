@@ -1,6 +1,6 @@
 # ApneaScrap Lab
 
-DIY freediving gear knowledge base. Techniques, builds, and test procedures for fins, monofins and neck weights. Built with MkDocs Material and deployed on GitHub Pages.
+DIY freediving gear knowledge base. Techniques, versions, and test procedures for short fins, monofin and neck weight. Built with MkDocs Material and deployed on GitHub Pages.
 
 ---
 
