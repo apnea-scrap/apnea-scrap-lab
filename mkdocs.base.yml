@@ -64,6 +64,7 @@ nav:
           - "Surface finish v1 — peel‑ply texture": techniques/surface-finish/v1.md
       - Vacuum gauge:
           - "Vacuum gauge v1 — syringe gauge": techniques/vacuum-gauge/v1-syringe-gauge.md
+  - Blog: blog/index.md
   - Contact: contact.md
 
 markdown_extensions:
