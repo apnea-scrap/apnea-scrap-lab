@@ -54,12 +54,12 @@ The example shown is for a **70 × 70 cm monofin**, but the same technique can b
 
 4. **Add wedge supports**  
    - Place plastic stackable wedges under the footpocket section.  
-   - Adjust wedge height to set the required angle (typically 20–30° for monofins).  
+   - Adjust wedge height to set the required angle (typically 20–30° for a monofin).
    - Ensure wedges are stable and evenly distributed.  
 
 ## Tradeoffs
-- **Advantage:** This build does not require a heavy wooden support structure, making it much easier and faster to put together.  
-- **Advantage:** Modular design — acrylic sheets and wedges can be stored flat and reused for different builds.  
+- **Advantage:** This version does not require a heavy wooden support structure, making it much easier and faster to put together.  
+- **Advantage:** Modular design — acrylic sheets and wedges can be stored flat and reused for different versions.  
 - **Drawback:** The base cannot be placed as a whole into a vacuum bag.  
 - **Drawback:** The only viable vacuum method is sealing the edges of the bag around the acrylic surface, which is less flexible than a solid one-piece base.  
 
