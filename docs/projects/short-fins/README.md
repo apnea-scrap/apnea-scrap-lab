@@ -1,3 +1,0 @@
-# Short fins
-
-Coming soon.

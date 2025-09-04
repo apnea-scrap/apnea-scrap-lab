@@ -1,3 +1,0 @@
-# Medium fins
-
-Coming soon.

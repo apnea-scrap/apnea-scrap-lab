@@ -1,3 +1,0 @@
-# Long fins
-
-Coming soon.
