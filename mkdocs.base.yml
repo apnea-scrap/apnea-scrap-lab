@@ -1,5 +1,5 @@
 site_name: ApneaScrap Lab
-site_description: DIY freediving gear — techniques, versions, and test results
+site_description: DIY Freediving Gear — Techniques, Versions, And Test Results
 repo_url: https://github.com/apnea-scrap/apnea-scrap-lab
 repo_name: apnea-scrap/apnea-scrap-lab
 edit_uri: edit/main/docs/
@@ -34,44 +34,44 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/apnea-scrap/apnea-scrap-lab/discussions
-      name: GitHub discussions
+      name: GitHub Discussions
 
 nav:
   - Home: index.md
   - Projects:
-      - Short fins:
-          - Versions: projects/short-fins/index.md
+      - Short Fins:
+          - Short Fins Versions: projects/short-fins/index.md
       - Monofin:
-          - Versions: projects/monofin/index.md
-      - Neck weight:
-          - "versions": projects/neck-weight/index.md
-          - "v1 - shot inner tube": projects/neck-weight/v1-shot-inner-tube.md
-          - "v2 - molded sleeve": projects/neck-weight/v2-molded-sleeve.md
-      - (future gear): projects/future-gear/index.md
+          - Monofin Versions: projects/monofin/index.md
+      - Neck Weight:
+          - Neck Weight Versions: projects/neck-weight/index.md
+          - V1 - Shot Inner Tube: projects/neck-weight/v1-shot-inner-tube.md
+          - V2 - Molded Sleeve: projects/neck-weight/v2-molded-sleeve.md
+      - (Future Gear): projects/future-gear/index.md
   - Techniques:
-      - Acrylic base:
-          - "Acrylic base versions": techniques/acrylic-base/index.md
-          - "v1 - wood support": techniques/acrylic-base/v1-wood-support.md
-          - "v2 - plastic wedges": techniques/acrylic-base/v2-acrylic-wedges.md
-      - Buoyancy test:
-          - "versions": techniques/buoyancy-test/index.md
-          - "v1 - bathtub": techniques/buoyancy-test/v1-bathtub.md
-      - Carbon layup:
-          - "versions": techniques/carbon-layup/index.md
-          - "v1 - linear taper": techniques/carbon-layup/v1.md
-          - "v2 - future project": techniques/carbon-layup/v2.md
-      - Flex test rig:
-          - "versions": techniques/flex-test-rig/index.md
-          - "v1 - weight belt test": techniques/flex-test-rig/v1-weight-belt-test.md
-      - Glue fin rails:
-          - "versions": techniques/glue-fin-rails/index.md
-          - "v1 - polyurethane adhesive": techniques/glue-fin-rails/v1.md
-      - Surface finish:
-          - "versions": techniques/surface-finish/index.md
-          - "v1 - peel‑ply texture": techniques/surface-finish/v1.md
-      - Vacuum gauge:
-          - "versions": techniques/vacuum-gauge/index.md
-          - "v1 - syringe gauge": techniques/vacuum-gauge/v1-syringe-gauge.md
+      - Acrylic Base:
+          - Acrylic Base Versions: techniques/acrylic-base/index.md
+          - V1 - Wood Support: techniques/acrylic-base/v1-wood-support.md
+          - V2 - Plastic Wedges: techniques/acrylic-base/v2-acrylic-wedges.md
+      - Buoyancy Test:
+          - Buoyancy Test Versions: techniques/buoyancy-test/index.md
+          - V1 - Bathtub: techniques/buoyancy-test/v1-bathtub.md
+      - Carbon Layup:
+          - Carbon Layup Versions: techniques/carbon-layup/index.md
+          - V1 - Linear Taper: techniques/carbon-layup/v1.md
+          - V2 - Future Project: techniques/carbon-layup/v2.md
+      - Flex Test Rig:
+          - Flex Test Rig Versions: techniques/flex-test-rig/index.md
+          - V1 - Weight Belt Test: techniques/flex-test-rig/v1-weight-belt-test.md
+      - Glue Fin Rails:
+          - Glue Fin Rails Versions: techniques/glue-fin-rails/index.md
+          - V1 - Polyurethane Adhesive: techniques/glue-fin-rails/v1.md
+      - Surface Finish:
+          - Surface Finish Versions: techniques/surface-finish/index.md
+          - V1 - Peel‑Ply Texture: techniques/surface-finish/v1.md
+      - Vacuum Gauge:
+          - Vacuum Gauge Versions: techniques/vacuum-gauge/index.md
+          - V1 - Syringe Gauge: techniques/vacuum-gauge/v1-syringe-gauge.md
   - Blog: blog/index.md
   - Contact: contact.md
 
