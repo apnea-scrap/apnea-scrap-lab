@@ -49,10 +49,6 @@ nav:
           - V2 - Molded Sleeve: projects/neck-weight/v2-molded-sleeve.md
       - (Future Gear): projects/future-gear/index.md
   - Techniques:
-      - Acrylic Base:
-          - Acrylic Base Versions: techniques/acrylic-base/index.md
-          - V1 - Wood Support: techniques/acrylic-base/v1-wood-support.md
-          - V2 - Plastic Wedges: techniques/acrylic-base/v2-acrylic-wedges.md
       - Buoyancy Test:
           - Buoyancy Test Versions: techniques/buoyancy-test/index.md
           - V1 - Bathtub: techniques/buoyancy-test/v1-bathtub.md
@@ -69,6 +65,10 @@ nav:
       - Glue Fin Rails:
           - Glue Fin Rails Versions: techniques/glue-fin-rails/index.md
           - V1 - Polyurethane Adhesive: techniques/glue-fin-rails/v1.md
+      - Laminating Base:
+          - Laminating Base Versions: techniques/laminating-base/index.md
+          - V1 - Wood Support: techniques/laminating-base/v1/wood-support.md
+          - V2 - Plastic Wedges: techniques/laminating-base/v2/acrylic-wedges.md
       - Surface Finish:
           - Surface Finish Versions: techniques/surface-finish/index.md
           - V1 - Peel‑Ply Texture: techniques/surface-finish/v1.md

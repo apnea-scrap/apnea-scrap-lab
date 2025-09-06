@@ -1,15 +1,5 @@
----
-title: Acrylic base v2 — acrylic + plastic wedges
-version: v2
-use_case: pool
-status: active
-maturity: stable
-cost_level: low
-tooling_level: low
-time_level: short
-date: 2025-08-13
----
-# Acrylic Base - V2 - Wedge Supports
+
+# Laminating Base - V2 - Acrylic with Wedge Supports
 
 This document describes how to build a modular acrylic base with wedge supports for laminating carbon fins.  
 The example shown is for a **70 × 70 cm monofin**, but the same technique can be adapted for **bifins** or other blade sizes.
