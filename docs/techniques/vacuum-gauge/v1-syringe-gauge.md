@@ -1,13 +1,11 @@
 ---
 title: Vacuum gauge v1 — syringe gauge
 version: v1
-use_case: bagging
 status: active
 maturity: stable
-cost_level: low
-tooling_level: low
-time_level: short
-date: 2025-08-28
+estimated_cost: 10
+time_to_implement: 1
+waiting_time: 0
 ---
 # Vacuum gauge v1 — syringe gauge
 

@@ -1,7 +1,15 @@
 
-# Laminating Base - V2 - Acrylic with Wedge Supports
+---
+title: Laminating base v2 — acrylic with wedge supports
+version: v2
+status: active
+estimated_cost: 10
+time_to_implement: 1
+waiting_time: 0
+---
+# Laminating base v2 — acrylic with wedge supports
 
-This document describes how to build a modular acrylic base with wedge supports for laminating carbon fins.  
+This document describes how to build a modular acrylic base with wedge supports for laminating carbon fins.
 The example shown is for a **70 × 70 cm monofin**, but the same technique can be adapted for **bifins** or other blade sizes.
 
 ## Base Dimensions

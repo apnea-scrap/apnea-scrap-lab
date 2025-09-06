@@ -1,4 +1,12 @@
-# Carbon Layup v1 — Wet Layup
+---
+title: Carbon layup v1 — wet layup
+version: v1
+status: active
+estimated_cost: 20
+time_to_implement: 3
+waiting_time: 12
+---
+# Carbon layup v1 — wet layup
 
 Baseline recipe with 0/90 twill and simple taper.
 

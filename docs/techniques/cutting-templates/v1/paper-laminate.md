@@ -1,4 +1,12 @@
-# Cutting Template - V1 - Paper Laminate
+---
+title: Cutting template v1 — paper laminate
+version: v1
+status: active
+estimated_cost: 20
+time_to_implement: 3
+waiting_time: 0
+---
+# Cutting template v1 — paper laminate
 
 This technique shows how to create a cutting template for fins using laminated paper.
 

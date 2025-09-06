@@ -1,7 +1,3 @@
-# Short fins versions
+# Short fins — compare versions
 
-## v1
-### Status
-Completed
-
-Coming soon.
+{{ versions_table() }}
