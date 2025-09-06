@@ -48,9 +48,6 @@ Produce a durable template that matches the foot pocket outline.
 |----------------------------------------------------|----------------------------------------------------|
 | Cutting Template 1                                 | Cutting Template 2                                 |
 
-## Data to Record / Results
-- Notes on fit within the foot pocket
-
-## Tips, Trade-offs, or Limitations
-- Laminated paper is water-resistant but can warp with heat; store flat.
+## Limitation
+- Laminated paper is not stiff enough and might warp when pushed into the foot pocket
 

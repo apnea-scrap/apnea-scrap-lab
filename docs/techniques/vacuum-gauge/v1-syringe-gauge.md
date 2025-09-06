@@ -74,9 +74,6 @@ Target positions relative to **start volume**:
 
 ---
 
-## Tips, Trade-offs, or Limitations
-- **Thin syringes = more visible plunger travel.** An insulin-style syringe can give ~2–3× more movement than a standard barrel.
-- Always mark **ambient** before sealing.
-- Wrap well in breather; the plunger must not be glued by resin.
-- Works best for **mild vacuum** (~−20 kPa gauge).
-- Ultra-cheap (under $1 in parts) and fully sealed, but only provides approximate pressure.
+## Limitations
+
+- The friction between the plunger and the barrel might affect precision

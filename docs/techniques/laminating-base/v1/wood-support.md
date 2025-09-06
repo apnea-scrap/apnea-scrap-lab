@@ -64,7 +64,7 @@ Create a rigid angled surface to support fin blades during lamination.
 - Notes on surface flatness after cure
 - Any deformation or movement during lamination
 
-## Tips, Trade-offs, or Limitations
+## Limitations
 
 - **Does not scale well**: In order to create bigger fins, the wooden structure needs to be re-worked.
 - **Vacuum Bag Fit**: Ensure the base with acrylic layers fits entirely into the vacuum bag.

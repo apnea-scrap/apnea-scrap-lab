@@ -52,13 +52,6 @@ nav:
           - V2 - Molded Sleeve: projects/neck-weight/v2-molded-sleeve.md
       - (Future Gear): projects/future-gear/index.md
   - Techniques:
-      - Buoyancy Test:
-          - Buoyancy Test Versions: techniques/buoyancy-test/index.md
-          - V1 - Bathtub: techniques/buoyancy-test/v1-bathtub.md
-      - Carbon Layup:
-          - Carbon Layup Versions: techniques/carbon-layup/index.md
-          - V1 - Linear Taper: techniques/carbon-layup/v1.md
-          - V2 - Future Project: techniques/carbon-layup/v2.md
       - Cutting Templates:
           - Cutting Template Versions: techniques/cutting-templates/index.md
           - V1 - Paper Laminate: techniques/cutting-templates/v1/paper-laminate.md
@@ -72,9 +65,9 @@ nav:
           - Laminating Base Versions: techniques/laminating-base/index.md
           - V1 - Wood Support: techniques/laminating-base/v1/wood-support.md
           - V2 - Plastic Wedges: techniques/laminating-base/v2/acrylic-wedges.md
-      - Surface Finish:
-          - Surface Finish Versions: techniques/surface-finish/index.md
-          - V1 - Peel‑Ply Texture: techniques/surface-finish/v1.md
+      - Laminating Carbon:
+          - Laminating Carbon Versions: techniques/laminating-carbon/index.md
+          - V1 - Wet Layup: techniques/laminating-carbon/v1/wet-layup.md
       - Vacuum Gauge:
           - Vacuum Gauge Versions: techniques/vacuum-gauge/index.md
           - V1 - Syringe Gauge: techniques/vacuum-gauge/v1-syringe-gauge.md

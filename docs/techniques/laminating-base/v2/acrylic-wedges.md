@@ -62,9 +62,10 @@ Provide a modular surface with adjustable wedges to support blades during lamina
 - Wedge heights and resulting angles
 - Notes on surface gaps or leaks during lamination
 
-## Tips, Trade-offs, or Limitations
-- **Advantage:** This version does not require a heavy wooden support structure, making it much easier and faster to put together.
-- **Advantage:** Modular design — acrylic sheets and wedges can be stored flat and reused for different versions.
-- **Drawback:** The base cannot be placed as a whole into a vacuum bag.
-- **Drawback:** The only viable vacuum method is sealing the edges of the bag around the acrylic surface, which is less flexible than a solid one-piece base.
-- **Adaptation for bifins:** Use fewer sheets and wedges sized to the narrower blades (two A3 sheets often suffice for each flat section).
+## Benefits
+- This version does not require a heavy wooden support structure, making it much easier and faster to put together.
+- Modular design — acrylic sheets and wedges can be stored flat and reused for different versions.
+
+## Limitations
+- The base cannot be placed as a whole into a vacuum bag.
+- The only viable vacuum method is sealing the edges of the bag around the acrylic surface, which is less flexible than a solid one-piece base.
