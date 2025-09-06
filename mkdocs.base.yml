@@ -52,6 +52,9 @@ nav:
           - V2 - Molded Sleeve: projects/neck-weight/v2-molded-sleeve.md
       - (Future Gear): projects/future-gear/index.md
   - Techniques:
+      - Cutting Cured Carbon:
+          - Cutting Cured Carbon Versions: techniques/cutting-cured-carbon/index.md
+          - V1 - Junior Hacksaw: techniques/cutting-cured-carbon/v1/junior-hacksaw.md
       - Cutting Templates:
           - Cutting Template Versions: techniques/cutting-templates/index.md
           - V1 - Paper Laminate: techniques/cutting-templates/v1/paper-laminate.md
