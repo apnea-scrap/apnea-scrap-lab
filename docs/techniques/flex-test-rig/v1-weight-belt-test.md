@@ -7,6 +7,7 @@ time_to_implement: 1
 waiting_time: 0
 ---
 # Flex test rig v1 — weight belt test
+{{ status_banner() }}
 
 **Goal**
 Measure how much load makes the **tip vertical (90°)** and where the blade bends (root, mid, tip).

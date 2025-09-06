@@ -8,6 +8,7 @@ time_to_implement: 1
 waiting_time: 0
 ---
 # Vacuum gauge v1 — syringe gauge
+{{ status_banner() }}
 
 A simple gauge to monitor mild vacuum (~81 kPa absolute, −20 kPa gauge) directly **inside** a vacuum bag.
 It uses Boyle’s law: trapped air expands as pressure drops, moving a rubber plunger seal you can read through the bag.

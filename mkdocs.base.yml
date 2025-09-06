@@ -36,6 +36,9 @@ extra:
       link: https://github.com/apnea-scrap/apnea-scrap-lab/discussions
       name: GitHub Discussions
 
+extra_css:
+  - css/status-banner.css
+
 nav:
   - Home: index.md
   - Projects:

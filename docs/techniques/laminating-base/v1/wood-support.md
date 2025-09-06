@@ -7,6 +7,7 @@ time_to_implement: 3
 waiting_time: 0
 ---
 # Laminating base v1 — acrylic with wood support
+{{ status_banner() }}
 
 25° wooden base with acrylic sheets for laminating carbon fin blades.
 
