@@ -1,4 +1,18 @@
+from pathlib import Path
+import re
+import yaml
+
+
 def define_env(env):
+    docs_dir = Path(env.project_dir) / "docs"
+
+    def read_meta(path: Path) -> dict:
+        text = path.read_text(encoding="utf-8")
+        match = re.match(r"^---\n(.*?)\n---\n", text, re.DOTALL)
+        if match:
+            return yaml.safe_load(match.group(1)) or {}
+        return {}
+
     @env.macro
     def yt(id, title="", ratio="56.25%"):
         title = title or "YouTube video"
@@ -6,3 +20,40 @@ def define_env(env):
   <iframe src="https://www.youtube-nocookie.com/embed/{id}" title="{title}" loading="lazy" allowfullscreen
           style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>
 </div>'''
+
+    @env.macro
+    def versions_table(path: str | None = None) -> str:
+        rel_dir = Path(path) if path else Path(env.page.file.src_path).parent
+        base = docs_dir / rel_dir
+        rows = []
+        for file in sorted(base.glob("**/*.md")):
+            if file.name == "index.md":
+                continue
+            meta = read_meta(file)
+            rel_path = file.relative_to(base)
+            link_text = " ".join(rel_path.with_suffix("").parts).replace("-", " ")
+            link = f"[{link_text}]({rel_path.as_posix()})"
+            cost = meta.get("estimated_cost")
+            impl = meta.get("time_to_implement")
+            wait = meta.get("waiting_time")
+            rows.append(
+                (
+                    link,
+                    meta.get("status", ""),
+                    f"£{cost}" if cost is not None else "",
+                    f"{impl}h" if impl is not None else "",
+                    f"{wait}h" if wait is not None else "",
+                )
+            )
+
+        if not rows:
+            return "No versions documented yet."
+
+        header = (
+            "| Version | Status | Estimated Cost (£) | Implementation Time (h) | Waiting Time (h) |"
+        )
+        separator = "|---|---|---|---|---|"
+        lines = [header, separator]
+        for link, status, cost, impl, wait in rows:
+            lines.append(f"| {link} | {status} | {cost} | {impl} | {wait} |")
+        return "\n".join(lines)

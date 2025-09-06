@@ -1,8 +1,3 @@
-# Monofin versions
+# Monofin — compare versions
 
-## v1
-### Status
-Research started
-
-| Version ID | Date | Notes |
-|---|---:|---|
+{{ versions_table() }}

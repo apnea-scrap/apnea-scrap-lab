@@ -1,4 +1,12 @@
-# Laminating Base - V1 — Acrylic with Wood Support
+---
+title: Laminating base v1 — acrylic with wood support
+version: v1
+status: active
+estimated_cost: 20
+time_to_implement: 3
+waiting_time: 0
+---
+# Laminating base v1 — acrylic with wood support
 
 25° wooden base with acrylic sheets for laminating carbon fin blades.
 
