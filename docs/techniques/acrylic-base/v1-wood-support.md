@@ -9,7 +9,7 @@ tooling_level: low
 time_level: medium
 date: 2025-07-10
 ---
-# Acrylic base v1 — wood support
+# Acrylic base - V1 — wood support
 
 25° wooden base with acrylic sheets for laminating carbon fin blades.
 

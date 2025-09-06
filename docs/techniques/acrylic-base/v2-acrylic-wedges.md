@@ -9,7 +9,7 @@ tooling_level: low
 time_level: short
 date: 2025-08-13
 ---
-# Acrylic Base with Wedge Supports
+# Acrylic Base - V2 - Wedge Supports
 
 This document describes how to build a modular acrylic base with wedge supports for laminating carbon fins.  
 The example shown is for a **70 × 70 cm monofin**, but the same technique can be adapted for **bifins** or other blade sizes.

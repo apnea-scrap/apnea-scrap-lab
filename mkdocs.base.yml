@@ -60,6 +60,9 @@ nav:
           - Carbon Layup Versions: techniques/carbon-layup/index.md
           - V1 - Linear Taper: techniques/carbon-layup/v1.md
           - V2 - Future Project: techniques/carbon-layup/v2.md
+      - Cutting Templates:
+          - Cutting Template Versions: techniques/cutting-templates/index.md
+          - V1 - Paper Laminate: techniques/cutting-templates/v1/paper-laminate.md
       - Flex Test Rig:
           - Flex Test Rig Versions: techniques/flex-test-rig/index.md
           - V1 - Weight Belt Test: techniques/flex-test-rig/v1-weight-belt-test.md
