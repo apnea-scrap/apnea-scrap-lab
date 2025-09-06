@@ -11,7 +11,10 @@ waiting_time: 0
 
 25° wooden base with acrylic sheets for laminating carbon fin blades.
 
-## Specifications
+## Goal
+Create a rigid angled surface to support fin blades during lamination.
+
+## Specifications / Dimensions
 
 **Dimensions**
 
@@ -23,9 +26,7 @@ waiting_time: 0
     - Minimum width: **25cm** (to match blade width).
     - Minimum length: **20cm** (to fit 15cm blade length and extra space).
 
-## Materials
-
-**BOM (Bill of Materials)**
+## Materials / Bill of Materials
 
 1. **Acrylic Sheets**:
     - 1x A3 size: **42cm x 30cm**.
@@ -43,7 +44,7 @@ waiting_time: 0
 - **Assembly Tools:** Screwdriver and screws for securing brackets.
 - **Measurement and Finishing:** Measuring tools (square, protractor, tape measure). Sandpaper for smoothing wood edges.
 
-## Build Process
+## Instructions (step-by-step)
 
 1. **Base Construction**
     - Use 1cm thick timber to create a solid base.
@@ -59,7 +60,11 @@ waiting_time: 0
 |----------------------------------------|--------------------------------------------|
 | Full Support Structure                 | Brackets and Side Supports                 |
 
-## Limitations
+## Data to Record / Results
+- Notes on surface flatness after cure
+- Any deformation or movement during lamination
+
+## Tips, Trade-offs, or Limitations
 
 - **Does not scale well**: In order to create bigger fins, the wooden structure needs to be re-worked.
 - **Vacuum Bag Fit**: Ensure the base with acrylic layers fits entirely into the vacuum bag.

@@ -13,18 +13,22 @@ waiting_time: 0
 A simple gauge to monitor mild vacuum (~81 kPa absolute, −20 kPa gauge) directly **inside** a vacuum bag.
 It uses Boyle’s law: trapped air expands as pressure drops, moving a rubber plunger seal you can read through the bag.
 
----
+## Goal
+Monitor vacuum level inside a bag using plunger movement.
 
-## Parts
+## Materials / Bill of Materials
 - 1 × syringe (10 mL or 20 mL, ideally **thin barrel** for more travel)
 - Luer-lock or push-on **tip cap** (to seal airtight)
 - Candle wax (for plunger lubrication)
 - Breather fabric (to wrap gauge and protect from resin)
 - Permanent marker (to mark calibration lines)
 
----
+## Tools Required
+- Knife or scissors (for trimming)
+- Permanent marker
+- Breather fabric
 
-## Build Steps
+## Instructions (step-by-step)
 1. **Modify plunger**
    - Remove plunger from syringe.
    - Cut off the **plastic rod**, leaving only the **rubber seal**.
@@ -51,6 +55,9 @@ It uses Boyle’s law: trapped air expands as pressure drops, moving a rubber pl
 
 ---
 
+## Data to Record / Results
+Record plunger position at ambient and at target pressure.
+
 ## Calibration Reference
 Target positions relative to **start volume**:
 
@@ -67,17 +74,9 @@ Target positions relative to **start volume**:
 
 ---
 
-## Tips
+## Tips, Trade-offs, or Limitations
 - **Thin syringes = more visible plunger travel.** An insulin-style syringe can give ~2–3× more movement than a standard barrel.
 - Always mark **ambient** before sealing.
 - Wrap well in breather; the plunger must not be glued by resin.
 - Works best for **mild vacuum** (~−20 kPa gauge).
-
----
-
-## Advantages
-- Ultra-cheap (under $1 in parts)
-- No electronics, no second syringe needed
-- Fully sealed, safe to place inside bag
-- Large visible plunger movement with thin syringes
-- Perfect for confirming steady ~80% atmospheric pressure during cure
+- Ultra-cheap (under $1 in parts) and fully sealed, but only provides approximate pressure.

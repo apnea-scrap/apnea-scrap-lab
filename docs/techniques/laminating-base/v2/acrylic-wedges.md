@@ -1,4 +1,3 @@
-
 ---
 title: Laminating base v2 — acrylic with wedge supports
 version: v2
@@ -13,13 +12,16 @@ waiting_time: 0
 This document describes how to build a modular acrylic base with wedge supports for laminating carbon fins.
 The example shown is for a **70 × 70 cm monofin**, but the same technique can be adapted for **bifins** or other blade sizes.
 
-## Base Dimensions
+## Goal
+Provide a modular surface with adjustable wedges to support blades during lamination.
+
+## Specifications / Dimensions
 - **Target working area (monofin example):** ~80 × 90 cm  
 - **Purpose:** Provides enough surface for a 70 × 70 cm monofin blade plus sealing margin  
 - **Support requirement:** Must be placed on a **flat, rigid surface** such as a table or workbench  
 - **Protection:** Place a **plastic sheet** under the base to protect the table surface  
 
-## Materials
+## Materials / Bill of Materials
 - **6 × A3 acrylic sheets (2 mm thick)**  
   - 4 sheets for the flat blade section (2 wide × 2 tall)  
   - 2 sheets for the angled footpocket section  
@@ -27,7 +29,7 @@ The example shown is for a **70 × 70 cm monofin**, but the same technique can b
 - **Plastic stackable wedges** to create the angled section under the footpockets  
 - **Protective plastic sheet** (to cover the table surface beneath the acrylic)  
 
-## Tools
+## Tools Required
 - Isopropyl alcohol and cloth (for cleaning sheet edges)  
 - Scissors or knife (for trimming electrical tape)  
 - Measuring tape or ruler (for alignment)  
@@ -37,7 +39,7 @@ The example shown is for a **70 × 70 cm monofin**, but the same technique can b
 - **Base assembly:** ~30 minutes  
 - **Wedge placement & alignment:** ~10 minutes  
 
-## Assembly (Monofin Example)
+## Instructions (step-by-step)
 1. **Prepare the surface**  
    - Place a plastic sheet on a flat, rigid table or bench.  
    - Ensure there is no dust or debris under the plastic.  
@@ -56,13 +58,13 @@ The example shown is for a **70 × 70 cm monofin**, but the same technique can b
    - Adjust wedge height to set the required angle (typically 20–30° for a monofin).
    - Ensure wedges are stable and evenly distributed.  
 
-## Tradeoffs
-- **Advantage:** This version does not require a heavy wooden support structure, making it much easier and faster to put together.  
-- **Advantage:** Modular design — acrylic sheets and wedges can be stored flat and reused for different versions.  
-- **Drawback:** The base cannot be placed as a whole into a vacuum bag.  
-- **Drawback:** The only viable vacuum method is sealing the edges of the bag around the acrylic surface, which is less flexible than a solid one-piece base.  
+## Data to Record / Results
+- Wedge heights and resulting angles
+- Notes on surface gaps or leaks during lamination
 
-## Adaptation for Bifins
-- Use the same base principle: flat section + small angled section for the footpockets.  
-- Fewer acrylic sheets are needed since bifin blades are narrower.  
-- For bifins around **20–22 cm wide per blade**, two A3 sheets side by side are often enough for the flat section.
+## Tips, Trade-offs, or Limitations
+- **Advantage:** This version does not require a heavy wooden support structure, making it much easier and faster to put together.
+- **Advantage:** Modular design — acrylic sheets and wedges can be stored flat and reused for different versions.
+- **Drawback:** The base cannot be placed as a whole into a vacuum bag.
+- **Drawback:** The only viable vacuum method is sealing the edges of the bag around the acrylic surface, which is less flexible than a solid one-piece base.
+- **Adaptation for bifins:** Use fewer sheets and wedges sized to the narrower blades (two A3 sheets often suffice for each flat section).
