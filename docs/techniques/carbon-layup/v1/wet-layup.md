@@ -11,7 +11,14 @@ waiting_time: 12
 
 Baseline recipe with 0/90 twill and simple taper.
 
-## Bill of Materials (BOM)
+## Goal
+Produce a basic carbon blade using a manual wet layup.
+
+## Specifications / Dimensions
+- Uses 0/90 3K twill carbon cloth
+- Geometry and taper follow the chosen cutting template
+
+## Materials / Bill of Materials
 
 ### From Easy Composites:
 1. **Laminating Starting Kit**:
@@ -35,9 +42,18 @@ Baseline recipe with 0/90 twill and simple taper.
 ### Additional Tool Required:
 - **Digital Scale**: Accurate mixing of resin and hardener.
 
+## Tools Required
+- Nitrile gloves
+- Mixing pots and sticks
+- Laminating brushes
+- Plastic finned roller (75 mm)
+- Scissors for cutting fabric
+- Digital scale
+- Optional: vacuum storage bags and hand pump
+
 ---
 
-## Instructions
+## Instructions (step-by-step)
 
 ### **0. Safety First**
 - Wear **nitrile gloves** and work in a **well-ventilated area** to avoid exposure to harmful fumes.
@@ -88,4 +104,13 @@ Baseline recipe with 0/90 twill and simple taper.
 ### **6. Clean-Up**
 1. Clean all reusable tools (e.g., brushes) with **acetone** immediately after use.
 2. Discard **used gloves, cups, and mixing sticks** responsibly.
+
+## Data to Record / Results
+- Resin and hardener weights mixed
+- Total laminate weight after cure
+- Observations on air bubbles or dry spots
+
+## Tips, Trade-offs, or Limitations
+- Manual layup can trap more resin compared to vacuum infusion.
+- Work time is limited once resin is mixed; prepare all materials in advance.
 
