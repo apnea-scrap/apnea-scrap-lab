@@ -1,4 +1,12 @@
-# Flex test rig v1: weight belt test
+---
+title: Flex test rig v1 — weight belt test
+version: v1
+status: active
+estimated_cost: 10
+time_to_implement: 1
+waiting_time: 0
+---
+# Flex test rig v1 — weight belt test
 
 **Goal**
 Measure how much load makes the **tip vertical (90°)** and where the blade bends (root, mid, tip).
