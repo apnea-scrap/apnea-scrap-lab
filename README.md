@@ -107,6 +107,7 @@ Macros live in `main.py`.
 
 - `{{ yt("VIDEO_ID", "Title") }}` embeds a responsive privacy friendly YouTube iframe
 - `{{ versions_table() }}` builds a version comparison table for the current folder based on front matter metadata
+- `{{ status_banner() }}` shows a coloured banner with the current page status
 
 Restart `mkdocs serve` if you modify `main.py` to reload macros.
 

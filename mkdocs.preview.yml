@@ -11,4 +11,5 @@ theme:
 extra_javascript:
   - js/preview-banner.js
 extra_css:
+  - css/status-banner.css
   - css/preview-banner.css

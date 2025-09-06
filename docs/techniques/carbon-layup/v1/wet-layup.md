@@ -7,6 +7,7 @@ time_to_implement: 3
 waiting_time: 12
 ---
 # Carbon layup v1 — wet layup
+{{ status_banner() }}
 
 Baseline recipe with 0/90 twill and simple taper.
 

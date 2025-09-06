@@ -6,4 +6,5 @@ site_url: !ENV [MKDOCS_SITE_URL, 'http://127.0.0.1:8000/local/something']
 extra_javascript:
   - js/local-banner.js
 extra_css:
+  - css/status-banner.css
   - css/local-banner.css

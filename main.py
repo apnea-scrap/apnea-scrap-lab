@@ -57,3 +57,13 @@ def define_env(env):
         for link, status, cost, impl, wait in rows:
             lines.append(f"| {link} | {status} | {cost} | {impl} | {wait} |")
         return "\n".join(lines)
+
+    @env.macro
+    def status_banner(status: str | None = None) -> str:
+        meta = read_meta(Path(env.page.file.abs_src_path))
+        status = status or meta.get("status")
+        if not status:
+            return ""
+        status_class = status.lower().replace(" ", "-")
+        return f'<div class="status-banner status-{status_class}">{status.title()}</div>'
+

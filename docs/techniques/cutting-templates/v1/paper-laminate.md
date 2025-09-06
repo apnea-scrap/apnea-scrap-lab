@@ -7,6 +7,7 @@ time_to_implement: 3
 waiting_time: 0
 ---
 # Cutting template v1 — paper laminate
+{{ status_banner() }}
 
 This technique shows how to create a cutting template for fins using laminated paper.
 
