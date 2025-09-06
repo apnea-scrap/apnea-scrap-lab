@@ -7,9 +7,9 @@ DIY freediving gear knowledge base. Techniques, versions, and test procedures fo
 ## Features
 
 - Clean documentation site with tabs for Projects and Techniques
-- Versioned techniques with labels like use_case and maturity
-- Pool vs Max use cases captured per version
-- Macros for reusable tables and YouTube embeds
+- Versioned techniques with standard metadata (status, cost £, implementation time h, waiting time h)
+- Comparison tables generated automatically from page metadata
+- Macro for YouTube embeds
 - GitHub Actions that build and publish automatically on every push to main
 
 ---
@@ -83,20 +83,15 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
    ---
    title: Carbon layup v2 - max taper
    version: v2
-   use_case: max
-   status: active
-   maturity: beta
-   cost_level: medium
-   tooling_level: medium
-   time_level: medium
-   date: 2025-08-13
-   ---
-   ```
-3. Update the comparison table in `docs/techniques/carbon-layup/index.md` to include the new version.
+    status: active
+    maturity: beta
+    estimated_cost: 20
+    time_to_implement: 3
+    waiting_time: 12
+    ---
+    ```
+3. The comparison table on the technique index updates automatically from this metadata.
 4. Commit and push. The site will rebuild automatically.
-
-### Pool vs Max labeling
-Use the `use_case:` label in front matter and reflect it in the technique index comparison table.
 
 ### Embed a YouTube video
 Use the `yt` macro defined in `main.py`.
@@ -111,6 +106,7 @@ Use the `yt` macro defined in `main.py`.
 Macros live in `main.py`.
 
 - `{{ yt("VIDEO_ID", "Title") }}` embeds a responsive privacy friendly YouTube iframe
+- `{{ versions_table() }}` builds a version comparison table for the current folder based on front matter metadata
 
 Restart `mkdocs serve` if you modify `main.py` to reload macros.
 
