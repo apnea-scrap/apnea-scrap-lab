@@ -1,7 +1,7 @@
 ---
 title: Laminating base v2 — acrylic with wedge supports
 version: v2
-status: active
+status: research
 estimated_cost: 10
 time_to_implement: 1
 waiting_time: 0

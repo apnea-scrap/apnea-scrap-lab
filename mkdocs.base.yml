@@ -57,10 +57,10 @@ nav:
           - V1 - Paper Laminate: techniques/cutting-templates/v1/paper-laminate.md
       - Flex Test Rig:
           - Flex Test Rig Versions: techniques/flex-test-rig/index.md
-          - V1 - Weight Belt Test: techniques/flex-test-rig/v1-weight-belt-test.md
+          - V1 - Weight Belt Test: techniques/flex-test-rig/v1/weight-belt-test.md
       - Glue Fin Rails:
           - Glue Fin Rails Versions: techniques/glue-fin-rails/index.md
-          - V1 - Polyurethane Adhesive: techniques/glue-fin-rails/v1.md
+          - V1 - Polyurethane Adhesive: techniques/glue-fin-rails/v1/two-part-glue.md
       - Laminating Base:
           - Laminating Base Versions: techniques/laminating-base/index.md
           - V1 - Wood Support: techniques/laminating-base/v1/wood-support.md
@@ -68,9 +68,13 @@ nav:
       - Laminating Carbon:
           - Laminating Carbon Versions: techniques/laminating-carbon/index.md
           - V1 - Wet Layup: techniques/laminating-carbon/v1/wet-layup.md
+      - Vacuum Bagging:
+          - Vacuum Bagging Versions: techniques/vacuum-bagging/index.md
+          - V1 - Enclosed Bagging: techniques/vacuum-bagging/v1/enclosed-bagging.md
+          - V1 - Edge-Sealed Bagging: techniques/vacuum-bagging/v2/edge-sealed-bagging.md
       - Vacuum Gauge:
           - Vacuum Gauge Versions: techniques/vacuum-gauge/index.md
-          - V1 - Syringe Gauge: techniques/vacuum-gauge/v1-syringe-gauge.md
+          - V1 - Syringe Gauge: techniques/vacuum-gauge/v1/syringe-gauge.md
   - Blog: blog/index.md
   - Contact: contact.md
 

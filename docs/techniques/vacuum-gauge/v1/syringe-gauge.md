@@ -1,7 +1,7 @@
 ---
 title: Vacuum gauge v1 — syringe gauge
 version: v1
-status: active
+status: research
 maturity: stable
 estimated_cost: 10
 time_to_implement: 1

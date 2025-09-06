@@ -1,7 +1,7 @@
 ---
 title: Flex test rig v1 — weight belt test
 version: v1
-status: active
+status: research
 estimated_cost: 10
 time_to_implement: 1
 waiting_time: 0

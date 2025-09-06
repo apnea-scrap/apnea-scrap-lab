@@ -1,7 +1,7 @@
 ---
 title: Glue fin rails v1 — polyurethane adhesive
 version: v1
-status: active
+status: stub
 maturity: stable
 estimated_cost: 10
 time_to_implement: 1

@@ -34,8 +34,8 @@ Produce a durable template that matches the foot pocket outline.
 3. **Trace an approximate contour**
    - Look at the foot pocket and trace an approximate contour (precision comes later).
 
-|          |          | ![Paper Template](sf_paper_template.jpeg) |          |          |
-|----------|----------|-------------------------------------------|----------|----------|
+|          | ![Paper Template](sf_paper_template.jpeg) |          |
+|----------|-------------------------------------------|----------|
 
 4. **Cut the Template**
    - Carefully cut along the traced outline using scissors.
