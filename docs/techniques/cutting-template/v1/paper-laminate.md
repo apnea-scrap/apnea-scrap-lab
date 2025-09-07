@@ -25,28 +25,26 @@ Produce a durable template that matches the foot pocket outline.
 - Scissors or precision cutting tool
 - Pen or pencil for tracing
 
+## Reference Images
+
+| ![Paper Template](sf_paper_template.jpeg) | ![Cutting Template 1](sf_cutting_template_01.jpeg) | ![Cutting Template 2](sf_cutting_template_02.jpeg) |
+|-------------------------------------------|----------------------------------------------------|----------------------------------------------------
+| Paper Template Traced                     | Cutting Template Back                              | Cutting Template Front                                 
+
 ## Instructions (step-by-step)
 1. **Print the Template**
-   - Print the provided A4 graph paper: [Download the Graph Paper](./graph_paper.pdf)
+     - Print the provided A4 graph paper: [Download the Graph Paper](./graph_paper.pdf)
 2. **Laminate the Paper**
-   - Apply lamination film or clear adhesive sheets to both sides for durability.
-   - Smooth the film to avoid air bubbles and ensure it adheres properly.
+     - Apply lamination film or clear adhesive sheets to both sides for durability.
+     - Smooth the film to avoid air bubbles and ensure it adheres properly.
 3. **Trace an approximate contour**
-   - Look at the foot pocket and trace an approximate contour (precision comes later).
-
-|          | ![Paper Template](sf_paper_template.jpeg) |          |
-|----------|-------------------------------------------|----------|
-
+     - Look at the foot pocket and trace an approximate contour (precision comes later).
 4. **Cut the Template**
-   - Carefully cut along the traced outline using scissors.
-   - Make sure the edges are smooth and well-defined.
+     - Carefully cut along the traced outline using scissors.
+     - Make sure the edges are smooth and well-defined.
 5. **Verify the Template**
-   - Try to fit the template into a foot pocket.
-   - Adjust any rough edges to ensure accuracy.
-
-| ![Cutting Template 1](sf_cutting_template_01.jpeg) | ![Cutting Template 2](sf_cutting_template_02.jpeg) |
-|----------------------------------------------------|----------------------------------------------------|
-| Cutting Template 1                                 | Cutting Template 2                                 |
+     - Try to fit the template into a foot pocket.
+     - Adjust any rough edges to ensure accuracy.
 
 ## Limitation
 - Laminated paper is not stiff enough and might warp when pushed into the foot pocket

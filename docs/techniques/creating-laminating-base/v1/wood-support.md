@@ -44,6 +44,12 @@ Create a rigid angled surface to support fin blades during lamination.
 - **Assembly Tools:** Screwdriver and screws for securing brackets.
 - **Measurement and Finishing:** Measuring tools (square, protractor, tape measure). Sandpaper for smoothing wood edges.
 
+## Reference Images 
+
+| ![Support Structure](support_all.jpeg) | ![Brackets and Side](support_brakets.jpeg) |
+|----------------------------------------|--------------------------------------------|
+| Full Support Structure                 | Brackets and Side Supports                 |
+
 ## Instructions (step-by-step)
 
 1. **Base Construction**
@@ -56,10 +62,6 @@ Create a rigid angled surface to support fin blades during lamination.
       tape**.
     - Ensure the surface is smooth and taut to properly press against the blade.
 
-| ![Support Structure](support_all.jpeg) | ![Brackets and Side](support_brakets.jpeg) |
-|----------------------------------------|--------------------------------------------|
-| Full Support Structure                 | Brackets and Side Supports                 |
-
 ## Data to Record / Results
 - Notes on surface flatness after cure
 - Any deformation or movement during lamination
@@ -68,5 +70,4 @@ Create a rigid angled surface to support fin blades during lamination.
 
 - **Does not scale well**: In order to create bigger fins, the wooden structure needs to be re-worked.
 - **Vacuum Bag Fit**: Ensure the base with acrylic layers fits entirely into the vacuum bag.
-- **Air Trapping Issue**: A gap between the angled section and wooden supports might trap **air during bagging**,
-  bending the acrylic.
+- **Air Trapping Issue**: The gap between the angled section and wooden supports bends the acrylic during vacuum bagging

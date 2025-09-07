@@ -26,6 +26,11 @@ To create a simple, low-cost vacuum environment for small parts using off-the-sh
 - Metal file (for smoothing edges of the base or parts)
 - Scissors (for cutting breather cloth)
 
+## Reference Images
+
+|          | ![Full Bagging](full_bagging.jpeg) |          |
+|----------|------------------------------------|----------|
+
 ## Instructions (step-by-step)
 1. Smooth the edges of the base or part using the file to prevent puncturing the vacuum bag.
 2. Place breather cloth around the part to allow airflow inside the bag.
@@ -35,9 +40,6 @@ To create a simple, low-cost vacuum environment for small parts using off-the-sh
 6. Use the manual pump to create a vacuum. Stop when the base begins to bend slightly, ensuring enough pressure without risking deformation.
 7. Check the bag after 10 minutes. If the vacuum is lost, the bag may be perforated. Replace the bag and restart the process.
 
-
-|          | ![Full Bagging](full_bagging.jpeg) |          |
-|----------|------------------------------------|----------|
 
 
 ## Limitations

@@ -30,28 +30,33 @@ Monitor vacuum level inside a bag using plunger movement.
 
 ## Instructions (step-by-step)
 1. **Modify plunger**
-   - Remove plunger from syringe.
-   - Cut off the **plastic rod**, leaving only the **rubber seal**.
+
+       - Remove plunger from syringe.
+       - Cut off the **plastic rod**, leaving only the **rubber seal**.
 
 2. **Prepare barrel**
-   - Clean inside of syringe.
-   - Lightly rub **candle wax** on the rubber seal for low friction.
+
+       - Clean inside of syringe.
+       - Lightly rub **candle wax** on the rubber seal for low friction.
 
 3. **Seal the syringe**
-   - Insert rubber seal back into barrel at the **start volume**:
-     - 5 mL mark for a 10 mL syringe
-     - 10 mL mark for a 20 mL syringe
-   - Cap the tip airtight with a Luer-lock or push-on tip cap.
+
+       - Insert rubber seal back into barrel at the **start volume**:
+           - 5 mL mark for a 10 mL syringe
+           - 10 mL mark for a 20 mL syringe
+       - Cap the tip airtight with a Luer-lock or push-on tip cap.
 
 4. **Mark the scale**
-   - Draw an **ambient mark** at the initial plunger position.
-   - Mark your **target 80% atmospheric (~81 kPa abs)**:
-     - 10 mL syringe → +1.25 mL (plunger moves ~7.6 mm on standard barrel, ~20 mm on thin insulin barrel)
-     - 20 mL syringe → +2.5 mL (plunger moves ~8.9 mm)
+
+       - Draw an **ambient mark** at the initial plunger position.
+       - Mark your **target 80% atmospheric (~81 kPa abs)**:
+           - 10 mL syringe → +1.25 mL (plunger moves ~7.6 mm on standard barrel, ~20 mm on thin insulin barrel)
+           - 20 mL syringe → +2.5 mL (plunger moves ~8.9 mm)
 
 5. **Wrap and place**
-   - Wrap syringe loosely in breather fabric so resin cannot touch it.
-   - Place it on top of breather stack, markings facing upward for reading through film.
+
+       - Wrap syringe loosely in breather fabric so resin cannot touch it.
+       - Place it on top of breather stack, markings facing upward for reading through film.
 
 ---
 

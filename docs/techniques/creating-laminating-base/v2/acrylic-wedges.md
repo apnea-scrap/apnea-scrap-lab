@@ -41,22 +41,22 @@ Provide a modular surface with adjustable wedges to support blades during lamina
 
 ## Instructions (step-by-step)
 1. **Prepare the surface**  
-   - Place a plastic sheet on a flat, rigid table or bench.  
-   - Ensure there is no dust or debris under the plastic.  
+     - Place a plastic sheet on a flat, rigid table or bench.  
+     - Ensure there is no dust or debris under the plastic.  
 
 2. **Arrange acrylic sheets**  
-   - Flat blade section: 4 A3 sheets in a 2 × 2 layout (~59 × 84 cm).  
-   - Footpocket section: 2 A3 sheets side by side (~29.7 × 84 cm).  
+     - Flat blade section: 4 A3 sheets in a 2 × 2 layout (~59 × 84 cm).  
+     - Footpocket section: 2 A3 sheets side by side (~29.7 × 84 cm).  
 
 3. **Join sheets**  
-   - Clean edges with isopropyl alcohol.  
-   - Bridge each joint with electrical tape, overlapping slightly (1–2 mm).  
-   - Press tape firmly to remove trapped air and keep surface flush.  
+     - Clean edges with isopropyl alcohol.  
+     - Bridge each joint with electrical tape, overlapping slightly (1–2 mm).  
+     - Press tape firmly to remove trapped air and keep surface flush.  
 
 4. **Add wedge supports**  
-   - Place plastic stackable wedges under the footpocket section.  
-   - Adjust wedge height to set the required angle (typically 20–30° for a monofin).
-   - Ensure wedges are stable and evenly distributed.  
+     - Place plastic stackable wedges under the footpocket section.  
+     - Adjust wedge height to set the required angle (typically 20–30° for a monofin).
+     - Ensure wedges are stable and evenly distributed.  
 
 ## Data to Record / Results
 - Wedge heights and resulting angles
