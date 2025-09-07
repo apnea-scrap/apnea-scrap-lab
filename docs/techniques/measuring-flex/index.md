@@ -1,4 +1,4 @@
-# Flex test rig — compare versions
+# Measuring Flex — compare versions
 
 Simple setups for measuring how blades bend under load.
 

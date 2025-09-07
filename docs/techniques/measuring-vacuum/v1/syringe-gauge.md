@@ -1,5 +1,5 @@
 ---
-title: Vacuum gauge v1 — syringe gauge
+title: Measuring Vacuum v1 — syringe gauge
 version: v1
 status: research
 maturity: stable
@@ -7,7 +7,7 @@ estimated_cost: 10
 time_to_implement: 1
 waiting_time: 0
 ---
-# Vacuum gauge v1 — syringe gauge
+# Measuring Vacuum v1 — syringe gauge
 {{ status_banner() }}
 
 A simple gauge to monitor mild vacuum (~81 kPa absolute, −20 kPa gauge) directly **inside** a vacuum bag.

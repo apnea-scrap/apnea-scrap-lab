@@ -1,4 +1,4 @@
-# Glue fin rails — compare versions
+# Gluing fin rails — compare versions
 
 Methods for attaching rubber rails to fin edges.
 

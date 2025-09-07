@@ -1,12 +1,12 @@
 ---
-title: Flex test rig v1 — weight belt test
+title: Measuring Flex v1 — weight belt test
 version: v1
 status: research
 estimated_cost: 10
 time_to_implement: 1
 waiting_time: 0
 ---
-# Flex Test Rig V1 — Weight Belt Test
+# Measuring flex V1 — Weight Belt Test
 {{ status_banner() }}
 
 ## Goal

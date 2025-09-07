@@ -1,5 +1,5 @@
 ---
-title: Glue fin rails v1 — polyurethane adhesive
+title: Gluing fin rails v1 — polyurethane adhesive
 version: v1
 status: stub
 maturity: stable
@@ -7,7 +7,7 @@ estimated_cost: 10
 time_to_implement: 1
 waiting_time: 12
 ---
-# Glue fin rails v1 — polyurethane adhesive
+# Gluing fin rails v1 — polyurethane adhesive
 {{ status_banner() }}
 Rubber rails, light clamp pressure, full cure overnight.
 

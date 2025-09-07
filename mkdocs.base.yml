@@ -52,32 +52,35 @@ nav:
           - V2 - Molded Sleeve: projects/neck-weight/v2-molded-sleeve.md
       - (Future Gear): projects/future-gear/index.md
   - Techniques:
+      - Creating Laminating Base:
+          - Creating Laminating Base Versions: techniques/creating-laminating-base/index.md
+          - V1 - Wood Support: techniques/creating-laminating-base/v1/wood-support.md
+          - V2 - Plastic Wedges: techniques/creating-laminating-base/v2/acrylic-wedges.md
       - Cutting Cured Carbon:
           - Cutting Cured Carbon Versions: techniques/cutting-cured-carbon/index.md
           - V1 - Junior Hacksaw: techniques/cutting-cured-carbon/v1/junior-hacksaw.md
-      - Cutting Templates:
-          - Cutting Template Versions: techniques/cutting-templates/index.md
-          - V1 - Paper Laminate: techniques/cutting-templates/v1/paper-laminate.md
-      - Flex Test Rig:
-          - Flex Test Rig Versions: techniques/flex-test-rig/index.md
-          - V1 - Weight Belt Test: techniques/flex-test-rig/v1/weight-belt-test.md
-      - Glue Fin Rails:
-          - Glue Fin Rails Versions: techniques/glue-fin-rails/index.md
-          - V1 - Polyurethane Adhesive: techniques/glue-fin-rails/v1/two-part-glue.md
-      - Laminating Base:
-          - Laminating Base Versions: techniques/laminating-base/index.md
-          - V1 - Wood Support: techniques/laminating-base/v1/wood-support.md
-          - V2 - Plastic Wedges: techniques/laminating-base/v2/acrylic-wedges.md
+      - Cutting Template:
+          - Cutting Template Versions: techniques/cutting-template/index.md
+          - V1 - Paper Laminate: techniques/cutting-template/v1/paper-laminate.md
+      - Finishing Carbon:
+          - Finishing Carbon Versions: techniques/finishing-carbon/index.md
+          - V1 - Epoxy and Clear Coat: techniques/finishing-carbon/v1/epoxy-and-clear-coat.md
+      - Gluing Fin Rails:
+          - Gluing Fin Rails Versions: techniques/gluing-fin-rails/index.md
+          - V1 - Polyurethane Adhesive: techniques/gluing-fin-rails/v1/two-part-glue.md
       - Laminating Carbon:
           - Laminating Carbon Versions: techniques/laminating-carbon/index.md
           - V1 - Wet Layup: techniques/laminating-carbon/v1/wet-layup.md
-      - Vacuum Bagging:
-          - Vacuum Bagging Versions: techniques/vacuum-bagging/index.md
-          - V1 - Enclosed Bagging: techniques/vacuum-bagging/v1/enclosed-bagging.md
-          - V1 - Edge-Sealed Bagging: techniques/vacuum-bagging/v2/edge-sealed-bagging.md
-      - Vacuum Gauge:
-          - Vacuum Gauge Versions: techniques/vacuum-gauge/index.md
-          - V1 - Syringe Gauge: techniques/vacuum-gauge/v1/syringe-gauge.md
+      - Measuring Flex:
+          - Measuring Flex Versions: techniques/measuring-flex/index.md
+          - V1 - Weight Belt Test: techniques/measuring-flex/v1/weight-belt-test.md
+      - Measuring Vacuum:
+          - Measuring Vacuum Versions: techniques/measuring-vacuum/index.md
+          - V1 - Syringe Gauge: techniques/measuring-vacuum/v1/syringe-gauge.md
+      - Vacuum Bagging Carbon:
+          - Vacuum Bagging Carbon Versions: techniques/vacuum-bagging-carbon/index.md
+          - V1 - Enclosed Bagging: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
+          - V1 - Edge-Sealed Bagging: techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md
   - Blog: blog/index.md
   - Contact: contact.md
 

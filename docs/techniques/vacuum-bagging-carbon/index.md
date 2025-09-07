@@ -1,4 +1,4 @@
-# Vacuum Bagging — compare versions
+# Vacuum Bagging Carbon — compare versions
 
 Techniques for vacuum bagging carbon layups.
 
