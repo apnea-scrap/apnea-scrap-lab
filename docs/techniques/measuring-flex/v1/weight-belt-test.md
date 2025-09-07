@@ -1,12 +1,10 @@
 ---
-title: Measuring Flex v1 — weight belt test
-version: v1
 status: research
 estimated_cost: 10
 time_to_implement: 1
 waiting_time: 0
 ---
-# Measuring flex V1 — Weight Belt Test
+# {{ parent_child_title() }}
 {{ status_banner() }}
 
 ## Goal

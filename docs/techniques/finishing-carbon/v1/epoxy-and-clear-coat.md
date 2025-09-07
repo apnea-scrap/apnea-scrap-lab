@@ -1,13 +1,11 @@
 ---
-title: Finishing Carbon v1 — Epoxy and ClearCoat
-version: v1
 status: active
 maturity: stable
 estimated_cost: 10
 time_to_implement: 1
 waiting_time: 0
 ---
-# Finishing Carbon v1 — Epoxy and ClearCoat
+# {{ parent_child_title() }}
 {{ status_banner() }}
 
 ## Goal

@@ -1,12 +1,11 @@
 ---
-title: Vacuum Bagging v1 — Enclosed Bagging
 version: v1
 status: active
 estimated_cost: 20
 time_to_implement: 3
 waiting_time: 12
 ---
-# Vacuum Bagging v1 — Enclosed Bagging
+# {{ parent_child_title() }}
 {{ status_banner() }}
 
 ## Goal

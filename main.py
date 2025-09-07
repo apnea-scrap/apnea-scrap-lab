@@ -67,3 +67,9 @@ def define_env(env):
         status_class = status.lower().replace(" ", "-")
         return f'<div class="status-banner status-{status_class}">{status.title()}</div>'
 
+    @env.macro
+    def parent_child_title():
+        page = env.variables.get("page")
+        parent = getattr(page, "parent", None)
+        parent_title = getattr(parent, "title", "") if parent else ""
+        return f"{parent_title} - {page.title}" if parent_title else page.title

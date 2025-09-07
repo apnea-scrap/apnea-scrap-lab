@@ -1,13 +1,10 @@
 ---
-title: Cutting Cured Carbon v1 — Junior Hacksaw
-version: v1
 status: active
-maturity: stable
 estimated_cost: 10
 time_to_implement: 1
 waiting_time: 0
 ---
-# Cutting Cured Carbon v1 — Junior Hacksaw
+# {{ parent_child_title() }}
 {{ status_banner() }}
 
 ## Goal

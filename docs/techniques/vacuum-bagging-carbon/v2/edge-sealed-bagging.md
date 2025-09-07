@@ -1,12 +1,10 @@
 ---
-title: Vacuum Bagging v2 — Edge-Sealed Bagging
-version: v2
 status: research
 estimated_cost: 35
 time_to_implement: 5
 waiting_time: 12
 ---
-# Vacuum Bagging v2 — Edge-Sealed Bagging
+# {{ parent_child_title() }}
 {{ status_banner() }}
 
 ## Goal

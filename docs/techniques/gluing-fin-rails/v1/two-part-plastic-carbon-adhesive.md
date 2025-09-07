@@ -1,13 +1,10 @@
 ---
-title: Gluing Fin Rails v1 — Two Part Plastic-to-Carbon Adhesive
-version: v1
 status: active
-maturity: stable
 estimated_cost: 15
 time_to_implement: 1
 waiting_time: 12
 ---
-# Gluing Fin Rails v1 — Two Part Plastic-to-Carbon Adhesive
+# {{ parent_child_title() }}
 {{ status_banner() }}
 
 ## Goal
