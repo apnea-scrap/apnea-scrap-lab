@@ -6,7 +6,7 @@ authors:
 summary: Launching the blog to share progress on DIY freediving gear and testing.
 ---
 
-![ApneaScrap logo](cover.svg)
+![logo_med.png](logo_med.png)
 
 We're starting a blog to share progress on DIY freediving gear and testing. Stay tuned for updates.
 

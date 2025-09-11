@@ -3,31 +3,33 @@ title: "Research Notes: Foot Pockets for a Short Carbon Training Fin"
 date: 2025-08-30
 authors:
   - julian-g
-summary: Collecting references on foot pockets for a short carbon bifin, covering popular models, DIY blade fit, angle and rail considerations, and technical resources.
+summary: Collecting references on freediving foot pockets for a short carbon bifin — which models divers use, which ones fit DIY blades, how angle and rails affect performance, and where to find technical resources.
 ---
 
-I'm starting a little project: building a **short carbon bifin** for training. Before I even think about layering carbon, I need to figure out which **foot pockets** to use. This post is basically me collecting info and links in one place so I can make a decision later.
+I want to build a **short carbon bifin** for pool and training.  
+Before cutting any carbon, I need to choose the **foot pocket**. These notes collect what I’ve learned so far.
 
-The main problems I need to solve are:
-1. Which pockets people actually use and why
-2. Which ones fit DIY blades
-3. How much the angle and rails matter
-4. Where to find solid technical references
+The main questions:
+
+1. **Which pockets are most commonly used, and why?**
+2. **Which ones fit DIY blades without heavy mods?**
+3. **How much do blade angle and rails matter for short fins?**
+4. **Where can I find solid references?**
 
 <!-- more -->
 
-## Popular models
+## 1. Popular models
 
-- **C4** – lightweight pockets available in multiple stiffnesses
+- **C4** – lightweight, multiple stiffness options
 - **Pathos** – 33° angle, minimal rubber for direct power transfer
-- **CETMA S-WiNG** – ultralight design without side rails
-- **Leaderfins Classic** – includes integrated rails
-- **SEAC** – known for comfort
-- **Mares Razor** and **Omer Stingray** – traditional rubber pockets found on many entry-level fins
+- **CETMA S-WiNG** – ultralight, no side rails
+- **Leaderfins Classic** – integrated rails
+- **SEAC** – comfort-oriented
+- **Mares Razor / Omer Stingray** – widely available, classic rubber pockets
 
-## Blade compatibility
+## 2. DIY blade compatibility
 
-These pockets accept a wide range of blades:
+These freediving foot pockets are known to accept third-party or home-made blades:
 
 - Cetma Composites S-WiNG
 - Mares Razor
@@ -37,9 +39,22 @@ These pockets accept a wide range of blades:
 - OMER Stingray
 - UltraFins
 
-## Resources
+## 3. Angle considerations
 
-- C4 guide to pockets and blades [PDF](https://www.spearfishing.de/fotos/equipment/c4/c4_2023.pdf)
-- Leaderfins footpockets: <https://www.freedivershop.com/leaderfins-footpockets>
-- UltraFins footpockets: <https://www.freedivershop.com/ultrafins-footpockets>
+- **Blade angle** usually between 20°–33°.
+- Larger angles favor surface swimming and gliding, but reduce blade snap.
+- Smaller angles (or flat pockets) suit continuous kicking, often better for short fins.
 
+## 4. Rail considerations
+
+- **Rails** stiffen the blade and channel water.
+- Long, thick rails can dampen flex and reduce reactivity — especially noticeable on shorter blades.
+- **Finding: small rails at the foot pocket let the carbon blade flex and generate thrust more effectively.**
+
+## 5. References
+
+- [C4 guide to pockets and blades (PDF)](https://www.spearfishing.de/fotos/equipment/c4/c4_2023.pdf)
+- [Leaderfins foot pockets](https://www.freedivershop.com/leaderfins-footpockets)
+- [UltraFins foot pockets](https://www.freedivershop.com/ultrafins-footpockets)
+
+---

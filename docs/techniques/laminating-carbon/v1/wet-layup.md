@@ -51,7 +51,12 @@ Produce a basic carbon blade using a manual wet layup.
 - Digital scale
 - Optional: vacuum storage bags and hand pump
 
----
+## Reference Images
+
+| ![Wet Carbon Laminate](sf_laminate_wet.jpeg) | ![Cured Carbon Laminate  ](sf_laminate_cured.jpeg) |
+|-------------------------------------------|--------------------------------------------------|
+| Wet Carbon Laminate                       | Cured Carbon Laminate                       |
+
 
 ## Instructions (step-by-step)
 
