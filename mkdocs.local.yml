@@ -7,4 +7,5 @@ extra_javascript:
   - js/local-banner.js
 extra_css:
   - css/status-banner.css
+  - css/praveen-hero.css
   - css/local-banner.css

@@ -38,6 +38,7 @@ extra:
 
 extra_css:
   - css/status-banner.css
+  - css/praveen-hero.css
 
 nav:
   - Home: index.md
