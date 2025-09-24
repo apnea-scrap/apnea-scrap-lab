@@ -15,6 +15,8 @@ The short version: two variables define how a blade feels in the water.
 - **Load (tip stiffness in kg)** — how much weight it takes to bend the blade to **90°**.
 - **Bending profile** — where the blade gives way once it reaches that load.
 
+The [Fin Flex Comparison Chart](https://fishingbigisland.wordpress.com/2017/12/03/fin-flex-comparison-chart/) and its [stiffness plot](https://fishingbigisland.wordpress.com/wp-content/uploads/2017/12/finstiffness2.png) show fin stiffness spanning roughly **15–40 units of force** across the models compared.
+
 Ninety degrees is the useful limit. After that the blade just folds over, stalls, and stops storing energy. Most long fins (XT Diving, C4, Leaderfins, etc.) fall in the **80–90 cm** length range, so that’s the baseline for comparing these values.
 
 The nuance: fins that bend closer to the footpocket always feel softer—even if the tip load matches a “harder” blade. When the flex starts near your feet the blade unloads early, the water sheds faster, and the kick feels lighter. If the bend moves toward the tip, it holds shape longer and feels stiffer.
