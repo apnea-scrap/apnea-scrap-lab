@@ -108,3 +108,6 @@ plugins:
   - macros
   - blog:
       blog_dir: blog
+
+hooks:
+  - shared/hooks/status_banner_assets.py
