@@ -1960,7 +1960,7 @@
         <li class="md-nav__item">
   <a href="#youngs-modulus" class="md-nav__link">
     <span class="md-ellipsis">
-      Young's modulus
+      Young’s modulus
     </span>
   </a>
   
@@ -1969,7 +1969,7 @@
         <li class="md-nav__item">
   <a href="#moment-of-inertia-i" class="md-nav__link">
     <span class="md-ellipsis">
-      Moment of inertia $I$
+      Moment of inertia \(I\)
     </span>
   </a>
   
@@ -2031,38 +2031,44 @@
 <!-- more -->
 
 <hr />
-<h3 id="youngs-modulus">Young's modulus<a class="headerlink" href="#youngs-modulus" title="Permanent link">&para;</a></h3>
+<h3 id="youngs-modulus">Young’s modulus<a class="headerlink" href="#youngs-modulus" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Prepreg sheet (<a href="https://www.easycomposites.co.uk/high-strength-carbon-fibre-sheet">Easy Composites high-strength carbon fibre sheet</a>):</strong> ~32.4 GPa</li>
-<li><strong>Wet layup + vacuum bagging:</strong> 20–40 GPa, depending on resin content and fibre fraction</li>
-<li>More resin → lower $E$</li>
-<li>Better fibre alignment and compaction → higher $E$</li>
+<li><strong>Wet layup + vacuum bagging:</strong> 20–40 GPa, depending on resin content and fibre fraction<ul>
+<li>More resin → lower <span class="arithmatex">\(E\)</span></li>
+<li>Better fibre alignment and compaction → higher <span class="arithmatex">\(E\)</span></li>
+</ul>
+</li>
 </ul>
 <hr />
-<h3 id="moment-of-inertia-i">Moment of inertia $I$<a class="headerlink" href="#moment-of-inertia-i" title="Permanent link">&para;</a></h3>
+<h3 id="moment-of-inertia-i">Moment of inertia <span class="arithmatex">\(I\)</span><a class="headerlink" href="#moment-of-inertia-i" title="Permanent link">&para;</a></h3>
 <p>For a rectangular section:</p>
-<p>$$
-I = \frac{b h^3}{12}
-$$</p>
+<div class="arithmatex">\[
+I = \frac{b h^{3}}{12}
+\]</div>
 <ul>
-<li>Blade width: $b = 180\,\text{mm}$</li>
-<li>Thickness (3 layers @ 0.31 mm each): $h = 0.93\,\text{mm}$</li>
+<li>Blade width: <span class="arithmatex">\(b = 180\,\text{mm}\)</span></li>
+<li>Thickness (3 layers @ 0.31 mm each): <span class="arithmatex">\(h = 0.93\,\text{mm}\)</span></li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 I \approx 12.1\,\text{mm}^4
-$$</p>
-<p>⚠️ This assumes <strong>uniform thickness</strong> along the length. Real fins are tapered, so actual $I(x)$ varies with position.</p>
+\]</div>
+<p>⚠️ This assumes <strong>uniform thickness</strong> along the length. Real fins are tapered, so actual <span class="arithmatex">\(I(x)\)</span> varies with position.</p>
 <hr />
 <h3 id="cantilever-beam-calculator-inputs">Cantilever beam calculator inputs<a class="headerlink" href="#cantilever-beam-calculator-inputs" title="Permanent link">&para;</a></h3>
 <p>Using the <a href="https://calcresource.com/statics-cantilever-beam.html">online cantilever calculator</a>:</p>
 <ul>
-<li><strong>Structure</strong></li>
-<li>Length $L = 250\,\text{mm}$</li>
-<li>Elastic modulus $E = 32\,\text{GPa} = 32{,}000\,\text{N/mm}^2$</li>
-<li>Moment of inertia $I = 12\,\text{mm}^4$</li>
-<li><strong>Imposed loading</strong></li>
+<li><strong>Structure</strong><ul>
+<li>Length <span class="arithmatex">\(L = 250\,\text{mm}\)</span></li>
+<li>Elastic modulus <span class="arithmatex">\(E = 32\,\text{GPa} = 32{,}000\,\text{N/mm}^2\)</span></li>
+<li>Moment of inertia <span class="arithmatex">\(I = 12\,\text{mm}^4\)</span></li>
+</ul>
+</li>
+<li><strong>Imposed loading</strong><ul>
 <li>Point load at tip</li>
-<li>$P = 2\,\text{kg}$</li>
+<li><span class="arithmatex">\(P = 2\,\text{kg}\)</span></li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h3>
