@@ -10,24 +10,26 @@
       
       
       
-        <link rel="canonical" href="https://apneascrap.com/blog/archive/2024/">
+        <link rel="canonical" href="https://apneascrap.com/blog/2025/10/05/research-notes-playing-with-cantilever-beam-calculator-for-fin-blades/">
+      
+      
+        <link rel="prev" href="../../../09/28/research-notes-blade-stiffness-and-profiles/">
       
       
       
-      
-      <link rel="icon" href="../../../assets/favicon.png">
+      <link rel="icon" href="../../../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>2024 - ApneaScrap Lab</title>
+        <title>Research Notes: Playing With Cantilever Beam Calculator for Fin Blades - ApneaScrap Lab</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/status-banner.css">
+      <link rel="stylesheet" href="../../../../../css/status-banner.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#youngs-modulus" class="md-skip">
           Skip to content
         </a>
       
@@ -88,9 +90,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="ApneaScrap Lab" class="md-header__button md-logo" aria-label="ApneaScrap Lab" data-md-component="logo">
+    <a href="../../../../.." title="ApneaScrap Lab" class="md-header__button md-logo" aria-label="ApneaScrap Lab" data-md-component="logo">
       
-  <img src="../../../assets/logo.svg" alt="logo">
+  <img src="../../../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              Research Notes: Playing With Cantilever Beam Calculator for Fin Blades
             
           </span>
         </div>
@@ -212,7 +214,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../../.." class="md-tabs__link">
         
   
   
@@ -240,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../projects/short-fins/" class="md-tabs__link">
+        <a href="../../../../../projects/short-fins/" class="md-tabs__link">
           
   
   
@@ -272,7 +274,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../techniques/choosing-bifin-footpockets/" class="md-tabs__link">
+        <a href="../../../../../techniques/choosing-bifin-footpockets/" class="md-tabs__link">
           
   
   
@@ -293,9 +295,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../../../../" class="md-tabs__link">
         
   
   
@@ -314,7 +318,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../contact/" class="md-tabs__link">
+      <a href="../../../../../contact/" class="md-tabs__link">
         
   
   
@@ -338,7 +342,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -351,9 +357,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="ApneaScrap Lab" class="md-nav__button md-logo" aria-label="ApneaScrap Lab" data-md-component="logo">
+    <a href="../../../../.." title="ApneaScrap Lab" class="md-nav__button md-logo" aria-label="ApneaScrap Lab" data-md-component="logo">
       
-  <img src="../../../assets/logo.svg" alt="logo">
+  <img src="../../../../../assets/logo.svg" alt="logo">
 
     </a>
     ApneaScrap Lab
@@ -380,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   
@@ -429,7 +435,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../projects/future-gear/" class="md-nav__link ">
+            <a href="../../../../../projects/future-gear/" class="md-nav__link ">
               
   
   
@@ -483,7 +489,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../projects/short-fins/" class="md-nav__link ">
+            <a href="../../../../../projects/short-fins/" class="md-nav__link ">
               
   
   
@@ -542,7 +548,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../projects/monofin/" class="md-nav__link ">
+            <a href="../../../../../projects/monofin/" class="md-nav__link ">
               
   
   
@@ -605,7 +611,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../projects/neck-weight/" class="md-nav__link ">
+            <a href="../../../../../projects/neck-weight/" class="md-nav__link ">
               
   
   
@@ -640,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/neck-weight/v1-shot-inner-tube/" class="md-nav__link">
+      <a href="../../../../../projects/neck-weight/v1-shot-inner-tube/" class="md-nav__link">
         
   
   
@@ -670,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/neck-weight/v2-molded-sleeve/" class="md-nav__link">
+      <a href="../../../../../projects/neck-weight/v2-molded-sleeve/" class="md-nav__link">
         
   
   
@@ -803,7 +809,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../techniques/choosing-bifin-footpockets/" class="md-nav__link ">
+            <a href="../../../../../techniques/choosing-bifin-footpockets/" class="md-nav__link ">
               
   
   
@@ -838,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../techniques/choosing-bifin-footpockets/v1/short-rails/" class="md-nav__link">
+      <a href="../../../../../techniques/choosing-bifin-footpockets/v1/short-rails/" class="md-nav__link">
         
   
   
@@ -901,7 +907,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../techniques/creating-laminating-base/" class="md-nav__link ">
+            <a href="../../../../../techniques/creating-laminating-base/" class="md-nav__link ">
               
   
   
@@ -936,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../techniques/creating-laminating-base/v1/wood-support/" class="md-nav__link">
+      <a href="../../../../../techniques/creating-laminating-base/v1/wood-support/" class="md-nav__link">
         
   
   
@@ -966,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../techniques/creating-laminating-base/v2/acrylic-wedges/" class="md-nav__link">
+      <a href="../../../../../techniques/creating-laminating-base/v2/acrylic-wedges/" class="md-nav__link">
         
   
   
@@ -1027,7 +1033,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../techniques/cutting-cured-carbon/" class="md-nav__link ">
+            <a href="../../../../../techniques/cutting-cured-carbon/" class="md-nav__link ">
               
   
   
@@ -1062,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../techniques/cutting-cured-carbon/v1/junior-hacksaw/" class="md-nav__link">
+      <a href="../../../../../techniques/cutting-cured-carbon/v1/junior-hacksaw/" class="md-nav__link">
         
   
   
@@ -1123,7 +1129,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../techniques/cutting-template/" class="md-nav__link ">
+            <a href="../../../../../techniques/cutting-template/" class="md-nav__link ">
               
   
   
@@ -1158,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../techniques/cutting-template/v1/paper-laminate/" class="md-nav__link">
+      <a href="../../../../../techniques/cutting-template/v1/paper-laminate/" class="md-nav__link">
         
   
   
@@ -1219,7 +1225,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../techniques/finishing-carbon/" class="md-nav__link ">
+            <a href="../../../../../techniques/finishing-carbon/" class="md-nav__link ">
               
   
   
@@ -1254,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../techniques/finishing-carbon/v1/epoxy-and-clear-coat/" class="md-nav__link">
+      <a href="../../../../../techniques/finishing-carbon/v1/epoxy-and-clear-coat/" class="md-nav__link">
         
   
   
@@ -1315,7 +1321,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../techniques/gluing-fin-rails/" class="md-nav__link ">
+            <a href="../../../../../techniques/gluing-fin-rails/" class="md-nav__link ">
               
   
   
@@ -1350,7 +1356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../techniques/gluing-fin-rails/v1/two-part-plastic-carbon-adhesive/" class="md-nav__link">
+      <a href="../../../../../techniques/gluing-fin-rails/v1/two-part-plastic-carbon-adhesive/" class="md-nav__link">
         
   
   
@@ -1411,7 +1417,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../techniques/laminating-carbon/" class="md-nav__link ">
+            <a href="../../../../../techniques/laminating-carbon/" class="md-nav__link ">
               
   
   
@@ -1446,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../techniques/laminating-carbon/v1/wet-layup/" class="md-nav__link">
+      <a href="../../../../../techniques/laminating-carbon/v1/wet-layup/" class="md-nav__link">
         
   
   
@@ -1507,7 +1513,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../techniques/measuring-flex/" class="md-nav__link ">
+            <a href="../../../../../techniques/measuring-flex/" class="md-nav__link ">
               
   
   
@@ -1542,7 +1548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../techniques/measuring-flex/v1/weight-belt-test/" class="md-nav__link">
+      <a href="../../../../../techniques/measuring-flex/v1/weight-belt-test/" class="md-nav__link">
         
   
   
@@ -1603,7 +1609,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../techniques/measuring-vacuum/" class="md-nav__link ">
+            <a href="../../../../../techniques/measuring-vacuum/" class="md-nav__link ">
               
   
   
@@ -1638,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../techniques/measuring-vacuum/v1/syringe-gauge/" class="md-nav__link">
+      <a href="../../../../../techniques/measuring-vacuum/v1/syringe-gauge/" class="md-nav__link">
         
   
   
@@ -1701,7 +1707,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../techniques/vacuum-bagging-carbon/" class="md-nav__link ">
+            <a href="../../../../../techniques/vacuum-bagging-carbon/" class="md-nav__link ">
               
   
   
@@ -1736,7 +1742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../techniques/vacuum-bagging-carbon/v1/enclosed-bagging/" class="md-nav__link">
+      <a href="../../../../../techniques/vacuum-bagging-carbon/v1/enclosed-bagging/" class="md-nav__link">
         
   
   
@@ -1766,7 +1772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging/" class="md-nav__link">
+      <a href="../../../../../techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging/" class="md-nav__link">
         
   
   
@@ -1808,12 +1814,14 @@
       
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
         
   
   
@@ -1835,7 +1843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contact/" class="md-nav__link">
+      <a href="../../../../../contact/" class="md-nav__link">
         
   
   
@@ -1859,68 +1867,232 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2024">2024<a class="headerlink" href="#2024" title="Permanent link">&para;</a></h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="../../../authors/julian-g-avatar.png" alt="Julian G.">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-08-20 00:00:00+00:00">August 20, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
             
-              1 min read
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="../../../../../authors/julian-g-avatar.png" alt="Julian G.">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="../../../../../authors/julian-g/">Julian G.</a>
+                        
+                      </strong>
+                      <br>
+                      Technologist. Fabricator. Freediver.
+                    </span>
+                  </div>
+                
+              </div>
             
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="welcome-to-the-apneascrap-lab-blog"><a class="toclink" href="../../2024/08/20/welcome-to-the-apneascrap-lab-blog/">Welcome to the ApneaScrap Lab Blog</a></h2>
-<p><img alt="logo_med.png" src="../../2024-08-20-welcome/logo_med.png" /></p>
-<p>We're starting a blog to share progress on DIY freediving gear and testing. Stay tuned for updates.</p>
-<p>This space will host:</p>
-<ul>
-<li><strong>Research notes</strong> that capture experiments and the theory behind our DIY projects.</li>
-<li><strong>Updates</strong> on builds, repairs, and anything else happening in the lab.</li>
-<li><strong>Brainstorming sessions</strong> where we think through solutions to tricky problems.</li>
-<li><strong>Field tests</strong> as we take prototypes into the water and report what worked (and what didn't).</li>
-</ul>
-
-    
-  </div>
-</article>
-      
-      
-        
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-10-05 00:00:00+00:00" class="md-ellipsis">October 5, 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              1 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
           
+            
 
-
-
-<nav class="md-pagination">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#youngs-modulus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Young’s modulus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moment-of-inertia-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moment of inertia \(I\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cantilever-beam-calculator-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cantilever beam calculator inputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
-        
-      
+          
+        </div>
+      </div>
     </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+  
+    <a href="https://github.com/apnea-scrap/apnea-scrap-lab/edit/main/docs/blog/posts/2025-10-05-cantilever-beam-calculator/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>Research Notes: Playing With Cantilever Beam Calculator for Fin Blades</h1>
+
+<p>I wanted to see how a simple cantilever beam model matches what happens with freediving fins. The idea is that a fin blade is essentially a thin rectangular beam clamped at the footpocket and loaded at the tip by the force of the water.</p>
+<!-- more -->
+
+<hr />
+<h3 id="youngs-modulus">Young’s modulus<a class="headerlink" href="#youngs-modulus" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Prepreg sheet (<a href="https://www.easycomposites.co.uk/high-strength-carbon-fibre-sheet">Easy Composites high-strength carbon fibre sheet</a>):</strong> ~32.4 GPa</li>
+<li><strong>Wet layup + vacuum bagging:</strong> 20–40 GPa, depending on resin content and fibre fraction<ul>
+<li>More resin → lower <span class="arithmatex">\(E\)</span></li>
+<li>Better fibre alignment and compaction → higher <span class="arithmatex">\(E\)</span></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="moment-of-inertia-i">Moment of inertia <span class="arithmatex">\(I\)</span><a class="headerlink" href="#moment-of-inertia-i" title="Permanent link">&para;</a></h3>
+<p>For a rectangular section:</p>
+<div class="arithmatex">\[
+I = \frac{b h^{3}}{12}
+\]</div>
+<ul>
+<li>Blade width: <span class="arithmatex">\(b = 180\,\text{mm}\)</span></li>
+<li>Thickness (3 layers @ 0.31 mm each): <span class="arithmatex">\(h = 0.93\,\text{mm}\)</span></li>
+</ul>
+<div class="arithmatex">\[
+I \approx 12.1\,\text{mm}^4
+\]</div>
+<p>⚠️ This assumes <strong>uniform thickness</strong> along the length. Real fins are tapered, so actual <span class="arithmatex">\(I(x)\)</span> varies with position.</p>
+<hr />
+<h3 id="cantilever-beam-calculator-inputs">Cantilever beam calculator inputs<a class="headerlink" href="#cantilever-beam-calculator-inputs" title="Permanent link">&para;</a></h3>
+<p>Using the <a href="https://calcresource.com/statics-cantilever-beam.html">online cantilever calculator</a>:</p>
+<ul>
+<li><strong>Structure</strong><ul>
+<li>Length <span class="arithmatex">\(L = 250\,\text{mm}\)</span></li>
+<li>Elastic modulus <span class="arithmatex">\(E = 32\,\text{GPa} = 32{,}000\,\text{N/mm}^2\)</span></li>
+<li>Moment of inertia <span class="arithmatex">\(I = 12\,\text{mm}^4\)</span></li>
+</ul>
+</li>
+<li><strong>Imposed loading</strong><ul>
+<li>Point load at tip</li>
+<li><span class="arithmatex">\(P = 2\,\text{kg}\)</span></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tip slope: ~–91°</li>
+</ul>
+<hr />
+<h3 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h3>
+<p>With only 2 kg load at the tip, the test piece bends almost to a right angle. This matches freediving practice: once a fin bends to ~90°, extra load doesn’t increase thrust, because the blade is already “giving way” to the water.</p>
+<p>This simple cantilever model helps build some intuition into how many layers are needed to achieve a desired stiffness.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
   </div>
 
           
@@ -1973,14 +2145,14 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.highlight", "search.suggest", "content.code.copy", "content.action.edit", "content.action.discuss", "content.action.issue", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.highlight", "search.suggest", "content.code.copy", "content.action.edit", "content.action.discuss", "content.action.issue", "toc.integrate"], "search": "../../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.50899def.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../../../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
