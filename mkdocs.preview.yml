@@ -9,6 +9,9 @@ theme:
 
 # No site_url so we don't mint preview canonicals or sitemaps
 extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
   - js/preview-banner.js
 extra_css:
   - css/status-banner.css
