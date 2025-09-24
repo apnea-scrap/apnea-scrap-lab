@@ -12,29 +12,29 @@ I wanted to see how a simple cantilever beam model matches what happens with fre
 
 ---
 
-### Young's modulus
+### Young’s modulus
 - **Prepreg sheet ([Easy Composites high-strength carbon fibre sheet](https://www.easycomposites.co.uk/high-strength-carbon-fibre-sheet)):** ~32.4 GPa
 - **Wet layup + vacuum bagging:** 20–40 GPa, depending on resin content and fibre fraction
-  - More resin → lower $E$
-  - Better fibre alignment and compaction → higher $E$
+    - More resin → lower \(E\)
+    - Better fibre alignment and compaction → higher \(E\)
 
 ---
 
-### Moment of inertia $I$
+### Moment of inertia \(I\)
 For a rectangular section:
 
 $$
-I = \frac{b h^3}{12}
+I = \frac{b h^{3}}{12}
 $$
 
-- Blade width: $b = 180\,\text{mm}$
-- Thickness (3 layers @ 0.31 mm each): $h = 0.93\,\text{mm}$
+- Blade width: \(b = 180\,\text{mm}\)
+- Thickness (3 layers @ 0.31 mm each): \(h = 0.93\,\text{mm}\)
 
 $$
 I \approx 12.1\,\text{mm}^4
 $$
 
-⚠️ This assumes **uniform thickness** along the length. Real fins are tapered, so actual $I(x)$ varies with position.
+⚠️ This assumes **uniform thickness** along the length. Real fins are tapered, so actual \(I(x)\) varies with position.
 
 ---
 
@@ -42,12 +42,12 @@ $$
 Using the [online cantilever calculator](https://calcresource.com/statics-cantilever-beam.html):
 
 - **Structure**
-  - Length $L = 250\,\text{mm}$
-  - Elastic modulus $E = 32\,\text{GPa} = 32{,}000\,\text{N/mm}^2$
-  - Moment of inertia $I = 12\,\text{mm}^4$
+    - Length \(L = 250\,\text{mm}\)
+    - Elastic modulus \(E = 32\,\text{GPa} = 32{,}000\,\text{N/mm}^2\)
+    - Moment of inertia \(I = 12\,\text{mm}^4\)
 - **Imposed loading**
-  - Point load at tip
-  - $P = 2\,\text{kg}$
+    - Point load at tip
+    - \(P = 2\,\text{kg}\)
 
 ---
 
