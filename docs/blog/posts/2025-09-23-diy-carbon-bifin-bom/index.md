@@ -1,9 +1,22 @@
 ---
-title: "Research Notes: DIY Carbon Bifin BOM"
-date: 2025-09-23
+title: 'Research Notes: DIY Carbon Bifin BOM'
+date:
+  created: 2025-09-23
+  updated: 2025-09-24
 authors:
-  - julian-g
+- julian-g
+categories:
+- Build Planning
+tags:
+- Bill of Materials
+- Short Bifins
+- Carbon Layup
+readtime: 3
 summary: Bill of materials and layering notes for building a short carbon bifin blade.
+links:
+- Short fins project: projects/short-fins/index.md
+- Laminating carbon technique: techniques/laminating-carbon/index.md
+- Vacuum bagging technique: techniques/vacuum-bagging-carbon/index.md
 ---
 
 Now that I’ve mapped out the foot pockets, I want to gather everything I need for actually **building a short carbon bifin blade**.

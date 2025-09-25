@@ -1,9 +1,23 @@
 ---
-title: "Research Notes: Blade Lengths for Freediving"
-date: 2025-10-12
+title: 'Research Notes: Blade Lengths for Freediving'
+date:
+  created: 2025-10-12
+  updated: 2025-10-12
 authors:
-  - julian-g
-summary: Snapshot of common long and short bifin blade lengths for travel vs. depth training.
+- julian-g
+categories:
+- Research Notes
+tags:
+- Blade Lengths
+- Travel Gear
+- Bifins
+readtime: 2
+summary: Snapshot of common long and short bifin blade lengths for travel vs. depth
+  training.
+links:
+- Short fins project: projects/short-fins/index.md
+- Future gear roadmap: projects/future-gear/index.md
+- Measuring flex technique: techniques/measuring-flex/index.md
 ---
 
 I finally pulled together a quick comparison of what "long" and "short" blades actually mean for bifins. Across the usual depth

@@ -1,9 +1,22 @@
 ---
-title: "Research Notes: DIY Carbon Monofin BOM"
-date: 2025-09-26
+title: 'Research Notes: DIY Carbon Monofin BOM'
+date:
+  created: 2025-09-26
+  updated: 2025-09-27
 authors:
-  - julian-g
+- julian-g
+categories:
+- Build Planning
+tags:
+- Bill of Materials
+- Monofins
+- Carbon Layup
+readtime: 3
 summary: Bill of materials and design notes for building a carbon monofin blade.
+links:
+- Monofin project: projects/monofin/index.md
+- Laminating carbon technique: techniques/laminating-carbon/index.md
+- Measuring flex technique: techniques/measuring-flex/index.md
 ---
 
 After mapping out bifins, I want to gather materials and design notes for **building a monofin blade**.
