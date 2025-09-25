@@ -84,7 +84,9 @@ nav:
           - Vacuum Bagging Carbon Versions: techniques/vacuum-bagging-carbon/index.md
           - V1 - Enclosed Bagging: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
           - V1 - Edge-Sealed Bagging: techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md
-  - Blog: blog/index.md
+  - Blog:
+      - blog/index.md
+      - Tags: blog/tags.md
   - Contact: contact.md
 
 markdown_extensions:
@@ -108,6 +110,15 @@ plugins:
   - macros
   - blog:
       blog_dir: blog
+      archive_date_format: MMMM yyyy
+      categories_allowed:
+        - Lab Updates
+        - Research Notes
+        - Build Planning
+      pagination_per_page: 5
+      blog_toc: true
+  - tags:
+      tags_file: blog/tags.md
 
 hooks:
   - shared/hooks/status_banner_assets.py
