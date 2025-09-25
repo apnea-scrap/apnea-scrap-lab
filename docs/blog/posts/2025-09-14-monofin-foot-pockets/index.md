@@ -1,9 +1,23 @@
 ---
-title: "Research Notes: Monofin Foot Pockets"
-date: 2025-09-14
+title: 'Research Notes: Monofin Foot Pockets'
+date:
+  created: 2025-09-14
+  updated: 2025-09-14
 authors:
-  - julian-g
-summary: Exploring dedicated monofin foot pockets versus adapted bifin pockets, plus training options and references for DIY builds.
+- julian-g
+categories:
+- Research Notes
+tags:
+- Foot Pockets
+- Monofins
+- Component Research
+readtime: 2
+summary: Exploring dedicated monofin foot pockets versus adapted bifin pockets, plus
+  training options and references for DIY builds.
+links:
+- Monofin project: projects/monofin/index.md
+- Short fins project: projects/short-fins/index.md
+- Gluing fin rails technique: techniques/gluing-fin-rails/index.md
 ---
 
 This is the second half of my research — this time looking at **monofin foot pockets**.

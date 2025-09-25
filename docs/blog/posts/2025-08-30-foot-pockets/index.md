@@ -1,9 +1,24 @@
 ---
-title: "Research Notes: Foot Pockets for a Short Carbon Training Fin"
-date: 2025-08-30
+title: 'Research Notes: Foot Pockets for a Short Carbon Training Fin'
+date:
+  created: 2025-08-30
+  updated: 2025-08-30
 authors:
-  - julian-g
-summary: Collecting references on freediving foot pockets for a short carbon bifin — which models divers use, which ones fit DIY blades, how angle and rails affect performance, and where to find technical resources.
+- julian-g
+categories:
+- Research Notes
+tags:
+- Foot Pockets
+- Short Bifins
+- Component Research
+readtime: 2
+summary: Collecting references on freediving foot pockets for a short carbon bifin
+  — which models divers use, which ones fit DIY blades, how angle and rails affect
+  performance, and where to find technical resources.
+links:
+- Short fins project: projects/short-fins/index.md
+- Choosing bifin footpockets technique: techniques/choosing-bifin-footpockets/index.md
+- Measuring flex technique: techniques/measuring-flex/index.md
 ---
 
 I want to build a **short carbon bifin** for pool and training.  

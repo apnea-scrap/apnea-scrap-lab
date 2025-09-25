@@ -1,9 +1,23 @@
 ---
-title: "Research Notes: Playing With Cantilever Beam Calculator for Fin Blades"
-date: 2025-10-05
+title: 'Research Notes: Playing With Cantilever Beam Calculator for Fin Blades'
+date:
+  created: 2025-10-05
+  updated: 2025-10-06
 authors:
-  - julian-g
-summary: Sanity-checking how a simple cantilever beam model compares to real freediving fin blades.
+- julian-g
+categories:
+- Research Notes
+tags:
+- Modeling
+- Blade Mechanics
+- Carbon Layup
+readtime: 2
+summary: Sanity-checking how a simple cantilever beam model compares to real freediving
+  fin blades.
+links:
+- Measuring flex technique: techniques/measuring-flex/index.md
+- Cantilever calculator notebook: projects/short-fins/index.md
+- Creating laminating base technique: techniques/creating-laminating-base/index.md
 ---
 
 I wanted to see how a simple cantilever beam model matches what happens with freediving fins. The idea is that a fin blade is essentially a thin rectangular beam clamped at the footpocket and loaded at the tip by the force of the water.

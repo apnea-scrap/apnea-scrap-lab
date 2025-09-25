@@ -1,9 +1,22 @@
 ---
-title: "Research Notes: Blade Stiffness and Profiles"
-date: 2025-09-28
+title: 'Research Notes: Blade Stiffness and Profiles'
+date:
+  created: 2025-09-28
+  updated: 2025-09-29
 authors:
-  - julian-g
+- julian-g
+categories:
+- Research Notes
+tags:
+- Blade Stiffness
+- Design References
+- Bifins
+readtime: 3
 summary: Quick reference on how tip load and bending profiles interact for bifin blades.
+links:
+- Measuring flex technique: techniques/measuring-flex/index.md
+- Short fins project: projects/short-fins/index.md
+- Future gear roadmap: projects/future-gear/index.md
 ---
 
 I finally pulled together a quick reference for how **tip load** ("hardness") and **bending profile** play together on long freediving blades. The clearest explanation I have found so far comes from this breakdown: ▶️ [Blade stiffness explained](https://www.youtube.com/watch?v=P52S1Bxy0Mc).
