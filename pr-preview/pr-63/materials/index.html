@@ -2819,42 +2819,55 @@
 
 
 <h1 id="materials-directory">Materials Directory<a class="headerlink" href="#materials-directory" title="Permanent link">&para;</a></h1>
-<p>A central catalogue of the consumables and components referenced across ApneaScrap Lab.
-Each material page explains what to look for, regional supplier options, and which builds use it.</p>
-<p>Use this directory to find locally sourced alternatives without the technique pages being tied to one
-country or store. When documenting a new technique, link to the relevant material pages instead of listing suppliers directly.</p>
+<p>A single place to keep track of every consumable, component, or tool that feeds into ApneaScrap Lab builds.
+Each page now stores the <strong>unit of measure</strong> and <strong>purchase history</strong> we have personally recorded so that
+techniques can reference a neutral material while still pointing back to real prices.</p>
+<p>Only the regions where we hold purchase data are listed. At the moment that means the United Kingdom.
+When new data comes in for other locales we can extend each page with additional purchase rows.</p>
 <h2 id="how-to-contribute">How to contribute<a class="headerlink" href="#how-to-contribute" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Create or update the material page with a short description, recommended specifications, and any sourcing notes.</li>
-<li>Group supplier links under regional headings (e.g. United Kingdom, European Union, North America) so readers can quickly spot local options.</li>
-<li>Add the technique or project that depends on the material to the "Related Techniques" section of the material page.</li>
-<li>Update the bill of materials in the technique so it links back to the material page.</li>
+<li>Create or update the material page with:</li>
+<li>a short overview and any usage notes;</li>
+<li>the <code>material</code> front matter block shown below, including at least one purchase entry;</li>
+<li>a purchase history table scoped to the regions where you have receipts.</li>
+<li>Link techniques and projects to the material page instead of hard-coding suppliers inside a build guide.</li>
+<li>When logging a new technique version, add a <code>bill_of_materials</code> list in the front matter and render it with
+   <code>No bill of materials recorded yet.</code>. This keeps the bill in sync with recorded purchase data and makes the total cost
+   explicit.</li>
 </ol>
 <p>Need a new material? Duplicate the template below.</p>
 <pre><code class="language-markdown">---
 title: Example Material
+material:
+  default_unit: example-unit
+  purchases:
+    - supplier: &quot;Supplier name&quot;
+      url: &quot;https://example.com/product&quot;
+      region: UK
+      date: 2025-06
+      unit: per example-unit
+      price:
+        amount: 12.34
+        currency: GBP
+      notes: &quot;What makes this purchase representative&quot;
 ---
 # Example Material
 
 ## Overview
 Describe the purpose of the material and what to look for.
 
-## Recommended Specs
+## Purchase history (UK)
+| Date | Supplier | Unit price | Notes |
+| --- | --- | --- | --- |
+| Jun 2025 | [Supplier name](https://example.com/product) | £12.34 per example-unit | 200 g/m², 1 m wide |
+
+## Usage notes
 - Bullet points covering weights, dimensions, compatible systems, etc.
 
-## Regional Suppliers
-### United Kingdom
-- [Supplier name](url) — short note on why it is relevant
-
-### European Union
-- ...
-
-### North America
-- ...
-
-## Related Techniques
+## Related techniques
 - [Technique name](../techniques/...)
 </code></pre>
+<p>Add techniques to the "Related techniques" section so it stays easy to see where a material is consumed.</p>
 
 
 
