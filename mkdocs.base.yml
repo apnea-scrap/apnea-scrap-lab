@@ -119,6 +119,7 @@ plugins:
         - Lab Updates
         - Research Notes
         - Build Planning
+        - Releases
       pagination_per_page: 5
       blog_toc: true
   - tags:
