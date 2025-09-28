@@ -3,7 +3,10 @@ title: Neck weight v1 — shot in inner tube
 version: v1
 status: active
 maturity: stable
-estimated_cost: 10
+estimated_cost:
+  - amount: 10
+    currency: GBP
+    region: UK
 time_to_implement: 1
 waiting_time: 0
 ---

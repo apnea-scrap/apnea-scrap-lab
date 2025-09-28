@@ -79,19 +79,23 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
    docs/techniques/carbon-layup/v2-max.md
    ```
 2. Add labels at the top using front matter:
-   ```markdown
-   ---
-   title: Carbon layup v2 - max taper
-   version: v2
-    status: active
-    maturity: beta
-    estimated_cost: 20
-    time_to_implement: 3
-    waiting_time: 12
-    ---
-    ```
-3. The comparison table on the technique index updates automatically from this metadata.
-4. Commit and push. The site will rebuild automatically.
+  ```markdown
+  ---
+  title: Carbon layup v2 - max taper
+  version: v2
+  status: active
+  maturity: beta
+  estimated_cost:
+    - amount: 20
+      currency: GBP
+      region: UK
+  time_to_implement: 3
+  waiting_time: 12
+  ---
+ ```
+ 3. The comparison table on the technique index updates automatically from this metadata.
+ 4. `estimated_cost` accepts a list of dictionaries so you can record regional estimates (keys: `amount`, `currency`, `region`, and optional `note`).
+ 4. Commit and push. The site will rebuild automatically.
 
 ### Embed a YouTube video
 Use the `yt` macro defined in `main.py`.

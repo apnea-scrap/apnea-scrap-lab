@@ -67,12 +67,42 @@ def define_env(env):
                 status_html = f'<span class="status-badge status-{status_class}">{status_text}</span>'
             else:
                 status_html = ""
+
+            def format_cost(value):
+                if value is None:
+                    return ""
+                if isinstance(value, list):
+                    formatted = [format_cost(item) for item in value]
+                    return "; ".join(filter(None, formatted))
+                if isinstance(value, dict):
+                    amount = value.get("amount")
+                    currency = value.get("currency")
+                    region = value.get("region")
+                    note = value.get("note")
+
+                    parts: list[str] = []
+                    if currency and amount is not None:
+                        parts.append(f"{str(currency).upper()} {amount}")
+                    elif amount is not None:
+                        parts.append(str(amount))
+                    elif currency:
+                        parts.append(str(currency).upper())
+
+                    details = [detail for detail in [region, note] if detail]
+                    if details:
+                        parts.append(f"({' — '.join(details)})")
+
+                    return " ".join(parts).strip()
+
+                return str(value)
+
+            cost_display = format_cost(cost)
             rows.append(
                 (
                     nav_key,
                     link,
                     status_html,
-                    f"£{cost}" if cost is not None else "",
+                    cost_display,
                     f"{impl}h" if impl is not None else "",
                     f"{wait}h" if wait is not None else "",
                 )
@@ -81,9 +111,7 @@ def define_env(env):
         if not rows:
             return "No versions documented yet."
 
-        header = (
-            "| Version | Status | Estimated Cost (£) | Implementation Time (h) | Waiting Time (h) |"
-        )
+        header = "| Version | Status | Estimated Cost | Implementation Time (h) | Waiting Time (h) |"
         separator = "|---|---|---|---|---|"
         lines = [header, separator]
         for _, link, status, cost, impl, wait in sorted(rows, key=lambda row: row[0], reverse=True):

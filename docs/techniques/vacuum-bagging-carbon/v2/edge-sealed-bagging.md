@@ -1,6 +1,9 @@
 ---
 status: research
-estimated_cost: 35
+estimated_cost:
+  - amount: 35
+    currency: GBP
+    region: UK
 time_to_implement: 5
 waiting_time: 12
 ---
@@ -16,11 +19,11 @@ To enable vacuum bagging of larger parts by sealing a cut vacuum bag directly to
 - Requires a rigid, smooth laminating base for edge sealing
 
 ## Materials / Bill of Materials
-- Vacuum bag film (cut to size)
-- Butyl sealing tape
-- Breather cloth
-- Vacuum gauge
-- Manual vacuum pump
+- [Vacuum bag film](../../../materials/vacuum-bag-film.md) cut to size
+- [Butyl sealing tape](../../../materials/butyl-sealing-tape.md)
+- [Breather cloth](../../../materials/breather-cloth.md)
+- [Vacuum gauge](../../../materials/vacuum-gauge.md)
+- [Manual vacuum pump](../../../materials/manual-vacuum-pump.md)
 
 ## Tools Required
 - Metal roller or rounded tool (for pressing sealant tape firmly)

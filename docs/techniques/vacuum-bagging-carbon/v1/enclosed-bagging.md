@@ -1,7 +1,10 @@
 ---
 version: v1
 status: active
-estimated_cost: 20
+estimated_cost:
+  - amount: 20
+    currency: GBP
+    region: UK
 time_to_implement: 3
 waiting_time: 12
 ---
@@ -18,8 +21,8 @@ To create a simple, low-cost vacuum environment for small parts using off-the-sh
 - Requires a flat, rigid base (e.g. acrylic sheet) to support the part
 
 ## Materials / Bill of Materials
-- Large vacuum storage bags with manual pump (the type used for clothes)
-- Breather cloth
+- [Vacuum storage bags](../../../materials/vacuum-storage-bags.md) with a compatible manual pump
+- [Breather cloth](../../../materials/breather-cloth.md)
 
 ## Tools Required
 - Metal file (for smoothing edges of the base or parts)

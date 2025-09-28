@@ -1,6 +1,9 @@
 ---
 status: research
-estimated_cost: 0
+estimated_cost:
+  - amount: 0
+    currency: GBP
+    region: UK
 time_to_implement: 1
 waiting_time: 0
 ---

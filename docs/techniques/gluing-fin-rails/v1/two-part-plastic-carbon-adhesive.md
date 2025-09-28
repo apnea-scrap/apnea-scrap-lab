@@ -1,6 +1,9 @@
 ---
 status: active
-estimated_cost: 15
+estimated_cost:
+  - amount: 15
+    currency: GBP
+    region: UK
 time_to_implement: 1
 waiting_time: 12
 ---
@@ -14,8 +17,8 @@ The rails protect the blade edges, improve water flow, and extend the blade’s 
 
 ## Materials / Bill of Materials
 
-- Rubber fin rails
-- Two-part plastic-to-carbon fiber composites adhesive (e.g., J-B Weld PlasticBonder syringe)
+- [Rubber fin rails](../../../materials/rubber-fin-rails.md)
+- [Plastic-to-carbon adhesive](../../../materials/plastic-to-carbon-adhesive.md)
 - Fold-back paper clips (for clamping)
 
 ## Tools Required

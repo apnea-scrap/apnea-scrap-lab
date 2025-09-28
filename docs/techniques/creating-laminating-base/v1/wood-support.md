@@ -1,6 +1,9 @@
 ---
 status: active
-estimated_cost: 20
+estimated_cost:
+  - amount: 20
+    currency: GBP
+    region: UK
 time_to_implement: 3
 waiting_time: 0
 ---
@@ -26,15 +29,15 @@ Create a rigid angled surface to support fin blades during lamination.
 
 ## Materials / Bill of Materials
 
-1. **Acrylic Sheets**:
-    - 1x A3 size: **42cm x 30cm**.
-    - 1x A4 size: **30cm x 21cm**.
-2. **Wooden Components**:
-    - DIY timber for constructing the base, **1cm thick**.
-3. **Brackets and Screws**:
-    - **2x metal brackets with screws** (1.6cm).
-4. **Adhesive**:
-    - Thin **double-sided tape** to hold the acrylic sheets onto the wooden structure.
+1. **[Acrylic sheet](../../../materials/acrylic-sheet.md)**
+    - 1× A3 size: **42 cm × 30 cm**.
+    - 1× A4 size: **30 cm × 21 cm**.
+2. **Wooden components**
+    - DIY timber for constructing the base, **1 cm thick**.
+3. **Brackets and screws**
+    - **2× metal brackets with screws** (1.6 cm).
+4. **Adhesive**
+    - Thin [double-sided tape](../../../materials/double-sided-tape.md) to hold the acrylic sheets onto the wooden structure.
 
 ## Tools Required
 

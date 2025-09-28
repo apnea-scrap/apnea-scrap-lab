@@ -1,6 +1,9 @@
 ---
 status: active
-estimated_cost: 20
+estimated_cost:
+  - amount: 20
+    currency: GBP
+    region: UK
 time_to_implement: 3
 waiting_time: 12
 ---
@@ -18,29 +21,14 @@ Produce a basic carbon blade using a manual wet layup.
 
 ## Materials / Bill of Materials
 
-1. **From Easy Composites:**
-
-       - **0.3 sqm** 2/2 Twill 3K Carbon Fiber Cloth
-       - **154 g EL2 laminating epoxy resin**
-       - **46 g AT30 Fast epoxy hardener** (mix 100:30 by weight with the resin)
-       - **35 ml PVA mold release agent**
-       - **0.3 sqm Peel Ply**
-       - **3 pairs nitrile gloves, 3 mixing pots, 3 mixing sticks**
-       - **1-inch laminating brush**
-       - **2 × 0.5-inch laminating brushes**
-       - **Plastic finned roller with handle**: 75 mm roller
-
-2. **From Amazon:**
-
-       - **Amazon Basics Vacuum Compression Zipper Storage Bags** (with airtight valve) and **hand pump** (optional, for vacuum pressing)
-
-3. **From DIY Stores:**
-
-       - **Acetone**: for cleaning the brushes after use
-
-4. **Additional Tools Required:**
-
-       - **Digital scale**: accurate mixing of resin and hardener
+- [Carbon fiber fabric](../../../materials/carbon-fiber-fabric.md) — 0.3 m² of 3K 2/2 twill cloth cut to the blade outline.
+- [Laminating epoxy system](../../../materials/laminating-epoxy-system.md) — Mix 154 g resin with 46 g hardener (100:30 by weight).
+- [PVA release agent](../../../materials/pva-release-agent.md) — Approximately 35 ml to seal the laminating base.
+- [Peel ply](../../../materials/peel-ply.md) — Two layers covering the full laminate area.
+- [Breather cloth](../../../materials/breather-cloth.md) — Optional wrap to improve vacuum bleed.
+- [Vacuum storage bags](../../../materials/vacuum-storage-bags.md) with hand pump — Optional low-cost vacuum enclosure.
+- Disposable consumables: nitrile gloves, mixing pots, mixing sticks, laminating brushes, plastic finned roller, and acetone for cleanup.
+- Digital scale accurate to 1 g for measuring resin and hardener.
 
 ## Tools Required
 - Nitrile gloves

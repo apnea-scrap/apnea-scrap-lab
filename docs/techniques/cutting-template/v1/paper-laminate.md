@@ -1,6 +1,9 @@
 ---
 status: active
-estimated_cost: 20
+estimated_cost:
+  - amount: 20
+    currency: GBP
+    region: UK
 time_to_implement: 3
 waiting_time: 0
 ---

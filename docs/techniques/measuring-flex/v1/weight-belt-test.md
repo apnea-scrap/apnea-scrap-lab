@@ -1,6 +1,9 @@
 ---
 status: superseded
-estimated_cost: 10
+estimated_cost:
+  - amount: 10
+    currency: GBP
+    region: UK
 time_to_implement: 0.25
 waiting_time: 0
 ---

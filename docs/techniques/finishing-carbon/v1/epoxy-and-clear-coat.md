@@ -1,7 +1,10 @@
 ---
 status: active
 maturity: stable
-estimated_cost: 10
+estimated_cost:
+  - amount: 10
+    currency: GBP
+    region: UK
 time_to_implement: 1
 waiting_time: 0
 ---
@@ -16,7 +19,7 @@ This improves durability, protects against moisture, enhances gloss, and provide
 ## Materials / Bill of Materials
 
 From DIY stores:
-- Clear coat epoxy spray (e.g., Hycote Double Acrylic Spray Paint, Clear Lacquer)
+- [Clear coat spray](../../../materials/clear-coat-spray.md) (acrylic or polyurethane lacquer)
 
 Optional:
 - Premium printable vinyl sticker paper (for decals/logos)

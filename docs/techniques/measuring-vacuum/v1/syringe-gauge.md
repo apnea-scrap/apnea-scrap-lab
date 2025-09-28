@@ -1,6 +1,9 @@
 ---
 status: research
-estimated_cost: 10
+estimated_cost:
+  - amount: 10
+    currency: GBP
+    region: UK
 time_to_implement: 1
 waiting_time: 0
 ---
@@ -17,7 +20,7 @@ Monitor vacuum level inside a bag using plunger movement.
 - 1 × syringe (10 mL or 20 mL, ideally **thin barrel** for more travel)
 - Luer-lock or push-on **tip cap** (to seal airtight)
 - Candle wax (for plunger lubrication)
-- Breather fabric (to wrap gauge and protect from resin)
+- [Breather cloth](../../../materials/breather-cloth.md) (to wrap the gauge and protect from resin)
 - Permanent marker (to mark calibration lines)
 
 ## Tools Required

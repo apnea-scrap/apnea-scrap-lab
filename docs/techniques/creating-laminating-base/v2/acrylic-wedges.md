@@ -1,6 +1,9 @@
 ---
 status: research
-estimated_cost: 10
+estimated_cost:
+  - amount: 10
+    currency: GBP
+    region: UK
 time_to_implement: 1
 waiting_time: 0
 ---
@@ -20,7 +23,7 @@ Provide a modular surface with adjustable wedges to support blades during lamina
 - **Protection:** Place a **plastic sheet** under the base to protect the table surface  
 
 ## Materials / Bill of Materials
-- **6 × A3 acrylic sheets (2 mm thick)**  
+- **6 × [acrylic sheets](../../../materials/acrylic-sheet.md) (2 mm thick)**
   - 4 sheets for the flat blade section (2 wide × 2 tall)  
   - 2 sheets for the angled footpocket section  
 - **Electrical tape** for sealing the joints  
