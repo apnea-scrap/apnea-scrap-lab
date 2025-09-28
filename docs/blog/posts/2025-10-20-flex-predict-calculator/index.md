@@ -19,7 +19,7 @@ links:
 - Measuring Flex technique: techniques/measuring-flex/index.md
 ---
 
-The new [Predicting Flex page](techniques/predicting-flex/v1/tapered-cantilever-beam) is now live with the tapered cantilever beam calculator embedded on it.
+The new [Predicting Flex page](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md) is now live with the tapered cantilever beam calculator embedded on it.
 
 <!-- more -->
 
