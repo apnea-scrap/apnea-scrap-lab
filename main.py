@@ -25,21 +25,53 @@ def define_env(env):
     def versions_table(path: str | None = None) -> str:
         rel_dir = Path(path) if path else Path(env.page.file.src_path).parent
         base = docs_dir / rel_dir
+
+        def build_nav_lookup():
+            nav_lookup: dict[str, str] = {}
+
+            def visit(items):
+                for item in items:
+                    if isinstance(item, dict):
+                        for title, value in item.items():
+                            if isinstance(value, str):
+                                key = str(Path(value)).replace("\\", "/")
+                                nav_lookup[key] = title
+                            elif isinstance(value, list):
+                                visit(value)
+                            else:
+                                visit([value])
+                    elif isinstance(item, list):
+                        visit(item)
+
+            visit(env.conf.get("nav", []))
+            return nav_lookup
+
+        nav_titles = build_nav_lookup()
         rows = []
         for file in sorted(base.glob("**/*.md")):
             if file.name == "index.md":
                 continue
             meta = read_meta(file)
             rel_path = file.relative_to(base)
-            link_text = " ".join(rel_path.with_suffix("").parts).replace("-", " ")
+            full_rel_path = rel_dir / rel_path
+            nav_key = full_rel_path.as_posix()
+            link_text = nav_titles.get(nav_key, " ".join(rel_path.with_suffix("").parts).replace("-", " "))
             link = f"[{link_text}]({rel_path.as_posix()})"
             cost = meta.get("estimated_cost")
             impl = meta.get("time_to_implement")
             wait = meta.get("waiting_time")
+            status = meta.get("status", "")
+            if status:
+                status_class = status.lower().replace(" ", "-")
+                status_text = status.title()
+                status_html = f'<span class="status-badge status-{status_class}">{status_text}</span>'
+            else:
+                status_html = ""
             rows.append(
                 (
+                    nav_key,
                     link,
-                    meta.get("status", ""),
+                    status_html,
                     f"£{cost}" if cost is not None else "",
                     f"{impl}h" if impl is not None else "",
                     f"{wait}h" if wait is not None else "",
@@ -54,7 +86,7 @@ def define_env(env):
         )
         separator = "|---|---|---|---|---|"
         lines = [header, separator]
-        for link, status, cost, impl, wait in rows:
+        for _, link, status, cost, impl, wait in sorted(rows, key=lambda row: row[0], reverse=True):
             lines.append(f"| {link} | {status} | {cost} | {impl} | {wait} |")
         return "\n".join(lines)
 
