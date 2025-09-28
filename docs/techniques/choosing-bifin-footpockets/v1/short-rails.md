@@ -1,6 +1,5 @@
 ---
 status: active
-estimated_cost: 40-90
 time_to_implement: N/A
 waiting_time: N/A
 ---
@@ -25,7 +24,7 @@ Choose the right freediving foot pockets for DIY carbon blades, focusing on perf
 
 1. **Check rail length**
 
-     - Choose pockets with **short or low-profile rails** so the blade can bend and return energy efficiently.
+    - Choose pockets with **short or low-profile rails** so the blade can bend and return energy efficiently (see [rubber fin rails](../../../materials/rubber-fin-rails.md) for sourcing options).
      - Avoid long or stiff rails that dampen flex, especially on short training blades.
 
 2. **Check blade angle**

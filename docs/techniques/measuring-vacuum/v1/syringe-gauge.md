@@ -1,6 +1,36 @@
 ---
 status: research
-estimated_cost: 10
+bill_of_materials:
+  - name: 10 mL syringe
+    description: Thin barrel syringe for plunger travel
+    quantity: 1
+    unit_cost:
+      amount: 0.80
+      currency: GBP
+  - name: Luer-lock tip cap
+    description: Single cap to seal the syringe tip
+    quantity: 1
+    unit_cost:
+      amount: 0.20
+      currency: GBP
+  - name: Candle wax shavings
+    description: Small amount to lubricate the rubber seal
+    quantity: 0.05
+    unit_cost:
+      amount: 2.00
+      currency: GBP
+  - material: materials/breather-cloth.md
+    description: Wrap to protect the gauge inside the bag
+    quantity: 0.1
+    unit: metre
+    purchase:
+      region: UK
+  - name: Permanent marker
+    description: Fine tip for calibration marks
+    quantity: 1
+    unit_cost:
+      amount: 1.50
+      currency: GBP
 time_to_implement: 1
 waiting_time: 0
 ---
@@ -13,12 +43,9 @@ It uses Boyle’s law: trapped air expands as pressure drops, moving a rubber pl
 ## Goal
 Monitor vacuum level inside a bag using plunger movement.
 
-## Materials / Bill of Materials
-- 1 × syringe (10 mL or 20 mL, ideally **thin barrel** for more travel)
-- Luer-lock or push-on **tip cap** (to seal airtight)
-- Candle wax (for plunger lubrication)
-- Breather fabric (to wrap gauge and protect from resin)
-- Permanent marker (to mark calibration lines)
+## Bill of Materials
+
+{{ render_bill_of_materials() }}
 
 ## Tools Required
 - Knife or scissors (for trimming)

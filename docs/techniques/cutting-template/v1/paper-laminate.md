@@ -1,6 +1,24 @@
 ---
 status: active
-estimated_cost: 20
+bill_of_materials:
+  - name: A4 cardstock sheets
+    description: 250 gsm sheets for tracing and stiffness
+    quantity: 2
+    unit_cost:
+      amount: 0.15
+      currency: GBP
+  - name: Laminating pouches
+    description: A4 gloss pouches used as protective film
+    quantity: 1
+    unit_cost:
+      amount: 0.40
+      currency: GBP
+  - name: Spray adhesive or glue stick
+    description: Light adhesive to tack layers prior to lamination
+    quantity: 0.1
+    unit_cost:
+      amount: 1.50
+      currency: GBP
 time_to_implement: 3
 waiting_time: 0
 ---
@@ -15,9 +33,9 @@ Produce a durable template that matches the foot pocket outline.
 ## Specifications / Dimensions
 - Sized to the chosen foot pocket and blade design
 
-## Materials / Bill of Materials
-- Paper sheets (standard or heavy-duty for added stiffness)
-- Lamination film or clear adhesive sheets
+## Bill of Materials
+
+{{ render_bill_of_materials() }}
 
 ## Tools Required
 - Scissors or precision cutting tool

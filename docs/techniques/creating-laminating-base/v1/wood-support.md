@@ -1,6 +1,41 @@
 ---
 status: active
-estimated_cost: 20
+bill_of_materials:
+  - material: materials/acrylic-sheet.md
+    name: Acrylic sheet (A3)
+    description: 3 mm clear sheet cut to 420 × 297 mm
+    quantity: 1
+    unit: sheet
+    purchase:
+      region: UK
+      unit: A3 sheet (3 mm)
+  - material: materials/acrylic-sheet.md
+    name: Acrylic sheet (A4)
+    description: 3 mm clear sheet cut to 297 × 210 mm
+    quantity: 1
+    unit: sheet
+    purchase:
+      region: UK
+      unit: A4 sheet (3 mm)
+  - material: materials/double-sided-tape.md
+    description: Thin acrylic tape to secure sheets to timber
+    quantity: 0.2
+    unit: roll
+    purchase:
+      region: UK
+      unit: 25 m roll (12 mm)
+  - name: Softwood board offcuts
+    description: 1 cm thick timber for base and angled supports
+    quantity: 1
+    unit_cost:
+      amount: 10.00
+      currency: GBP
+  - name: Angle brackets and screws
+    description: Two galvanised brackets with matching screws
+    quantity: 1
+    unit_cost:
+      amount: 4.20
+      currency: GBP
 time_to_implement: 3
 waiting_time: 0
 ---
@@ -24,17 +59,9 @@ Create a rigid angled surface to support fin blades during lamination.
     - Minimum width: **25cm** (to match blade width).
     - Minimum length: **20cm** (to fit 15cm blade length and extra space).
 
-## Materials / Bill of Materials
+## Bill of Materials
 
-1. **Acrylic Sheets**:
-    - 1x A3 size: **42cm x 30cm**.
-    - 1x A4 size: **30cm x 21cm**.
-2. **Wooden Components**:
-    - DIY timber for constructing the base, **1cm thick**.
-3. **Brackets and Screws**:
-    - **2x metal brackets with screws** (1.6cm).
-4. **Adhesive**:
-    - Thin **double-sided tape** to hold the acrylic sheets onto the wooden structure.
+{{ render_bill_of_materials() }}
 
 ## Tools Required
 

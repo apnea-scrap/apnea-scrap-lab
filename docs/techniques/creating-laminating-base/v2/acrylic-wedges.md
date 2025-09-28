@@ -1,6 +1,32 @@
 ---
 status: research
-estimated_cost: 10
+bill_of_materials:
+  - material: materials/acrylic-sheet.md
+    name: Acrylic sheet (A3, 2 mm)
+    description: Six panels for modular monofin base
+    quantity: 6
+    unit: sheet
+    purchase:
+      region: UK
+      unit: A3 sheet (2 mm)
+  - name: Electrical tape roll
+    description: Wide PVC tape to join acrylic seams
+    quantity: 0.5
+    unit_cost:
+      amount: 4.00
+      currency: GBP
+  - name: Stackable plastic wedges
+    description: Adjustable supports for the angled foot pocket section
+    quantity: 1
+    unit_cost:
+      amount: 12.00
+      currency: GBP
+  - name: Protective plastic sheet
+    description: Disposable sheet to protect the bench surface
+    quantity: 1
+    unit_cost:
+      amount: 2.50
+      currency: GBP
 time_to_implement: 1
 waiting_time: 0
 ---
@@ -19,13 +45,9 @@ Provide a modular surface with adjustable wedges to support blades during lamina
 - **Support requirement:** Must be placed on a **flat, rigid surface** such as a table or workbench  
 - **Protection:** Place a **plastic sheet** under the base to protect the table surface  
 
-## Materials / Bill of Materials
-- **6 × A3 acrylic sheets (2 mm thick)**  
-  - 4 sheets for the flat blade section (2 wide × 2 tall)  
-  - 2 sheets for the angled footpocket section  
-- **Electrical tape** for sealing the joints  
-- **Plastic stackable wedges** to create the angled section under the footpockets  
-- **Protective plastic sheet** (to cover the table surface beneath the acrylic)  
+## Bill of Materials
+
+{{ render_bill_of_materials() }}
 
 ## Tools Required
 - Isopropyl alcohol and cloth (for cleaning sheet edges)  

@@ -1,6 +1,18 @@
 ---
 status: active
-estimated_cost: 10
+bill_of_materials:
+  - name: Printed cutting template
+    description: A4 sheet laminated or taped to the blade
+    quantity: 1
+    unit_cost:
+      amount: 0.10
+      currency: GBP
+  - name: Electrical tape
+    description: Short lengths to hold the template during cutting
+    quantity: 0.1
+    unit_cost:
+      amount: 4.00
+      currency: GBP
 time_to_implement: 1
 waiting_time: 0
 ---
@@ -10,9 +22,9 @@ waiting_time: 0
 ## Goal
 To cut cured carbon laminate into the desired shape using a simple junior hacksaw method, ensuring a clean fit into the final assembly.
 
-## Materials / Bill of Materials
-- Printed or drawn cutting template
-- Electrical tape (to attach the template to the laminate)
+## Bill of Materials
+
+{{ render_bill_of_materials() }}
 
 ## Tools Required
 - Junior hacksaw with a fine-tooth metal blade

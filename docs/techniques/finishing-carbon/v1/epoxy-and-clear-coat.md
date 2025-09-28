@@ -1,7 +1,34 @@
 ---
 status: active
 maturity: stable
-estimated_cost: 10
+bill_of_materials:
+  - material: materials/laminating-epoxy-system.md
+    description: Thin finishing coat (approx. 100 ml mixed)
+    quantity: 0.2
+    unit: 500 ml kit
+    purchase:
+      region: UK
+      unit: 500 ml kit
+  - material: materials/clear-coat-spray.md
+    description: Three light lacquer passes for UV protection
+    quantity: 0.3
+    unit: can
+    purchase:
+      region: UK
+      unit: 500 ml can
+  - name: Sandpaper set
+    description: 400, 600, and 1000 grit sheets
+    quantity: 1
+    unit_cost:
+      amount: 3.00
+      currency: GBP
+  - name: Printable vinyl decal sheet (optional)
+    description: Gloss white adhesive sheet for logos
+    quantity: 0.2
+    unit_cost:
+      amount: 7.50
+      currency: GBP
+    notes: Optional branding layer
 time_to_implement: 1
 waiting_time: 0
 ---
@@ -13,13 +40,9 @@ waiting_time: 0
 To apply a protective and aesthetic finish to cured carbon blades by sealing, smoothing, and clear-coating the surface.  
 This improves durability, protects against moisture, enhances gloss, and provides the option for custom decals.
 
-## Materials / Bill of Materials
+## Bill of Materials
 
-From DIY stores:
-- Clear coat epoxy spray (e.g., Hycote Double Acrylic Spray Paint, Clear Lacquer)
-
-Optional:
-- Premium printable vinyl sticker paper (for decals/logos)
+{{ render_bill_of_materials() }}
 
 ## Tools Required
 

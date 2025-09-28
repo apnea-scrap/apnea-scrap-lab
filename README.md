@@ -7,8 +7,10 @@ DIY freediving gear knowledge base. Techniques, versions, and test procedures fo
 ## Features
 
 - Clean documentation site with tabs for Projects and Techniques
-- Versioned techniques with standard metadata (status, cost £, implementation time h, waiting time h)
+- Versioned techniques with standard metadata (status, estimated cost, implementation time h, waiting time h)
 - Comparison tables generated automatically from page metadata
+- Bill of materials tables rendered from front matter so costs stay linked to recorded purchases
+- Material pages list regional supplier history via macros fed by front matter
 - Macro for YouTube embeds
 - GitHub Actions that build and publish automatically on every push to main
 
@@ -79,19 +81,33 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
    docs/techniques/carbon-layup/v2-max.md
    ```
 2. Add labels at the top using front matter:
-   ```markdown
-   ---
-   title: Carbon layup v2 - max taper
-   version: v2
-    status: active
-    maturity: beta
-    estimated_cost: 20
-    time_to_implement: 3
-    waiting_time: 12
-    ---
-    ```
-3. The comparison table on the technique index updates automatically from this metadata.
-4. Commit and push. The site will rebuild automatically.
+  ```markdown
+  ---
+  title: Carbon layup v2 - max taper
+  version: v2
+  status: active
+  maturity: beta
+  bill_of_materials:
+    - material: materials/carbon-fiber-fabric.md
+      description: 200 g/m² 3K cloth
+      quantity: 0.3
+      unit: m²
+      purchase:
+        region: UK
+        unit: m² (1 m wide)
+    - name: Consumables pack
+      description: Gloves, brushes, mixing sticks
+      quantity: 1
+      unit_cost:
+        amount: 3.50
+        currency: GBP
+  time_to_implement: 3
+  waiting_time: 12
+  ---
+  ```
+3. Add `{{ render_bill_of_materials() }}` where you want the rendered table to appear.
+4. The comparison table on the technique index automatically calculates estimated costs from the bill of materials.
+5. Commit and push. The site will rebuild automatically.
 
 ### Embed a YouTube video
 Use the `yt` macro defined in `main.py`.
@@ -108,6 +124,8 @@ Macros live in `main.py`.
 - `{{ yt("VIDEO_ID", "Title") }}` embeds a responsive privacy friendly YouTube iframe
 - `{{ versions_table() }}` builds a version comparison table for the current folder based on front matter metadata
 - `{{ status_banner() }}` shows a coloured banner with the current page status
+- `{{ render_bill_of_materials() }}` converts the front matter bill of materials into a table, automatically pulling pricing from linked material pages when available
+- `{{ render_material_purchases() }}` groups a material page’s purchase history by region and renders supplier tables
 
 Restart `mkdocs serve` if you modify `main.py` to reload macros.
 

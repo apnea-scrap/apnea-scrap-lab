@@ -1,6 +1,5 @@
 ---
 status: active
-estimated_cost: 0
 time_to_implement: 0.25
 waiting_time: 0
 ---

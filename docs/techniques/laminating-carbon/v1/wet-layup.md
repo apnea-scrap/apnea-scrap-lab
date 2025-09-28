@@ -1,6 +1,63 @@
 ---
 status: active
-estimated_cost: 20
+bill_of_materials:
+  - material: materials/carbon-fiber-fabric.md
+    description: 0.3 m² of 200 g/m² 3K 2/2 twill cloth
+    quantity: 0.3
+    unit: m²
+    purchase:
+      region: UK
+      unit: m² (1 m wide)
+  - material: materials/laminating-epoxy-system.md
+    description: 200 g mixed resin (approx. 200 ml)
+    quantity: 0.4
+    unit: 500 ml kit
+    purchase:
+      region: UK
+      unit: 500 ml kit
+  - material: materials/pva-release-agent.md
+    description: Two thin coats on the laminating base
+    quantity: 0.07
+    unit: 500 ml bottle
+    purchase:
+      region: UK
+      unit: 500 ml bottle
+  - material: materials/peel-ply.md
+    description: Two layers cut to the blade outline
+    quantity: 0.6
+    unit: metre
+    purchase:
+      region: UK
+      unit: linear metre (1.5 m wide)
+  - material: materials/breather-cloth.md
+    description: Wrap to improve vacuum bleed
+    quantity: 0.5
+    unit: metre
+    purchase:
+      region: UK
+      unit: linear metre (1 m wide)
+    notes: Optional for manual pump setups
+  - material: materials/vacuum-storage-bags.md
+    description: Large bag enclosure (one bag from a pack of two)
+    quantity: 0.5
+    unit: pack
+    purchase:
+      region: UK
+      unit: pack of 2 (55 × 85 cm)
+  - material: materials/manual-vacuum-pump.md
+    description: Manual pump amortised over repeated builds
+    quantity: 0.1
+    unit: pump
+    purchase:
+      region: UK
+      unit: pump kit
+    notes: Optional; reuse across laminations
+  - name: Consumables pack
+    description: Gloves, mixing sticks, acetone wipes
+    quantity: 1
+    unit_cost:
+      amount: 3.50
+      currency: GBP
 time_to_implement: 3
 waiting_time: 12
 ---
@@ -16,31 +73,12 @@ Produce a basic carbon blade using a manual wet layup.
 - Uses 0/90 3K twill carbon cloth
 - Geometry and taper follow the chosen cutting template
 
-## Materials / Bill of Materials
+## Bill of Materials
 
-1. **From Easy Composites:**
+{{ render_bill_of_materials() }}
 
-       - **0.3 sqm** 2/2 Twill 3K Carbon Fiber Cloth
-       - **154 g EL2 laminating epoxy resin**
-       - **46 g AT30 Fast epoxy hardener** (mix 100:30 by weight with the resin)
-       - **35 ml PVA mold release agent**
-       - **0.3 sqm Peel Ply**
-       - **3 pairs nitrile gloves, 3 mixing pots, 3 mixing sticks**
-       - **1-inch laminating brush**
-       - **2 × 0.5-inch laminating brushes**
-       - **Plastic finned roller with handle**: 75 mm roller
-
-2. **From Amazon:**
-
-       - **Amazon Basics Vacuum Compression Zipper Storage Bags** (with airtight valve) and **hand pump** (optional, for vacuum pressing)
-
-3. **From DIY Stores:**
-
-       - **Acetone**: for cleaning the brushes after use
-
-4. **Additional Tools Required:**
-
-       - **Digital scale**: accurate mixing of resin and hardener
+- Digital scale accurate to 1 g for measuring resin and hardener.
+- Plastic finned roller (75 mm) to consolidate the laminate.
 
 ## Tools Required
 - Nitrile gloves

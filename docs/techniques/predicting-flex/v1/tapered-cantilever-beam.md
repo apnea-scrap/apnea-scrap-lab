@@ -1,6 +1,5 @@
 ---
 status: research
-estimated_cost: 0
 time_to_implement: 1
 waiting_time: 0
 ---
