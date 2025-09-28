@@ -1,30 +1,33 @@
 ---
 title: Vacuum Storage Bags
+material:
+  default_unit: pack
+  purchases:
+    - supplier: "Lakeland"
+      url: "https://www.lakeland.co.uk/"
+      region: UK
+      date: 2025-06
+      unit: per pack of 2 (55 × 85 cm)
+      price:
+        amount: 12.00
+        currency: GBP
+      notes: "Large heavy-duty storage bags compatible with Status pump"
 ---
 # Vacuum Storage Bags
 
 ## Overview
-Household vacuum compression bags can double as low-cost vacuum chambers for small laminates. Choose heavy-duty bags with a valve
-that accepts generic pumps and ensure seams can withstand repeated cycles.
+Household storage bags that double as low-cost vacuum enclosures for small laminates. Thick plastic withstands repeated
+pump cycles when the seal is kept clean.
 
-## Recommended Specs
-- Multi-layer PA/PE film at least 90 microns thick
-- Screw-valve compatible with hand pumps or vacuum hoses
-- Large enough to fit the laminating base with breather cloth clearance
+## Purchase history (UK)
+| Date | Supplier | Unit price | Notes |
+| --- | --- | --- | --- |
+| Jun 2025 | [Lakeland](https://www.lakeland.co.uk/) | £12.00 per pack of 2 (55 × 85 cm) | Heavy-duty storage bags, includes zip slider |
 
-## Regional Suppliers
-### United Kingdom
-- [Lakeland Vacuum Storage Bags](https://www.lakeland.co.uk/) — Durable seams and replacement valve gaskets
-- [SpaceSaver Premium Bags](https://www.spacesaver.com/) — Includes manual pump for travel use
+## Usage notes
+- Clean the sealing bar before every pull to avoid slow leaks.
+- Slip a silicone baking mat inside to protect the bag from sharp corners.
 
-### European Union
-- [Compactor Lifebox Bags](https://www.compactor.com/) — Reinforced valves and wide size selection
-- [Ikea Jämlik](https://www.ikea.com/) — Budget option widely stocked across the EU
-
-### North America
-- [Ziploc Space Bag](https://www.ziploc.com/) — Available in most hardware stores with multiple sizes
-- [VacuFlat Bags](https://www.vacuflat.com/) — Thick film better suited to repeated composites work
-
-## Related Techniques
-- [Vacuum Bagging Carbon – V1 Enclosed Bagging](../techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md)
+## Related techniques
 - [Laminating Carbon – V1 Wet Layup](../techniques/laminating-carbon/v1/wet-layup.md)
+- [Vacuum Bagging Carbon – V1 Enclosed Bagging](../techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md)

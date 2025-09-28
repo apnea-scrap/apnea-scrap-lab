@@ -1,30 +1,32 @@
 ---
 title: Vacuum Gauge
+material:
+  default_unit: gauge
+  purchases:
+    - supplier: "RDG Tools"
+      url: "https://www.rdgtools.co.uk/"
+      region: UK
+      date: 2025-06
+      unit: per gauge
+      price:
+        amount: 17.50
+        currency: GBP
+      notes: '0–30 inHg analogue gauge with 1/4" BSP thread'
 ---
 # Vacuum Gauge
 
 ## Overview
-A vacuum gauge helps you monitor seal quality and repeatability. For hand layups, analogue gauges with hose barbs are easy to
-install inline with manual pumps or bag valves.
+Analogue gauge used to monitor bag pressure during curing. The 0–30 inHg dial is easy to read and compatible with common
+vacuum fittings.
 
-## Recommended Specs
-- Range 0 to -1 bar (0 to 30 inHg) with clear markings around -0.2 to -0.8 bar
-- 1/4" BSP/NPT or hose barb connection compatible with bag fittings
-- Oil-filled gauges resist vibration and make leaks easier to spot
+## Purchase history (UK)
+| Date | Supplier | Unit price | Notes |
+| --- | --- | --- | --- |
+| Jun 2025 | [RDG Tools](https://www.rdgtools.co.uk/) | £17.50 per gauge | 0–30 inHg analogue gauge with 1/4" BSP thread |
 
-## Regional Suppliers
-### United Kingdom
-- [RS PRO Vacuum Gauges](https://uk.rs-online.com/) — Multiple dial sizes with BSP threads
-- [Vacuum Pressing Systems Gauge Kit](https://www.vacupress.com/) — Includes hose barb adapter for Thin Air Press setups
+## Usage notes
+- Mount close to the bag to catch leaks early; use PTFE tape on the threads.
+- Zero the gauge before every use to offset any shipping knocks.
 
-### European Union
-- [Güde Vacuum Gauge](https://www.guede.com/) — Affordable gauges for workshop use
-- [HPC KAESER Accessories](https://www.hpccompressors.co.uk/) — Industrial gauges with protective casings
-
-### North America
-- [McMaster-Carr Vacuum Gauges](https://www.mcmaster.com/vacuum-gauges/) — Wide selection of oil-filled gauges
-- [Roarockit Inline Gauge](https://www.roarockit.com/) — Designed for skateboard pressing vacuum systems
-
-## Related Techniques
-- [Vacuum Bagging Carbon – V2 Edge-Sealed Bagging](../techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md)
+## Related techniques
 - [Measuring Vacuum – V1 Syringe Gauge](../techniques/measuring-vacuum/v1/syringe-gauge.md)

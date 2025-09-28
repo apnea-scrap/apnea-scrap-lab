@@ -1,30 +1,33 @@
 ---
 title: PVA Release Agent
+material:
+  default_unit: 500 ml bottle
+  purchases:
+    - supplier: "Easy Composites"
+      url: "https://www.easycomposites.co.uk/pva-release-agent"
+      region: UK
+      date: 2025-06
+      unit: per 500 ml bottle
+      price:
+        amount: 9.60
+        currency: GBP
+      notes: "Green PVA release agent for composites tooling"
 ---
 # PVA Release Agent
 
 ## Overview
-Polyvinyl alcohol (PVA) release agents form a sacrificial film that stops epoxy from bonding to tooling surfaces. They are ideal
-for sealing laminating bases and moulds that do not have a permanent release coating.
+Polyvinyl alcohol release agent brushed onto laminating bases to prevent epoxy from sticking. Leaves a thin film that
+washes away with water after the cure.
 
-## Recommended Specs
-- Water-based PVA formulated for epoxy and polyester systems
-- Sprayable or brushable viscosity depending on your tooling finish
-- Dries to a thin, even film in under 30 minutes at room temperature
+## Purchase history (UK)
+| Date | Supplier | Unit price | Notes |
+| --- | --- | --- | --- |
+| Jun 2025 | [Easy Composites](https://www.easycomposites.co.uk/pva-release-agent) | £9.60 per 500 ml bottle | Green PVA release agent |
 
-## Regional Suppliers
-### United Kingdom
-- [Easy Composites TR104](https://www.easycomposites.co.uk/pva-release-agent) — Brush or spray, compatible with epoxy layups
-- [EC Fibreglass](https://ecfibreglasssupplies.co.uk/) — Supplies PVA and complementary wax systems
+## Usage notes
+- Apply in two thin coats with foam brushes for an even sheen.
+- Allow at least 30 minutes drying time before laying carbon to avoid fisheyes.
 
-### European Union
-- [R&G PVA Release](https://shop1.r-g.de/en/art/390110) — Available in 0.5 L bottles, works with epoxy and polyester resins
-- [HP-Textiles HP-PVA](https://shop.hp-textiles.com/en/Release-Agents/) — Sold with atomisers for even coats
-
-### North America
-- [Fibre Glast PVA Release Film #13](https://www.fibreglast.com/product/PVA_Release_Film_13/Release_Agents) — PVA compatible with epoxy
-- [Airtech Blue PVA](https://www.airtechintl.com/) — Industrial grade release agent in multiple bottle sizes
-
-## Related Techniques
+## Related techniques
 - [Laminating Carbon – V1 Wet Layup](../techniques/laminating-carbon/v1/wet-layup.md)
-- [Vacuum Bagging Carbon – V1 Enclosed Bagging](../techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md)
+- [Creating Laminating Base – V1 Wood Support](../techniques/creating-laminating-base/v1/wood-support.md)

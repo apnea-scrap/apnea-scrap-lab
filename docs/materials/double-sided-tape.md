@@ -1,29 +1,33 @@
 ---
 title: Double-Sided Tape
+material:
+  default_unit: roll
+  purchases:
+    - supplier: "Easy Composites"
+      url: "https://www.easycomposites.co.uk/double-sided-tape"
+      region: UK
+      date: 2025-06
+      unit: per 25 m roll (12 mm)
+      price:
+        amount: 8.40
+        currency: GBP
+      notes: "Thin acrylic transfer tape for securing films"
 ---
 # Double-Sided Tape
 
 ## Overview
-Thin double-sided tape secures acrylic skins and templates during setup without adding bulk. Removable tapes let you reposition
-parts while still holding them in place during vacuum bagging.
+Thin acrylic adhesive tape used to temporarily hold vacuum films, peel ply, or small components in place without leaving
+a thick ridge.
 
-## Recommended Specs
-- Thickness below 0.2 mm to avoid imprinting through laminates
-- Acrylic adhesive for strong hold on plastics and wood
-- Supplied on rolls wider than 10 mm for easy application
+## Purchase history (UK)
+| Date | Supplier | Unit price | Notes |
+| --- | --- | --- | --- |
+| Jun 2025 | [Easy Composites](https://www.easycomposites.co.uk/double-sided-tape) | £8.40 per 25 m roll (12 mm) | Low-profile acrylic transfer tape |
 
-## Regional Suppliers
-### United Kingdom
-- [3M 9088](https://www.3m.co.uk/) — High-tack acrylic adhesive widely available from industrial distributors
-- [Tesa 4965](https://www.tesa.com/) — Performs well on acrylic at room temperature
+## Usage notes
+- Apply in short sections; long strips are harder to reposition cleanly.
+- Keep the release liner on until the dry fit is perfect to avoid dust contamination.
 
-### European Union
-- [Weicon Double-Sided Tape](https://www.weicon.de/) — Stocked by many EU tooling suppliers
-- [RS PRO Acrylic Tape](https://www.rs-online.com/) — Ships EU-wide with multiple widths
-
-### North America
-- [3M VHB 4910 (thin variants)](https://www.3m.com/) — Transparent tape that bonds acrylic securely
-- [Uline Industrial Tape](https://www.uline.com/) — Budget-friendly rolls for workshop use
-
-## Related Techniques
+## Related techniques
 - [Creating Laminating Base – V1 Wood Support](../techniques/creating-laminating-base/v1/wood-support.md)
+- [Creating Laminating Base – V2 Acrylic Wedges](../techniques/creating-laminating-base/v2/acrylic-wedges.md)

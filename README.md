@@ -7,8 +7,9 @@ DIY freediving gear knowledge base. Techniques, versions, and test procedures fo
 ## Features
 
 - Clean documentation site with tabs for Projects and Techniques
-- Versioned techniques with standard metadata (status, cost £, implementation time h, waiting time h)
+- Versioned techniques with standard metadata (status, estimated cost, implementation time h, waiting time h)
 - Comparison tables generated automatically from page metadata
+- Bill of materials tables rendered from front matter so costs stay linked to recorded purchases
 - Macro for YouTube embeds
 - GitHub Actions that build and publish automatically on every push to main
 
@@ -86,16 +87,35 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
   status: active
   maturity: beta
   estimated_cost:
-    - amount: 20
+    - amount: 33.29
       currency: GBP
       region: UK
+      note: Based on Jun 2025 UK purchase history
+  bill_of_materials:
+    - material: materials/carbon-fiber-fabric.md
+      description: 200 g/m² 3K cloth
+      quantity: 0.3
+      unit: m²
+      unit_cost:
+        amount: 36.80
+        currency: GBP
+        per: m²
+        supplier: Easy Composites
+        date: 2025-06
+    - name: Consumables pack
+      description: Gloves, brushes, mixing sticks
+      quantity: 1
+      unit_cost:
+        amount: 3.50
+        currency: GBP
   time_to_implement: 3
   waiting_time: 12
   ---
- ```
- 3. The comparison table on the technique index updates automatically from this metadata.
- 4. `estimated_cost` accepts a list of dictionaries so you can record regional estimates (keys: `amount`, `currency`, `region`, and optional `note`).
- 4. Commit and push. The site will rebuild automatically.
+  ```
+3. Add `{{ render_bill_of_materials() }}` where you want the rendered table to appear.
+4. The comparison table on the technique index updates automatically from this metadata.
+5. `estimated_cost` accepts a list of dictionaries so you can record regional estimates (keys: `amount`, `currency`, `region`, and optional `note`).
+6. Commit and push. The site will rebuild automatically.
 
 ### Embed a YouTube video
 Use the `yt` macro defined in `main.py`.

@@ -1,30 +1,32 @@
 ---
 title: Rubber Fin Rails
+material:
+  default_unit: pair
+  purchases:
+    - supplier: "Freedive Store"
+      url: "https://www.freedivestore.com/"
+      region: UK
+      date: 2025-06
+      unit: per pair (1.2 m length)
+      price:
+        amount: 14.90
+        currency: GBP
+      notes: "Soft rubber rails suitable for 2 mm blade edges"
 ---
 # Rubber Fin Rails
 
 ## Overview
-Rubber rails protect blade edges and guide water flow along fins. Choose rails designed for composite freediving blades so they
-fit securely while allowing the blade to flex.
+Rubber side rails improve hydrodynamics and protect blade edges. Choose rails with an internal slot that matches the blade
+thickness after finishing.
 
-## Recommended Specs
-- Shore A hardness 60–70 for a balance of grip and flexibility
-- Inner profile sized for 2–3 mm blade thickness
-- Available in lengths long enough for full blade perimeter (typically 1.6 m per fin)
+## Purchase history (UK)
+| Date | Supplier | Unit price | Notes |
+| --- | --- | --- | --- |
+| Jun 2025 | [Freedive Store](https://www.freedivestore.com/) | £14.90 per pair (1.2 m length) | Soft rubber profile for bifin blades |
 
-## Regional Suppliers
-### United Kingdom
-- [DiveSports UK](https://www.divesports.co.uk/) — Replacement rails compatible with Pathos and similar foot pockets
-- [Apnea Products](https://apneaproducts.co.uk/) — Stocks soft and stiff rail profiles
+## Usage notes
+- Warm rails in hot water to soften before installation, especially on tight radii.
+- Roughen the bonding face lightly with 120-grit sandpaper for better adhesion.
 
-### European Union
-- [Leaderfins Spare Rails](https://www.leaderfins.com/) — Offers medium and hard rails with international shipping
-- [Finisimo](https://www.finisimo.it/) — Italian supplier for custom-length rails
-
-### North America
-- [Specialfins USA](https://specialfins.com/) — Ships universal rails for DIY blade builders
-- [Mako Spearguns](https://www.makospearguns.com/) — Carries spare bi-fin rails and hardware
-
-## Related Techniques
-- [Gluing Fin Rails – V1 Two Part Plastic-to-Carbon Adhesive](../techniques/gluing-fin-rails/v1/two-part-plastic-carbon-adhesive.md)
-- [Choosing Bi-fin Foot Pockets – V1 Short Rails](../techniques/choosing-bifin-footpockets/v1/short-rails.md)
+## Related techniques
+- [Gluing Fin Rails – V1 Two-Part Plastic Carbon Adhesive](../techniques/gluing-fin-rails/v1/two-part-plastic-carbon-adhesive.md)

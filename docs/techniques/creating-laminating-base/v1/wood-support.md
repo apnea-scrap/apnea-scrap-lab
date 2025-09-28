@@ -1,9 +1,55 @@
 ---
 status: active
 estimated_cost:
-  - amount: 20
+  - amount: 38.78
     currency: GBP
     region: UK
+    note: Based on Jun 2025 UK purchase history
+bill_of_materials:
+  - material: materials/acrylic-sheet.md
+    name: Acrylic sheet (A3)
+    description: 3 mm clear sheet cut to 420 × 297 mm
+    quantity: 1
+    unit: sheet
+    unit_cost:
+      amount: 13.80
+      currency: GBP
+      per: A3 sheet (3 mm)
+      supplier: The Plastic People
+      date: 2025-06
+  - material: materials/acrylic-sheet.md
+    name: Acrylic sheet (A4)
+    description: 3 mm clear sheet cut to 297 × 210 mm
+    quantity: 1
+    unit: sheet
+    unit_cost:
+      amount: 9.10
+      currency: GBP
+      per: A4 sheet (3 mm)
+      supplier: The Plastic People
+      date: 2025-06
+  - material: materials/double-sided-tape.md
+    description: Thin acrylic tape to secure sheets to timber
+    quantity: 0.2
+    unit: roll
+    unit_cost:
+      amount: 8.40
+      currency: GBP
+      per: 25 m roll (12 mm)
+      supplier: Easy Composites
+      date: 2025-06
+  - name: Softwood board offcuts
+    description: 1 cm thick timber for base and angled supports
+    quantity: 1
+    unit_cost:
+      amount: 10.00
+      currency: GBP
+  - name: Angle brackets and screws
+    description: Two galvanised brackets with matching screws
+    quantity: 1
+    unit_cost:
+      amount: 4.20
+      currency: GBP
 time_to_implement: 3
 waiting_time: 0
 ---
@@ -27,17 +73,9 @@ Create a rigid angled surface to support fin blades during lamination.
     - Minimum width: **25cm** (to match blade width).
     - Minimum length: **20cm** (to fit 15cm blade length and extra space).
 
-## Materials / Bill of Materials
+## Bill of Materials
 
-1. **[Acrylic sheet](../../../materials/acrylic-sheet.md)**
-    - 1× A3 size: **42 cm × 30 cm**.
-    - 1× A4 size: **30 cm × 21 cm**.
-2. **Wooden components**
-    - DIY timber for constructing the base, **1 cm thick**.
-3. **Brackets and screws**
-    - **2× metal brackets with screws** (1.6 cm).
-4. **Adhesive**
-    - Thin [double-sided tape](../../../materials/double-sided-tape.md) to hold the acrylic sheets onto the wooden structure.
+{{ render_bill_of_materials() }}
 
 ## Tools Required
 

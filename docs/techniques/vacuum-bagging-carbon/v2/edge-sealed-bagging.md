@@ -1,9 +1,61 @@
 ---
 status: research
 estimated_cost:
-  - amount: 35
+  - amount: 43.26
     currency: GBP
     region: UK
+    note: Based on Jun 2025 UK purchase history
+bill_of_materials:
+  - material: materials/vacuum-bag-film.md
+    description: Cut large enough for flange seal and pleats
+    quantity: 1.2
+    unit: metre
+    unit_cost:
+      amount: 3.90
+      currency: GBP
+      per: metre
+      supplier: Easy Composites
+      date: 2025-06
+  - material: materials/butyl-sealing-tape.md
+    description: Continuous bead around the laminating base
+    quantity: 0.4
+    unit: roll
+    unit_cost:
+      amount: 5.90
+      currency: GBP
+      per: roll
+      supplier: Easy Composites
+      date: 2025-06
+  - material: materials/breather-cloth.md
+    description: Under-bag airflow path and resin catch
+    quantity: 0.6
+    unit: metre
+    unit_cost:
+      amount: 6.20
+      currency: GBP
+      per: metre
+      supplier: Easy Composites
+      date: 2025-06
+  - material: materials/vacuum-gauge.md
+    description: Inline gauge to monitor vacuum level
+    quantity: 1
+    unit: gauge
+    unit_cost:
+      amount: 17.50
+      currency: GBP
+      per: gauge
+      supplier: RDG Tools
+      date: 2025-06
+  - material: materials/manual-vacuum-pump.md
+    description: Manual pump for edge-sealed bag
+    quantity: 1
+    unit: pump
+    unit_cost:
+      amount: 15.00
+      currency: GBP
+      per: pump kit
+      supplier: Status
+      date: 2025-06
 time_to_implement: 5
 waiting_time: 12
 ---
@@ -18,12 +70,9 @@ To enable vacuum bagging of larger parts by sealing a cut vacuum bag directly to
 - Target vacuum level: ~80% vacuum (-0.2 bar relative to atmosphere)
 - Requires a rigid, smooth laminating base for edge sealing
 
-## Materials / Bill of Materials
-- [Vacuum bag film](../../../materials/vacuum-bag-film.md) cut to size
-- [Butyl sealing tape](../../../materials/butyl-sealing-tape.md)
-- [Breather cloth](../../../materials/breather-cloth.md)
-- [Vacuum gauge](../../../materials/vacuum-gauge.md)
-- [Manual vacuum pump](../../../materials/manual-vacuum-pump.md)
+## Bill of Materials
+
+{{ render_bill_of_materials() }}
 
 ## Tools Required
 - Metal roller or rounded tool (for pressing sealant tape firmly)

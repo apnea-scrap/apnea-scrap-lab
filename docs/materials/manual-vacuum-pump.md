@@ -1,30 +1,33 @@
 ---
 title: Manual Vacuum Pump
+material:
+  default_unit: pump
+  purchases:
+    - supplier: "Status"
+      url: "https://www.lakeland.co.uk/"
+      region: UK
+      date: 2025-06
+      unit: per pump kit
+      price:
+        amount: 15.00
+        currency: GBP
+      notes: "Status hand pump bundled with large food storage bags"
 ---
 # Manual Vacuum Pump
 
 ## Overview
-Manual pumps are useful for small laminating setups where electric vacuum pumps are overkill. Hand-operated piston or lever
-pumps let you evacuate compact vacuum bags while keeping the kit portable.
+Hand-operated vacuum pump used with consumer storage bags for budget laminating setups. Pulls a modest vacuum quickly
+and is easy to source locally.
 
-## Recommended Specs
-- Compatible hose barb or valve adapter for storage bags or bagging film
-- Capable of reaching at least -0.6 bar on small volumes
-- Durable seals that tolerate repeated cycles without oiling
+## Purchase history (UK)
+| Date | Supplier | Unit price | Notes |
+| --- | --- | --- | --- |
+| Jun 2025 | [Status](https://www.lakeland.co.uk/) | £15.00 per pump kit | Hand pump supplied with two 55 × 85 cm bags |
 
-## Regional Suppliers
-### United Kingdom
-- [Vacuum Pressing Systems Thin Air Press Pump](https://www.vacupress.com/) — Compact hand pump suited to composites experimentation
-- [Sealey VS016](https://www.sealey.co.uk/) — Automotive vacuum pump with gauge and hose adaptors
+## Usage notes
+- Apply a little silicone grease to the seals periodically to maintain suction.
+- Expect to re-pump every hour during longer cures; keep the pump attached for convenience.
 
-### European Union
-- [Schmalz Manual Vacuum Pump](https://www.schmalz.com/) — Industrial-grade option with replaceable seals
-- [DICTUM Vacuum Press Kit Pump](https://www.dictum.com/) — Woodworking pump that doubles for composites bagging
-
-### North America
-- [Roarockit Thin Air Press Pump](https://www.roarockit.com/) — Widely used for skateboard pressing and small composites work
-- [Mityvac MV8500](https://www.mityvac.com/) — Automotive hand pump capable of sustained vacuum
-
-## Related Techniques
+## Related techniques
+- [Laminating Carbon – V1 Wet Layup](../techniques/laminating-carbon/v1/wet-layup.md)
 - [Vacuum Bagging Carbon – V1 Enclosed Bagging](../techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md)
-- [Vacuum Bagging Carbon – V2 Edge-Sealed Bagging](../techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md)

@@ -1,9 +1,89 @@
 ---
 status: active
 estimated_cost:
-  - amount: 20
+  - amount: 38.29
     currency: GBP
     region: UK
+    note: Based on Jun 2025 UK purchase history
+bill_of_materials:
+  - material: materials/carbon-fiber-fabric.md
+    description: 0.3 m² of 200 g/m² 3K 2/2 twill cloth
+    quantity: 0.3
+    unit: m²
+    unit_cost:
+      amount: 36.80
+      currency: GBP
+      per: m²
+      supplier: Easy Composites
+      date: 2025-06
+  - material: materials/laminating-epoxy-system.md
+    description: 200 g mixed resin (approx. 200 ml)
+    quantity: 0.4
+    unit: 500 ml kit
+    unit_cost:
+      amount: 24.00
+      currency: GBP
+      per: 500 ml kit
+      supplier: Easy Composites
+      date: 2025-06
+  - material: materials/pva-release-agent.md
+    description: Two thin coats on the laminating base
+    quantity: 0.07
+    unit: 500 ml bottle
+    unit_cost:
+      amount: 9.60
+      currency: GBP
+      per: 500 ml bottle
+      supplier: Easy Composites
+      date: 2025-06
+  - material: materials/peel-ply.md
+    description: Two layers cut to the blade outline
+    quantity: 0.6
+    unit: metre
+    unit_cost:
+      amount: 4.80
+      currency: GBP
+      per: metre
+      supplier: Easy Composites
+      date: 2025-06
+  - material: materials/breather-cloth.md
+    description: Wrap to improve vacuum bleed
+    quantity: 0.5
+    unit: metre
+    unit_cost:
+      amount: 6.20
+      currency: GBP
+      per: metre
+      supplier: Easy Composites
+      date: 2025-06
+    notes: Optional for manual pump setups
+  - material: materials/vacuum-storage-bags.md
+    description: Large bag enclosure (one bag from a pack of two)
+    quantity: 0.5
+    unit: pack
+    unit_cost:
+      amount: 12.00
+      currency: GBP
+      per: pack
+      supplier: Lakeland
+      date: 2025-06
+  - material: materials/manual-vacuum-pump.md
+    description: Manual pump amortised over repeated builds
+    quantity: 0.1
+    unit: pump
+    unit_cost:
+      amount: 15.00
+      currency: GBP
+      per: pump kit
+      supplier: Status
+      date: 2025-06
+    notes: Optional; reuse across laminations
+  - name: Consumables pack
+    description: Gloves, mixing sticks, acetone wipes
+    quantity: 1
+    unit_cost:
+      amount: 3.50
+      currency: GBP
 time_to_implement: 3
 waiting_time: 12
 ---
@@ -19,16 +99,12 @@ Produce a basic carbon blade using a manual wet layup.
 - Uses 0/90 3K twill carbon cloth
 - Geometry and taper follow the chosen cutting template
 
-## Materials / Bill of Materials
+## Bill of Materials
 
-- [Carbon fiber fabric](../../../materials/carbon-fiber-fabric.md) — 0.3 m² of 3K 2/2 twill cloth cut to the blade outline.
-- [Laminating epoxy system](../../../materials/laminating-epoxy-system.md) — Mix 154 g resin with 46 g hardener (100:30 by weight).
-- [PVA release agent](../../../materials/pva-release-agent.md) — Approximately 35 ml to seal the laminating base.
-- [Peel ply](../../../materials/peel-ply.md) — Two layers covering the full laminate area.
-- [Breather cloth](../../../materials/breather-cloth.md) — Optional wrap to improve vacuum bleed.
-- [Vacuum storage bags](../../../materials/vacuum-storage-bags.md) with hand pump — Optional low-cost vacuum enclosure.
-- Disposable consumables: nitrile gloves, mixing pots, mixing sticks, laminating brushes, plastic finned roller, and acetone for cleanup.
+{{ render_bill_of_materials() }}
+
 - Digital scale accurate to 1 g for measuring resin and hardener.
+- Plastic finned roller (75 mm) to consolidate the laminate.
 
 ## Tools Required
 - Nitrile gloves

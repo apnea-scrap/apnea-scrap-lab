@@ -2,9 +2,41 @@
 version: v1
 status: active
 estimated_cost:
-  - amount: 20
+  - amount: 24.10
     currency: GBP
     region: UK
+    note: Based on Jun 2025 UK purchase history
+bill_of_materials:
+  - material: materials/vacuum-storage-bags.md
+    description: Heavy-duty bag for enclosed setup
+    quantity: 0.5
+    unit: pack
+    unit_cost:
+      amount: 12.00
+      currency: GBP
+      per: pack
+      supplier: Lakeland
+      date: 2025-06
+  - material: materials/manual-vacuum-pump.md
+    description: Hand pump supplied with compatible valve
+    quantity: 1
+    unit: pump
+    unit_cost:
+      amount: 15.00
+      currency: GBP
+      per: pump kit
+      supplier: Status
+      date: 2025-06
+  - material: materials/breather-cloth.md
+    description: Wraps part to distribute airflow
+    quantity: 0.5
+    unit: metre
+    unit_cost:
+      amount: 6.20
+      currency: GBP
+      per: metre
+      supplier: Easy Composites
+      date: 2025-06
 time_to_implement: 3
 waiting_time: 12
 ---
@@ -20,9 +52,9 @@ To create a simple, low-cost vacuum environment for small parts using off-the-sh
 - Pressure achievable: approximately -0.2 to -0.4 bar with a manual pump
 - Requires a flat, rigid base (e.g. acrylic sheet) to support the part
 
-## Materials / Bill of Materials
-- [Vacuum storage bags](../../../materials/vacuum-storage-bags.md) with a compatible manual pump
-- [Breather cloth](../../../materials/breather-cloth.md)
+## Bill of Materials
+
+{{ render_bill_of_materials() }}
 
 ## Tools Required
 - Metal file (for smoothing edges of the base or parts)

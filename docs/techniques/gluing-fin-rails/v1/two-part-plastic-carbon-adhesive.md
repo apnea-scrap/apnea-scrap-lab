@@ -1,9 +1,37 @@
 ---
 status: active
 estimated_cost:
-  - amount: 15
+  - amount: 30.15
     currency: GBP
     region: UK
+    note: Based on Jun 2025 UK purchase history
+bill_of_materials:
+  - material: materials/rubber-fin-rails.md
+    description: One pair of soft rubber rails sized for bifin blades
+    quantity: 1
+    unit: pair
+    unit_cost:
+      amount: 14.90
+      currency: GBP
+      per: pair (1.2 m)
+      supplier: Freedive Store
+      date: 2025-06
+  - material: materials/plastic-to-carbon-adhesive.md
+    description: 25 ml of 3M DP420 mixed with nozzle
+    quantity: 0.5
+    unit: cartridge
+    unit_cost:
+      amount: 24.50
+      currency: GBP
+      per: 50 ml cartridge
+      supplier: Easy Composites
+      date: 2025-06
+  - name: Fold-back clips set
+    description: 20 mm binder clips for clamping rails during cure
+    quantity: 1
+    unit_cost:
+      amount: 3.00
+      currency: GBP
 time_to_implement: 1
 waiting_time: 12
 ---
@@ -15,11 +43,9 @@ waiting_time: 12
 To attach rubber fin rails securely to carbon fiber blades using a strong composite adhesive.  
 The rails protect the blade edges, improve water flow, and extend the blade’s lifespan.
 
-## Materials / Bill of Materials
+## Bill of Materials
 
-- [Rubber fin rails](../../../materials/rubber-fin-rails.md)
-- [Plastic-to-carbon adhesive](../../../materials/plastic-to-carbon-adhesive.md)
-- Fold-back paper clips (for clamping)
+{{ render_bill_of_materials() }}
 
 ## Tools Required
 
