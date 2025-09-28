@@ -1,7 +1,7 @@
 ---
-status: research
+status: superseded
 estimated_cost: 10
-time_to_implement: 1
+time_to_implement: 0.25
 waiting_time: 0
 ---
 # {{ parent_child_title() }}
