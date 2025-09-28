@@ -78,6 +78,9 @@ nav:
       - Measuring Flex:
           - Measuring Flex Versions: techniques/measuring-flex/index.md
           - V1 - Weight Belt Test: techniques/measuring-flex/v1/weight-belt-test.md
+      - Predicting Flex:
+          - Predicting Flex Versions: techniques/predicting-flex/index.md
+          - V1 - Tapered Cantilever Beam: techniques/predicting-flex/v1/tapered-cantilever-beam.md
       - Measuring Vacuum:
           - Measuring Vacuum Versions: techniques/measuring-vacuum/index.md
           - V1 - Syringe Gauge: techniques/measuring-vacuum/v1/syringe-gauge.md

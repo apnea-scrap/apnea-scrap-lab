@@ -73,3 +73,12 @@ def define_env(env):
         parent = getattr(page, "parent", None)
         parent_title = getattr(parent, "title", "") if parent else ""
         return f"{parent_title} - {page.title}" if parent_title else page.title
+
+    @env.macro
+    def flex_predictor_embed():
+        return (
+            '<link rel="stylesheet" href="https://flex.apneascrap.com/fin-bending.css">\n'
+            '<div id="fin-bending-app"></div>\n'
+            '<script src="https://flex.apneascrap.com/fin-bending-core.js"></script>\n'
+            '<script src="https://flex.apneascrap.com/fin-bending-render.js"></script>'
+        )
