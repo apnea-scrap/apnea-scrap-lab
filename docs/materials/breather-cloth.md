@@ -7,7 +7,7 @@ material:
       url: "https://www.easycomposites.co.uk/breather-fabric"
       region: UK
       date: 2025-06
-      unit: per linear metre (1 m wide)
+      unit: linear metre (1 m wide)
       price:
         amount: 6.20
         currency: GBP
@@ -19,10 +19,9 @@ material:
 Breather cloth spreads vacuum pressure evenly and channels air to the resin trap. Polyester felt is reusable for small
 projects and easy to cut to shape.
 
-## Purchase history (UK)
-| Date | Supplier | Unit price | Notes |
-| --- | --- | --- | --- |
-| Jun 2025 | [Easy Composites](https://www.easycomposites.co.uk/breather-fabric) | £6.20 per linear metre (1 m wide) | Polyester breather felt, 200 g/m² |
+## Purchase history
+
+{{ render_material_purchases() }}
 
 ## Usage notes
 - Lay the breather so it wraps around the laminate edges to avoid resin-rich corners.

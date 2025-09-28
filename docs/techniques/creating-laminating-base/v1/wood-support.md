@@ -11,33 +11,24 @@ bill_of_materials:
     description: 3 mm clear sheet cut to 420 × 297 mm
     quantity: 1
     unit: sheet
-    unit_cost:
-      amount: 13.80
-      currency: GBP
-      per: A3 sheet (3 mm)
-      supplier: The Plastic People
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: A3 sheet (3 mm)
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A4)
     description: 3 mm clear sheet cut to 297 × 210 mm
     quantity: 1
     unit: sheet
-    unit_cost:
-      amount: 9.10
-      currency: GBP
-      per: A4 sheet (3 mm)
-      supplier: The Plastic People
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: A4 sheet (3 mm)
   - material: materials/double-sided-tape.md
     description: Thin acrylic tape to secure sheets to timber
     quantity: 0.2
     unit: roll
-    unit_cost:
-      amount: 8.40
-      currency: GBP
-      per: 25 m roll (12 mm)
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: 25 m roll (12 mm)
   - name: Softwood board offcuts
     description: 1 cm thick timber for base and angled supports
     quantity: 1

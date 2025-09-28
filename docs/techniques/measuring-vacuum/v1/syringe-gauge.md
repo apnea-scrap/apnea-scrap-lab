@@ -28,12 +28,8 @@ bill_of_materials:
     description: Wrap to protect the gauge inside the bag
     quantity: 0.1
     unit: metre
-    unit_cost:
-      amount: 6.20
-      currency: GBP
-      per: metre
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
   - name: Permanent marker
     description: Fine tip for calibration marks
     quantity: 1

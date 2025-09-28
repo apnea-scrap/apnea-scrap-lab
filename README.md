@@ -10,6 +10,7 @@ DIY freediving gear knowledge base. Techniques, versions, and test procedures fo
 - Versioned techniques with standard metadata (status, estimated cost, implementation time h, waiting time h)
 - Comparison tables generated automatically from page metadata
 - Bill of materials tables rendered from front matter so costs stay linked to recorded purchases
+- Material pages list regional supplier history via macros fed by front matter
 - Macro for YouTube embeds
 - GitHub Actions that build and publish automatically on every push to main
 
@@ -96,12 +97,9 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
       description: 200 g/m² 3K cloth
       quantity: 0.3
       unit: m²
-      unit_cost:
-        amount: 36.80
-        currency: GBP
-        per: m²
-        supplier: Easy Composites
-        date: 2025-06
+      purchase:
+        region: UK
+        unit: m² (1 m wide)
     - name: Consumables pack
       description: Gloves, brushes, mixing sticks
       quantity: 1
@@ -132,6 +130,8 @@ Macros live in `main.py`.
 - `{{ yt("VIDEO_ID", "Title") }}` embeds a responsive privacy friendly YouTube iframe
 - `{{ versions_table() }}` builds a version comparison table for the current folder based on front matter metadata
 - `{{ status_banner() }}` shows a coloured banner with the current page status
+- `{{ render_bill_of_materials() }}` converts the front matter bill of materials into a table, automatically pulling pricing from linked material pages when available
+- `{{ render_material_purchases() }}` groups a material page’s purchase history by region and renders supplier tables
 
 Restart `mkdocs serve` if you modify `main.py` to reload macros.
 

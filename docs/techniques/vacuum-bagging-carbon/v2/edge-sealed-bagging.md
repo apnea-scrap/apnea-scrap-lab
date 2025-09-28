@@ -10,52 +10,37 @@ bill_of_materials:
     description: Cut large enough for flange seal and pleats
     quantity: 1.2
     unit: metre
-    unit_cost:
-      amount: 3.90
-      currency: GBP
-      per: metre
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: linear metre (760 mm wide)
   - material: materials/butyl-sealing-tape.md
     description: Continuous bead around the laminating base
     quantity: 0.4
     unit: roll
-    unit_cost:
-      amount: 5.90
-      currency: GBP
-      per: roll
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: 15 m roll (12 mm)
   - material: materials/breather-cloth.md
     description: Under-bag airflow path and resin catch
     quantity: 0.6
     unit: metre
-    unit_cost:
-      amount: 6.20
-      currency: GBP
-      per: metre
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: linear metre (1 m wide)
   - material: materials/vacuum-gauge.md
     description: Inline gauge to monitor vacuum level
     quantity: 1
     unit: gauge
-    unit_cost:
-      amount: 17.50
-      currency: GBP
-      per: gauge
-      supplier: RDG Tools
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: gauge
   - material: materials/manual-vacuum-pump.md
     description: Manual pump for edge-sealed bag
     quantity: 1
     unit: pump
-    unit_cost:
-      amount: 15.00
-      currency: GBP
-      per: pump kit
-      supplier: Status
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: pump kit
 time_to_implement: 5
 waiting_time: 12
 ---

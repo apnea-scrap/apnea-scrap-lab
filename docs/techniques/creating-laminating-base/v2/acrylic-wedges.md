@@ -11,12 +11,9 @@ bill_of_materials:
     description: Six panels for modular monofin base
     quantity: 6
     unit: sheet
-    unit_cost:
-      amount: 12.10
-      currency: GBP
-      per: A3 sheet (2 mm)
-      supplier: The Plastic People
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: A3 sheet (2 mm)
   - name: Electrical tape roll
     description: Wide PVC tape to join acrylic seams
     quantity: 0.5

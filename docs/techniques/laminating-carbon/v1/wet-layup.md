@@ -10,73 +10,52 @@ bill_of_materials:
     description: 0.3 m² of 200 g/m² 3K 2/2 twill cloth
     quantity: 0.3
     unit: m²
-    unit_cost:
-      amount: 36.80
-      currency: GBP
-      per: m²
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: m² (1 m wide)
   - material: materials/laminating-epoxy-system.md
     description: 200 g mixed resin (approx. 200 ml)
     quantity: 0.4
     unit: 500 ml kit
-    unit_cost:
-      amount: 24.00
-      currency: GBP
-      per: 500 ml kit
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: 500 ml kit
   - material: materials/pva-release-agent.md
     description: Two thin coats on the laminating base
     quantity: 0.07
     unit: 500 ml bottle
-    unit_cost:
-      amount: 9.60
-      currency: GBP
-      per: 500 ml bottle
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: 500 ml bottle
   - material: materials/peel-ply.md
     description: Two layers cut to the blade outline
     quantity: 0.6
     unit: metre
-    unit_cost:
-      amount: 4.80
-      currency: GBP
-      per: metre
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: linear metre (1.5 m wide)
   - material: materials/breather-cloth.md
     description: Wrap to improve vacuum bleed
     quantity: 0.5
     unit: metre
-    unit_cost:
-      amount: 6.20
-      currency: GBP
-      per: metre
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: linear metre (1 m wide)
     notes: Optional for manual pump setups
   - material: materials/vacuum-storage-bags.md
     description: Large bag enclosure (one bag from a pack of two)
     quantity: 0.5
     unit: pack
-    unit_cost:
-      amount: 12.00
-      currency: GBP
-      per: pack
-      supplier: Lakeland
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: pack of 2 (55 × 85 cm)
   - material: materials/manual-vacuum-pump.md
     description: Manual pump amortised over repeated builds
     quantity: 0.1
     unit: pump
-    unit_cost:
-      amount: 15.00
-      currency: GBP
-      per: pump kit
-      supplier: Status
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: pump kit
     notes: Optional; reuse across laminations
   - name: Consumables pack
     description: Gloves, mixing sticks, acetone wipes

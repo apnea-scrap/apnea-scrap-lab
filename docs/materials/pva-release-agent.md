@@ -7,7 +7,7 @@ material:
       url: "https://www.easycomposites.co.uk/pva-release-agent"
       region: UK
       date: 2025-06
-      unit: per 500 ml bottle
+      unit: 500 ml bottle
       price:
         amount: 9.60
         currency: GBP
@@ -19,10 +19,9 @@ material:
 Polyvinyl alcohol release agent brushed onto laminating bases to prevent epoxy from sticking. Leaves a thin film that
 washes away with water after the cure.
 
-## Purchase history (UK)
-| Date | Supplier | Unit price | Notes |
-| --- | --- | --- | --- |
-| Jun 2025 | [Easy Composites](https://www.easycomposites.co.uk/pva-release-agent) | £9.60 per 500 ml bottle | Green PVA release agent |
+## Purchase history
+
+{{ render_material_purchases() }}
 
 ## Usage notes
 - Apply in two thin coats with foam brushes for an even sheen.

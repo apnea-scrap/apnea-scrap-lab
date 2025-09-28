@@ -7,7 +7,7 @@ material:
       url: "https://www.easycomposites.co.uk/peel-ply"
       region: UK
       date: 2025-06
-      unit: per linear metre (1.5 m wide)
+      unit: linear metre (1.5 m wide)
       price:
         amount: 4.80
         currency: GBP
@@ -19,10 +19,9 @@ material:
 Breathable nylon layer that wicks away excess resin and leaves a keyed surface for secondary bonding or finishing. Scoured
 peel ply releases cleanly from cured laminates.
 
-## Purchase history (UK)
-| Date | Supplier | Unit price | Notes |
-| --- | --- | --- | --- |
-| Jun 2025 | [Easy Composites](https://www.easycomposites.co.uk/peel-ply) | £4.80 per linear metre (1.5 m wide) | Scoured nylon peel ply |
+## Purchase history
+
+{{ render_material_purchases() }}
 
 ## Usage notes
 - Lay peel ply with light tension to avoid wrinkles imprinting into the laminate.

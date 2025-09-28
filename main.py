@@ -156,6 +156,54 @@ def define_env(env):
             return parsed.strftime("%b %Y")
         return value
 
+    def _parse_date(value: str | None) -> datetime | None:
+        if not value:
+            return None
+        for fmt in ("%Y-%m-%d", "%Y-%m", "%Y"):
+            try:
+                return datetime.strptime(value, fmt)
+            except ValueError:
+                continue
+        return None
+
+    def _normalise(value: str | None) -> str:
+        return (value or "").strip().lower()
+
+    def _select_material_purchase(
+        purchases: list[dict],
+        *,
+        region: str | None = None,
+        supplier: str | None = None,
+        date: str | None = None,
+        unit: str | None = None,
+    ) -> dict | None:
+        if not purchases:
+            return None
+
+        candidates = purchases
+
+        if region:
+            region_matches = [p for p in candidates if _normalise(p.get("region")) == _normalise(region)]
+            candidates = region_matches or candidates
+
+        if supplier:
+            supplier_matches = [p for p in candidates if _normalise(p.get("supplier")) == _normalise(supplier)]
+            candidates = supplier_matches or candidates
+
+        if date:
+            date_matches = [p for p in candidates if str(p.get("date")) == str(date)]
+            candidates = date_matches or candidates
+
+        if unit:
+            unit_matches = [p for p in candidates if _normalise(p.get("unit")) == _normalise(unit)]
+            candidates = unit_matches or candidates
+
+        def sort_key(purchase: dict):
+            parsed = _parse_date(purchase.get("date"))
+            return (parsed or datetime.min, purchase.get("supplier") or "")
+
+        return sorted(candidates, key=sort_key, reverse=True)[0]
+
     @env.macro
     def render_bill_of_materials(path: str | None = None) -> str:
         page = Path(env.page.file.src_path)
@@ -182,6 +230,7 @@ def define_env(env):
             unit_cost = item.get("unit_cost", {}) or {}
 
             material_cell = ""
+            material_meta: dict | None = None
             if material_path:
                 material_page = Path(material_path)
                 if material_page.is_absolute():
@@ -195,6 +244,21 @@ def define_env(env):
                 material_cell = f"[{title}]({rel_path.replace(os.sep, '/')})"
             elif name:
                 material_cell = name
+
+            material_info = material_meta or {}
+            material_purchases = material_info.get("material", {}).get("purchases", [])
+            purchase_hint = item.get("purchase") or {}
+            region_hint = purchase_hint.get("region") or item.get("region")
+            supplier_hint = purchase_hint.get("supplier") or item.get("supplier")
+            date_hint = purchase_hint.get("date") or item.get("date")
+            unit_hint = purchase_hint.get("unit")
+            selected_purchase = _select_material_purchase(
+                material_purchases,
+                region=region_hint,
+                supplier=supplier_hint,
+                date=date_hint,
+                unit=unit_hint,
+            )
 
             if description:
                 suffix = description if notes else description
@@ -226,6 +290,22 @@ def define_env(env):
             unit_cost_date = unit_cost.get("date")
             unit_cost_note = unit_cost.get("note")
 
+            if selected_purchase:
+                purchase_price = selected_purchase.get("price") or {}
+                if unit_cost_amount is None and purchase_price.get("amount") is not None:
+                    unit_cost_amount = purchase_price.get("amount")
+                if not unit_cost_currency and purchase_price.get("currency"):
+                    unit_cost_currency = purchase_price.get("currency")
+                if not unit_cost_per and selected_purchase.get("unit"):
+                    per_value = str(selected_purchase.get("unit"))
+                    unit_cost_per = per_value[4:] if per_value.lower().startswith("per ") else per_value
+                if not unit_cost_supplier and selected_purchase.get("supplier"):
+                    unit_cost_supplier = selected_purchase.get("supplier")
+                if not unit_cost_date and selected_purchase.get("date"):
+                    unit_cost_date = selected_purchase.get("date")
+                if not unit_cost_note and selected_purchase.get("notes"):
+                    unit_cost_note = selected_purchase.get("notes")
+
             unit_cost_details = []
             formatted_unit_cost = ""
             if unit_cost_amount is not None and unit_cost_currency:
@@ -235,7 +315,11 @@ def define_env(env):
                 except Exception:
                     formatted_unit_cost = f"{unit_cost_currency} {unit_cost_amount}"
                 if unit_cost_per:
-                    formatted_unit_cost += f" per {unit_cost_per}"
+                    per_value = str(unit_cost_per)
+                    if per_value.lower().startswith("per "):
+                        formatted_unit_cost += f" {per_value}"
+                    else:
+                        formatted_unit_cost += f" per {per_value}"
             elif unit_cost_amount is not None:
                 formatted_unit_cost = str(unit_cost_amount)
             elif unit_cost_currency:
@@ -295,6 +379,80 @@ def define_env(env):
             )
 
         return "\n".join(table_lines)
+
+    @env.macro
+    def render_material_purchases(path: str | None = None, heading_level: int = 3) -> str:
+        page_path = Path(path) if path else Path(env.page.file.abs_src_path)
+        meta = read_meta(page_path)
+        material_block = meta.get("material") or {}
+        purchases = material_block.get("purchases") or []
+
+        if not purchases:
+            return "No purchase history recorded yet."
+
+        grouped: dict[str, list[dict]] = {}
+        for purchase in purchases:
+            region = purchase.get("region") or "Unspecified region"
+            grouped.setdefault(region, []).append(purchase)
+
+        heading_prefix = "#" * max(heading_level, 1)
+        sections: list[str] = []
+
+        def display_region(region_key: str) -> str:
+            mapping = {
+                "uk": "United Kingdom",
+                "us": "United States",
+                "eu": "European Union",
+            }
+            normalised = region_key.strip().lower()
+            return mapping.get(normalised, region_key)
+
+        for region_key in sorted(grouped.keys(), key=lambda value: value.lower()):
+            sections.append(f"{heading_prefix} {display_region(region_key)}")
+            sections.append("| Date | Supplier | Unit price | Notes |")
+            sections.append("| --- | --- | --- | --- |")
+
+            region_purchases = sorted(
+                grouped[region_key],
+                key=lambda purchase: (_parse_date(purchase.get("date")) or datetime.min, purchase.get("supplier") or ""),
+                reverse=True,
+            )
+
+            for purchase in region_purchases:
+                display_date = _format_date(purchase.get("date")) or ""
+                supplier = purchase.get("supplier") or ""
+                url = purchase.get("url")
+                supplier_cell = f"[{supplier}]({url})" if supplier and url else supplier
+
+                price_block = purchase.get("price") or {}
+                price_amount = price_block.get("amount")
+                price_currency = price_block.get("currency")
+                if price_amount is not None and price_currency:
+                    try:
+                        price_value = _format_currency(Decimal(str(price_amount)), price_currency)
+                    except Exception:
+                        price_value = f"{price_currency} {price_amount}"
+                elif price_amount is not None:
+                    price_value = str(price_amount)
+                elif price_currency:
+                    price_value = price_currency
+                else:
+                    price_value = ""
+
+                purchase_unit = purchase.get("unit")
+                if purchase_unit:
+                    unit_text = str(purchase_unit)
+                    if unit_text.lower().startswith("per "):
+                        price_value = f"{price_value} {unit_text}" if price_value else unit_text
+                    else:
+                        price_value = f"{price_value} per {unit_text}" if price_value else f"per {unit_text}"
+
+                notes = purchase.get("notes") or ""
+                sections.append(f"| {display_date} | {supplier_cell} | {price_value} | {notes} |")
+
+            sections.append("")
+
+        return "\n".join(sections).strip()
 
     @env.macro
     def status_banner(status: str | None = None) -> str:

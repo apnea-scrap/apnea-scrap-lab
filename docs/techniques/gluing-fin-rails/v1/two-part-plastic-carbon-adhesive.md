@@ -10,22 +10,14 @@ bill_of_materials:
     description: One pair of soft rubber rails sized for bifin blades
     quantity: 1
     unit: pair
-    unit_cost:
-      amount: 14.90
-      currency: GBP
-      per: pair (1.2 m)
-      supplier: Freedive Store
-      date: 2025-06
+    purchase:
+      region: UK
   - material: materials/plastic-to-carbon-adhesive.md
     description: 25 ml of 3M DP420 mixed with nozzle
     quantity: 0.5
     unit: cartridge
-    unit_cost:
-      amount: 24.50
-      currency: GBP
-      per: 50 ml cartridge
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
   - name: Fold-back clips set
     description: 20 mm binder clips for clamping rails during cure
     quantity: 1

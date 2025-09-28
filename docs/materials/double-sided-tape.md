@@ -7,7 +7,7 @@ material:
       url: "https://www.easycomposites.co.uk/double-sided-tape"
       region: UK
       date: 2025-06
-      unit: per 25 m roll (12 mm)
+      unit: 25 m roll (12 mm)
       price:
         amount: 8.40
         currency: GBP
@@ -19,10 +19,9 @@ material:
 Thin acrylic adhesive tape used to temporarily hold vacuum films, peel ply, or small components in place without leaving
 a thick ridge.
 
-## Purchase history (UK)
-| Date | Supplier | Unit price | Notes |
-| --- | --- | --- | --- |
-| Jun 2025 | [Easy Composites](https://www.easycomposites.co.uk/double-sided-tape) | £8.40 per 25 m roll (12 mm) | Low-profile acrylic transfer tape |
+## Purchase history
+
+{{ render_material_purchases() }}
 
 ## Usage notes
 - Apply in short sections; long strips are harder to reposition cleanly.

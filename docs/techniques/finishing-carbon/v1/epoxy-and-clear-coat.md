@@ -11,22 +11,16 @@ bill_of_materials:
     description: Thin finishing coat (approx. 100 ml mixed)
     quantity: 0.2
     unit: 500 ml kit
-    unit_cost:
-      amount: 24.00
-      currency: GBP
-      per: 500 ml kit
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: 500 ml kit
   - material: materials/clear-coat-spray.md
     description: Three light lacquer passes for UV protection
     quantity: 0.3
     unit: can
-    unit_cost:
-      amount: 10.00
-      currency: GBP
-      per: 500 ml can
-      supplier: Halfords
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: 500 ml can
   - name: Sandpaper set
     description: 400, 600, and 1000 grit sheets
     quantity: 1

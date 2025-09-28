@@ -7,7 +7,7 @@ material:
       url: "https://www.easycomposites.co.uk/butyl-sealant-tape"
       region: UK
       date: 2025-06
-      unit: per 15 m roll (12 mm)
+      unit: 15 m roll (12 mm)
       price:
         amount: 5.90
         currency: GBP
@@ -19,10 +19,9 @@ material:
 Tacky butyl sealant used to close vacuum bags. Sticks well to plastics and peel ply without leaving residue when removed
 slowly after the cure.
 
-## Purchase history (UK)
-| Date | Supplier | Unit price | Notes |
-| --- | --- | --- | --- |
-| Jun 2025 | [Easy Composites](https://www.easycomposites.co.uk/butyl-sealant-tape) | £5.90 per 15 m roll (12 mm) | Butyl vacuum bag sealant, room-temperature |
+## Purchase history
+
+{{ render_material_purchases() }}
 
 ## Usage notes
 - Warm the tape slightly in cold shops so it compresses uniformly.

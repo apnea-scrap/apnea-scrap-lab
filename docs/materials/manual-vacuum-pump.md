@@ -7,7 +7,7 @@ material:
       url: "https://www.lakeland.co.uk/"
       region: UK
       date: 2025-06
-      unit: per pump kit
+      unit: pump kit
       price:
         amount: 15.00
         currency: GBP
@@ -19,10 +19,9 @@ material:
 Hand-operated vacuum pump used with consumer storage bags for budget laminating setups. Pulls a modest vacuum quickly
 and is easy to source locally.
 
-## Purchase history (UK)
-| Date | Supplier | Unit price | Notes |
-| --- | --- | --- | --- |
-| Jun 2025 | [Status](https://www.lakeland.co.uk/) | £15.00 per pump kit | Hand pump supplied with two 55 × 85 cm bags |
+## Purchase history
+
+{{ render_material_purchases() }}
 
 ## Usage notes
 - Apply a little silicone grease to the seals periodically to maintain suction.

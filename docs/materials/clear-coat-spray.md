@@ -7,7 +7,7 @@ material:
       url: "https://www.halfords.com/motoring/paints-and-body-repair/paint-and-spray/"
       region: UK
       date: 2025-06
-      unit: per 500 ml can
+      unit: 500 ml can
       price:
         amount: 10.00
         currency: GBP
@@ -19,10 +19,9 @@ material:
 Protective lacquer applied after sanding and polishing to seal exposed fibres and add gloss. The Halfords rattle can lays
 down evenly when warmed and shaken thoroughly.
 
-## Purchase history (UK)
-| Date | Supplier | Unit price | Notes |
-| --- | --- | --- | --- |
-| Jun 2025 | [Halfords](https://www.halfords.com/motoring/paints-and-body-repair/paint-and-spray/) | £10.00 per 500 ml can | Clear lacquer with UV stabilisers |
+## Purchase history
+
+{{ render_material_purchases() }}
 
 ## Usage notes
 - Warm the can in tepid water before spraying for a finer atomisation.

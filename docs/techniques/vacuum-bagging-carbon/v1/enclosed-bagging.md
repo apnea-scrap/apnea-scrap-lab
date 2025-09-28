@@ -11,32 +11,23 @@ bill_of_materials:
     description: Heavy-duty bag for enclosed setup
     quantity: 0.5
     unit: pack
-    unit_cost:
-      amount: 12.00
-      currency: GBP
-      per: pack
-      supplier: Lakeland
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: pack of 2 (55 × 85 cm)
   - material: materials/manual-vacuum-pump.md
     description: Hand pump supplied with compatible valve
     quantity: 1
     unit: pump
-    unit_cost:
-      amount: 15.00
-      currency: GBP
-      per: pump kit
-      supplier: Status
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: pump kit
   - material: materials/breather-cloth.md
     description: Wraps part to distribute airflow
     quantity: 0.5
     unit: metre
-    unit_cost:
-      amount: 6.20
-      currency: GBP
-      per: metre
-      supplier: Easy Composites
-      date: 2025-06
+    purchase:
+      region: UK
+      unit: linear metre (1 m wide)
 time_to_implement: 3
 waiting_time: 12
 ---

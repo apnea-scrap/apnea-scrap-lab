@@ -7,7 +7,7 @@ material:
       url: "https://www.freedivestore.com/"
       region: UK
       date: 2025-06
-      unit: per pair (1.2 m length)
+      unit: pair (1.2 m length)
       price:
         amount: 14.90
         currency: GBP
@@ -19,10 +19,9 @@ material:
 Rubber side rails improve hydrodynamics and protect blade edges. Choose rails with an internal slot that matches the blade
 thickness after finishing.
 
-## Purchase history (UK)
-| Date | Supplier | Unit price | Notes |
-| --- | --- | --- | --- |
-| Jun 2025 | [Freedive Store](https://www.freedivestore.com/) | £14.90 per pair (1.2 m length) | Soft rubber profile for bifin blades |
+## Purchase history
+
+{{ render_material_purchases() }}
 
 ## Usage notes
 - Warm rails in hot water to soften before installation, especially on tight radii.

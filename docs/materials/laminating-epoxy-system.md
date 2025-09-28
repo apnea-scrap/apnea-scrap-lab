@@ -7,7 +7,7 @@ material:
       url: "https://www.easycomposites.co.uk/el2-epoxy-laminating-resin"
       region: UK
       date: 2025-06
-      unit: per 500 ml kit
+      unit: 500 ml kit
       price:
         amount: 24.00
         currency: GBP
@@ -19,10 +19,9 @@ material:
 Two-part epoxy system for wet layups. EL2 resin with AT30 hardener delivers a manageable pot life and cures at room
 temperature while achieving high clarity.
 
-## Purchase history (UK)
-| Date | Supplier | Unit price | Notes |
-| --- | --- | --- | --- |
-| Jun 2025 | [Easy Composites](https://www.easycomposites.co.uk/el2-epoxy-laminating-resin) | £24.00 per 500 ml kit | EL2 resin with AT30 slow hardener |
+## Purchase history
+
+{{ render_material_purchases() }}
 
 ## Usage notes
 - Mix by weight at **100:30** (resin:hardener) and scrape the cup walls thoroughly.

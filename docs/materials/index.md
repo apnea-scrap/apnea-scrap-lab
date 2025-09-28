@@ -14,12 +14,12 @@ When new data comes in for other locales we can extend each page with additional
 
 1. Create or update the material page with:
    - a short overview and any usage notes;
-   - the `material` front matter block shown below, including at least one purchase entry;
-   - a purchase history table scoped to the regions where you have receipts.
+   - the `material` front matter block shown below, including at least one purchase entry for every supplier-region pair;
+   - a `{{ render_material_purchases() }}` call so the macro can turn the recorded purchases into tables grouped by region.
 2. Link techniques and projects to the material page instead of hard-coding suppliers inside a build guide.
 3. When logging a new technique version, add a `bill_of_materials` list in the front matter and render it with
-   `{{ render_bill_of_materials() }}`. This keeps the bill in sync with recorded purchase data and makes the total cost
-   explicit.
+   `{{ render_bill_of_materials() }}`. Reference materials via their page path and provide a `purchase` hint (region, unit,
+   supplier, etc.) so the macro can pull matching price data from the material page automatically.
 
 Need a new material? Duplicate the template below.
 
@@ -33,7 +33,7 @@ material:
       url: "https://example.com/product"
       region: UK
       date: 2025-06
-      unit: per example-unit
+      unit: example-unit
       price:
         amount: 12.34
         currency: GBP
@@ -44,10 +44,9 @@ material:
 ## Overview
 Describe the purpose of the material and what to look for.
 
-## Purchase history (UK)
-| Date | Supplier | Unit price | Notes |
-| --- | --- | --- | --- |
-| Jun 2025 | [Supplier name](https://example.com/product) | £12.34 per example-unit | 200 g/m², 1 m wide |
+## Purchase history
+
+{{ render_material_purchases() }}
 
 ## Usage notes
 - Bullet points covering weights, dimensions, compatible systems, etc.

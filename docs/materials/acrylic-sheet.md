@@ -7,7 +7,7 @@ material:
       url: "https://www.theplasticpeople.co.uk/"
       region: UK
       date: 2025-06
-      unit: per A3 sheet (3 mm)
+      unit: A3 sheet (3 mm)
       price:
         amount: 13.80
         currency: GBP
@@ -16,7 +16,7 @@ material:
       url: "https://www.theplasticpeople.co.uk/"
       region: UK
       date: 2025-06
-      unit: per A3 sheet (2 mm)
+      unit: A3 sheet (2 mm)
       price:
         amount: 12.10
         currency: GBP
@@ -25,7 +25,7 @@ material:
       url: "https://www.theplasticpeople.co.uk/"
       region: UK
       date: 2025-06
-      unit: per A4 sheet (3 mm)
+      unit: A4 sheet (3 mm)
       price:
         amount: 9.10
         currency: GBP
@@ -37,12 +37,9 @@ material:
 Rigid, smooth base material for laminating setups. Cast acrylic is flat, resists acetone wipe-downs, and maintains
 transparency so you can spot trapped air or debris while assembling the layup.
 
-## Purchase history (UK)
-| Date | Supplier | Unit price | Notes |
-| --- | --- | --- | --- |
-| Jun 2025 | [The Plastic People](https://www.theplasticpeople.co.uk/) | £13.80 per A3 sheet (3 mm) | Clear cast acrylic, deburred edges |
-| Jun 2025 | [The Plastic People](https://www.theplasticpeople.co.uk/) | £12.10 per A3 sheet (2 mm) | Clear cast acrylic, 2 mm for modular wedges |
-| Jun 2025 | [The Plastic People](https://www.theplasticpeople.co.uk/) | £9.10 per A4 sheet (3 mm) | Matching sheet for angled wedges |
+## Purchase history
+
+{{ render_material_purchases() }}
 
 ## Usage notes
 - Ask for **cast** acrylic rather than extruded to reduce warping when sanding or trimming.
