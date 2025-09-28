@@ -1,11 +1,6 @@
 ---
 status: active
 maturity: stable
-estimated_cost:
-  - amount: 12.30
-    currency: GBP
-    region: UK
-    note: Based on Jun 2025 UK purchase history
 bill_of_materials:
   - material: materials/laminating-epoxy-system.md
     description: Thin finishing coat (approx. 100 ml mixed)

@@ -1,10 +1,5 @@
 ---
 status: research
-estimated_cost:
-  - amount: 43.26
-    currency: GBP
-    region: UK
-    note: Based on Jun 2025 UK purchase history
 bill_of_materials:
   - material: materials/vacuum-bag-film.md
     description: Cut large enough for flange seal and pleats

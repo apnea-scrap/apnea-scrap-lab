@@ -1,10 +1,5 @@
 ---
 status: active
-estimated_cost:
-  - amount: 0.85
-    currency: GBP
-    region: UK
-    note: Based on Jun 2025 UK purchase history
 bill_of_materials:
   - name: A4 cardstock sheets
     description: 250 gsm sheets for tracing and stiffness

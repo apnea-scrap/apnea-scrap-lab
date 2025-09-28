@@ -1,10 +1,5 @@
 ---
 status: research
-estimated_cost:
-  - amount: 89.10
-    currency: GBP
-    region: UK
-    note: Based on Jun 2025 UK purchase history
 bill_of_materials:
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A3, 2 mm)

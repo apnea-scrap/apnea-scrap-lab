@@ -87,11 +87,6 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
   version: v2
   status: active
   maturity: beta
-  estimated_cost:
-    - amount: 33.29
-      currency: GBP
-      region: UK
-      note: Based on Jun 2025 UK purchase history
   bill_of_materials:
     - material: materials/carbon-fiber-fabric.md
       description: 200 g/m² 3K cloth
@@ -111,9 +106,8 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
   ---
   ```
 3. Add `{{ render_bill_of_materials() }}` where you want the rendered table to appear.
-4. The comparison table on the technique index updates automatically from this metadata.
-5. `estimated_cost` accepts a list of dictionaries so you can record regional estimates (keys: `amount`, `currency`, `region`, and optional `note`).
-6. Commit and push. The site will rebuild automatically.
+4. The comparison table on the technique index automatically calculates estimated costs from the bill of materials.
+5. Commit and push. The site will rebuild automatically.
 
 ### Embed a YouTube video
 Use the `yt` macro defined in `main.py`.

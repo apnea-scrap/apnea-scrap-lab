@@ -24,6 +24,148 @@ def define_env(env):
           style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>
 </div>'''
 
+    def _format_decimal(value, places=3) -> str:
+        quantised = Decimal(str(value)).quantize(Decimal(f"1.{'0' * places}"), rounding=ROUND_HALF_UP)
+        text = format(quantised.normalize(), "f")
+        if "." in text:
+            text = text.rstrip("0").rstrip(".")
+        return text
+
+    def _format_currency(amount: Decimal, currency: str) -> str:
+        currency = (currency or "").upper()
+        symbols = {
+            "GBP": "£",
+            "USD": "$",
+            "EUR": "€",
+        }
+        quantised = amount.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+        symbol = symbols.get(currency)
+        if symbol:
+            return f"{symbol}{quantised}"
+        if currency:
+            return f"{currency} {quantised}"
+        return str(quantised)
+
+    def _format_quantity_display(quantity, unit):
+        quantity_decimal: Decimal | None = None
+        if quantity is not None:
+            try:
+                quantity_decimal = Decimal(str(quantity))
+                quantity_text = _format_decimal(quantity_decimal)
+            except Exception:
+                quantity_decimal = None
+                quantity_text = str(quantity)
+            if unit:
+                quantity_text = f"{quantity_text} {unit}"
+        else:
+            quantity_text = unit or ""
+        return quantity_text, quantity_decimal
+
+    def _bill_of_material_items(meta_source: Path) -> list[dict]:
+        meta = read_meta(meta_source)
+        items = meta.get("bill_of_materials", []) or []
+        results: list[dict] = []
+
+        for item in items:
+            material_path = item.get("material")
+            name = item.get("name")
+            description = item.get("description")
+            notes = item.get("notes")
+            quantity = item.get("quantity")
+            unit = item.get("unit")
+            quantity_display, quantity_decimal = _format_quantity_display(quantity, unit)
+
+            material_meta: dict | None = None
+            material_page_rel: Path | None = None
+            title = name
+
+            if material_path:
+                material_page = Path(material_path)
+                if material_page.is_absolute():
+                    material_page = material_page.relative_to(docs_dir)
+                if material_page.suffix != ".md":
+                    material_page = material_page.with_suffix(".md")
+                material_page_rel = material_page
+                material_meta = read_meta(docs_dir / material_page)
+                title = title or material_meta.get("title")
+
+            if not title and material_page_rel is not None:
+                title = material_page_rel.stem.replace("-", " ").title()
+            title = title or ""
+
+            unit_cost = (item.get("unit_cost") or {}).copy()
+            unit_cost_amount = unit_cost.get("amount")
+            unit_cost_currency = unit_cost.get("currency")
+            unit_cost_per = unit_cost.get("per")
+
+            purchase_hint = item.get("purchase") or {}
+            region_hint = purchase_hint.get("region") or item.get("region")
+            supplier_hint = purchase_hint.get("supplier") or item.get("supplier")
+            date_hint = purchase_hint.get("date") or item.get("date")
+            unit_hint = purchase_hint.get("unit")
+
+            material_info = material_meta or {}
+            material_purchases = material_info.get("material", {}).get("purchases", [])
+            selected_purchase = _select_material_purchase(
+                material_purchases,
+                region=region_hint,
+                supplier=supplier_hint,
+                date=date_hint,
+                unit=unit_hint,
+            )
+
+            if selected_purchase:
+                purchase_price = selected_purchase.get("price") or {}
+                if unit_cost_amount is None and purchase_price.get("amount") is not None:
+                    unit_cost_amount = purchase_price.get("amount")
+                if not unit_cost_currency and purchase_price.get("currency"):
+                    unit_cost_currency = purchase_price.get("currency")
+                if not unit_cost_per and selected_purchase.get("unit"):
+                    per_value = str(selected_purchase.get("unit"))
+                    unit_cost_per = per_value[4:] if per_value.lower().startswith("per ") else per_value
+
+            unit_cost_decimal: Decimal | None = None
+            if unit_cost_amount is not None:
+                try:
+                    unit_cost_decimal = Decimal(str(unit_cost_amount))
+                except Exception:
+                    unit_cost_decimal = None
+
+            line_total_decimal: Decimal | None = None
+            if unit_cost_decimal is not None and unit_cost_currency and quantity_decimal is not None:
+                line_total_decimal = quantity_decimal * unit_cost_decimal
+
+            results.append(
+                {
+                    "material_page": material_page_rel,
+                    "title": title,
+                    "description": description,
+                    "notes": notes,
+                    "quantity_display": quantity_display,
+                    "quantity_decimal": quantity_decimal,
+                    "unit": unit,
+                    "unit_cost_currency": unit_cost_currency,
+                    "unit_cost_decimal": unit_cost_decimal,
+                    "unit_cost_amount": unit_cost_amount,
+                    "unit_cost_per": unit_cost_per,
+                    "line_total_decimal": line_total_decimal,
+                }
+            )
+
+        return results
+
+    def _bill_of_material_totals(items: list[dict]) -> list[tuple[str, Decimal]]:
+        totals: dict[str, Decimal] = {}
+        for item in items:
+            currency = item.get("unit_cost_currency")
+            line_total = item.get("line_total_decimal")
+            if not currency or line_total is None:
+                continue
+            currency_code = str(currency).upper()
+            totals.setdefault(currency_code, Decimal("0"))
+            totals[currency_code] += line_total
+        return sorted(totals.items(), key=lambda entry: entry[0])
+
     @env.macro
     def versions_table(path: str | None = None) -> str:
         rel_dir = Path(path) if path else Path(env.page.file.src_path).parent
@@ -60,7 +202,15 @@ def define_env(env):
             nav_key = full_rel_path.as_posix()
             link_text = nav_titles.get(nav_key, " ".join(rel_path.with_suffix("").parts).replace("-", " "))
             link = f"[{link_text}]({rel_path.as_posix()})"
-            cost = meta.get("estimated_cost")
+            bom_items = _bill_of_material_items(file)
+            bom_totals = _bill_of_material_totals(bom_items)
+            if bom_totals:
+                cost = [
+                    {"amount": total_amount, "currency": currency}
+                    for currency, total_amount in bom_totals
+                ]
+            else:
+                cost = meta.get("estimated_cost")
             impl = meta.get("time_to_implement")
             wait = meta.get("waiting_time")
             status = meta.get("status", "")
@@ -85,7 +235,10 @@ def define_env(env):
 
                     parts: list[str] = []
                     if currency and amount is not None:
-                        parts.append(f"{str(currency).upper()} {amount}")
+                        try:
+                            parts.append(_format_currency(Decimal(str(amount)), currency))
+                        except Exception:
+                            parts.append(f"{str(currency).upper()} {amount}")
                     elif amount is not None:
                         parts.append(str(amount))
                     elif currency:
@@ -120,28 +273,6 @@ def define_env(env):
         for _, link, status, cost, impl, wait in sorted(rows, key=lambda row: row[0], reverse=True):
             lines.append(f"| {link} | {status} | {cost} | {impl} | {wait} |")
         return "\n".join(lines)
-
-    def _format_decimal(value, places=3) -> str:
-        quantised = Decimal(str(value)).quantize(Decimal(f"1.{'0' * places}"), rounding=ROUND_HALF_UP)
-        text = format(quantised.normalize(), "f")
-        if "." in text:
-            text = text.rstrip("0").rstrip(".")
-        return text
-
-    def _format_currency(amount: Decimal, currency: str) -> str:
-        currency = (currency or "").upper()
-        symbols = {
-            "GBP": "£",
-            "USD": "$",
-            "EUR": "€",
-        }
-        quantised = amount.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
-        symbol = symbols.get(currency)
-        if symbol:
-            return f"{symbol}{quantised}"
-        if currency:
-            return f"{currency} {quantised}"
-        return str(quantised)
 
     def _format_date(value: str | None) -> str | None:
         if not value:
@@ -206,176 +337,85 @@ def define_env(env):
 
     @env.macro
     def render_bill_of_materials(path: str | None = None) -> str:
-        page = Path(env.page.file.src_path)
+        page_rel = Path(env.page.file.src_path)
         meta_source = Path(path) if path else Path(env.page.file.abs_src_path)
-        meta = read_meta(meta_source)
-        items = meta.get("bill_of_materials", []) or []
+        items = _bill_of_material_items(meta_source)
 
         if not items:
             return "No bill of materials recorded yet."
 
-        page_dir = page.parent
-
-        rows: list[tuple[str, str, str, str]] = []
-        total_amount: Decimal | None = None
-        total_currency: str | None = None
-
-        for item in items:
-            material_path = item.get("material")
-            description = item.get("description")
-            name = item.get("name")
-            quantity = item.get("quantity")
-            unit = item.get("unit")
-            notes = item.get("notes")
-            unit_cost = item.get("unit_cost", {}) or {}
-
-            material_cell = ""
-            material_meta: dict | None = None
-            if material_path:
-                material_page = Path(material_path)
-                if material_page.is_absolute():
-                    material_page = material_page.relative_to(docs_dir)
-                if material_page.suffix != ".md":
-                    material_page = material_page.with_suffix(".md")
-                material_abs = docs_dir / material_page
-                material_meta = read_meta(material_abs)
-                title = name or material_meta.get("title") or material_page.stem.replace("-", " ").title()
-                rel_path = os.path.relpath(material_page.as_posix(), page_dir.as_posix())
-                material_cell = f"[{title}]({rel_path.replace(os.sep, '/')})"
-            elif name:
-                material_cell = name
-
-            material_info = material_meta or {}
-            material_purchases = material_info.get("material", {}).get("purchases", [])
-            purchase_hint = item.get("purchase") or {}
-            region_hint = purchase_hint.get("region") or item.get("region")
-            supplier_hint = purchase_hint.get("supplier") or item.get("supplier")
-            date_hint = purchase_hint.get("date") or item.get("date")
-            unit_hint = purchase_hint.get("unit")
-            selected_purchase = _select_material_purchase(
-                material_purchases,
-                region=region_hint,
-                supplier=supplier_hint,
-                date=date_hint,
-                unit=unit_hint,
-            )
-
-            if description:
-                suffix = description if notes else description
-                material_cell = f"{material_cell}<br><small>{suffix}</small>" if material_cell else suffix
-
-            if notes:
-                note_html = notes if notes.startswith("<") else notes
-                if material_cell:
-                    material_cell += f"<br><small>{note_html}</small>"
-                else:
-                    material_cell = f"<small>{note_html}</small>"
-
-            quantity_cell = ""
-            if quantity is not None:
-                try:
-                    quantity_value = Decimal(str(quantity))
-                    quantity_cell = _format_decimal(quantity_value)
-                except Exception:
-                    quantity_cell = str(quantity)
-                if unit:
-                    quantity_cell = f"{quantity_cell} {unit}"
-            elif unit:
-                quantity_cell = unit
-
-            unit_cost_amount = unit_cost.get("amount")
-            unit_cost_currency = unit_cost.get("currency")
-            unit_cost_per = unit_cost.get("per")
-            unit_cost_supplier = unit_cost.get("supplier")
-            unit_cost_date = unit_cost.get("date")
-            unit_cost_note = unit_cost.get("note")
-
-            if selected_purchase:
-                purchase_price = selected_purchase.get("price") or {}
-                if unit_cost_amount is None and purchase_price.get("amount") is not None:
-                    unit_cost_amount = purchase_price.get("amount")
-                if not unit_cost_currency and purchase_price.get("currency"):
-                    unit_cost_currency = purchase_price.get("currency")
-                if not unit_cost_per and selected_purchase.get("unit"):
-                    per_value = str(selected_purchase.get("unit"))
-                    unit_cost_per = per_value[4:] if per_value.lower().startswith("per ") else per_value
-                if not unit_cost_supplier and selected_purchase.get("supplier"):
-                    unit_cost_supplier = selected_purchase.get("supplier")
-                if not unit_cost_date and selected_purchase.get("date"):
-                    unit_cost_date = selected_purchase.get("date")
-                if not unit_cost_note and selected_purchase.get("notes"):
-                    unit_cost_note = selected_purchase.get("notes")
-
-            unit_cost_details = []
-            formatted_unit_cost = ""
-            if unit_cost_amount is not None and unit_cost_currency:
-                try:
-                    amount_decimal = Decimal(str(unit_cost_amount))
-                    formatted_unit_cost = _format_currency(amount_decimal, unit_cost_currency)
-                except Exception:
-                    formatted_unit_cost = f"{unit_cost_currency} {unit_cost_amount}"
-                if unit_cost_per:
-                    per_value = str(unit_cost_per)
-                    if per_value.lower().startswith("per "):
-                        formatted_unit_cost += f" {per_value}"
-                    else:
-                        formatted_unit_cost += f" per {per_value}"
-            elif unit_cost_amount is not None:
-                formatted_unit_cost = str(unit_cost_amount)
-            elif unit_cost_currency:
-                formatted_unit_cost = unit_cost_currency
-
-            formatted_date = _format_date(unit_cost_date)
-            if formatted_date:
-                unit_cost_details.append(formatted_date)
-            if unit_cost_supplier:
-                unit_cost_details.append(unit_cost_supplier)
-            if unit_cost_note:
-                unit_cost_details.append(unit_cost_note)
-            if unit_cost_details:
-                details = ", ".join(unit_cost_details)
-                formatted_unit_cost = f"{formatted_unit_cost} ({details})" if formatted_unit_cost else f"({details})"
-
-            line_cost_cell = ""
-            if unit_cost_amount is not None and unit_cost_currency and quantity is not None:
-                try:
-                    quantity_decimal = Decimal(str(quantity))
-                    amount_decimal = Decimal(str(unit_cost_amount))
-                    line_total = quantity_decimal * amount_decimal
-                    line_cost_cell = _format_currency(line_total, unit_cost_currency)
-
-                    if total_currency is None:
-                        total_currency = unit_cost_currency
-                        total_amount = line_total
-                    elif unit_cost_currency == total_currency:
-                        total_amount = (total_amount or Decimal("0")) + line_total
-                    else:
-                        total_currency = None
-                        total_amount = None
-                except Exception:
-                    line_cost_cell = ""
-
-            rows.append(
-                (
-                    material_cell or "",
-                    quantity_cell,
-                    formatted_unit_cost,
-                    line_cost_cell,
-                )
-            )
+        page_dir_abs = docs_dir / page_rel.parent
 
         table_lines = [
             "| Material | Quantity | Unit Cost | Line Cost |",
             "| --- | --- | --- | --- |",
         ]
-        for material_cell, quantity_cell, unit_cost_cell, line_cost_cell in rows:
+
+        for item in items:
+            material_cell = ""
+            material_page_rel: Path | None = item.get("material_page")
+            title = item.get("title") or ""
+
+            if material_page_rel is not None:
+                material_abs = docs_dir / material_page_rel
+                rel_path = os.path.relpath(material_abs, start=page_dir_abs)
+                material_cell = f"[{title}]({rel_path.replace(os.sep, '/')})" if title else f"[{material_page_rel.stem}]({rel_path.replace(os.sep, '/')})"
+            elif title:
+                material_cell = title
+
+            description = item.get("description")
+            notes = item.get("notes")
+            if description:
+                suffix = description if notes else description
+                material_cell = f"{material_cell}<br><small>{suffix}</small>" if material_cell else suffix
+
+            if notes:
+                note_html = notes if str(notes).startswith("<") else notes
+                if material_cell:
+                    material_cell += f"<br><small>{note_html}</small>"
+                else:
+                    material_cell = f"<small>{note_html}</small>"
+
+            quantity_cell = item.get("quantity_display") or ""
+
+            unit_cost_cell = ""
+            unit_cost_currency = item.get("unit_cost_currency")
+            unit_cost_decimal = item.get("unit_cost_decimal")
+            unit_cost_amount = item.get("unit_cost_amount")
+            unit_cost_per = item.get("unit_cost_per")
+
+            if unit_cost_decimal is not None and unit_cost_currency:
+                unit_cost_cell = _format_currency(unit_cost_decimal, unit_cost_currency)
+            elif unit_cost_amount is not None and unit_cost_currency:
+                unit_cost_cell = f"{unit_cost_currency} {unit_cost_amount}"
+            elif unit_cost_decimal is not None:
+                unit_cost_cell = _format_decimal(unit_cost_decimal)
+            elif unit_cost_amount is not None:
+                unit_cost_cell = str(unit_cost_amount)
+            elif unit_cost_currency:
+                unit_cost_cell = unit_cost_currency
+
+            if unit_cost_per:
+                per_value = str(unit_cost_per)
+                if per_value.lower().startswith("per "):
+                    unit_cost_cell = f"{unit_cost_cell} {per_value}".strip()
+                else:
+                    suffix = f"per {per_value}" if unit_cost_cell else f"per {per_value}"
+                    unit_cost_cell = f"{unit_cost_cell} {suffix}".strip()
+
+            line_cost_cell = ""
+            line_total_decimal = item.get("line_total_decimal")
+            if line_total_decimal is not None and unit_cost_currency:
+                line_cost_cell = _format_currency(line_total_decimal, unit_cost_currency)
+
             table_lines.append(
                 f"| {material_cell} | {quantity_cell} | {unit_cost_cell} | {line_cost_cell} |"
             )
 
-        if total_currency and total_amount is not None:
+        totals = _bill_of_material_totals(items)
+        for currency, amount in totals:
             table_lines.append(
-                f"| **Total** |  |  | **{_format_currency(total_amount, total_currency)}** |"
+                f"| **Total** |  |  | **{_format_currency(amount, currency)}** |"
             )
 
         return "\n".join(table_lines)

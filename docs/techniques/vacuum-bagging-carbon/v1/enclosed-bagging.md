@@ -1,11 +1,6 @@
 ---
 version: v1
 status: active
-estimated_cost:
-  - amount: 24.10
-    currency: GBP
-    region: UK
-    note: Based on Jun 2025 UK purchase history
 bill_of_materials:
   - material: materials/vacuum-storage-bags.md
     description: Heavy-duty bag for enclosed setup

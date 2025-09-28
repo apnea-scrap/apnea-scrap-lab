@@ -1,10 +1,5 @@
 ---
 status: research
-estimated_cost:
-  - amount: 3.22
-    currency: GBP
-    region: UK
-    note: Based on Jun 2025 UK purchase history
 bill_of_materials:
   - name: 10 mL syringe
     description: Thin barrel syringe for plunger travel

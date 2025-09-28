@@ -1,10 +1,5 @@
 ---
 status: active
-estimated_cost:
-  - amount: 0.50
-    currency: GBP
-    region: UK
-    note: Based on Jun 2025 UK purchase history
 bill_of_materials:
   - name: Printed cutting template
     description: A4 sheet laminated or taped to the blade

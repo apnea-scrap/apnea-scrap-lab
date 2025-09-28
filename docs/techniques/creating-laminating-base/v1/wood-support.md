@@ -1,10 +1,5 @@
 ---
 status: active
-estimated_cost:
-  - amount: 38.78
-    currency: GBP
-    region: UK
-    note: Based on Jun 2025 UK purchase history
 bill_of_materials:
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A3)

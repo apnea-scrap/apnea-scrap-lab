@@ -1,10 +1,5 @@
 ---
 status: active
-estimated_cost:
-  - amount: 38.29
-    currency: GBP
-    region: UK
-    note: Based on Jun 2025 UK purchase history
 bill_of_materials:
   - material: materials/carbon-fiber-fabric.md
     description: 0.3 m² of 200 g/m² 3K 2/2 twill cloth

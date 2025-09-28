@@ -1,10 +1,5 @@
 ---
 status: active
-estimated_cost:
-  - amount: 30.15
-    currency: GBP
-    region: UK
-    note: Based on Jun 2025 UK purchase history
 bill_of_materials:
   - material: materials/rubber-fin-rails.md
     description: One pair of soft rubber rails sized for bifin blades
