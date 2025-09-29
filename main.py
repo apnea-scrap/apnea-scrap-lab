@@ -167,10 +167,27 @@ def define_env(env):
                 title = material_page_rel.stem.replace("-", " ").title()
             title = title or ""
 
+            price_mode: str | None = item.get("price_mode")
+            pricing_field = item.get("pricing")
+            pricing_region: str | None = None
+            pricing_supplier: str | None = None
+            pricing_unit_override: str | None = None
+
+            if isinstance(pricing_field, dict):
+                price_mode = price_mode or pricing_field.get("mode")
+                pricing_region = pricing_field.get("region")
+                pricing_supplier = pricing_field.get("supplier")
+                pricing_unit_override = pricing_field.get("unit")
+            elif isinstance(pricing_field, str):
+                price_mode = price_mode or pricing_field
+
             unit_cost_field = item.get("unit_cost")
             unit_cost_label: str | None = None
             if isinstance(unit_cost_field, dict):
                 unit_cost = unit_cost_field.copy()
+                mode_value = unit_cost.pop("mode", None)
+                if price_mode is None and isinstance(mode_value, str):
+                    price_mode = mode_value
             elif isinstance(unit_cost_field, str):
                 unit_cost = {}
                 unit_cost_label = unit_cost_field.strip() or None
@@ -242,6 +259,54 @@ def define_env(env):
                         break
 
             resolved_unit = explicit_unit or purchase_unit
+
+            price_mode_value = _normalise(price_mode)
+            if not price_mode_value:
+                price_mode_value = "latest"
+
+            if price_mode_value == "range" and material_path:
+                range_unit_filter = pricing_unit_override or unit_hint or purchase_unit
+                price_ranges = _material_price_ranges(
+                    material_purchases,
+                    region=pricing_region,
+                    supplier=pricing_supplier,
+                    unit=range_unit_filter,
+                )
+                if price_ranges:
+                    range_strings: list[str] = []
+                    for currency_code in sorted(price_ranges.keys()):
+                        low, high = price_ranges[currency_code]
+                        if low == high:
+                            range_text = _format_currency(low, currency_code)
+                        else:
+                            range_text = f"{_format_currency(low, currency_code)} - {_format_currency(high, currency_code)}"
+                        range_strings.append(range_text)
+
+                    per_reference = pricing_unit_override or explicit_unit or purchase_unit
+                    per_suffix = ""
+                    if per_reference:
+                        per_value = str(per_reference)
+                        if per_value.lower().startswith("per "):
+                            per_suffix = f" {per_value}"
+                        else:
+                            per_suffix = f" per {per_value}"
+
+                    summary_text = "<br>".join(range_strings)
+                    if per_suffix:
+                        summary_text = f"{summary_text}{per_suffix}"
+                    range_label = f"{summary_text} (recorded range)" if summary_text else "Recorded price range"
+
+                    if unit_cost_label:
+                        unit_cost_label = f"{unit_cost_label}<br><small>{range_label}</small>"
+                    else:
+                        unit_cost_label = range_label
+
+                    unit_cost_currency = None
+                    unit_cost_amount = None
+                    unit_cost_per = None
+                else:
+                    price_mode_value = "latest"
+
             quantity_display, quantity_decimal = _format_quantity_display(quantity_amount, resolved_unit)
             if quantity_display_override:
                 quantity_display = str(quantity_display_override)
@@ -423,6 +488,12 @@ def define_env(env):
     def _normalise(value: str | None) -> str:
         return (value or "").strip().lower()
 
+    def _normalise_unit(value: str | None) -> str:
+        normalised = _normalise(value)
+        if normalised.startswith("per "):
+            return normalised[4:]
+        return normalised
+
     def _select_material_purchase(
         purchases: list[dict],
         *,
@@ -449,7 +520,10 @@ def define_env(env):
             candidates = date_matches or candidates
 
         if unit:
-            unit_matches = [p for p in candidates if _normalise(p.get("unit")) == _normalise(unit)]
+            unit_key = _normalise_unit(unit)
+            unit_matches = [
+                p for p in candidates if _normalise_unit(p.get("unit")) == unit_key
+            ]
             candidates = unit_matches or candidates
 
         def sort_key(purchase: dict):
@@ -457,6 +531,55 @@ def define_env(env):
             return (parsed or datetime.min, purchase.get("supplier") or "")
 
         return sorted(candidates, key=sort_key, reverse=True)[0]
+
+    def _material_price_ranges(
+        purchases: list[dict],
+        *,
+        region: str | None = None,
+        supplier: str | None = None,
+        unit: str | None = None,
+    ) -> dict[str, tuple[Decimal, Decimal]]:
+        if not purchases:
+            return {}
+
+        region_key = _normalise(region) if region else ""
+        supplier_key = _normalise(supplier) if supplier else ""
+        unit_key = _normalise_unit(unit) if unit else ""
+
+        filtered: list[dict] = []
+        for purchase in purchases:
+            if region_key and _normalise(purchase.get("region")) != region_key:
+                continue
+            if supplier_key and _normalise(purchase.get("supplier")) != supplier_key:
+                continue
+            if unit_key and _normalise_unit(purchase.get("unit")) != unit_key:
+                continue
+            filtered.append(purchase)
+
+        if not filtered:
+            return {}
+
+        ranges: dict[str, list[Decimal]] = {}
+        for purchase in filtered:
+            price_block = purchase.get("price") or {}
+            amount = price_block.get("amount")
+            currency = price_block.get("currency")
+            if amount is None or not currency:
+                continue
+            try:
+                amount_decimal = Decimal(str(amount))
+            except Exception:
+                continue
+            currency_code = str(currency).upper()
+            ranges.setdefault(currency_code, []).append(amount_decimal)
+
+        result: dict[str, tuple[Decimal, Decimal]] = {}
+        for currency_code, values in ranges.items():
+            if not values:
+                continue
+            result[currency_code] = (min(values), max(values))
+
+        return result
 
     @env.macro
     def render_tools_required(path: str | None = None, title: str | None = None) -> str:

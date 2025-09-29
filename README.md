@@ -117,6 +117,9 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
   material page, skip the legacy `purchase` block—the macro automatically selects the recorded purchase using the
   `quantity.unit` you provide. List recurring equipment under `tools_required`, adding a `name` for each tool and a
   short `purpose` that explains why it is needed for the process.
+  To show the recorded price spread instead of the latest purchase, add `pricing: range` (or
+  `pricing: { mode: range, unit: pair }` to filter by unit) to the BOM entry that references the material. The range is
+  calculated from the stored purchases, so totals are left blank for that row.
 3. Add a `## Tools Required` section near the top of the page (for example right after `{{ status_banner() }}`) and place `{{ render_tools_required() }}` inside it to render the tools list captured in front matter.
 4. Add `{{ render_bill_of_materials() }}` where you want the rendered table to appear.
 5. The comparison table on the technique index automatically calculates estimated costs from the bill of materials.

@@ -1,5 +1,13 @@
 ---
 status: active
+bill_of_materials:
+  - material: materials/bifin-footpockets.md
+    description: Pair of angled freediving pockets with short rails
+    quantity:
+      amount: 1
+      unit: pair
+    pricing:
+      mode: range
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}
@@ -18,25 +26,30 @@ Choose the right freediving foot pockets for DIY carbon blades, focusing on perf
 |---------------------------------------------|
 | Example Foot pocket                         |
 
+## Bill of Materials
+
+{{ render_bill_of_materials() }}
+
 ## Instructions (step-by-step)
 
 1. **Check rail length**
 
     - Choose pockets with **short or low-profile rails** so the blade can bend and return energy efficiently (see [rubber fin rails](../../../materials/rubber-fin-rails.md) for sourcing options).
-     - Avoid long or stiff rails that dampen flex, especially on short training blades.
+    - Avoid long or stiff rails that dampen flex, especially on short training blades.
+    - Review current supplier pricing on the [bifin foot pockets material page](../../../materials/bifin-footpockets.md) — budget listings can differ from retail stock.
 
 2. **Check blade angle**
 
-     - Select pockets with **20°–33° blade angle**.
-     - Larger angles favor surface swimming and gliding.
-     - Smaller angles or flat pockets may feel more responsive but are less efficient for pool or surface work.
+    - Select pockets with **20°–33° blade angle**.
+    - Larger angles favor surface swimming and gliding.
+    - Smaller angles or flat pockets may feel more responsive but are less efficient for pool or surface work.
 
 3. **Check attachment system**
 
-     - Ensure the pockets use a **two-point attachment**:
-         - Blade slides into the pocket slot
-         - Screws lock it in place
-     - This system is standard for modern freediving pockets and ensures a secure, repeatable fit.
+    - Ensure the pockets use a **two-point attachment**:
+        - Blade slides into the pocket slot
+        - Screws lock it in place
+    - This system is standard for modern freediving pockets and ensures a secure, repeatable fit.
 
 | ![sf_footpockets.jpeg](sf_footpockets.jpeg) |
 |---------------------------------------------|
