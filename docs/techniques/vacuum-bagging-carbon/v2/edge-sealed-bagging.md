@@ -3,29 +3,25 @@ status: research
 bill_of_materials:
   - material: materials/vacuum-bagging-kit.md
     description: Manual pump with heavy-duty storage bags for low-cost vacuum pulls
-    quantity: 1
-    unit: kit
-    purchase:
-      region: UK
+    quantity:
+      amount: 1
       unit: kit
   - material: materials/butyl-sealing-tape.md
     description: Continuous bead around the laminating base
-    quantity: 0.4
-    unit: roll
-    purchase:
-      region: UK
+    quantity:
+      amount: 0.4
       unit: 15 m roll (12 mm)
   - material: materials/breather-cloth.md
     description: Under-bag airflow path and resin catch
-    quantity: 0.6
-    unit: metre
-    purchase:
-      region: UK
-      unit: linear metre (1 m wide)
+    quantity:
+      amount: 0.12
+      unit: 5 m pack (1 m wide)
+      display: 0.6 m (1 m wide)
   - name: DIY Vacuum gauge
     description: Inline gauge to monitor vacuum level
-    quantity: 1
-    unit: gauge
+    quantity:
+      amount: 1
+      unit: gauge
     unit_cost:
       amount: 2.00
       currency: GBP

@@ -4,7 +4,7 @@ title: Materials Directory
 # Materials Directory
 
 A single place to keep track of every consumable, component, or tool that feeds into ApneaScrap Lab builds.
-Each page now stores the **unit of measure** and **purchase history** we have personally recorded so that
+Each page now stores the **purchase history** we have personally recorded so that
 techniques can reference a neutral material while still pointing back to real prices.
 
 Only the regions where we hold purchase data are listed. At the moment that means the United Kingdom.
@@ -18,8 +18,10 @@ When new data comes in for other locales we can extend each page with additional
    - a `{{ render_material_purchases() }}` call so the macro can turn the recorded purchases into tables grouped by region.
 2. Link techniques and projects to the material page instead of hard-coding suppliers inside a build guide.
 3. When logging a new technique version, add a `bill_of_materials` list in the front matter and render it with
-   `{{ render_bill_of_materials() }}`. Reference materials via their page path and provide a `purchase` hint (region, unit,
-   supplier, etc.) so the macro can pull matching price data from the material page automatically.
+   `{{ render_bill_of_materials() }}`. Reference materials via their page path and set `quantity.unit` so the macro can
+   match the recorded purchase data automatically. Skip `purchase` hints on technique entries—the macro infers the
+   correct record from the unit you supply. Quantities default to the chosen purchase unit, so you only need to describe
+   the amount being used.
 
 Need a new material? Duplicate the template below.
 
@@ -27,7 +29,6 @@ Need a new material? Duplicate the template below.
 ---
 title: Example Material
 material:
-  default_unit: example-unit
   purchases:
     - supplier: "Supplier name"
       url: "https://example.com/product"

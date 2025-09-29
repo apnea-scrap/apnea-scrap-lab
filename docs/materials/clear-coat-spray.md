@@ -1,7 +1,6 @@
 ---
 title: Clear Coat Spray
 material:
-  default_unit: can
   purchases:
     - supplier: "Amazon"
       url: "https://www.amazon.co.uk/dp/B004SNLNY2"

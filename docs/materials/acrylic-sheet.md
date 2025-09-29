@@ -1,7 +1,6 @@
 ---
 title: Acrylic Sheet
 material:
-  default_unit: sheet
   purchases:
     - supplier: "Amazon"
       url: "https://www.amazon.co.uk/dp/B09TL1SCCD"

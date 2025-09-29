@@ -1,7 +1,6 @@
 ---
 title: Plastic to Carbon Adhesive
 material:
-  default_unit: syringe
   purchases:
     - supplier: "Amazon"
       url: "https://www.amazon.co.uk/dp/B01IBOK7FE"

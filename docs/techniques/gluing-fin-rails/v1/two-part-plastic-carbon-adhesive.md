@@ -5,19 +5,20 @@ waiting_time: 12
 bill_of_materials:
   - material: materials/rubber-fin-rails.md
     description: One pair of soft rubber rails sized for bifin blades
-    quantity: 1
-    unit: pair
-    purchase:
-      region: UK
+    quantity:
+      amount: 2
+      unit: metre
+      display: 2 m (pair of rails)
   - material: materials/plastic-to-carbon-adhesive.md
     description: 25 ml of 3M DP420 mixed with nozzle
-    quantity: 0.5
-    unit: cartridge
-    purchase:
-      region: UK
+    quantity:
+      amount: 0.5
+      unit: 25 ml syringe
   - name: Fold-back clips set
     description: 20 mm binder clips for clamping rails during cure
-    quantity: 1
+    quantity:
+      amount: 1
+      unit: set
     unit_cost:
       amount: 3.00
       currency: GBP

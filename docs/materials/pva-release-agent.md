@@ -1,7 +1,6 @@
 ---
 title: PVA Release Agent
 material:
-  default_unit: 500 ml bottle
   purchases:
     - supplier: "Easy Composites"
       url: "https://www.easycomposites.co.uk/pva-mould-release-agent"

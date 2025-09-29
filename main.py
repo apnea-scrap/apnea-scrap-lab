@@ -69,11 +69,25 @@ def define_env(env):
         for item in items:
             material_path = item.get("material")
             name = item.get("name")
+
+            if not material_path and not name:
+                raise ValueError(
+                    f"Bill of materials item in {meta_source} must define either 'material' or 'name'."
+                )
+
             description = item.get("description")
             notes = item.get("notes")
-            quantity = item.get("quantity")
-            unit = item.get("unit")
-            quantity_display, quantity_decimal = _format_quantity_display(quantity, unit)
+            quantity_field = item.get("quantity")
+            explicit_unit = item.get("unit")
+            quantity_amount = None
+            quantity_display_override = None
+
+            if isinstance(quantity_field, dict):
+                quantity_amount = quantity_field.get("amount")
+                quantity_display_override = quantity_field.get("display")
+                explicit_unit = quantity_field.get("unit", explicit_unit)
+            else:
+                quantity_amount = quantity_field
 
             material_meta: dict | None = None
             material_page_rel: Path | None = None
@@ -98,11 +112,32 @@ def define_env(env):
             unit_cost_currency = unit_cost.get("currency")
             unit_cost_per = unit_cost.get("per")
 
-            purchase_hint = item.get("purchase") or {}
-            region_hint = purchase_hint.get("region") or item.get("region")
-            supplier_hint = purchase_hint.get("supplier") or item.get("supplier")
-            date_hint = purchase_hint.get("date") or item.get("date")
+            direct_region = item.get("region")
+            direct_supplier = item.get("supplier")
+            direct_date = item.get("date")
+
+            purchase_hint_raw = item.get("purchase")
+
+            if material_path and (
+                purchase_hint_raw
+                or direct_region is not None
+                or direct_supplier is not None
+                or direct_date is not None
+            ):
+                raise ValueError(
+                    "Bill of materials entries that reference a material must not define purchase hints; "
+                    "set quantity.unit to match the desired purchase instead."
+                )
+
+            purchase_hint = purchase_hint_raw or {}
+
+            region_hint = purchase_hint.get("region") or direct_region
+            supplier_hint = purchase_hint.get("supplier") or direct_supplier
+            date_hint = purchase_hint.get("date") or direct_date
             unit_hint = purchase_hint.get("unit")
+
+            if material_path and explicit_unit:
+                unit_hint = explicit_unit
 
             material_info = material_meta or {}
             material_purchases = material_info.get("material", {}).get("purchases", [])
@@ -114,15 +149,29 @@ def define_env(env):
                 unit=unit_hint,
             )
 
+            purchase_unit: str | None = None
             if selected_purchase:
                 purchase_price = selected_purchase.get("price") or {}
                 if unit_cost_amount is None and purchase_price.get("amount") is not None:
                     unit_cost_amount = purchase_price.get("amount")
                 if not unit_cost_currency and purchase_price.get("currency"):
                     unit_cost_currency = purchase_price.get("currency")
-                if not unit_cost_per and selected_purchase.get("unit"):
-                    per_value = str(selected_purchase.get("unit"))
+                purchase_unit = selected_purchase.get("unit")
+                if not unit_cost_per and purchase_unit:
+                    per_value = str(purchase_unit)
                     unit_cost_per = per_value[4:] if per_value.lower().startswith("per ") else per_value
+
+            if not purchase_unit:
+                for candidate in material_purchases:
+                    candidate_unit = candidate.get("unit")
+                    if candidate_unit:
+                        purchase_unit = candidate_unit
+                        break
+
+            resolved_unit = explicit_unit or purchase_unit
+            quantity_display, quantity_decimal = _format_quantity_display(quantity_amount, resolved_unit)
+            if quantity_display_override:
+                quantity_display = str(quantity_display_override)
 
             unit_cost_decimal: Decimal | None = None
             if unit_cost_amount is not None:
@@ -143,7 +192,7 @@ def define_env(env):
                     "notes": notes,
                     "quantity_display": quantity_display,
                     "quantity_decimal": quantity_decimal,
-                    "unit": unit,
+                    "unit": resolved_unit,
                     "unit_cost_currency": unit_cost_currency,
                     "unit_cost_decimal": unit_cost_decimal,
                     "unit_cost_amount": unit_cost_amount,

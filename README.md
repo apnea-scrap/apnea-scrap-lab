@@ -90,14 +90,14 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
   bill_of_materials:
     - material: materials/carbon-fiber-fabric.md
       description: 200 g/m² 3K cloth
-      quantity: 0.3
-      unit: m²
-      purchase:
-        region: UK
+      quantity:
+        amount: 0.3
         unit: m² (1 m wide)
     - name: Consumables pack
       description: Gloves, brushes, mixing sticks
-      quantity: 1
+      quantity:
+        amount: 1
+        unit: pack
       unit_cost:
         amount: 3.50
         currency: GBP
@@ -105,6 +105,12 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
   waiting_time: 12
   ---
   ```
+  Every bill of materials entry must either reference a material page (setting `quantity.unit` so the macro can match a
+  recorded purchase) or provide its own `name`. Use `quantity.amount` for the numerical value and set
+  `quantity.unit` whenever you want to control the rendered unit or are defining an inline item. Provide
+  `quantity.display` if you need full control over how the quantity appears in the rendered table. When linking a
+  material page, skip the legacy `purchase` block—the macro automatically selects the recorded purchase using the
+  `quantity.unit` you provide.
 3. Add `{{ render_bill_of_materials() }}` where you want the rendered table to appear.
 4. The comparison table on the technique index automatically calculates estimated costs from the bill of materials.
 5. Commit and push. The site will rebuild automatically.

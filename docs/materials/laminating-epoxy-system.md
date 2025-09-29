@@ -1,7 +1,6 @@
 ---
 title: Laminating Epoxy System
 material:
-  default_unit: 500 ml kit
   purchases:
     - supplier: "Easy Composites"
       url: "https://www.easycomposites.co.uk/el2-epoxy-laminating-resin"

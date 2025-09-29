@@ -1,13 +1,12 @@
 ---
 title: Breather Cloth
 material:
-  default_unit: metre
   purchases:
     - supplier: "Easy Composites"
       url: "https://www.easycomposites.co.uk/breather-fabric"
       region: UK
       date: 2025-06
-      unit: 5lm pack (1 m wide)
+      unit: 5 m pack (1 m wide)
       price:
         amount: 12.00
         currency: GBP

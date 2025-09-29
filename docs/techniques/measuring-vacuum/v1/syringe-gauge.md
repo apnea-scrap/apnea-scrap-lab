@@ -5,31 +5,37 @@ waiting_time: 0
 bill_of_materials:
   - name: 10 mL syringe
     description: Thin barrel syringe for plunger travel
-    quantity: 1
+    quantity:
+      amount: 1
     unit_cost:
       amount: 0.80
       currency: GBP
   - name: Luer-lock tip cap
     description: Single cap to seal the syringe tip
-    quantity: 1
+    quantity:
+      amount: 1
     unit_cost:
       amount: 0.20
       currency: GBP
   - name: Candle wax shavings
     description: Small amount to lubricate the rubber seal
-    quantity: 0.05
+    quantity:
+      amount: 0.05
+      unit: block
     unit_cost:
       amount: 2.00
       currency: GBP
   - material: materials/breather-cloth.md
     description: Wrap to protect the gauge inside the bag
-    quantity: 0.1
-    unit: metre
-    purchase:
-      region: UK
+    quantity:
+      amount: 0.1
+      unit: 5 m pack (1 m wide)
+      display: 0.5 m (1 m wide)
   - name: Permanent marker
     description: Fine tip for calibration marks
-    quantity: 1
+    quantity:
+      amount: 1
+      unit: marker
     unit_cost:
       amount: 1.50
       currency: GBP
