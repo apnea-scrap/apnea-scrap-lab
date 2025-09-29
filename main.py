@@ -260,9 +260,15 @@ def define_env(env):
 
             resolved_unit = explicit_unit or purchase_unit
 
+            quantity_display, quantity_decimal = _format_quantity_display(quantity_amount, resolved_unit)
+            if quantity_display_override:
+                quantity_display = str(quantity_display_override)
+
             price_mode_value = _normalise(price_mode)
             if not price_mode_value:
                 price_mode_value = "latest"
+
+            line_total_ranges: dict[str, tuple[Decimal, Decimal]] = {}
 
             if price_mode_value == "range" and material_path:
                 range_unit_filter = pricing_unit_override or unit_hint or purchase_unit
@@ -296,6 +302,13 @@ def define_env(env):
                         summary_text = f"{summary_text}{per_suffix}"
                     range_label = f"{summary_text} (recorded range)" if summary_text else "Recorded price range"
 
+                    if quantity_decimal is not None:
+                        for currency_code, (low, high) in price_ranges.items():
+                            line_total_ranges[currency_code] = (
+                                quantity_decimal * low,
+                                quantity_decimal * high,
+                            )
+
                     if unit_cost_label:
                         unit_cost_label = f"{unit_cost_label}<br><small>{range_label}</small>"
                     else:
@@ -307,10 +320,6 @@ def define_env(env):
                 else:
                     price_mode_value = "latest"
 
-            quantity_display, quantity_decimal = _format_quantity_display(quantity_amount, resolved_unit)
-            if quantity_display_override:
-                quantity_display = str(quantity_display_override)
-
             unit_cost_decimal: Decimal | None = None
             if unit_cost_amount is not None:
                 try:
@@ -321,6 +330,17 @@ def define_env(env):
             line_total_decimal: Decimal | None = None
             if unit_cost_decimal is not None and unit_cost_currency and quantity_decimal is not None:
                 line_total_decimal = quantity_decimal * unit_cost_decimal
+
+            if (
+                line_total_decimal is not None
+                and unit_cost_currency
+                and not line_total_ranges
+            ):
+                currency_code = str(unit_cost_currency).upper()
+                line_total_ranges[currency_code] = (
+                    line_total_decimal,
+                    line_total_decimal,
+                )
 
             results.append(
                 {
@@ -337,22 +357,40 @@ def define_env(env):
                     "unit_cost_per": unit_cost_per,
                     "unit_cost_label": unit_cost_label,
                     "line_total_decimal": line_total_decimal,
+                    "line_total_ranges": line_total_ranges,
                 }
             )
 
         return results
 
-    def _bill_of_material_totals(items: list[dict]) -> list[tuple[str, Decimal]]:
-        totals: dict[str, Decimal] = {}
+    def _bill_of_material_totals(items: list[dict]) -> list[tuple[str, Decimal, Decimal]]:
+        totals: dict[str, dict[str, Decimal]] = {}
         for item in items:
+            range_totals = item.get("line_total_ranges") or {}
+            if range_totals:
+                for currency_code, (low_value, high_value) in range_totals.items():
+                    if low_value is None or high_value is None:
+                        continue
+                    code = str(currency_code).upper()
+                    bucket = totals.setdefault(code, {"low": Decimal("0"), "high": Decimal("0")})
+                    bucket["low"] += low_value
+                    bucket["high"] += high_value
+                continue
+
             currency = item.get("unit_cost_currency")
             line_total = item.get("line_total_decimal")
             if not currency or line_total is None:
                 continue
-            currency_code = str(currency).upper()
-            totals.setdefault(currency_code, Decimal("0"))
-            totals[currency_code] += line_total
-        return sorted(totals.items(), key=lambda entry: entry[0])
+            code = str(currency).upper()
+            bucket = totals.setdefault(code, {"low": Decimal("0"), "high": Decimal("0")})
+            bucket["low"] += line_total
+            bucket["high"] += line_total
+
+        ordered: list[tuple[str, Decimal, Decimal]] = []
+        for currency_code in sorted(totals.keys()):
+            data = totals[currency_code]
+            ordered.append((currency_code, data["low"], data["high"]))
+        return ordered
 
     @env.macro
     def versions_table(path: str | None = None) -> str:
@@ -393,10 +431,15 @@ def define_env(env):
             bom_items = _bill_of_material_items(file)
             bom_totals = _bill_of_material_totals(bom_items)
             if bom_totals:
-                cost = [
-                    {"amount": total_amount, "currency": currency}
-                    for currency, total_amount in bom_totals
-                ]
+                cost = []
+                for currency, low_total, high_total in bom_totals:
+                    entry: dict[str, object] = {"currency": currency}
+                    if low_total == high_total:
+                        entry["amount"] = low_total
+                    else:
+                        entry["amount_low"] = low_total
+                        entry["amount_high"] = high_total
+                    cost.append(entry)
             else:
                 cost = meta.get("estimated_cost")
             impl = meta.get("time_to_implement")
@@ -417,20 +460,50 @@ def define_env(env):
                     return "; ".join(filter(None, formatted))
                 if isinstance(value, dict):
                     amount = value.get("amount")
+                    amount_low = value.get("amount_low")
+                    amount_high = value.get("amount_high")
                     currency = value.get("currency")
                     region = value.get("region")
                     note = value.get("note")
 
                     parts: list[str] = []
-                    if currency and amount is not None:
+                    has_range = amount_low is not None and amount_high is not None
+
+                    if has_range:
+                        low_value = amount_low
+                        high_value = amount_high
                         try:
-                            parts.append(_format_currency(Decimal(str(amount)), currency))
+                            low_decimal = Decimal(str(low_value))
+                            high_decimal = Decimal(str(high_value))
                         except Exception:
-                            parts.append(f"{str(currency).upper()} {amount}")
-                    elif amount is not None:
-                        parts.append(str(amount))
-                    elif currency:
-                        parts.append(str(currency).upper())
+                            low_decimal = None
+                            high_decimal = None
+
+                        if currency and low_decimal is not None and high_decimal is not None:
+                            low_text = _format_currency(low_decimal, currency)
+                            high_text = _format_currency(high_decimal, currency)
+                        elif low_decimal is not None and high_decimal is not None:
+                            low_text = _format_decimal(low_decimal)
+                            high_text = _format_decimal(high_decimal)
+                        else:
+                            low_text = str(low_value) if low_value is not None else ""
+                            high_text = str(high_value) if high_value is not None else ""
+
+                        range_text = " - ".join(filter(None, [low_text, high_text])).strip()
+                        if range_text:
+                            parts.append(range_text)
+                        elif currency:
+                            parts.append(str(currency).upper())
+                    else:
+                        if currency and amount is not None:
+                            try:
+                                parts.append(_format_currency(Decimal(str(amount)), currency))
+                            except Exception:
+                                parts.append(f"{str(currency).upper()} {amount}")
+                        elif amount is not None:
+                            parts.append(str(amount))
+                        elif currency:
+                            parts.append(str(currency).upper())
 
                     details = [detail for detail in [region, note] if detail]
                     if details:
@@ -701,9 +774,15 @@ def define_env(env):
             )
 
         totals = _bill_of_material_totals(items)
-        for currency, amount in totals:
+        for currency, low_total, high_total in totals:
+            if low_total == high_total:
+                formatted_total = _format_currency(low_total, currency)
+            else:
+                formatted_total = (
+                    f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
+                )
             table_lines.append(
-                f"| **Total** |  |  | **{_format_currency(amount, currency)}** |"
+                f"| **Total** |  |  | **{formatted_total}** |"
             )
 
         return "\n".join(table_lines)
