@@ -44,7 +44,7 @@ nav:
   - Home: index.md
   - Projects:
       - Short Fins:
-          - Short Fins Versions: projects/short-fins/index.md
+          - Short Fins Project Sketch: projects/short-fins/index.md
       - Monofin:
           - Monofin Versions: projects/monofin/index.md
       - Neck Weight:
