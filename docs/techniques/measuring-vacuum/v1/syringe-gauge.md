@@ -2,6 +2,11 @@
 status: research
 time_to_implement: 1
 waiting_time: 0
+tools_required:
+  - name: Knife or scissors
+    purpose: Trim tubing and syringe components to length
+  - name: Permanent marker
+    purpose: Mark graduations and reference points on the gauge
 bill_of_materials:
   - name: 10 mL syringe
     description: Thin barrel syringe for plunger travel
@@ -34,8 +39,7 @@ Monitor vacuum level inside a bag using plunger movement.
 {{ render_bill_of_materials() }}
 
 ## Tools Required
-- Knife or scissors (for trimming)
-- Permanent marker
+{{ render_tools_required() }}
 
 ## Instructions (step-by-step)
 1. **Modify plunger**

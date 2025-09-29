@@ -2,6 +2,15 @@
 status: research
 time_to_implement: 1
 waiting_time: 0
+tools_required:
+  - name: Isopropyl alcohol and cloth
+    purpose: Clean acrylic edges before applying tape
+  - name: Scissors or knife
+    purpose: Trim electrical tape to length
+  - name: Measuring tape or ruler
+    purpose: Align wedges consistently across the base
+  - name: Squeegee, roller, or thumb pressure
+    purpose: Press the tape firmly onto the acrylic for a flat seal
 bill_of_materials:
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A3, 2 mm)
@@ -51,10 +60,7 @@ Provide a modular surface with adjustable wedges to support blades during lamina
 {{ render_bill_of_materials() }}
 
 ## Tools Required
-- Isopropyl alcohol and cloth (for cleaning sheet edges)  
-- Scissors or knife (for trimming electrical tape)  
-- Measuring tape or ruler (for alignment)  
-- Squeegee, roller, or thumb pressure (for pressing tape flush)  
+{{ render_tools_required() }}
 
 ## Time Required
 - **Base assembly:** ~30 minutes  

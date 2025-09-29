@@ -26,6 +26,13 @@ bill_of_materials:
 
 time_to_implement: 0.5
 waiting_time: 0
+tools_required:
+  - name: Metal roller or rounded tool
+    purpose: Press the butyl sealing tape firmly to the base
+  - name: Scissors or utility knife
+    purpose: Cut the bag film and breather cloth to size
+  - name: Cleaning cloth and window cleaner
+    purpose: Remove dust and grease before sealing the bag edges
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}
@@ -43,9 +50,7 @@ To enable vacuum bagging of larger parts by sealing a cut vacuum bag directly to
 {{ render_bill_of_materials() }}
 
 ## Tools Required
-- Metal roller or rounded tool (for pressing sealant tape firmly)
-- Scissors or utility knife (for cutting bag film and breather cloth)
-- Cleaning cloth and window cleaner
+{{ render_tools_required() }}
 
 ## Instructions (step-by-step)
 

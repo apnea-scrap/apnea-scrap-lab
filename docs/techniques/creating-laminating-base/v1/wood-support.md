@@ -2,6 +2,15 @@
 status: active
 time_to_implement: 3
 waiting_time: 0
+tools_required:
+  - name: Wood saw
+    purpose: Cut the laminating base supports to length
+  - name: Screwdriver for angle brackets
+    purpose: Drive screws to secure brackets and maintain the angle
+  - name: Measuring tools (square, protractor, tape measure)
+    purpose: Check angles and dimensions while setting up the base
+  - name: Sandpaper for smoothing wood edges
+    purpose: Remove splinters and soften corners that contact the laminate
 bill_of_materials:
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A3)
@@ -63,12 +72,9 @@ Create a rigid angled surface to support fin blades during lamination.
 {{ render_bill_of_materials() }}
 
 ## Tools Required
+{{ render_tools_required() }}
 
-- **Cutting Tools:** Wood saw.
-- **Assembly Tools:** Screwdriver and screws for securing brackets.
-- **Measurement and Finishing:** Measuring tools (square, protractor, tape measure). Sandpaper for smoothing wood edges.
-
-## Reference Images 
+## Reference Images
 
 | ![Support Structure](support_all.jpeg) | ![Brackets and Side](support_brakets.jpeg) |
 |----------------------------------------|--------------------------------------------|

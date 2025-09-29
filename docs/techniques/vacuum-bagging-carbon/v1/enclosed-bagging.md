@@ -14,6 +14,11 @@ bill_of_materials:
       display: 0.5 m (1 m wide)
 time_to_implement: 0.25
 waiting_time: 0
+tools_required:
+  - name: Metal file
+    purpose: Smooth base edges so they do not puncture the bag
+  - name: Scissors
+    purpose: Cut breather cloth and consumables to size
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}
@@ -32,8 +37,7 @@ To create a simple, low-cost vacuum environment for small parts using the manual
 {{ render_bill_of_materials() }}
 
 ## Tools Required
-- Metal file (for smoothing edges of the base or parts)
-- Scissors (for cutting breather cloth)
+{{ render_tools_required() }}
 
 ## Reference Images
 

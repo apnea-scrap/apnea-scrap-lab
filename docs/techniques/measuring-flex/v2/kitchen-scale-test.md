@@ -2,6 +2,9 @@
 status: active
 time_to_implement: 0.25
 waiting_time: 0
+tools_required:
+  - name: Kitchen scale
+    purpose: Measure the load applied during the flex test
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}
@@ -9,8 +12,12 @@ waiting_time: 0
 ## Goal
 Measure the load required to make the **tip vertical (90°)** and observe where the blade bends (root, mid, tip).
 
+## Bill of Materials
+
+{{ render_bill_of_materials() }}
+
 ## Tools Required
-- Kitchen Scale 
+{{ render_tools_required() }}
 
 ## Reference Images
 

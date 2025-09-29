@@ -2,6 +2,13 @@
 status: active
 time_to_implement: 1
 waiting_time: 0
+tools_required:
+  - name: Junior hacksaw with a fine-tooth metal blade
+    purpose: Cut the cured carbon cleanly without fraying
+  - name: Metal file
+    purpose: Deburr and smooth the cut edges
+  - name: Safety goggles, dust mask, and protective gloves
+    purpose: Shield eyes, lungs, and skin from carbon dust and splinters
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}
@@ -14,9 +21,7 @@ To cut cured carbon laminate into the desired shape using a simple junior hacksa
 {{ render_bill_of_materials() }}
 
 ## Tools Required
-- Junior hacksaw with a fine-tooth metal blade
-- Metal file
-- Safety goggles, dust mask, and protective gloves
+{{ render_tools_required() }}
 
 ## Instructions (step-by-step)
 0. **Safety**: Wear gloves, eye protection, and a dust mask. Perform all steps in a well-ventilated area.
