@@ -761,6 +761,76 @@ def define_env(env):
 
         return "\n".join(table_lines)
 
+    def _render_bill_of_material_row(item: dict, page_dir_abs: Path) -> tuple[str, str, str, str]:
+        material_cell = ""
+        material_page_rel: Path | None = item.get("material_page")
+        title = item.get("title") or ""
+
+        if material_page_rel is not None:
+            material_abs = docs_dir / material_page_rel
+            rel_path = os.path.relpath(material_abs, start=page_dir_abs)
+            link_label = title or material_page_rel.stem
+            material_cell = f"[{link_label}]({rel_path.replace(os.sep, '/')})"
+        elif title:
+            material_cell = title
+
+        description = item.get("description")
+        notes = item.get("notes")
+        if description:
+            suffix = description if notes else description
+            material_cell = f"{material_cell}<br><small>{suffix}</small>" if material_cell else suffix
+
+        if notes:
+            note_html = notes if str(notes).startswith("<") else notes
+            if material_cell:
+                material_cell += f"<br><small>{note_html}</small>"
+            else:
+                material_cell = f"<small>{note_html}</small>"
+
+        quantity_cell = item.get("quantity_display") or ""
+
+        unit_cost_cell = ""
+        unit_cost_currency = item.get("unit_cost_currency")
+        unit_cost_decimal = item.get("unit_cost_decimal")
+        unit_cost_amount = item.get("unit_cost_amount")
+        unit_cost_per = item.get("unit_cost_per")
+        unit_cost_label = item.get("unit_cost_label")
+
+        if unit_cost_decimal is not None and unit_cost_currency:
+            unit_cost_cell = _format_currency(unit_cost_decimal, unit_cost_currency)
+        elif unit_cost_amount is not None and unit_cost_currency:
+            unit_cost_cell = f"{unit_cost_currency} {unit_cost_amount}"
+        elif unit_cost_decimal is not None:
+            unit_cost_cell = _format_decimal(unit_cost_decimal)
+        elif unit_cost_amount is not None:
+            unit_cost_cell = str(unit_cost_amount)
+        elif unit_cost_currency:
+            unit_cost_cell = unit_cost_currency
+
+        if unit_cost_per:
+            per_value = str(unit_cost_per)
+            if per_value.lower().startswith("per "):
+                unit_cost_cell = f"{unit_cost_cell} {per_value}".strip()
+            else:
+                suffix = f"per {per_value}" if unit_cost_cell else f"per {per_value}"
+                unit_cost_cell = f"{unit_cost_cell} {suffix}".strip()
+
+        if unit_cost_label:
+            unit_cost_cell = unit_cost_label if not unit_cost_cell else f"{unit_cost_cell} — {unit_cost_label}"
+
+        line_cost_cell = ""
+        line_total_decimal = item.get("line_total_decimal")
+        if line_total_decimal is not None and unit_cost_currency:
+            line_cost_cell = _format_currency(line_total_decimal, unit_cost_currency)
+
+        return material_cell, quantity_cell, unit_cost_cell, line_cost_cell
+
+    def _format_table_cell(value: str) -> str:
+        if not value:
+            return ""
+        escaped = escape(value)
+        return escaped.replace("|", "&#124;").replace("\n", "<br>")
+
     @env.macro
     def render_bill_of_materials(path: str | None = None) -> str:
         page_rel = Path(env.page.file.src_path)
@@ -778,66 +848,9 @@ def define_env(env):
         ]
 
         for item in items:
-            material_cell = ""
-            material_page_rel: Path | None = item.get("material_page")
-            title = item.get("title") or ""
-
-            if material_page_rel is not None:
-                material_abs = docs_dir / material_page_rel
-                rel_path = os.path.relpath(material_abs, start=page_dir_abs)
-                material_cell = f"[{title}]({rel_path.replace(os.sep, '/')})" if title else f"[{material_page_rel.stem}]({rel_path.replace(os.sep, '/')})"
-            elif title:
-                material_cell = title
-
-            description = item.get("description")
-            notes = item.get("notes")
-            if description:
-                suffix = description if notes else description
-                material_cell = f"{material_cell}<br><small>{suffix}</small>" if material_cell else suffix
-
-            if notes:
-                note_html = notes if str(notes).startswith("<") else notes
-                if material_cell:
-                    material_cell += f"<br><small>{note_html}</small>"
-                else:
-                    material_cell = f"<small>{note_html}</small>"
-
-            quantity_cell = item.get("quantity_display") or ""
-
-            unit_cost_cell = ""
-            unit_cost_currency = item.get("unit_cost_currency")
-            unit_cost_decimal = item.get("unit_cost_decimal")
-            unit_cost_amount = item.get("unit_cost_amount")
-            unit_cost_per = item.get("unit_cost_per")
-            unit_cost_label = item.get("unit_cost_label")
-
-            if unit_cost_decimal is not None and unit_cost_currency:
-                unit_cost_cell = _format_currency(unit_cost_decimal, unit_cost_currency)
-            elif unit_cost_amount is not None and unit_cost_currency:
-                unit_cost_cell = f"{unit_cost_currency} {unit_cost_amount}"
-            elif unit_cost_decimal is not None:
-                unit_cost_cell = _format_decimal(unit_cost_decimal)
-            elif unit_cost_amount is not None:
-                unit_cost_cell = str(unit_cost_amount)
-            elif unit_cost_currency:
-                unit_cost_cell = unit_cost_currency
-
-            if unit_cost_per:
-                per_value = str(unit_cost_per)
-                if per_value.lower().startswith("per "):
-                    unit_cost_cell = f"{unit_cost_cell} {per_value}".strip()
-                else:
-                    suffix = f"per {per_value}" if unit_cost_cell else f"per {per_value}"
-                    unit_cost_cell = f"{unit_cost_cell} {suffix}".strip()
-
-            if unit_cost_label:
-                unit_cost_cell = unit_cost_label if not unit_cost_cell else f"{unit_cost_cell} — {unit_cost_label}"
-
-            line_cost_cell = ""
-            line_total_decimal = item.get("line_total_decimal")
-            if line_total_decimal is not None and unit_cost_currency:
-                line_cost_cell = _format_currency(line_total_decimal, unit_cost_currency)
-
+            material_cell, quantity_cell, unit_cost_cell, line_cost_cell = _render_bill_of_material_row(
+                item, page_dir_abs
+            )
             table_lines.append(
                 f"| {material_cell} | {quantity_cell} | {unit_cost_cell} | {line_cost_cell} |"
             )
@@ -875,6 +888,85 @@ def define_env(env):
             )
 
         heading_prefix = "#" * max(heading_level, 1)
+        if kind_normalised == "bill_of_materials":
+            page_rel = Path(env.page.file.src_path)
+            page_dir_abs = docs_dir / page_rel.parent
+            table_lines = [
+                "| Technique | Material | Quantity | Unit Cost | Line Cost |",
+                "| --- | --- | --- | --- | --- |",
+            ]
+            aggregated_items: list[dict] = []
+            empty_notes: list[str] = []
+
+            for technique in techniques:
+                display_title = technique["title"]
+                note = technique.get("notes") or ""
+                technique_path = technique["path"]
+
+                items = _bill_of_material_items(technique_path)
+                if not items:
+                    if note:
+                        note_html = _format_table_cell(str(note))
+                        empty_notes.append(
+                            f"<p><strong>{escape(display_title)}:</strong> <em>{note_html}</em></p>"
+                        )
+                    else:
+                        empty_notes.append(
+                            f"<p><strong>{escape(display_title)}:</strong> <em>No bill of materials recorded yet.</em></p>"
+                        )
+                    continue
+
+                aggregated_items.extend(items)
+
+                technique_label = _format_table_cell(str(display_title))
+                note_html = _format_table_cell(str(note)) if note else ""
+
+                for index, item in enumerate(items):
+                    material_cell, quantity_cell, unit_cost_cell, line_cost_cell = _render_bill_of_material_row(
+                        item, page_dir_abs
+                    )
+                    technique_cell = technique_label if index == 0 else ""
+                    if index == 0 and note_html:
+                        if technique_cell:
+                            technique_cell = f"{technique_cell}<br><small><em>{note_html}</em></small>"
+                        else:
+                            technique_cell = f"<small><em>{note_html}</em></small>"
+
+                    table_lines.append(
+                        f"| {technique_cell} | {material_cell} | {quantity_cell} | {unit_cost_cell} | {line_cost_cell} |"
+                    )
+
+                technique_totals = _bill_of_material_totals(items)
+                for currency, low_total, high_total in technique_totals:
+                    if low_total == high_total:
+                        formatted_total = _format_currency(low_total, currency)
+                    else:
+                        formatted_total = (
+                            f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
+                        )
+                    table_lines.append(
+                        f"| **{_format_table_cell(str(display_title))} total** |  |  |  | **{formatted_total}** |"
+                    )
+
+            if not aggregated_items:
+                return "No bill of materials recorded yet."
+
+            grand_totals = _bill_of_material_totals(aggregated_items)
+            for currency, low_total, high_total in grand_totals:
+                if low_total == high_total:
+                    formatted_total = _format_currency(low_total, currency)
+                else:
+                    formatted_total = (
+                        f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
+                    )
+                table_lines.append(
+                    f"| **Grand total** |  |  |  | **{formatted_total}** |"
+                )
+
+            extra_notes = "\n".join(empty_notes)
+            table_html = "\n".join(table_lines)
+            return f"{table_html}\n\n{extra_notes}".strip()
+
         sections: list[str] = []
 
         for technique in techniques:
@@ -882,14 +974,9 @@ def define_env(env):
             note = technique.get("notes") or ""
             technique_path = technique["path"]
 
-            if kind_normalised == "bill_of_materials":
-                content = render_bill_of_materials(path=str(technique_path))
-                if not content:
-                    content = "No bill of materials recorded yet."
-            else:
-                content = render_tools_required(path=str(technique_path))
-                if not content:
-                    content = "No tools recorded yet."
+            content = render_tools_required(path=str(technique_path))
+            if not content:
+                content = "No tools recorded yet."
 
             sections.append(f"{heading_prefix} {display_title}")
             if note:
