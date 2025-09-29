@@ -1,7 +1,6 @@
 ---
 title: Carbon Fiber Fabric
 material:
-  default_unit: m²
   purchases:
     - supplier: "Easy Composites"
       url: "https://www.easycomposites.co.uk/200g-black-stuff-22-twill-3k-carbon-fibre-cloth"

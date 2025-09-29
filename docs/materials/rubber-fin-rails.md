@@ -1,7 +1,6 @@
 ---
 title: Rubber Fin Rails
 material:
-  default_unit: metre
   purchases:
     - supplier: "AliExpress"
       url: "https://www.aliexpress.com/item/1005007590033380.html"

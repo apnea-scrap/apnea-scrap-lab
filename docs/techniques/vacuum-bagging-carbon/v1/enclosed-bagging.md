@@ -3,18 +3,15 @@ status: active
 bill_of_materials:
   - material: materials/vacuum-bagging-kit.md
     description: Heavy-duty storage bag plus compatible hand pump
-    quantity: 1
-    unit: kit
-    purchase:
-      region: UK
+    quantity:
+      amount: 1
       unit: kit
   - material: materials/breather-cloth.md
     description: Wraps part to distribute airflow
-    quantity: 0.5
-    unit: metre
-    purchase:
-      region: UK
-      unit: linear metre (1 m wide)
+    quantity:
+      amount: 0.1
+      unit: 5 m pack (1 m wide)
+      display: 0.5 m (1 m wide)
 time_to_implement: 0.25
 waiting_time: 0
 ---

@@ -1,7 +1,6 @@
 ---
 title: Butyl Sealing Tape
 material:
-  default_unit: roll
   purchases:
     - supplier: "Easy Composites"
       url: "https://www.easycomposites.co.uk/vacuum-bagging-sealant-tape"

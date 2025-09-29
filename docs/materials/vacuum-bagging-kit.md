@@ -1,7 +1,6 @@
 ---
 title: Vacuum Bagging Kit
 material:
-  default_unit: kit
   purchases:
     - supplier: "Amazon"
       url: "https://www.amazon.co.uk/dp/B07RSCPH4N"

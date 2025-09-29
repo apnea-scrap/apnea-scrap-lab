@@ -5,27 +5,27 @@ waiting_time: 4
 bill_of_materials:
   - material: materials/laminating-epoxy-system.md
     description: Thin finishing coat (approx. 100 ml mixed)
-    quantity: 0.2
-    unit: 500 ml kit
-    purchase:
-      region: UK
+    quantity:
+      amount: 0.2
       unit: 500 ml kit
   - material: materials/clear-coat-spray.md
     description: Three light lacquer passes for UV protection
-    quantity: 0.3
-    unit: can
-    purchase:
-      region: UK
-      unit: 500 ml can
+    quantity:
+      amount: 0.3
+      unit: 400 ml can
   - name: Sandpaper set
     description: 400, 600, and 1000 grit sheets
-    quantity: 1
+    quantity:
+      amount: 1
+      unit: set
     unit_cost:
       amount: 3.00
       currency: GBP
   - name: Printable vinyl decal sheet (optional)
     description: Gloss white adhesive sheet for logos
-    quantity: 0.2
+    quantity:
+      amount: 0.2
+      unit: sheet
     unit_cost:
       amount: 7.50
       currency: GBP

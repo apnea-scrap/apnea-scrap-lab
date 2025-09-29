@@ -5,35 +5,31 @@ waiting_time: 12
 bill_of_materials:
   - material: materials/carbon-fiber-fabric.md
     description: 0.3 m² of 200 g/m² 3K 2/2 twill cloth
-    quantity: 0.3
-    unit: m²
-    purchase:
-      region: UK
+    quantity:
+      amount: 0.3
       unit: m² (1 m wide)
   - material: materials/laminating-epoxy-system.md
     description: 200 g mixed resin (approx. 200 ml)
-    quantity: 0.4
-    unit: 500 ml kit
-    purchase:
-      region: UK
+    quantity:
+      amount: 0.4
       unit: 500 ml kit
   - material: materials/pva-release-agent.md
     description: Two thin coats on the laminating base
-    quantity: 0.07
-    unit: 500 ml bottle
-    purchase:
-      region: UK
-      unit: 500 ml bottle
+    quantity:
+      amount: 0.175
+      unit: 200 ml bottle
+      display: 35 ml (two thin coats)
   - material: materials/peel-ply.md
     description: Two layers cut to the blade outline
-    quantity: 0.6
-    unit: metre
-    purchase:
-      region: UK
-      unit: linear metre (1.5 m wide)
+    quantity:
+      amount: 0.12
+      unit: 5 m pack (1.5 m wide)
+      display: 0.6 m (1.5 m wide)
   - name: Consumables pack
     description: Gloves, mixing sticks, acetone wipes
-    quantity: 1
+    quantity:
+      amount: 1
+      unit: pack
     unit_cost:
       amount: 3.50
       currency: GBP

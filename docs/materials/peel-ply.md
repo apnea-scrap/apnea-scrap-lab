@@ -1,13 +1,12 @@
 ---
 title: Peel Ply
 material:
-  default_unit: metre
   purchases:
     - supplier: "Easy Composites"
       url: "https://www.easycomposites.co.uk/peel-ply"
       region: UK
       date: 2025-06
-      unit: 5ml pack (1.5 m wide)
+      unit: 5 m pack (1.5 m wide)
       price:
         amount: 12.00
         currency: GBP
