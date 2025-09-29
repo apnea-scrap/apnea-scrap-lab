@@ -2743,7 +2743,7 @@
 
 <h1 id="materials-directory">Materials Directory<a class="headerlink" href="#materials-directory" title="Permanent link">&para;</a></h1>
 <p>A single place to keep track of every consumable, component, or tool that feeds into ApneaScrap Lab builds.
-Each page now stores the <strong>unit of measure</strong> and <strong>purchase history</strong> we have personally recorded so that
+Each page now stores the <strong>purchase history</strong> we have personally recorded so that
 techniques can reference a neutral material while still pointing back to real prices.</p>
 <p>Only the regions where we hold purchase data are listed. At the moment that means the United Kingdom.
 When new data comes in for other locales we can extend each page with additional purchase rows.</p>
@@ -2755,14 +2755,15 @@ When new data comes in for other locales we can extend each page with additional
 <li>a <code>No purchase history recorded yet.</code> call so the macro can turn the recorded purchases into tables grouped by region.</li>
 <li>Link techniques and projects to the material page instead of hard-coding suppliers inside a build guide.</li>
 <li>When logging a new technique version, add a <code>bill_of_materials</code> list in the front matter and render it with
-   <code>No bill of materials recorded yet.</code>. Reference materials via their page path and provide a <code>purchase</code> hint (region, unit,
-   supplier, etc.) so the macro can pull matching price data from the material page automatically.</li>
+   <code>No bill of materials recorded yet.</code>. Reference materials via their page path and set <code>quantity.unit</code> so the macro can
+   match the recorded purchase data automatically. Skip <code>purchase</code> hints on technique entries—the macro infers the
+   correct record from the unit you supply. Quantities default to the chosen purchase unit, so you only need to describe
+   the amount being used.</li>
 </ol>
 <p>Need a new material? Duplicate the template below.</p>
 <pre><code class="language-markdown">---
 title: Example Material
 material:
-  default_unit: example-unit
   purchases:
     - supplier: &quot;Supplier name&quot;
       url: &quot;https://example.com/product&quot;
