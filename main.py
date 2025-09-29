@@ -121,6 +121,75 @@ def define_env(env):
 
         return tools
 
+    def _resolve_project_techniques(meta_source: Path) -> list[dict]:
+        meta = read_meta(meta_source)
+        raw_entries = meta.get("techniques") or meta.get("technique_references")
+
+        if not raw_entries:
+            return []
+
+        if not isinstance(raw_entries, (list, tuple)):
+            raise ValueError(
+                "Techniques listed in front matter must be provided as a list."
+            )
+
+        resolved: list[dict] = []
+
+        for index, entry in enumerate(raw_entries):
+            if isinstance(entry, str):
+                entry = {"path": entry}
+
+            if not isinstance(entry, dict):
+                raise ValueError(
+                    "Each technique entry must be a dictionary or path string."
+                )
+
+            path_value = (
+                entry.get("path")
+                or entry.get("page")
+                or entry.get("source")
+                or entry.get("ref")
+            )
+
+            if not path_value:
+                raise ValueError(
+                    "Technique entries must define a 'path' (or 'page'/'source') field."
+                )
+
+            technique_path = Path(path_value)
+
+            if not technique_path.is_absolute():
+                if str(technique_path).startswith("docs/") or str(technique_path).startswith("docs\\"):
+                    technique_path = Path(env.project_dir) / technique_path
+                else:
+                    technique_path = docs_dir / technique_path
+
+            if not technique_path.exists():
+                raise FileNotFoundError(
+                    f"Technique file '{path_value}' referenced in {meta_source} does not exist."
+                )
+
+            display_title = entry.get("title") or entry.get("name")
+            if not display_title:
+                technique_meta = read_meta(technique_path)
+                display_title = technique_meta.get("title")
+
+            if not display_title:
+                display_title = technique_path.stem.replace("-", " ").title()
+
+            notes_value = entry.get("notes") or entry.get("focus")
+            notes = str(notes_value).strip() if notes_value else ""
+
+            resolved.append(
+                {
+                    "title": str(display_title),
+                    "path": technique_path,
+                    "notes": notes,
+                }
+            )
+
+        return resolved
+
     def _bill_of_material_items(meta_source: Path) -> list[dict]:
         meta = read_meta(meta_source)
         items = meta.get("bill_of_materials", []) or []
@@ -786,6 +855,48 @@ def define_env(env):
             )
 
         return "\n".join(table_lines)
+
+    @env.macro
+    def render_technique_requirements(
+        kind: str = "bill_of_materials",
+        path: str | None = None,
+        heading_level: int = 3,
+    ) -> str:
+        meta_source = Path(path) if path else Path(env.page.file.abs_src_path)
+        techniques = _resolve_project_techniques(meta_source)
+
+        if not techniques:
+            return ""
+
+        kind_normalised = (kind or "").strip().lower()
+        if kind_normalised not in {"bill_of_materials", "tools"}:
+            raise ValueError(
+                "render_technique_requirements kind must be 'bill_of_materials' or 'tools'."
+            )
+
+        heading_prefix = "#" * max(heading_level, 1)
+        sections: list[str] = []
+
+        for technique in techniques:
+            display_title = technique["title"]
+            note = technique.get("notes") or ""
+            technique_path = technique["path"]
+
+            if kind_normalised == "bill_of_materials":
+                content = render_bill_of_materials(path=str(technique_path))
+                if not content:
+                    content = "No bill of materials recorded yet."
+            else:
+                content = render_tools_required(path=str(technique_path))
+                if not content:
+                    content = "No tools recorded yet."
+
+            sections.append(f"{heading_prefix} {display_title}")
+            if note:
+                sections.append(f"<p><em>{escape(str(note))}</em></p>")
+            sections.append(content)
+
+        return "\n\n".join(sections).strip()
 
     @env.macro
     def render_material_purchases(path: str | None = None, heading_level: int = 3) -> str:
