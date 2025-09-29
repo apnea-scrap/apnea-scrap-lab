@@ -2,6 +2,11 @@
 status: research
 time_to_implement: 1
 waiting_time: 0
+tools_required:
+  - name: Knife or scissors
+    purpose: Trim tubing and syringe components to length
+  - name: Permanent marker
+    purpose: Mark graduations and reference points on the gauge
 bill_of_materials:
   - name: 10 mL syringe
     description: Thin barrel syringe for plunger travel
@@ -23,6 +28,8 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+{{ render_tools_required() }}
+
 A simple gauge to monitor mild vacuum (~81 kPa absolute, −20 kPa gauge) directly **inside** a vacuum bag.
 It uses Boyle’s law: trapped air expands as pressure drops, moving a rubber plunger seal you can read through the bag.
 
@@ -32,10 +39,6 @@ Monitor vacuum level inside a bag using plunger movement.
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
-
-## Tools Required
-- Knife or scissors (for trimming)
-- Permanent marker
 
 ## Instructions (step-by-step)
 1. **Modify plunger**

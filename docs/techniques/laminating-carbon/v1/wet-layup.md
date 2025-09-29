@@ -2,6 +2,21 @@
 status: active
 time_to_implement: 1
 waiting_time: 12
+tools_required:
+  - name: Nitrile gloves
+    purpose: Protect your hands while handling resin
+  - name: Mixing pots and sticks
+    purpose: Measure and blend epoxy batches
+  - name: Laminating brushes
+    purpose: Wet out the carbon fabric evenly
+  - name: Plastic finned roller (75 mm)
+    purpose: Consolidate layers and push out trapped air
+  - name: Scissors for cutting fabric
+    purpose: Cut reinforcement to the required templates
+  - name: Digital scale
+    purpose: Weigh resin batches for accurate mix ratios
+  - name: Optional vacuum bagging kit
+    purpose: Apply consolidation pressure when available
 bill_of_materials:
   - material: materials/carbon-fiber-fabric.md
     description: 0.3 m² of 200 g/m² 3K 2/2 twill cloth
@@ -37,6 +52,8 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+{{ render_tools_required() }}
+
 Baseline recipe with 0/90 twill and simple taper.
 
 ## Goal
@@ -49,18 +66,6 @@ Produce a basic carbon blade using a manual wet layup.
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
-
-- Digital scale accurate to 1 g for measuring resin and hardener.
-- Plastic finned roller (75 mm) to consolidate the laminate.
-
-## Tools Required
-- Nitrile gloves
-- Mixing pots and sticks
-- Laminating brushes
-- Plastic finned roller (75 mm)
-- Scissors for cutting fabric
-- Digital scale
-- Optional: vacuum bagging kit (manual pump plus storage bags)
 
 ## Reference Images
 

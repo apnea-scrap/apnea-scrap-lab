@@ -3,6 +3,7 @@ import os
 import re
 from datetime import datetime
 from decimal import Decimal, ROUND_HALF_UP
+from html import escape
 import yaml
 
 
@@ -60,6 +61,65 @@ def define_env(env):
         else:
             quantity_text = unit or ""
         return quantity_text, quantity_decimal
+
+    def _tools_required(meta_source: Path) -> list[dict]:
+        meta = read_meta(meta_source)
+        raw_tools = meta.get("tools_required")
+
+        if not raw_tools:
+            return []
+
+        if not isinstance(raw_tools, (list, tuple)):
+            raw_tools = [raw_tools]
+
+        tools: list[dict] = []
+
+        for entry in raw_tools:
+            if isinstance(entry, dict):
+                name = (
+                    entry.get("name")
+                    or entry.get("label")
+                    or entry.get("title")
+                    or entry.get("tool")
+                )
+                name = str(name).strip() if name is not None else ""
+
+                purpose = entry.get("purpose")
+                if purpose is None:
+                    purpose = entry.get("description") or entry.get("details")
+                purpose = str(purpose).strip() if purpose is not None else ""
+
+                if not name:
+                    raise ValueError(
+                        "Tools in front matter must define a 'name' field."
+                    )
+                if not purpose:
+                    raise ValueError(
+                        f"Tool '{name}' in {meta_source} must define a 'purpose' field."
+                    )
+
+                notes_field = entry.get("notes") or entry.get("note")
+                notes = str(notes_field).strip() if notes_field is not None else ""
+
+                link_field = entry.get("link") or entry.get("url")
+                link = str(link_field).strip() if link_field else ""
+
+                tools.append(
+                    {
+                        "name": name,
+                        "purpose": purpose,
+                        "notes": notes,
+                        "link": link,
+                    }
+                )
+            elif entry is None:
+                continue
+            else:
+                raise ValueError(
+                    f"Tools in {meta_source} must be dictionaries with name and purpose."
+                )
+
+        return tools
 
     def _bill_of_material_items(meta_source: Path) -> list[dict]:
         meta = read_meta(meta_source)
@@ -397,6 +457,44 @@ def define_env(env):
             return (parsed or datetime.min, purchase.get("supplier") or "")
 
         return sorted(candidates, key=sort_key, reverse=True)[0]
+
+    @env.macro
+    def render_tools_required(path: str | None = None, title: str | None = None) -> str:
+        meta_source = Path(path) if path else Path(env.page.file.abs_src_path)
+        tools = _tools_required(meta_source)
+
+        if not tools:
+            return ""
+
+        heading = title if title is not None else "Tools Required"
+        heading_html = f"<strong>{heading}</strong>" if heading else ""
+
+        list_items_parts: list[str] = []
+        for tool in tools:
+            name_html = escape(tool["name"])
+            if tool.get("link"):
+                href = escape(tool["link"], quote=True)
+                name_html = f"<a href=\"{href}\">{name_html}</a>"
+
+            purpose_html = escape(tool["purpose"])
+            item_body = f"<strong>{name_html}</strong> — {purpose_html}"
+
+            notes = tool.get("notes")
+            if notes:
+                notes_html = notes if str(notes).startswith("<") else escape(str(notes))
+                item_body = f"{item_body}<br><small>{notes_html}</small>"
+
+            list_items_parts.append(f"<li>{item_body}</li>")
+
+        list_items = "".join(list_items_parts)
+        list_html = f"<ul>{list_items}</ul>"
+
+        if heading_html:
+            content = f"{heading_html}\n{list_html}"
+        else:
+            content = list_html
+
+        return f"<div class=\"tools-required\">\n{content}\n</div>"
 
     @env.macro
     def render_bill_of_materials(path: str | None = None) -> str:

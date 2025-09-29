@@ -2,6 +2,11 @@
 status: active
 time_to_implement: 0.5
 waiting_time: 0
+tools_required:
+  - name: Scissors or precision cutting tool
+    purpose: Trim the laminated template to the traced outline
+  - name: Pen or pencil for tracing
+    purpose: Mark the foot pocket contour onto the laminate
 bill_of_materials:
   - name: A4 sheets
     description: 250 gsm sheets for tracing and stiffness
@@ -16,6 +21,8 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+{{ render_tools_required() }}
+
 This technique shows how to create a cutting template for fins using laminated paper.
 
 ## Goal
@@ -27,10 +34,6 @@ Produce a durable template that matches the foot pocket outline.
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
-
-## Tools Required
-- Scissors or precision cutting tool
-- Pen or pencil for tracing
 
 ## Reference Images
 

@@ -101,6 +101,11 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
       unit_cost:
         amount: 3.50
         currency: GBP
+  tools_required:
+    - name: Nitrile gloves
+      purpose: Protect your hands while handling resin
+    - name: Mixing sticks
+      purpose: Blend resin and hardener thoroughly
   time_to_implement: 3
   waiting_time: 12
   ---
@@ -110,10 +115,12 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
   `quantity.unit` whenever you want to control the rendered unit or are defining an inline item. Provide
   `quantity.display` if you need full control over how the quantity appears in the rendered table. When linking a
   material page, skip the legacy `purchase` block—the macro automatically selects the recorded purchase using the
-  `quantity.unit` you provide.
-3. Add `{{ render_bill_of_materials() }}` where you want the rendered table to appear.
-4. The comparison table on the technique index automatically calculates estimated costs from the bill of materials.
-5. Commit and push. The site will rebuild automatically.
+  `quantity.unit` you provide. List recurring equipment under `tools_required`, adding a `name` for each tool and a
+  short `purpose` that explains why it is needed for the process.
+3. Add `{{ render_tools_required() }}` near the top of the page (for example right after `{{ status_banner() }}`) to render the tools list captured in front matter.
+4. Add `{{ render_bill_of_materials() }}` where you want the rendered table to appear.
+5. The comparison table on the technique index automatically calculates estimated costs from the bill of materials.
+6. Commit and push. The site will rebuild automatically.
 
 ### Embed a YouTube video
 Use the `yt` macro defined in `main.py`.
@@ -130,6 +137,8 @@ Macros live in `main.py`.
 - `{{ yt("VIDEO_ID", "Title") }}` embeds a responsive privacy friendly YouTube iframe
 - `{{ versions_table() }}` builds a version comparison table for the current folder based on front matter metadata
 - `{{ status_banner() }}` shows a coloured banner with the current page status
+- `{{ render_tools_required() }}` outputs the tool list stored in front matter without needing a dedicated page section;
+  each tool entry must provide a `name` and `purpose`
 - `{{ render_bill_of_materials() }}` converts the front matter bill of materials into a table, automatically pulling pricing from linked material pages when available; set `unit_cost: "Inexpensive option"` (or any label string) on a BOM entry when you want the table to display that note instead of a numeric price
 - `{{ render_material_purchases() }}` groups a material page’s purchase history by region and renders supplier tables
 

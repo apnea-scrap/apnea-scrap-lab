@@ -2,6 +2,13 @@
 status: active
 time_to_implement: 0.5
 waiting_time: 12
+tools_required:
+  - name: Gloves
+    purpose: Keep the two-part adhesive off your skin
+  - name: Sandpaper (around 400 grit)
+    purpose: Key both surfaces to improve adhesion
+  - name: Window cleaner
+    purpose: Degrease the blade and rails before bonding
 bill_of_materials:
   - material: materials/rubber-fin-rails.md
     description: One pair of soft rubber rails sized for bifin blades
@@ -24,6 +31,8 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+{{ render_tools_required() }}
+
 ## Goal
 
 To attach rubber fin rails securely to carbon fiber blades using a strong composite adhesive.  
@@ -32,12 +41,6 @@ The rails protect the blade edges, improve water flow, and extend the blade’s 
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
-
-## Tools Required
-
-- Gloves
-- Sandpaper (around 400 grit)
-- Window cleaner (for cleaning surfaces)
 
 ## Instructions (step-by-step)
 

@@ -2,6 +2,15 @@
 status: research
 time_to_implement: 1
 waiting_time: 0
+tools_required:
+  - name: Isopropyl alcohol and cloth
+    purpose: Clean acrylic edges before applying tape
+  - name: Scissors or knife
+    purpose: Trim electrical tape to length
+  - name: Measuring tape or ruler
+    purpose: Align wedges consistently across the base
+  - name: Squeegee, roller, or thumb pressure
+    purpose: Press the tape firmly onto the acrylic for a flat seal
 bill_of_materials:
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A3, 2 mm)
@@ -34,6 +43,8 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+{{ render_tools_required() }}
+
 This document describes how to build a modular acrylic base with wedge supports for laminating carbon fins.
 The example shown is for a **70 × 70 cm monofin**, but the same technique can be adapted for **bifins** or other blade sizes.
 
@@ -49,12 +60,6 @@ Provide a modular surface with adjustable wedges to support blades during lamina
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
-
-## Tools Required
-- Isopropyl alcohol and cloth (for cleaning sheet edges)  
-- Scissors or knife (for trimming electrical tape)  
-- Measuring tape or ruler (for alignment)  
-- Squeegee, roller, or thumb pressure (for pressing tape flush)  
 
 ## Time Required
 - **Base assembly:** ~30 minutes  
