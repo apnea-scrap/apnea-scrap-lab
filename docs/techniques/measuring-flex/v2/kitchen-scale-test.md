@@ -9,11 +9,15 @@ tools_required:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-## Tools Required
-{{ render_tools_required() }}
-
 ## Goal
 Measure the load required to make the **tip vertical (90°)** and observe where the blade bends (root, mid, tip).
+
+## Bill of Materials
+
+{{ render_bill_of_materials() }}
+
+## Tools Required
+{{ render_tools_required() }}
 
 ## Reference Images
 

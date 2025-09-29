@@ -13,15 +13,15 @@ tools_required:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-## Tools Required
-{{ render_tools_required() }}
-
 ## Goal
 To cut cured carbon laminate into the desired shape using a simple junior hacksaw method, ensuring a clean fit into the final assembly.
 
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
+
+## Tools Required
+{{ render_tools_required() }}
 
 ## Instructions (step-by-step)
 0. **Safety**: Wear gloves, eye protection, and a dust mask. Perform all steps in a well-ventilated area.

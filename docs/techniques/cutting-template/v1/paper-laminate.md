@@ -21,9 +21,6 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-## Tools Required
-{{ render_tools_required() }}
-
 This technique shows how to create a cutting template for fins using laminated paper.
 
 ## Goal
@@ -35,6 +32,9 @@ Produce a durable template that matches the foot pocket outline.
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
+
+## Tools Required
+{{ render_tools_required() }}
 
 ## Reference Images
 

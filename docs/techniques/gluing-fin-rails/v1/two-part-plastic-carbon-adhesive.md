@@ -31,17 +31,17 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-## Tools Required
-{{ render_tools_required() }}
-
 ## Goal
 
-To attach rubber fin rails securely to carbon fiber blades using a strong composite adhesive.  
+To attach rubber fin rails securely to carbon fiber blades using a strong composite adhesive.
 The rails protect the blade edges, improve water flow, and extend the blade’s lifespan.
 
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
+
+## Tools Required
+{{ render_tools_required() }}
 
 ## Instructions (step-by-step)
 

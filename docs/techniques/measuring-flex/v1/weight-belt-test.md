@@ -9,12 +9,31 @@ tools_required:
     purpose: Record the deflection for later comparison
   - name: Angle finder or protractor
     purpose: Measure the bend angle at the target load
+bill_of_materials:
+  - name: Weight belt with pockets
+    description: Holds weights in place to load the fin tip and mid-span
+    quantity:
+      amount: 1
+      unit: belt
+  - name: Dive weights
+    description: Individual weights to create the 2:1 tip-to-mid loading ratio
+    quantity:
+      amount: 3
+      unit: weights
+      display: Mix of weights to reach target load
+  - name: Rigid ruler or printed grid
+    description: Visual reference to observe bend angles along the blade span
+    quantity:
+      amount: 1
+      unit: reference board
+  - name: Masking tape
+    description: Secures the grid or ruler to the support structure
+    quantity:
+      amount: 1
+      unit: roll
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}
-
-## Tools Required
-{{ render_tools_required() }}
 
 ## Goal
 Measure the load required to make the **tip vertical (90°)** and observe where the blade bends (root, mid, tip).
@@ -24,11 +43,12 @@ Measure the load required to make the **tip vertical (90°)** and observe where 
 - Marks at 0.3 L (root), 0.6 L (mid), and 0.9 L (tip)
 - Weights applied in a 2:1 ratio (tip:mid)
 
-## Materials
-- Weight belt
-- Dive weights
-- Ruler or printed grid
-- Tape for securing the reference grid
+## Bill of Materials
+
+{{ render_bill_of_materials() }}
+
+## Tools Required
+{{ render_tools_required() }}
 
 ## Instructions
 - **Step 1 — Load until tip is vertical**  

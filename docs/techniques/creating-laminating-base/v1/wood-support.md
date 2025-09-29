@@ -50,9 +50,6 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-## Tools Required
-{{ render_tools_required() }}
-
 25° wooden base with acrylic sheets for laminating carbon fin blades.
 
 ## Goal
@@ -73,6 +70,9 @@ Create a rigid angled surface to support fin blades during lamination.
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
+
+## Tools Required
+{{ render_tools_required() }}
 
 ## Reference Images
 

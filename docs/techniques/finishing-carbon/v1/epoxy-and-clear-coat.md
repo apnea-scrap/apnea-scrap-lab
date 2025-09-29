@@ -47,17 +47,17 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-## Tools Required
-{{ render_tools_required() }}
-
 ## Goal
 
-To apply a protective and aesthetic finish to cured carbon blades by sealing, smoothing, and clear-coating the surface.  
+To apply a protective and aesthetic finish to cured carbon blades by sealing, smoothing, and clear-coating the surface.
 This improves durability, protects against moisture, enhances gloss, and provides the option for custom decals.
 
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
+
+## Tools Required
+{{ render_tools_required() }}
 
 ## Instructions (step-by-step)
 

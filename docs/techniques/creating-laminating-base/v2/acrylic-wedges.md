@@ -43,9 +43,6 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-## Tools Required
-{{ render_tools_required() }}
-
 This document describes how to build a modular acrylic base with wedge supports for laminating carbon fins.
 The example shown is for a **70 × 70 cm monofin**, but the same technique can be adapted for **bifins** or other blade sizes.
 
@@ -61,6 +58,9 @@ Provide a modular surface with adjustable wedges to support blades during lamina
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
+
+## Tools Required
+{{ render_tools_required() }}
 
 ## Time Required
 - **Base assembly:** ~30 minutes  
