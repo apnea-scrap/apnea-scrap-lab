@@ -49,31 +49,17 @@ nav:
           - Monofin Versions: projects/monofin/index.md
       - Neck Weight:
           - Neck Weight Versions: projects/neck-weight/index.md
-          - V1 - Shot Inner Tube: projects/neck-weight/v1-shot-inner-tube.md
           - V2 - Molded Sleeve: projects/neck-weight/v2-molded-sleeve.md
+          - V1 - Shot Inner Tube: projects/neck-weight/v1-shot-inner-tube.md
       - (Future Gear): projects/future-gear/index.md
-  - Materials:
-      - Acrylic Sheet: materials/acrylic-sheet.md
-      - Breather Cloth: materials/breather-cloth.md
-      - Butyl Sealing Tape: materials/butyl-sealing-tape.md
-      - Carbon Fiber Fabric: materials/carbon-fiber-fabric.md
-      - Clear Coat Spray: materials/clear-coat-spray.md
-      - Laminating Epoxy System: materials/laminating-epoxy-system.md
-      - Materials Directory: materials/index.md
-      - Vacuum Bagging Kit: materials/vacuum-bagging-kit.md
-      - PVA Release Agent: materials/pva-release-agent.md
-      - Peel Ply: materials/peel-ply.md
-      - Plastic-to-Carbon Adhesive: materials/plastic-to-carbon-adhesive.md
-      - Rubber Fin Rails: materials/rubber-fin-rails.md
-      - Stackable Plastic Wedges: materials/stackable-plastic-wedges.md
   - Techniques:
       - Choosing Bi-fin Foot Pockets:
           - Choosing Bi-fin Foot Pockets Versions: techniques/choosing-bifin-footpockets/index.md
           - V1 - Short Rails: techniques/choosing-bifin-footpockets/v1/short-rails.md
       - Creating Laminating Base:
           - Creating Laminating Base Versions: techniques/creating-laminating-base/index.md
-          - V1 - Wood Support: techniques/creating-laminating-base/v1/wood-support.md
           - V2 - Plastic Wedges: techniques/creating-laminating-base/v2/acrylic-wedges.md
+          - V1 - Wood Support: techniques/creating-laminating-base/v1/wood-support.md
       - Cutting Cured Carbon:
           - Cutting Cured Carbon Versions: techniques/cutting-cured-carbon/index.md
           - V1 - Junior Hacksaw: techniques/cutting-cured-carbon/v1/junior-hacksaw.md
@@ -91,8 +77,8 @@ nav:
           - V1 - Wet Layup: techniques/laminating-carbon/v1/wet-layup.md
       - Measuring Flex:
           - Measuring Flex Versions: techniques/measuring-flex/index.md
-          - V1 - Weight Belt Test: techniques/measuring-flex/v1/weight-belt-test.md
           - V2 - Kitchen Scale Test: techniques/measuring-flex/v2/kitchen-scale-test.md
+          - V1 - Weight Belt Test: techniques/measuring-flex/v1/weight-belt-test.md
       - Predicting Flex:
           - Predicting Flex Versions: techniques/predicting-flex/index.md
           - V1 - Tapered Cantilever Beam: techniques/predicting-flex/v1/tapered-cantilever-beam.md
@@ -101,8 +87,22 @@ nav:
           - V1 - Syringe Gauge: techniques/measuring-vacuum/v1/syringe-gauge.md
       - Vacuum Bagging Carbon:
           - Vacuum Bagging Carbon Versions: techniques/vacuum-bagging-carbon/index.md
+          - V2 - Edge-Sealed Bagging: techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md
           - V1 - Enclosed Bagging: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
-          - V1 - Edge-Sealed Bagging: techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md
+  - Materials:
+      - Acrylic Sheet: materials/acrylic-sheet.md
+      - Breather Cloth: materials/breather-cloth.md
+      - Butyl Sealing Tape: materials/butyl-sealing-tape.md
+      - Carbon Fiber Fabric: materials/carbon-fiber-fabric.md
+      - Clear Coat Spray: materials/clear-coat-spray.md
+      - Laminating Epoxy System: materials/laminating-epoxy-system.md
+      - Materials Directory: materials/index.md
+      - PVA Release Agent: materials/pva-release-agent.md
+      - Peel Ply: materials/peel-ply.md
+      - Plastic-to-Carbon Adhesive: materials/plastic-to-carbon-adhesive.md
+      - Rubber Fin Rails: materials/rubber-fin-rails.md
+      - Stackable Plastic Wedges: materials/stackable-plastic-wedges.md
+      - Vacuum Bagging Kit: materials/vacuum-bagging-kit.md
   - Blog:
       - blog/index.md
       - Tags: blog/tags.md
