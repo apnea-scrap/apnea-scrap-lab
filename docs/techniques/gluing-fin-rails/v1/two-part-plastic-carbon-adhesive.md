@@ -12,16 +12,14 @@ bill_of_materials:
   - material: materials/plastic-to-carbon-adhesive.md
     description: 25 ml of 3M DP420 mixed with nozzle
     quantity:
-      amount: 0.5
+      amount: 1
       unit: 25 ml syringe
   - name: Fold-back clips set
     description: 20 mm binder clips for clamping rails during cure
     quantity:
       amount: 1
       unit: set
-    unit_cost:
-      amount: 3.00
-      currency: GBP
+    unit_cost: Inexpensive
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

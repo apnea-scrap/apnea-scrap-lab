@@ -23,17 +23,13 @@ bill_of_materials:
     quantity:
       amount: 1
       unit: sheet
-    unit_cost:
-      amount: 1.50
-      currency: GBP
+    unit_cost: Inexpensive
   - name: Electrical tape roll
     description: Wide PVC tape to join acrylic seams
     quantity:
       amount: 1
       unit: roll
-    unit_cost:
-      amount: 1.00
-      currency: GBP
+    unit_cost: Inexpensive
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

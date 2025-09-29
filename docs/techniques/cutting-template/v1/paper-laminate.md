@@ -3,24 +3,15 @@ status: active
 time_to_implement: 0.5
 waiting_time: 0
 bill_of_materials:
-  - name: A4 cardstock sheets
+  - name: A4 sheets
     description: 250 gsm sheets for tracing and stiffness
     quantity: 2
-    unit_cost:
-      amount: 0.15
-      currency: GBP
+    unit_cost: Inexpensive
   - name: Laminating pouches
     description: A4 gloss pouches used as protective film
     quantity: 1
-    unit_cost:
-      amount: 0.40
-      currency: GBP
-  - name: Spray adhesive or glue stick
-    description: Light adhesive to tack layers prior to lamination
-    quantity: 0.1
-    unit_cost:
-      amount: 1.50
-      currency: GBP
+    unit_cost: Inexpensive
+
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

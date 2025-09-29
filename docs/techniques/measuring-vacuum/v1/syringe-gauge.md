@@ -7,38 +7,18 @@ bill_of_materials:
     description: Thin barrel syringe for plunger travel
     quantity:
       amount: 1
-    unit_cost:
-      amount: 0.80
-      currency: GBP
+    unit_cost: Inexpensive
   - name: Luer-lock tip cap
     description: Single cap to seal the syringe tip
     quantity:
       amount: 1
-    unit_cost:
-      amount: 0.20
-      currency: GBP
+    unit_cost: Inexpensive
   - name: Candle wax shavings
     description: Small amount to lubricate the rubber seal
     quantity:
       amount: 0.05
       unit: block
-    unit_cost:
-      amount: 2.00
-      currency: GBP
-  - material: materials/breather-cloth.md
-    description: Wrap to protect the gauge inside the bag
-    quantity:
-      amount: 0.1
-      unit: 5 m pack (1 m wide)
-      display: 0.5 m (1 m wide)
-  - name: Permanent marker
-    description: Fine tip for calibration marks
-    quantity:
-      amount: 1
-      unit: marker
-    unit_cost:
-      amount: 1.50
-      currency: GBP
+    unit_cost: Inexpensive
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}
@@ -56,7 +36,6 @@ Monitor vacuum level inside a bag using plunger movement.
 ## Tools Required
 - Knife or scissors (for trimming)
 - Permanent marker
-- Breather fabric
 
 ## Instructions (step-by-step)
 1. **Modify plunger**
@@ -82,11 +61,6 @@ Monitor vacuum level inside a bag using plunger movement.
        - Mark your **target 80% atmospheric (~81 kPa abs)**:
            - 10 mL syringe → +1.25 mL (plunger moves ~7.6 mm on standard barrel, ~20 mm on thin insulin barrel)
            - 20 mL syringe → +2.5 mL (plunger moves ~8.9 mm)
-
-5. **Wrap and place**
-
-       - Wrap syringe loosely in breather fabric so resin cannot touch it.
-       - Place it on top of breather stack, markings facing upward for reading through film.
 
 ---
 

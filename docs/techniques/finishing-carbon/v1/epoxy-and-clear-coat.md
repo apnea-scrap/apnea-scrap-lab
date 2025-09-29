@@ -24,10 +24,10 @@ bill_of_materials:
   - name: Printable vinyl decal sheet (optional)
     description: Gloss white adhesive sheet for logos
     quantity:
-      amount: 0.2
+      amount: 1
       unit: sheet
     unit_cost:
-      amount: 7.50
+      amount: 1.50
       currency: GBP
     notes: Optional branding layer
 ---

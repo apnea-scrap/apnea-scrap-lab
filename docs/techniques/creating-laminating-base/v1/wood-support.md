@@ -36,9 +36,7 @@ bill_of_materials:
     quantity:
       amount: 1
       unit: roll
-    unit_cost:
-      amount: 2.00
-      currency: GBP
+    unit_cost: Inexpensive
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

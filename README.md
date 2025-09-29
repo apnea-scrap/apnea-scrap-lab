@@ -130,7 +130,7 @@ Macros live in `main.py`.
 - `{{ yt("VIDEO_ID", "Title") }}` embeds a responsive privacy friendly YouTube iframe
 - `{{ versions_table() }}` builds a version comparison table for the current folder based on front matter metadata
 - `{{ status_banner() }}` shows a coloured banner with the current page status
-- `{{ render_bill_of_materials() }}` converts the front matter bill of materials into a table, automatically pulling pricing from linked material pages when available
+- `{{ render_bill_of_materials() }}` converts the front matter bill of materials into a table, automatically pulling pricing from linked material pages when available; set `unit_cost: "Inexpensive option"` (or any label string) on a BOM entry when you want the table to display that note instead of a numeric price
 - `{{ render_material_purchases() }}` groups a material page’s purchase history by region and renders supplier tables
 
 Restart `mkdocs serve` if you modify `main.py` to reload macros.

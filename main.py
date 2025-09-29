@@ -107,10 +107,23 @@ def define_env(env):
                 title = material_page_rel.stem.replace("-", " ").title()
             title = title or ""
 
-            unit_cost = (item.get("unit_cost") or {}).copy()
+            unit_cost_field = item.get("unit_cost")
+            unit_cost_label: str | None = None
+            if isinstance(unit_cost_field, dict):
+                unit_cost = unit_cost_field.copy()
+            elif isinstance(unit_cost_field, str):
+                unit_cost = {}
+                unit_cost_label = unit_cost_field.strip() or None
+            else:
+                unit_cost = {}
+
             unit_cost_amount = unit_cost.get("amount")
             unit_cost_currency = unit_cost.get("currency")
             unit_cost_per = unit_cost.get("per")
+            if unit_cost_label is None:
+                label_value = unit_cost.get("label")
+                if isinstance(label_value, str):
+                    unit_cost_label = label_value.strip() or None
 
             direct_region = item.get("region")
             direct_supplier = item.get("supplier")
@@ -197,6 +210,7 @@ def define_env(env):
                     "unit_cost_decimal": unit_cost_decimal,
                     "unit_cost_amount": unit_cost_amount,
                     "unit_cost_per": unit_cost_per,
+                    "unit_cost_label": unit_cost_label,
                     "line_total_decimal": line_total_decimal,
                 }
             )
@@ -432,6 +446,7 @@ def define_env(env):
             unit_cost_decimal = item.get("unit_cost_decimal")
             unit_cost_amount = item.get("unit_cost_amount")
             unit_cost_per = item.get("unit_cost_per")
+            unit_cost_label = item.get("unit_cost_label")
 
             if unit_cost_decimal is not None and unit_cost_currency:
                 unit_cost_cell = _format_currency(unit_cost_decimal, unit_cost_currency)
@@ -451,6 +466,9 @@ def define_env(env):
                 else:
                     suffix = f"per {per_value}" if unit_cost_cell else f"per {per_value}"
                     unit_cost_cell = f"{unit_cost_cell} {suffix}".strip()
+
+            if unit_cost_label:
+                unit_cost_cell = unit_cost_label if not unit_cost_cell else f"{unit_cost_cell} — {unit_cost_label}"
 
             line_cost_cell = ""
             line_total_decimal = item.get("line_total_decimal")
