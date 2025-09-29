@@ -1,5 +1,7 @@
 ---
 status: active
+time_to_implement: 0.5
+waiting_time: 12
 bill_of_materials:
   - material: materials/rubber-fin-rails.md
     description: One pair of soft rubber rails sized for bifin blades
@@ -19,8 +21,6 @@ bill_of_materials:
     unit_cost:
       amount: 3.00
       currency: GBP
-time_to_implement: 1
-waiting_time: 12
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

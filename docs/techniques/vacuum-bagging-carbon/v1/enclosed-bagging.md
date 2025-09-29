@@ -1,21 +1,13 @@
 ---
-version: v1
 status: active
 bill_of_materials:
-  - material: materials/vacuum-storage-bags.md
-    description: Heavy-duty bag for enclosed setup
-    quantity: 0.5
-    unit: pack
-    purchase:
-      region: UK
-      unit: pack of 2 (55 × 85 cm)
-  - material: materials/manual-vacuum-pump.md
-    description: Hand pump supplied with compatible valve
+  - material: materials/vacuum-bagging-kit.md
+    description: Heavy-duty storage bag plus compatible hand pump
     quantity: 1
-    unit: pump
+    unit: kit
     purchase:
       region: UK
-      unit: pump kit
+      unit: kit
   - material: materials/breather-cloth.md
     description: Wraps part to distribute airflow
     quantity: 0.5
@@ -23,14 +15,14 @@ bill_of_materials:
     purchase:
       region: UK
       unit: linear metre (1 m wide)
-time_to_implement: 3
-waiting_time: 12
+time_to_implement: 0.25
+waiting_time: 0
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
 ## Goal
-To create a simple, low-cost vacuum environment for small parts using off-the-shelf vacuum storage bags.
+To create a simple, low-cost vacuum environment for small parts using the manual pump and storage bags from the vacuum bagging kit.
 
 ## Specifications / Dimensions
 - Suitable for small to medium parts that fit inside standard vacuum storage bags

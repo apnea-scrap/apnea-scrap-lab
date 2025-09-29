@@ -1,15 +1,24 @@
 ---
 title: Rubber Fin Rails
 material:
-  default_unit: pair
+  default_unit: metre
   purchases:
-    - supplier: "Freedive Store"
-      url: "https://www.freedivestore.com/"
+    - supplier: "AliExpress"
+      url: "https://www.aliexpress.com/item/1005007590033380.html"
       region: UK
       date: 2025-06
-      unit: pair (1.2 m length)
+      unit: metre
       price:
-        amount: 14.90
+        amount: 2.00
+        currency: GBP
+      notes: "Soft rubber rails suitable for 2 mm blade edges"
+    - supplier: "DiveInn"
+      url: "https://www.tradeinn.com/diveinn/en/imersion-fin-blade-protection-water-rail-1-m/617875/p"
+      region: UK
+      date: 2025-06
+      unit: metre
+      price:
+        amount: 6.00
         currency: GBP
       notes: "Soft rubber rails suitable for 2 mm blade edges"
 ---

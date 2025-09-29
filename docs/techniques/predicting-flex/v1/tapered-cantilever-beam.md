@@ -1,7 +1,5 @@
 ---
 status: research
-time_to_implement: 1
-waiting_time: 0
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

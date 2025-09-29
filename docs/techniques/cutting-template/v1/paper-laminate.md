@@ -1,5 +1,7 @@
 ---
 status: active
+time_to_implement: 0.5
+waiting_time: 0
 bill_of_materials:
   - name: A4 cardstock sheets
     description: 250 gsm sheets for tracing and stiffness
@@ -19,8 +21,6 @@ bill_of_materials:
     unit_cost:
       amount: 1.50
       currency: GBP
-time_to_implement: 3
-waiting_time: 0
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

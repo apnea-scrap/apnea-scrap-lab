@@ -7,11 +7,11 @@ material:
       url: "https://www.easycomposites.co.uk/peel-ply"
       region: UK
       date: 2025-06
-      unit: linear metre (1.5 m wide)
+      unit: 5ml pack (1.5 m wide)
       price:
-        amount: 4.80
+        amount: 12.00
         currency: GBP
-      notes: "Nylon peel ply, scoured for epoxy"
+      notes: "Peel ply suitable for vacuum bagging of wet-lay laminates"
 ---
 # Peel Ply
 

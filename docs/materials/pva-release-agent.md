@@ -4,14 +4,14 @@ material:
   default_unit: 500 ml bottle
   purchases:
     - supplier: "Easy Composites"
-      url: "https://www.easycomposites.co.uk/pva-release-agent"
+      url: "https://www.easycomposites.co.uk/pva-mould-release-agent"
       region: UK
       date: 2025-06
-      unit: 500 ml bottle
+      unit: 200 ml bottle
       price:
-        amount: 9.60
+        amount: 5.00
         currency: GBP
-      notes: "Green PVA release agent for composites tooling"
+      notes: "PVA is a traditional mould release agent"
 ---
 # PVA Release Agent
 

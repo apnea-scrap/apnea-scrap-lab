@@ -1,6 +1,7 @@
 ---
 status: active
-maturity: stable
+time_to_implement: 1
+waiting_time: 4
 bill_of_materials:
   - material: materials/laminating-epoxy-system.md
     description: Thin finishing coat (approx. 100 ml mixed)
@@ -29,8 +30,6 @@ bill_of_materials:
       amount: 7.50
       currency: GBP
     notes: Optional branding layer
-time_to_implement: 1
-waiting_time: 0
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

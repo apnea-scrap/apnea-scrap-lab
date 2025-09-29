@@ -1,5 +1,7 @@
 ---
 status: research
+time_to_implement: 1
+waiting_time: 0
 bill_of_materials:
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A3, 2 mm)
@@ -29,8 +31,6 @@ bill_of_materials:
     unit_cost:
        amount: 1.00
        currency: GBP
-time_to_implement: 1
-waiting_time: 0
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

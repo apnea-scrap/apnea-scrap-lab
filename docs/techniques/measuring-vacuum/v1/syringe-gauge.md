@@ -1,5 +1,7 @@
 ---
 status: research
+time_to_implement: 1
+waiting_time: 0
 bill_of_materials:
   - name: 10 mL syringe
     description: Thin barrel syringe for plunger travel
@@ -31,8 +33,6 @@ bill_of_materials:
     unit_cost:
       amount: 1.50
       currency: GBP
-time_to_implement: 1
-waiting_time: 0
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

@@ -1,18 +1,5 @@
 ---
 status: active
-bill_of_materials:
-  - name: Printed cutting template
-    description: A4 sheet laminated or taped to the blade
-    quantity: 1
-    unit_cost:
-      amount: 0.10
-      currency: GBP
-  - name: Electrical tape
-    description: Short lengths to hold the template during cutting
-    quantity: 0.1
-    unit_cost:
-      amount: 4.00
-      currency: GBP
 time_to_implement: 1
 waiting_time: 0
 ---

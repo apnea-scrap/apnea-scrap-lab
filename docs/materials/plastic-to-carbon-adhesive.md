@@ -1,22 +1,22 @@
 ---
 title: Plastic to Carbon Adhesive
 material:
-  default_unit: cartridge
+  default_unit: syringe
   purchases:
-    - supplier: "Easy Composites"
-      url: "https://www.easycomposites.co.uk/3m-scotch-weld-dp420-epoxy-adhesive"
+    - supplier: "Amazon"
+      url: "https://www.amazon.co.uk/dp/B01IBOK7FE"
       region: UK
       date: 2025-06
-      unit: 50 ml cartridge
+      unit: 25 ml syringe
       price:
         amount: 24.50
         currency: GBP
-      notes: "3M DP420 grey, high-shear epoxy"
+      notes: "50139 J-B Weld PlasticBonder- Black"
 ---
 # Plastic to Carbon Adhesive
 
 ## Overview
-Two-part structural adhesive ideal for bonding plastic fin rails to cured carbon blades. 3M DP420 offers high peel and
+Two-part structural adhesive ideal for bonding plastic fin rails to cured carbon blades. J-B Weld PlasticBonder high peel and
 shear strength while remaining slightly flexible.
 
 ## Purchase history

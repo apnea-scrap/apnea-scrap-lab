@@ -1,5 +1,7 @@
 ---
 status: active
+time_to_implement: 1
+waiting_time: 12
 bill_of_materials:
   - material: materials/carbon-fiber-fabric.md
     description: 0.3 m² of 200 g/m² 3K 2/2 twill cloth
@@ -29,37 +31,12 @@ bill_of_materials:
     purchase:
       region: UK
       unit: linear metre (1.5 m wide)
-  - material: materials/breather-cloth.md
-    description: Wrap to improve vacuum bleed
-    quantity: 0.5
-    unit: metre
-    purchase:
-      region: UK
-      unit: linear metre (1 m wide)
-    notes: Optional for manual pump setups
-  - material: materials/vacuum-storage-bags.md
-    description: Large bag enclosure (one bag from a pack of two)
-    quantity: 0.5
-    unit: pack
-    purchase:
-      region: UK
-      unit: pack of 2 (55 × 85 cm)
-  - material: materials/manual-vacuum-pump.md
-    description: Manual pump amortised over repeated builds
-    quantity: 0.1
-    unit: pump
-    purchase:
-      region: UK
-      unit: pump kit
-    notes: Optional; reuse across laminations
   - name: Consumables pack
     description: Gloves, mixing sticks, acetone wipes
     quantity: 1
     unit_cost:
       amount: 3.50
       currency: GBP
-time_to_implement: 3
-waiting_time: 12
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}
@@ -87,7 +64,7 @@ Produce a basic carbon blade using a manual wet layup.
 - Plastic finned roller (75 mm)
 - Scissors for cutting fabric
 - Digital scale
-- Optional: vacuum storage bags and hand pump
+- Optional: vacuum bagging kit (manual pump plus storage bags)
 
 ## Reference Images
 
@@ -142,8 +119,8 @@ Produce a basic carbon blade using a manual wet layup.
 
 1. Once the laminate layers are complete, apply **two layers of peel ply** over the top surface.
    - Peel ply absorbs **excess resin** and helps achieve a uniform finish.
-2. Optional: include a **breather layer** to improve vacuum results (future upgrade).
-3. Optional: if using vacuum storage bags, place the prepared laminate inside, seal, and apply **vacuum pressure** using the pump.
+2. Optional: include a **breather layer** to improve vacuum results.
+3. Optional: if using the vacuum bagging kit, place the prepared laminate inside one of the storage bags, seal it, and apply **vacuum pressure** with the manual pump.
 
 ---
 

@@ -1,7 +1,5 @@
 ---
 status: active
-time_to_implement: N/A
-waiting_time: N/A
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

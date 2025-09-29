@@ -1,13 +1,13 @@
 ---
 status: research
 bill_of_materials:
-  - material: materials/vacuum-bag-film.md
-    description: Cut large enough for flange seal and pleats
-    quantity: 1.2
-    unit: metre
+  - material: materials/vacuum-bagging-kit.md
+    description: Manual pump with heavy-duty storage bags for low-cost vacuum pulls
+    quantity: 1
+    unit: kit
     purchase:
       region: UK
-      unit: linear metre (760 mm wide)
+      unit: kit
   - material: materials/butyl-sealing-tape.md
     description: Continuous bead around the laminating base
     quantity: 0.4
@@ -22,22 +22,16 @@ bill_of_materials:
     purchase:
       region: UK
       unit: linear metre (1 m wide)
-  - material: materials/vacuum-gauge.md
+  - name: DIY Vacuum gauge
     description: Inline gauge to monitor vacuum level
     quantity: 1
     unit: gauge
-    purchase:
-      region: UK
-      unit: gauge
-  - material: materials/manual-vacuum-pump.md
-    description: Manual pump for edge-sealed bag
-    quantity: 1
-    unit: pump
-    purchase:
-      region: UK
-      unit: pump kit
-time_to_implement: 5
-waiting_time: 12
+    unit_cost:
+      amount: 2.00
+      currency: GBP
+
+time_to_implement: 0.5
+waiting_time: 0
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}
@@ -60,14 +54,17 @@ To enable vacuum bagging of larger parts by sealing a cut vacuum bag directly to
 - Cleaning cloth and window cleaner
 
 ## Instructions (step-by-step)
-1. Clean the edges of the laminating base with a cloth and window cleaner to ensure proper adhesion of the butyl tape.
-2. Cut a sheet of vacuum bag film large enough to cover the part with margin on all sides.
-3. Apply butyl sealing tape along the edges of the laminating base.
-4. Place the vacuum bag film over the base and press it firmly into the butyl tape to create a continuous edge seal.
-5. Install the vacuum pump connector and vacuum gauge through the bag film or at a pre-made port.
-6. Place breather cloth around the part to maintain airflow under the bag.
-7. Start pumping manually and monitor the gauge. Stop when ~80% vacuum (-0.2 bar) is reached.
-8. Check for leaks by observing if the gauge holds steady for at least 10 minutes. If vacuum drops, inspect and reseal edges.
+
+1. Clean the laminating base edges thoroughly using a cloth and window cleaner to ensure the butyl tape adheres
+   properly.
+2. Cut a sheet of vacuum bag film with sufficient margin to cover the part completely on all sides.
+3. Apply a continuous strip of butyl sealing tape along the edges of the laminating base.
+4. Lay the vacuum bag film over the base, pressing it firmly into the butyl tape to create an airtight seal.
+5. Ensure the vacuum valve is positioned away from critical laminate parts such as the free blade.
+6. Arrange breather cloth around the part to support airflow under the bag, and place an extra layer beneath the valve.
+7. Pump manually while monitoring the gauge, stopping once ~80% vacuum (-0.2 bar) is achieved.
+8. Check for leaks by verifying the gauge holds steady for at least 10 minutes. If vacuum drops, inspect and reseal the
+   edges as needed.
 
 ## Limitations
 - Requires a clean and smooth base surface for proper sealing; dust, grease, or moisture will cause leaks
