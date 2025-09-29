@@ -8,7 +8,7 @@ bill_of_materials:
     quantity:
       amount: 2
       unit: metre
-      display: 2 m (pair of rails)
+      display: 2 m (enough for four rails)
   - material: materials/plastic-to-carbon-adhesive.md
     description: 25 ml of 3M DP420 mixed with nozzle
     quantity:

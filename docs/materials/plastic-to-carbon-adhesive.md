@@ -8,7 +8,7 @@ material:
       date: 2025-06
       unit: 25 ml syringe
       price:
-        amount: 24.50
+        amount: 8.25
         currency: GBP
       notes: "50139 J-B Weld PlasticBonder- Black"
 ---
