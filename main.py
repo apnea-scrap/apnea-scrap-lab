@@ -466,31 +466,35 @@ def define_env(env):
         if not tools:
             return ""
 
+        def _escape_cell(value: str) -> str:
+            escaped = escape(value)
+            return escaped.replace("|", "&#124;").replace("\n", "<br>")
+
         table_lines = [
-            "| Tool | Purpose | Notes |",
-            "| --- | --- | --- |",
+            "| Tool | Purpose |",
+            "| --- | --- |",
         ]
 
         for tool in tools:
-            name_html = escape(tool["name"])
+            name_html = _escape_cell(tool["name"])
             if tool.get("link"):
                 href = escape(tool["link"], quote=True)
                 name_html = f"<a href=\"{href}\">{name_html}</a>"
 
-            purpose_html = escape(tool["purpose"])
+            purpose_html = _escape_cell(tool["purpose"])
 
             notes_value = tool.get("notes")
             if notes_value:
                 notes_text = str(notes_value)
-                notes_html = notes_text if notes_text.startswith("<") else escape(notes_text)
-            else:
-                notes_html = ""
+                if notes_text.startswith("<"):
+                    notes_html = notes_text
+                else:
+                    notes_html = _escape_cell(notes_text)
+                purpose_html = f"{purpose_html}<br><small>{notes_html}</small>"
 
-            table_lines.append(f"| {name_html} | {purpose_html} | {notes_html} |")
+            table_lines.append(f"| {name_html} | {purpose_html} |")
 
-        table = "\n".join(table_lines)
-
-        return f"<div class=\"tools-required\">\n{table}\n</div>"
+        return "\n".join(table_lines)
 
     @env.macro
     def render_bill_of_materials(path: str | None = None) -> str:

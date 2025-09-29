@@ -62,10 +62,6 @@ Provide a modular surface with adjustable wedges to support blades during lamina
 ## Tools Required
 {{ render_tools_required() }}
 
-## Time Required
-- **Base assembly:** ~30 minutes  
-- **Wedge placement & alignment:** ~10 minutes  
-
 ## Instructions (step-by-step)
 1. **Prepare the surface**  
      - Place a plastic sheet on a flat, rigid table or bench.  
