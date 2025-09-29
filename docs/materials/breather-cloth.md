@@ -7,11 +7,11 @@ material:
       url: "https://www.easycomposites.co.uk/breather-fabric"
       region: UK
       date: 2025-06
-      unit: linear metre (1 m wide)
+      unit: 5lm pack (1 m wide)
       price:
-        amount: 6.20
+        amount: 12.00
         currency: GBP
-      notes: "Polyester breather felt, 200 g/m²"
+      notes: "Polyester breather felt, 140 g/m²"
 ---
 # Breather Cloth
 

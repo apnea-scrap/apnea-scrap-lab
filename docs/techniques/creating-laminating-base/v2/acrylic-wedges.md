@@ -4,29 +4,31 @@ bill_of_materials:
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A3, 2 mm)
     description: Six panels for modular monofin base
-    quantity: 6
-    unit: sheet
+    quantity: 1
+    unit: 6 pack A3 sheet
     purchase:
       region: UK
-      unit: A3 sheet (2 mm)
-  - name: Electrical tape roll
-    description: Wide PVC tape to join acrylic seams
-    quantity: 0.5
-    unit_cost:
-      amount: 4.00
-      currency: GBP
-  - name: Stackable plastic wedges
+      unit: 6 pack A3 sheet (2 mm)
+  - material: materials/stackable-plastic-wedges.md
+    name: Stackable plastic wedges
     description: Adjustable supports for the angled foot pocket section
     quantity: 1
+    unit: pack (18 wedges)
     unit_cost:
-      amount: 12.00
+      amount: 7.00
       currency: GBP
   - name: Protective plastic sheet
     description: Disposable sheet to protect the bench surface
     quantity: 1
     unit_cost:
-      amount: 2.50
+      amount: 1.50
       currency: GBP
+  - name: Electrical tape roll
+    description: Wide PVC tape to join acrylic seams
+    quantity: 1
+    unit_cost:
+       amount: 1.00
+       currency: GBP
 time_to_implement: 1
 waiting_time: 0
 ---

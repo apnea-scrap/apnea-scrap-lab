@@ -9,7 +9,7 @@ material:
       date: 2025-06
       unit: 500 ml kit
       price:
-        amount: 24.00
+        amount: 15.00
         currency: GBP
       notes: "EL2 resin with AT30 hardener, room-temperature cure"
 ---

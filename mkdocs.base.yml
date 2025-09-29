@@ -53,22 +53,22 @@ nav:
           - V2 - Molded Sleeve: projects/neck-weight/v2-molded-sleeve.md
       - (Future Gear): projects/future-gear/index.md
   - Materials:
-      - Materials Directory: materials/index.md
+      - Acrylic Sheet: materials/acrylic-sheet.md
+      - Breather Cloth: materials/breather-cloth.md
+      - Butyl Sealing Tape: materials/butyl-sealing-tape.md
       - Carbon Fiber Fabric: materials/carbon-fiber-fabric.md
+      - Clear Coat Spray: materials/clear-coat-spray.md
       - Laminating Epoxy System: materials/laminating-epoxy-system.md
+      - Manual Vacuum Pump: materials/manual-vacuum-pump.md
+      - Materials Directory: materials/index.md
       - PVA Release Agent: materials/pva-release-agent.md
       - Peel Ply: materials/peel-ply.md
-      - Breather Cloth: materials/breather-cloth.md
-      - Vacuum Storage Bags: materials/vacuum-storage-bags.md
-      - Vacuum Bag Film: materials/vacuum-bag-film.md
-      - Butyl Sealing Tape: materials/butyl-sealing-tape.md
-      - Manual Vacuum Pump: materials/manual-vacuum-pump.md
-      - Vacuum Gauge: materials/vacuum-gauge.md
-      - Rubber Fin Rails: materials/rubber-fin-rails.md
       - Plastic-to-Carbon Adhesive: materials/plastic-to-carbon-adhesive.md
-      - Acrylic Sheet: materials/acrylic-sheet.md
-      - Double-Sided Tape: materials/double-sided-tape.md
-      - Clear Coat Spray: materials/clear-coat-spray.md
+      - Rubber Fin Rails: materials/rubber-fin-rails.md
+      - Stackable Plastic Wedges: materials/stackable-plastic-wedges.md
+      - Vacuum Bag Film: materials/vacuum-bag-film.md
+      - Vacuum Gauge: materials/vacuum-gauge.md
+      - Vacuum Storage Bags: materials/vacuum-storage-bags.md
   - Techniques:
       - Choosing Bi-fin Foot Pockets:
           - Choosing Bi-fin Foot Pockets Versions: techniques/choosing-bifin-footpockets/index.md

@@ -4,14 +4,14 @@ material:
   default_unit: roll
   purchases:
     - supplier: "Easy Composites"
-      url: "https://www.easycomposites.co.uk/butyl-sealant-tape"
+      url: "https://www.easycomposites.co.uk/vacuum-bagging-sealant-tape"
       region: UK
       date: 2025-06
       unit: 15 m roll (12 mm)
       price:
-        amount: 5.90
+        amount: 6.50
         currency: GBP
-      notes: "Standard tacky tape for room-temperature vacuum bagging"
+      notes: "Butyl sealant tape used for sealing vacuum bags"
 ---
 # Butyl Sealing Tape
 
@@ -24,7 +24,6 @@ slowly after the cure.
 {{ render_material_purchases() }}
 
 ## Usage notes
-- Warm the tape slightly in cold shops so it compresses uniformly.
 - Do not stretch during placement; instead, lay it gently and press once the bag is aligned.
 
 ## Related techniques

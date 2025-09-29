@@ -8,22 +8,15 @@ bill_of_materials:
     unit: sheet
     purchase:
       region: UK
-      unit: A3 sheet (3 mm)
+      unit: 1 sheet A3 sheet (2 mm)
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A4)
-    description: 3 mm clear sheet cut to 297 × 210 mm
+    description: 2 mm clear sheet cut to 210 x 297 mm
     quantity: 1
     unit: sheet
     purchase:
       region: UK
-      unit: A4 sheet (3 mm)
-  - material: materials/double-sided-tape.md
-    description: Thin acrylic tape to secure sheets to timber
-    quantity: 0.2
-    unit: roll
-    purchase:
-      region: UK
-      unit: 25 m roll (12 mm)
+      unit: 1 sheet A4 sheet (2 mm)
   - name: Softwood board offcuts
     description: 1 cm thick timber for base and angled supports
     quantity: 1
@@ -35,6 +28,12 @@ bill_of_materials:
     quantity: 1
     unit_cost:
       amount: 4.20
+      currency: GBP
+  - name: Double sided-tape
+    description: Thin acrylic tape to secure sheets to timber
+    quantity: 1
+    unit_cost:
+      amount: 2.00
       currency: GBP
 time_to_implement: 3
 waiting_time: 0

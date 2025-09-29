@@ -3,33 +3,33 @@ title: Acrylic Sheet
 material:
   default_unit: sheet
   purchases:
-    - supplier: "The Plastic People"
-      url: "https://www.theplasticpeople.co.uk/"
+    - supplier: "Amazon"
+      url: "https://www.amazon.co.uk/dp/B09TL1SCCD"
       region: UK
       date: 2025-06
-      unit: A3 sheet (3 mm)
+      unit: 6 pack A3 sheet (2 mm)
       price:
-        amount: 13.80
+        amount: 16.00
         currency: GBP
-      notes: "Clear cast acrylic cut to 420 × 297 mm for laminating bases"
-    - supplier: "The Plastic People"
-      url: "https://www.theplasticpeople.co.uk/"
+      notes: "Clear cast acrylic cut to 420 x 297 mm for laminating bases"
+    - supplier: "Amazon"
+      url: "https://www.amazon.co.uk/dp/B0CCF2VW9P"
       region: UK
       date: 2025-06
-      unit: A3 sheet (2 mm)
+      unit: 1 sheet A3 sheet (2 mm)
       price:
-        amount: 12.10
+        amount: 10.00
         currency: GBP
-      notes: "Clear cast acrylic cut to 420 × 297 mm for modular bases"
-    - supplier: "The Plastic People"
-      url: "https://www.theplasticpeople.co.uk/"
+      notes: "Clear cast acrylic cut to 420 x 297 mm for laminating bases"
+    - supplier: "Amazon"
+      url: "https://www.amazon.co.uk/dp/B0CCF2VW9P"
       region: UK
       date: 2025-06
-      unit: A4 sheet (3 mm)
+      unit: 1 sheet A4 sheet (2 mm)
       price:
-        amount: 9.10
+        amount: 5.5
         currency: GBP
-      notes: "Clear cast acrylic cut to 297 × 210 mm for wedges"
+      notes: "Clear cast acrylic cut to 210 x 297 mm for laminating bases"
 ---
 # Acrylic Sheet
 
@@ -42,7 +42,6 @@ transparency so you can spot trapped air or debris while assembling the layup.
 {{ render_material_purchases() }}
 
 ## Usage notes
-- Ask for **cast** acrylic rather than extruded to reduce warping when sanding or trimming.
 - Keep a spare protective film on one face until final assembly to minimise scratches.
 
 ## Related techniques

@@ -3,28 +3,26 @@ title: Clear Coat Spray
 material:
   default_unit: can
   purchases:
-    - supplier: "Halfords"
-      url: "https://www.halfords.com/motoring/paints-and-body-repair/paint-and-spray/"
+    - supplier: "Amazon"
+      url: "https://www.amazon.co.uk/dp/B004SNLNY2"
       region: UK
       date: 2025-06
-      unit: 500 ml can
+      unit: 400 ml can
       price:
-        amount: 10.00
+        amount: 8.00
         currency: GBP
-      notes: "Halfords clear lacquer, UV resistant"
+      notes: "Acrylic Spray Paint, Clear Lacquer"
 ---
 # Clear Coat Spray
 
 ## Overview
-Protective lacquer applied after sanding and polishing to seal exposed fibres and add gloss. The Halfords rattle can lays
-down evenly when warmed and shaken thoroughly.
+Protective lacquer applied after sanding and polishing to seal exposed fibres and add gloss. 
 
 ## Purchase history
 
 {{ render_material_purchases() }}
 
 ## Usage notes
-- Warm the can in tepid water before spraying for a finer atomisation.
 - Apply three light coats with 10 minutes flash time to avoid runs.
 
 ## Related techniques
