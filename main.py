@@ -731,33 +731,14 @@ def define_env(env):
         if not tools:
             return ""
 
-        def _escape_cell(value: str) -> str:
-            escaped = escape(value)
-            return escaped.replace("|", "&#124;").replace("\n", "<br>")
-
         table_lines = [
             "| Tool | Purpose |",
             "| --- | --- |",
         ]
 
         for tool in tools:
-            name_html = _escape_cell(tool["name"])
-            if tool.get("link"):
-                href = escape(tool["link"], quote=True)
-                name_html = f"<a href=\"{href}\">{name_html}</a>"
-
-            purpose_html = _escape_cell(tool["purpose"])
-
-            notes_value = tool.get("notes")
-            if notes_value:
-                notes_text = str(notes_value)
-                if notes_text.startswith("<"):
-                    notes_html = notes_text
-                else:
-                    notes_html = _escape_cell(notes_text)
-                purpose_html = f"{purpose_html}<br><small>{notes_html}</small>"
-
-            table_lines.append(f"| {name_html} | {purpose_html} |")
+            name_cell, purpose_cell = _render_tool_row(tool)
+            table_lines.append(f"| {name_cell} | {purpose_cell} |")
 
         return "\n".join(table_lines)
 
@@ -825,6 +806,33 @@ def define_env(env):
 
         return material_cell, quantity_cell, unit_cost_cell, line_cost_cell
 
+    def _render_tool_row(tool: dict) -> tuple[str, str]:
+        name_value = str(tool.get("name") or "")
+        name_cell = _format_table_cell(name_value)
+
+        link_value = tool.get("link")
+        if link_value:
+            href = escape(str(link_value), quote=True)
+            label = name_cell or escape(str(link_value))
+            name_cell = f"<a href=\"{href}\">{label}</a>"
+
+        purpose_value = str(tool.get("purpose") or "")
+        purpose_cell = _format_table_cell(purpose_value)
+
+        notes_value = tool.get("notes")
+        if notes_value:
+            notes_text = str(notes_value)
+            if notes_text.startswith("<"):
+                notes_html = notes_text
+            else:
+                notes_html = _format_table_cell(notes_text)
+            if purpose_cell:
+                purpose_cell = f"{purpose_cell}<br><small>{notes_html}</small>"
+            else:
+                purpose_cell = f"<small>{notes_html}</small>"
+
+        return name_cell, purpose_cell
+
     def _format_table_cell(value: str) -> str:
         if not value:
             return ""
@@ -887,7 +895,6 @@ def define_env(env):
                 "render_technique_requirements kind must be 'bill_of_materials' or 'tools'."
             )
 
-        heading_prefix = "#" * max(heading_level, 1)
         if kind_normalised == "bill_of_materials":
             page_rel = Path(env.page.file.src_path)
             page_dir_abs = docs_dir / page_rel.parent
@@ -967,23 +974,56 @@ def define_env(env):
             table_html = "\n".join(table_lines)
             return f"{table_html}\n\n{extra_notes}".strip()
 
-        sections: list[str] = []
+        table_lines = [
+            "| Technique | Tool | Purpose |",
+            "| --- | --- | --- |",
+        ]
+        empty_notes: list[str] = []
+        has_rows = False
 
         for technique in techniques:
             display_title = technique["title"]
             note = technique.get("notes") or ""
             technique_path = technique["path"]
 
-            content = render_tools_required(path=str(technique_path))
-            if not content:
-                content = "No tools recorded yet."
+            tools = _tools_required(technique_path)
+            if not tools:
+                if note:
+                    note_html = _format_table_cell(str(note))
+                    empty_notes.append(
+                        f"<p><strong>{escape(display_title)}:</strong> <em>{note_html}</em></p>"
+                    )
+                else:
+                    empty_notes.append(
+                        f"<p><strong>{escape(display_title)}:</strong> <em>No tools recorded yet.</em></p>"
+                    )
+                continue
 
-            sections.append(f"{heading_prefix} {display_title}")
-            if note:
-                sections.append(f"<p><em>{escape(str(note))}</em></p>")
-            sections.append(content)
+            technique_label = _format_table_cell(str(display_title))
+            note_html = _format_table_cell(str(note)) if note else ""
 
-        return "\n\n".join(sections).strip()
+            for index, tool in enumerate(tools):
+                name_cell, purpose_cell = _render_tool_row(tool)
+                technique_cell = technique_label if index == 0 else ""
+                if index == 0 and note_html:
+                    if technique_cell:
+                        technique_cell = f"{technique_cell}<br><small><em>{note_html}</em></small>"
+                    else:
+                        technique_cell = f"<small><em>{note_html}</em></small>"
+
+                table_lines.append(
+                    f"| {technique_cell} | {name_cell} | {purpose_cell} |"
+                )
+                has_rows = True
+
+        if not has_rows:
+            return "No tools recorded yet."
+
+        extra_notes = "\n".join(empty_notes)
+        table_html = "\n".join(table_lines)
+        if extra_notes:
+            return f"{table_html}\n\n{extra_notes}".strip()
+        return table_html
 
     @env.macro
     def render_material_purchases(path: str | None = None, heading_level: int = 3) -> str:
