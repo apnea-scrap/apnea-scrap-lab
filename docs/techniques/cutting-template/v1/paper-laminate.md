@@ -21,6 +21,7 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+## Tools Required
 {{ render_tools_required() }}
 
 This technique shows how to create a cutting template for fins using laminated paper.

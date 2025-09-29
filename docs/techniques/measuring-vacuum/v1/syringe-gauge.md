@@ -28,6 +28,7 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+## Tools Required
 {{ render_tools_required() }}
 
 A simple gauge to monitor mild vacuum (~81 kPa absolute, −20 kPa gauge) directly **inside** a vacuum bag.

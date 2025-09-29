@@ -52,6 +52,7 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+## Tools Required
 {{ render_tools_required() }}
 
 Baseline recipe with 0/90 twill and simple taper.

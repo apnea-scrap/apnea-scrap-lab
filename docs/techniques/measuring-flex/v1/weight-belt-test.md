@@ -13,6 +13,7 @@ tools_required:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+## Tools Required
 {{ render_tools_required() }}
 
 ## Goal

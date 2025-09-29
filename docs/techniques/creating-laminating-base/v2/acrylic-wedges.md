@@ -43,6 +43,7 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+## Tools Required
 {{ render_tools_required() }}
 
 This document describes how to build a modular acrylic base with wedge supports for laminating carbon fins.

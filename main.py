@@ -466,10 +466,11 @@ def define_env(env):
         if not tools:
             return ""
 
-        heading = title if title is not None else "Tools Required"
-        heading_html = f"<strong>{heading}</strong>" if heading else ""
+        table_lines = [
+            "| Tool | Purpose | Notes |",
+            "| --- | --- | --- |",
+        ]
 
-        list_items_parts: list[str] = []
         for tool in tools:
             name_html = escape(tool["name"])
             if tool.get("link"):
@@ -477,24 +478,19 @@ def define_env(env):
                 name_html = f"<a href=\"{href}\">{name_html}</a>"
 
             purpose_html = escape(tool["purpose"])
-            item_body = f"<strong>{name_html}</strong> — {purpose_html}"
 
-            notes = tool.get("notes")
-            if notes:
-                notes_html = notes if str(notes).startswith("<") else escape(str(notes))
-                item_body = f"{item_body}<br><small>{notes_html}</small>"
+            notes_value = tool.get("notes")
+            if notes_value:
+                notes_text = str(notes_value)
+                notes_html = notes_text if notes_text.startswith("<") else escape(notes_text)
+            else:
+                notes_html = ""
 
-            list_items_parts.append(f"<li>{item_body}</li>")
+            table_lines.append(f"| {name_html} | {purpose_html} | {notes_html} |")
 
-        list_items = "".join(list_items_parts)
-        list_html = f"<ul>{list_items}</ul>"
+        table = "\n".join(table_lines)
 
-        if heading_html:
-            content = f"{heading_html}\n{list_html}"
-        else:
-            content = list_html
-
-        return f"<div class=\"tools-required\">\n{content}\n</div>"
+        return f"<div class=\"tools-required\">\n{table}\n</div>"
 
     @env.macro
     def render_bill_of_materials(path: str | None = None) -> str:
