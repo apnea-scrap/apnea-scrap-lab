@@ -47,10 +47,10 @@ Early outline for producing compact training fins with predictable flex and repe
 - Capture trimming allowances so the cured laminate nests cleanly within the template.
 
 ## Bill of Materials
-{{ render_technique_requirements("bill_of_materials") }}
+{{ render_technique_requirements_bill_of_materials() }}
 
 ## Tools Required
-{{ render_technique_requirements("tools") }}
+{{ render_technique_requirements_tools() }}
 
 ## Instructions
 1. Build or update the cutting template using the steps from [Laminated paper cutting template](../../../techniques/cutting-template/v1/paper-laminate.md).

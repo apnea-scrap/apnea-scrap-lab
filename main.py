@@ -877,98 +877,69 @@ def define_env(env):
 
         return "\n".join(table_lines)
 
-    @env.macro
-    def render_technique_requirements(
-        kind: str = "bill_of_materials",
-        path: str | None = None,
-        heading_level: int = 3,
+    def _render_technique_requirements_bill_of_materials(
+        meta_source: Path,
     ) -> str:
-        meta_source = Path(path) if path else Path(env.page.file.abs_src_path)
         techniques = _resolve_project_techniques(meta_source)
 
         if not techniques:
             return ""
 
-        kind_normalised = (kind or "").strip().lower()
-        if kind_normalised not in {"bill_of_materials", "tools"}:
-            raise ValueError(
-                "render_technique_requirements kind must be 'bill_of_materials' or 'tools'."
-            )
+        page_rel = Path(env.page.file.src_path)
+        page_dir_abs = docs_dir / page_rel.parent
+        table_lines = [
+            "| Technique | Material | Quantity | Unit Cost | Line Cost |",
+            "| --- | --- | --- | --- | --- |",
+        ]
+        aggregated_items: list[dict] = []
+        empty_notes: list[str] = []
+        populated_techniques: list[tuple[dict, list[dict]]] = []
 
-        if kind_normalised == "bill_of_materials":
-            page_rel = Path(env.page.file.src_path)
-            page_dir_abs = docs_dir / page_rel.parent
-            table_lines = [
-                "| Technique | Material | Quantity | Unit Cost | Line Cost |",
-                "| --- | --- | --- | --- | --- |",
-            ]
-            aggregated_items: list[dict] = []
-            empty_notes: list[str] = []
-            populated_techniques: list[tuple[dict, list[dict]]] = []
+        for technique in techniques:
+            display_title = technique["title"]
+            note = technique.get("notes") or ""
+            technique_path = technique["path"]
 
-            for technique in techniques:
-                display_title = technique["title"]
-                note = technique.get("notes") or ""
-                technique_path = technique["path"]
+            items = _bill_of_material_items(technique_path)
+            if not items:
+                if note:
+                    note_html = _format_table_cell(str(note))
+                    empty_notes.append(
+                        f"<p><strong>{escape(display_title)}:</strong> <em>{note_html}</em></p>"
+                    )
+                else:
+                    empty_notes.append(
+                        f"<p><strong>{escape(display_title)}:</strong> <em>No bill of materials recorded yet.</em></p>"
+                    )
+                continue
 
-                items = _bill_of_material_items(technique_path)
-                if not items:
-                    if note:
-                        note_html = _format_table_cell(str(note))
-                        empty_notes.append(
-                            f"<p><strong>{escape(display_title)}:</strong> <em>{note_html}</em></p>"
-                        )
+            aggregated_items.extend(items)
+            populated_techniques.append((technique, items))
+
+        for index, (technique, items) in enumerate(populated_techniques):
+            display_title = technique["title"]
+            note = technique.get("notes") or ""
+
+            technique_label = _format_table_cell(str(display_title))
+            note_html = _format_table_cell(str(note)) if note else ""
+
+            for item_index, item in enumerate(items):
+                material_cell, quantity_cell, unit_cost_cell, line_cost_cell = _render_bill_of_material_row(
+                    item, page_dir_abs
+                )
+                technique_cell = technique_label if item_index == 0 else ""
+                if item_index == 0 and note_html:
+                    if technique_cell:
+                        technique_cell = f"{technique_cell}<br><small><em>{note_html}</em></small>"
                     else:
-                        empty_notes.append(
-                            f"<p><strong>{escape(display_title)}:</strong> <em>No bill of materials recorded yet.</em></p>"
-                        )
-                    continue
+                        technique_cell = f"<small><em>{note_html}</em></small>"
 
-                aggregated_items.extend(items)
-                populated_techniques.append((technique, items))
+                table_lines.append(
+                    f"| {technique_cell} | {material_cell} | {quantity_cell} | {unit_cost_cell} | {line_cost_cell} |"
+                )
 
-            for index, (technique, items) in enumerate(populated_techniques):
-                display_title = technique["title"]
-                note = technique.get("notes") or ""
-
-                technique_label = _format_table_cell(str(display_title))
-                note_html = _format_table_cell(str(note)) if note else ""
-
-                for item_index, item in enumerate(items):
-                    material_cell, quantity_cell, unit_cost_cell, line_cost_cell = _render_bill_of_material_row(
-                        item, page_dir_abs
-                    )
-                    technique_cell = technique_label if item_index == 0 else ""
-                    if item_index == 0 and note_html:
-                        if technique_cell:
-                            technique_cell = f"{technique_cell}<br><small><em>{note_html}</em></small>"
-                        else:
-                            technique_cell = f"<small><em>{note_html}</em></small>"
-
-                    table_lines.append(
-                        f"| {technique_cell} | {material_cell} | {quantity_cell} | {unit_cost_cell} | {line_cost_cell} |"
-                    )
-
-                technique_totals = _bill_of_material_totals(items)
-                for currency, low_total, high_total in technique_totals:
-                    if low_total == high_total:
-                        formatted_total = _format_currency(low_total, currency)
-                    else:
-                        formatted_total = (
-                            f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
-                        )
-                    table_lines.append(
-                        f"| **{_format_table_cell(str(display_title))} total** |  |  |  | **{formatted_total}** |"
-                    )
-
-                if index < len(populated_techniques) - 1:
-                    table_lines.append("| <small>&nbsp;</small> |  |  |  |  |")
-
-            if not aggregated_items:
-                return "No bill of materials recorded yet."
-
-            grand_totals = _bill_of_material_totals(aggregated_items)
-            for currency, low_total, high_total in grand_totals:
+            technique_totals = _bill_of_material_totals(items)
+            for currency, low_total, high_total in technique_totals:
                 if low_total == high_total:
                     formatted_total = _format_currency(low_total, currency)
                 else:
@@ -976,12 +947,36 @@ def define_env(env):
                         f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
                     )
                 table_lines.append(
-                    f"| **Grand total** |  |  |  | **{formatted_total}** |"
+                    f"| **{_format_table_cell(str(display_title))} total** |  |  |  | **{formatted_total}** |"
                 )
 
-            extra_notes = "\n".join(empty_notes)
-            table_html = "\n".join(table_lines)
-            return f"{table_html}\n\n{extra_notes}".strip()
+            if index < len(populated_techniques) - 1:
+                table_lines.append("| <small>&nbsp;</small> |  |  |  |  |")
+
+        if not aggregated_items:
+            return "No bill of materials recorded yet."
+
+        grand_totals = _bill_of_material_totals(aggregated_items)
+        for currency, low_total, high_total in grand_totals:
+            if low_total == high_total:
+                formatted_total = _format_currency(low_total, currency)
+            else:
+                formatted_total = (
+                    f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
+                )
+            table_lines.append(
+                f"| **Grand total** |  |  |  | **{formatted_total}** |"
+            )
+
+        extra_notes = "\n".join(empty_notes)
+        table_html = "\n".join(table_lines)
+        return f"{table_html}\n\n{extra_notes}".strip()
+
+    def _render_technique_requirements_tools(meta_source: Path) -> str:
+        techniques = _resolve_project_techniques(meta_source)
+
+        if not techniques:
+            return ""
 
         table_lines = [
             "| Tool | Techniques | Purpose |",
@@ -1009,12 +1004,6 @@ def define_env(env):
                 continue
 
             technique_label = _format_table_cell(str(display_title))
-            note_html = _format_table_cell(str(note)) if note else ""
-            if note_html:
-                if technique_label:
-                    technique_label = f"{technique_label}<br><small><em>{note_html}</em></small>"
-                else:
-                    technique_label = f"<small><em>{note_html}</em></small>"
 
             for tool in tools:
                 key = (
@@ -1045,18 +1034,28 @@ def define_env(env):
 
         grouped_rows.sort(key=lambda row: row[0].lower())
 
-        for index, (name_cell, techniques_cell, purpose_cell) in enumerate(grouped_rows):
+        for name_cell, techniques_cell, purpose_cell in grouped_rows:
             table_lines.append(
                 f"| {name_cell} | {techniques_cell} | {purpose_cell} |"
             )
-            if index < len(grouped_rows) - 1:
-                table_lines.append("| <small>&nbsp;</small> |  |  |")
 
         extra_notes = "\n".join(empty_notes)
         table_html = "\n".join(table_lines)
         if extra_notes:
             return f"{table_html}\n\n{extra_notes}".strip()
         return table_html
+
+    @env.macro
+    def render_technique_requirements_bill_of_materials(
+        path: str | None = None,
+    ) -> str:
+        meta_source = Path(path) if path else Path(env.page.file.abs_src_path)
+        return _render_technique_requirements_bill_of_materials(meta_source)
+
+    @env.macro
+    def render_technique_requirements_tools(path: str | None = None) -> str:
+        meta_source = Path(path) if path else Path(env.page.file.abs_src_path)
+        return _render_technique_requirements_tools(meta_source)
 
     @env.macro
     def render_material_purchases(path: str | None = None, heading_level: int = 3) -> str:
