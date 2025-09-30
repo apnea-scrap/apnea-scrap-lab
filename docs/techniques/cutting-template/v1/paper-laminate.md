@@ -3,9 +3,9 @@ status: active
 time_to_implement: 0.5
 waiting_time: 0
 tools_required:
-  - name: Scissors or precision cutting tool
-    purpose: Trim the laminated template to the traced outline
-  - name: Pen or pencil for tracing
+  - name: Scissors
+    purpose: Cut materials like fabric, film, or templates to size
+  - name: Pencil
     purpose: Mark the foot pocket contour onto the laminate
 bill_of_materials:
   - name: A4 sheets

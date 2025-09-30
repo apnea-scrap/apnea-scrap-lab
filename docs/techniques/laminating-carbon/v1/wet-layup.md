@@ -3,20 +3,20 @@ status: active
 time_to_implement: 1
 waiting_time: 12
 tools_required:
-  - name: Nitrile gloves
-    purpose: Protect your hands while handling resin
-  - name: Mixing pots and sticks
-    purpose: Measure and blend epoxy batches
-  - name: Laminating brushes
-    purpose: Wet out the carbon fabric evenly
+  - name: Gloves
+    purpose: Protect your hands from resin, adhesives, and carbon fibers
+  - name: Mixing pots
+    purpose: Measure and combine resin and hardener accurately
+  - name: Mixing sticks
+    purpose: Blend resin and hardener thoroughly
+  - name: Brushes
+    purpose: Apply resin and coatings evenly across the laminate
   - name: Plastic finned roller (75 mm)
     purpose: Consolidate layers and push out trapped air
-  - name: Scissors for cutting fabric
-    purpose: Cut reinforcement to the required templates
+  - name: Scissors
+    purpose: Cut materials like fabric, film, or templates to size
   - name: Digital scale
     purpose: Weigh resin batches for accurate mix ratios
-  - name: Optional vacuum bagging kit
-    purpose: Apply consolidation pressure when available
 bill_of_materials:
   - material: materials/carbon-fiber-fabric.md
     description: 0.3 m² of 200 g/m² 3K 2/2 twill cloth
@@ -79,7 +79,7 @@ Produce a basic carbon blade using a manual wet layup.
 
 **0. Safety first**
 
-- Wear **nitrile gloves** and work in a **well-ventilated area** to avoid exposure to harmful fumes.
+- Wear **gloves** and work in a **well-ventilated area** to avoid exposure to harmful fumes.
 
 ---
 
@@ -122,7 +122,7 @@ Produce a basic carbon blade using a manual wet layup.
 1. Once the laminate layers are complete, apply **two layers of peel ply** over the top surface.
    - Peel ply absorbs **excess resin** and helps achieve a uniform finish.
 2. Optional: include a **breather layer** to improve vacuum results.
-3. Optional: if using the vacuum bagging kit, place the prepared laminate inside one of the storage bags, seal it, and apply **vacuum pressure** with the manual pump.
+3. Optional: if using a vacuum bagging kit, place the prepared laminate inside one of the storage bags, seal it, and apply **vacuum pressure** with the manual pump.
 
 ---
 

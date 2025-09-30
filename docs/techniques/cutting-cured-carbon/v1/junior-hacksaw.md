@@ -6,9 +6,13 @@ tools_required:
   - name: Junior hacksaw with a fine-tooth metal blade
     purpose: Cut the cured carbon cleanly without fraying
   - name: Metal file
-    purpose: Deburr and smooth the cut edges
-  - name: Safety goggles, dust mask, and protective gloves
-    purpose: Shield eyes, lungs, and skin from carbon dust and splinters
+    purpose: Smooth cut edges and remove burrs
+  - name: Gloves
+    purpose: Protect your hands from resin, adhesives, and carbon fibers
+  - name: Safety goggles
+    purpose: Protect your eyes from dust and splashes
+  - name: Dust mask
+    purpose: Prevent inhalation of carbon dust during cutting
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}
@@ -24,7 +28,7 @@ To cut cured carbon laminate into the desired shape using a simple junior hacksa
 {{ render_tools_required() }}
 
 ## Instructions (step-by-step)
-0. **Safety**: Wear gloves, eye protection, and a dust mask. Perform all steps in a well-ventilated area.
+0. **Safety**: Wear gloves, safety goggles, and a dust mask. Perform all steps in a well-ventilated area.
 1. Attach the cutting template to the cured laminate using electrical tape.
 2. Hold the laminate securely on a stable surface.
 3. Use a junior hacksaw with a fine-tooth metal blade to slowly cut along the template line. Apply steady pressure and avoid forcing the saw.

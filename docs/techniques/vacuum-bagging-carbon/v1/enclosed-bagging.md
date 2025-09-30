@@ -16,9 +16,9 @@ time_to_implement: 0.25
 waiting_time: 0
 tools_required:
   - name: Metal file
-    purpose: Smooth base edges so they do not puncture the bag
+    purpose: Smooth cut edges and remove burrs
   - name: Scissors
-    purpose: Cut breather cloth and consumables to size
+    purpose: Cut materials like fabric, film, or templates to size
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

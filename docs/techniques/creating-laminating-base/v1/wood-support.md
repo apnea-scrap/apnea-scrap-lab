@@ -5,12 +5,12 @@ waiting_time: 0
 tools_required:
   - name: Wood saw
     purpose: Cut the laminating base supports to length
-  - name: Screwdriver for angle brackets
+  - name: Screwdriver
     purpose: Drive screws to secure brackets and maintain the angle
-  - name: Measuring tools (square, protractor, tape measure)
-    purpose: Check angles and dimensions while setting up the base
-  - name: Sandpaper for smoothing wood edges
-    purpose: Remove splinters and soften corners that contact the laminate
+  - name: Tape measure
+    purpose: Check dimensions and spacing during setup
+  - name: Sandpaper
+    purpose: Prepare and smooth surfaces for better adhesion and finish
 bill_of_materials:
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A3)
