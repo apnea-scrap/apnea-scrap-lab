@@ -3,18 +3,16 @@ status: active
 time_to_implement: 1
 waiting_time: 4
 tools_required:
-  - name: Mixing cups
+  - name: Mixing pots
     purpose: Measure and combine resin with hardener
-  - name: Small brush
+  - name: Brushes
     purpose: Spread the epoxy and clear coat evenly
-  - name: Sandpaper (400 / 600 grit; 1000 grit optional)
-    purpose: Level and smooth the cured surface between coats
+  - name: Sandpaper
+    purpose: Level and smooth the cured surface between coats (400, 600, and optional 1000 grit)
   - name: Gloves
     purpose: Keep resin and solvents off your hands
   - name: Eye protection
     purpose: Guard against splashes while applying resin
-  - name: Well-ventilated workspace
-    purpose: Provide airflow to control fumes and cure safely
 bill_of_materials:
   - material: materials/laminating-epoxy-system.md
     description: Thin finishing coat (approx. 100 ml mixed)

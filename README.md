@@ -102,7 +102,7 @@ Open `mkdocs.yml` and add or reorder pages in the `nav:` section.
         amount: 3.50
         currency: GBP
   tools_required:
-    - name: Nitrile gloves
+    - name: Gloves
       purpose: Protect your hands while handling resin
     - name: Mixing sticks
       purpose: Blend resin and hardener thoroughly

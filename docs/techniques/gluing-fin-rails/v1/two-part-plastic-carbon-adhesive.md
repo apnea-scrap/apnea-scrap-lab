@@ -5,8 +5,8 @@ waiting_time: 12
 tools_required:
   - name: Gloves
     purpose: Keep the two-part adhesive off your skin
-  - name: Sandpaper (around 400 grit)
-    purpose: Key both surfaces to improve adhesion
+  - name: Sandpaper
+    purpose: Key both surfaces to improve adhesion (around 400 grit)
   - name: Window cleaner
     purpose: Degrease the blade and rails before bonding
 bill_of_materials:
