@@ -47,6 +47,11 @@ def define_env(env):
             return f"{currency} {quantised}"
         return str(quantised)
 
+    def _format_total_display(currency: str, low_total: Decimal, high_total: Decimal) -> str:
+        if low_total == high_total:
+            return _format_currency(low_total, currency)
+        return f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
+
     def _format_quantity_display(quantity, unit):
         quantity_decimal: Decimal | None = None
         if quantity is not None:
@@ -918,12 +923,7 @@ def define_env(env):
 
         totals = _bill_of_material_totals(items)
         for currency, low_total, high_total in totals:
-            if low_total == high_total:
-                formatted_total = _format_currency(low_total, currency)
-            else:
-                formatted_total = (
-                    f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
-                )
+            formatted_total = _format_total_display(currency, low_total, high_total)
             table_lines.append(
                 f"| **Total** |  |  | **{formatted_total}** |"
             )
@@ -993,12 +993,7 @@ def define_env(env):
 
             technique_totals = _bill_of_material_totals(items)
             for currency, low_total, high_total in technique_totals:
-                if low_total == high_total:
-                    formatted_total = _format_currency(low_total, currency)
-                else:
-                    formatted_total = (
-                        f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
-                    )
+                formatted_total = _format_total_display(currency, low_total, high_total)
                 table_lines.append(
                     f"| **{_format_table_cell(str(display_title))} total** |  |  |  | **{formatted_total}** |"
                 )
@@ -1010,13 +1005,42 @@ def define_env(env):
             return "No bill of materials recorded yet."
 
         grand_totals = _bill_of_material_totals(aggregated_items)
-        for currency, low_total, high_total in grand_totals:
-            if low_total == high_total:
-                formatted_total = _format_currency(low_total, currency)
+        consumable_items: list[dict] = []
+        reusable_items: list[dict] = []
+
+        for item in aggregated_items:
+            usage_key = str(item.get("usage_type") or "").lower()
+            if usage_key == "reusable":
+                reusable_items.append(item)
             else:
-                formatted_total = (
-                    f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
+                consumable_items.append(item)
+
+        consumable_totals = _bill_of_material_totals(consumable_items)
+        reusable_totals = _bill_of_material_totals(reusable_items)
+
+        def _totals_to_map(totals: list[tuple[str, Decimal, Decimal]]) -> dict[str, tuple[Decimal, Decimal]]:
+            return {currency: (low_total, high_total) for currency, low_total, high_total in totals}
+
+        consumable_map = _totals_to_map(consumable_totals)
+        reusable_map = _totals_to_map(reusable_totals)
+        grand_map = _totals_to_map(grand_totals)
+
+        def _append_usage_totals(label: str, totals_map: dict[str, tuple[Decimal, Decimal]]):
+            currency_keys = sorted(set(grand_map.keys()) | set(totals_map.keys()))
+            if not currency_keys:
+                return
+            for currency in currency_keys:
+                low_total, high_total = totals_map.get(currency, (Decimal("0"), Decimal("0")))
+                formatted_total = _format_total_display(currency, low_total, high_total)
+                table_lines.append(
+                    f"| **{label}** |  |  |  | **{formatted_total}** |"
                 )
+
+        _append_usage_totals("Consumables subtotal", consumable_map)
+        _append_usage_totals("Reusable subtotal", reusable_map)
+
+        for currency, low_total, high_total in grand_totals:
+            formatted_total = _format_total_display(currency, low_total, high_total)
             table_lines.append(
                 f"| **Grand total** |  |  |  | **{formatted_total}** |"
             )
