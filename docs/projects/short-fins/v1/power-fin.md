@@ -66,16 +66,16 @@ Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1
 - _TODO: record bending moment targets_
 - _TODO: capture free-blade bend profile once measured_
 
+## Reference images
+_TODO: add foot pocket reference photo_
+_TODO: add laminate stack photo_
+_TODO: add finished blade photo_
+
 ## Bill of Materials
 {{ render_technique_requirements_bill_of_materials() }}
 
 ## Tools Required
 {{ render_technique_requirements_tools() }}
-
-## Reference images
-_TODO: add foot pocket reference photo_
-_TODO: add laminate stack photo_
-_TODO: add finished blade photo_
 
 ## Instructions
 1. Build a 500 mm × 300 mm laminating base following [Creating a laminating base](../../../techniques/creating-laminating-base/v1/wood-support.md) so one blade can be laminated at a time.

@@ -29,18 +29,18 @@ Produce a durable template that matches the foot pocket outline.
 ## Specifications / Dimensions
 - Sized to the chosen foot pocket and blade design
 
+## Reference Images
+
+| ![Paper Template](sf_paper_template.jpeg) | ![Cutting Template 1](sf_cutting_template_01.jpeg) | ![Cutting Template 2](sf_cutting_template_02.jpeg) |
+|-------------------------------------------|----------------------------------------------------|----------------------------------------------------
+| Paper Template Traced                     | Cutting Template Back                              | Cutting Template Front                                 
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
 
 ## Tools Required
 {{ render_tools_required() }}
-
-## Reference Images
-
-| ![Paper Template](sf_paper_template.jpeg) | ![Cutting Template 1](sf_cutting_template_01.jpeg) | ![Cutting Template 2](sf_cutting_template_02.jpeg) |
-|-------------------------------------------|----------------------------------------------------|----------------------------------------------------
-| Paper Template Traced                     | Cutting Template Back                              | Cutting Template Front                                 
 
 ## Instructions (step-by-step)
 1. **Print the Template**

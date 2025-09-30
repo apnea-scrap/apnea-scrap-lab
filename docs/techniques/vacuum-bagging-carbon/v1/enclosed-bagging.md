@@ -32,17 +32,17 @@ To create a simple, low-cost vacuum environment for small parts using the manual
 - Pressure achievable: approximately -0.2 to -0.4 bar with a manual pump
 - Requires a flat, rigid base (e.g. acrylic sheet) to support the part
 
+## Reference Images
+
+|          | ![Full Bagging](full_bagging.jpeg) |          |
+|----------|------------------------------------|----------|
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
 
 ## Tools Required
 {{ render_tools_required() }}
-
-## Reference Images
-
-|          | ![Full Bagging](full_bagging.jpeg) |          |
-|----------|------------------------------------|----------|
 
 ## Instructions (step-by-step)
 1. Smooth the edges of the base or part using the file to prevent puncturing the vacuum bag.

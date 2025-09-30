@@ -61,19 +61,18 @@ Produce a basic carbon blade using a manual wet layup.
 - Uses 0/90 3K twill carbon cloth
 - Geometry and taper follow the chosen cutting template
 
-## Bill of Materials
-
-{{ render_bill_of_materials() }}
-
-## Tools Required
-{{ render_tools_required() }}
-
 ## Reference Images
 
 | ![Wet Carbon Laminate](sf_laminate_wet.jpeg) | ![Cured Carbon Laminate  ](sf_laminate_cured.jpeg) |
 |-------------------------------------------|--------------------------------------------------|
 | Wet Carbon Laminate                       | Cured Carbon Laminate                       |
 
+## Bill of Materials
+
+{{ render_bill_of_materials() }}
+
+## Tools Required
+{{ render_tools_required() }}
 
 ## Instructions (step-by-step)
 
