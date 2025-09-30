@@ -22,9 +22,6 @@ techniques:
   - title: Gluing Fin Rails
     focus: Gluing Fin Rails
     path: techniques/gluing-fin-rails/v1/two-part-plastic-carbon-adhesive.md
-  - title: Measuring Flex
-    focus: Logging blade stiffness
-    path: techniques/measuring-flex/v1/weight-belt-test.md
 
 ---
 
@@ -57,8 +54,8 @@ Target outline for each blade:
 - Layer 3: two strips at 10 cm × 40 cm each, running along the edges for rail reinforcement
 - Layer 4: 20 cm × 40 cm top ply
 
-- _TODO: add thickness profile graphic_
-- _TODO: add laminate stack table_
+_TODO: add thickness profile graphic_
+_TODO: add laminate stack table_
 
 #### Cutting plan
 - _TODO: document full cutting plan for two blades_
@@ -76,9 +73,9 @@ Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1
 {{ render_technique_requirements_tools() }}
 
 ## Reference images
-- _TODO: add foot pocket reference photo_
-- _TODO: add laminate stack photo_
-- _TODO: add finished blade photo_
+_TODO: add foot pocket reference photo_
+_TODO: add laminate stack photo_
+_TODO: add finished blade photo_
 
 ## Instructions
 1. Build a 500 mm × 300 mm laminating base following [Creating a laminating base](../../../techniques/creating-laminating-base/v1/wood-support.md) so one blade can be laminated at a time.
@@ -95,7 +92,5 @@ Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1
 ### Flex notes
 Record measured deflection using the [Weight belt test](../../../techniques/measuring-flex/v1/weight-belt-test.md) once prototypes are complete.
 
-- _TODO: compare measured flex against the predictions_
+_TODO: compare measured flex against the predictions_
 
-## Testing Notes
-- _TODO: add pool, depth session, and durability observations_
