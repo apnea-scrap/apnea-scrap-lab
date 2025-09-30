@@ -39,16 +39,16 @@ Early outline for producing compact training fins with predictable flex and repe
 ### Foot pockets ready
 Make sure your foot pockets are on hand before you start. If you still need to choose a pair, follow the steps in [Choosing the foot pockets](../../../techniques/choosing-bifin-footpockets/v1/short-rails.md). Once the pockets are sorted, lay out a fresh cutting template with [Laminated paper cutting template](../../../techniques/cutting-template/v1/paper-laminate.md).
 
-> **Heads-up:** The dimensions below assume 150 mm of blade will slide into the foot pocket. Measure your pockets to confirm before cutting.
+**Heads-up:** The dimensions below assume 150 mm of blade will slide into the foot pocket. Measure your pockets to confirm before cutting.
 
 ### Specifications / Dimensions
 Target outline for each blade:
 
 - **Width:** 18 cm
 - **Total length:** 40 cm
-  - 0–15 cm: inside the foot pocket (flat section)
-  - 15–23 cm: transition and bend within the rails
-  - 23–40 cm: free blade to the trailing edge
+    - 0–15 cm: inside the foot pocket (flat section)
+    - 15–23 cm: transition and bend within the rails
+    - 23–40 cm: free blade to the trailing edge
 
 #### Layer schedule (one blade)
 - Reserve 15 cm from the heel line for the bend zone.
