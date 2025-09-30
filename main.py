@@ -1045,10 +1045,10 @@ def define_env(env):
         if not grouped_tools:
             return "No tools recorded yet."
 
-        grouped_entries = sorted(
-            grouped_tools.values(),
-            key=lambda entry: str(entry["name"]).casefold(),
-        )
+        grouped_entries = [
+            grouped_tools[normalized_name]
+            for normalized_name in sorted(grouped_tools.keys())
+        ]
 
         for entry in grouped_entries:
             name_value = str(entry["name"])
