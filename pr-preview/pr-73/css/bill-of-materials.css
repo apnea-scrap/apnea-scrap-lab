@@ -1,0 +1,33 @@
+.md-typeset .bom-usage-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5em;
+  line-height: 1;
+  font-size: 0.95rem;
+  padding: 0.1rem;
+}
+
+.md-typeset .bom-usage-indicator::after {
+  content: "";
+}
+
+.md-typeset .bom-usage-indicator-reusable {
+  color: #1b5e20;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .bom-usage-indicator-reusable {
+  color: #a5d6a7;
+}
+
+.md-typeset .bom-usage-indicator-consumable {
+  color: #0d47a1;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .bom-usage-indicator-consumable {
+  color: #90caf9;
+}
+
+.md-typeset .bom-usage-indicator-other {
+  color: inherit;
+}
