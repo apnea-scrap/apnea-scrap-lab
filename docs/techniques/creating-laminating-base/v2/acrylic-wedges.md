@@ -3,13 +3,13 @@ status: research
 time_to_implement: 1
 waiting_time: 0
 tools_required:
-  - name: Isopropyl alcohol and cloth
+  - name: Isopropyl alcohol
     purpose: Clean acrylic edges before applying tape
   - name: Scissors
-    purpose: Trim electrical tape to length (a craft knife also works)
+    purpose: Cut materials like fabric, film, or templates to size
   - name: Tape measure
-    purpose: Align wedges consistently across the base
-  - name: Squeegee, roller, or thumb pressure
+    purpose: Check dimensions and spacing during setup
+  - name: Hand roller or squeegee
     purpose: Press the tape firmly onto the acrylic for a flat seal
 bill_of_materials:
   - material: materials/acrylic-sheet.md

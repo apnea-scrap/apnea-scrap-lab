@@ -4,17 +4,17 @@ time_to_implement: 1
 waiting_time: 12
 tools_required:
   - name: Gloves
-    purpose: Protect your hands while handling resin
+    purpose: Protect your hands from resin, adhesives, and carbon fibers
   - name: Mixing pots
-    purpose: Measure epoxy batches before combining
+    purpose: Measure and combine resin and hardener accurately
   - name: Mixing sticks
     purpose: Blend resin and hardener thoroughly
   - name: Brushes
-    purpose: Wet out the carbon fabric evenly
+    purpose: Apply resin and coatings evenly across the laminate
   - name: Plastic finned roller (75 mm)
     purpose: Consolidate layers and push out trapped air
   - name: Scissors
-    purpose: Cut reinforcement to the required templates
+    purpose: Cut materials like fabric, film, or templates to size
   - name: Digital scale
     purpose: Weigh resin batches for accurate mix ratios
 bill_of_materials:

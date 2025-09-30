@@ -8,9 +8,9 @@ tools_required:
   - name: Screwdriver
     purpose: Drive screws to secure brackets and maintain the angle
   - name: Tape measure
-    purpose: Check dimensions while setting up the base; use a square or protractor if you need to verify angles
+    purpose: Check dimensions and spacing during setup
   - name: Sandpaper
-    purpose: Remove splinters and soften corners that contact the laminate
+    purpose: Prepare and smooth surfaces for better adhesion and finish
 bill_of_materials:
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A3)

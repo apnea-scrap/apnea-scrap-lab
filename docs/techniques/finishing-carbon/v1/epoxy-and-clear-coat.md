@@ -4,15 +4,15 @@ time_to_implement: 1
 waiting_time: 4
 tools_required:
   - name: Mixing pots
-    purpose: Measure and combine resin with hardener
+    purpose: Measure and combine resin and hardener accurately
   - name: Brushes
-    purpose: Spread the epoxy and clear coat evenly
+    purpose: Apply resin and coatings evenly across the laminate
   - name: Sandpaper
-    purpose: Level and smooth the cured surface between coats (400, 600, and optional 1000 grit)
+    purpose: Prepare and smooth surfaces for better adhesion and finish
   - name: Gloves
-    purpose: Keep resin and solvents off your hands
-  - name: Eye protection
-    purpose: Guard against splashes while applying resin
+    purpose: Protect your hands from resin, adhesives, and carbon fibers
+  - name: Safety goggles
+    purpose: Protect your eyes from dust and splashes
 bill_of_materials:
   - material: materials/laminating-epoxy-system.md
     description: Thin finishing coat (approx. 100 ml mixed)

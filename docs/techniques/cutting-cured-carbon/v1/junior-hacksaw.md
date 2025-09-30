@@ -6,11 +6,11 @@ tools_required:
   - name: Junior hacksaw with a fine-tooth metal blade
     purpose: Cut the cured carbon cleanly without fraying
   - name: Metal file
-    purpose: Deburr and smooth the cut edges
+    purpose: Smooth cut edges and remove burrs
   - name: Gloves
-    purpose: Shield skin from carbon dust and splinters
+    purpose: Protect your hands from resin, adhesives, and carbon fibers
   - name: Safety goggles
-    purpose: Protect eyes from carbon dust while cutting
+    purpose: Protect your eyes from dust and splashes
   - name: Dust mask
     purpose: Prevent inhalation of carbon dust during cutting
 ---

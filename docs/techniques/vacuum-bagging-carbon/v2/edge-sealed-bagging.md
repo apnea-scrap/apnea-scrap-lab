@@ -30,9 +30,9 @@ tools_required:
   - name: Metal roller or rounded tool
     purpose: Press the butyl sealing tape firmly to the base
   - name: Scissors
-    purpose: Cut the bag film and breather cloth to size (a utility knife also works)
-  - name: Cleaning cloth and window cleaner
-    purpose: Remove dust and grease before sealing the bag edges
+    purpose: Cut materials like fabric, film, or templates to size
+  - name: Window cleaner
+    purpose: Degrease surfaces before bonding or sealing
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

@@ -4,11 +4,11 @@ time_to_implement: 0.5
 waiting_time: 12
 tools_required:
   - name: Gloves
-    purpose: Keep the two-part adhesive off your skin
+    purpose: Protect your hands from resin, adhesives, and carbon fibers
   - name: Sandpaper
-    purpose: Key both surfaces to improve adhesion (around 400 grit)
+    purpose: Prepare and smooth surfaces for better adhesion and finish
   - name: Window cleaner
-    purpose: Degrease the blade and rails before bonding
+    purpose: Degrease surfaces before bonding or sealing
 bill_of_materials:
   - material: materials/rubber-fin-rails.md
     description: One pair of soft rubber rails sized for bifin blades

@@ -983,7 +983,7 @@ def define_env(env):
             "| --- | --- | --- |",
         ]
         empty_notes: list[str] = []
-        grouped_tools: dict[tuple[str, str, str, str], dict[str, object]] = {}
+        grouped_tools: dict[str, dict[str, object]] = {}
 
         for technique in techniques:
             display_title = technique["title"]
@@ -1006,35 +1006,85 @@ def define_env(env):
             technique_label = _format_table_cell(str(display_title))
 
             for tool in tools:
-                key = (
-                    _format_table_cell(str(tool.get("name") or "")),
-                    _format_table_cell(str(tool.get("purpose") or "")),
-                    _format_table_cell(str(tool.get("notes") or "")),
-                    str(tool.get("link") or ""),
-                )
+                raw_name = str(tool.get("name") or "").strip()
+                if not raw_name:
+                    continue
+
+                normalized_name = raw_name.casefold()
                 entry = grouped_tools.setdefault(
-                    key,
+                    normalized_name,
                     {
-                        "tool": tool,
+                        "name": raw_name,
+                        "link": tool.get("link"),
+                        "purposes": [],
+                        "notes": [],
                         "techniques": [],
                     },
                 )
+
+                if not entry["name"] and raw_name:
+                    entry["name"] = raw_name
+
+                link_value = tool.get("link")
+                if link_value and not entry["link"]:
+                    entry["link"] = link_value
+
+                purpose_value = str(tool.get("purpose") or "").strip()
+                if purpose_value and purpose_value not in entry["purposes"]:
+                    entry["purposes"].append(purpose_value)
+
+                notes_value = tool.get("notes")
+                if notes_value is not None:
+                    notes_text = str(notes_value)
+                    if notes_text and notes_text not in entry["notes"]:
+                        entry["notes"].append(notes_text)
+
                 if technique_label and technique_label not in entry["techniques"]:
                     entry["techniques"].append(technique_label)
 
         if not grouped_tools:
             return "No tools recorded yet."
 
-        grouped_rows: list[tuple[str, str, str]] = []
-        for key, data in grouped_tools.items():
-            tool = data["tool"]
-            name_cell, purpose_cell = _render_tool_row(tool)
-            techniques_cell = "<br>".join(data["techniques"])
-            grouped_rows.append((name_cell, techniques_cell, purpose_cell))
+        grouped_entries = sorted(
+            grouped_tools.values(),
+            key=lambda entry: str(entry["name"]).casefold(),
+        )
 
-        grouped_rows.sort(key=lambda row: row[0].lower())
+        for entry in grouped_entries:
+            name_value = str(entry["name"])
+            name_cell = _format_table_cell(name_value)
+            link_value = entry.get("link")
+            if link_value:
+                href = escape(str(link_value), quote=True)
+                label = name_cell or escape(str(link_value))
+                name_cell = f"<a href=\"{href}\">{label}</a>"
 
-        for name_cell, techniques_cell, purpose_cell in grouped_rows:
+            techniques_cell = "<br>".join(entry["techniques"])
+
+            purpose_parts: list[str] = []
+            for purpose in entry["purposes"]:
+                formatted = _format_table_cell(purpose)
+                if formatted:
+                    purpose_parts.append(formatted)
+
+            purpose_cell = "<br>".join(purpose_parts)
+
+            note_cells: list[str] = []
+            for note in entry["notes"]:
+                if note.startswith("<"):
+                    note_cells.append(note)
+                else:
+                    formatted_note = _format_table_cell(note)
+                    if formatted_note:
+                        note_cells.append(formatted_note)
+
+            if note_cells:
+                notes_html = "<br>".join(note_cells)
+                if purpose_cell:
+                    purpose_cell = f"{purpose_cell}<br><small>{notes_html}</small>"
+                else:
+                    purpose_cell = f"<small>{notes_html}</small>"
+
             table_lines.append(
                 f"| {name_cell} | {techniques_cell} | {purpose_cell} |"
             )
