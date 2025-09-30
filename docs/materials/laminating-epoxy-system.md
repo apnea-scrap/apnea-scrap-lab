@@ -1,6 +1,8 @@
 ---
 title: Laminating Epoxy System
 material:
+  costing:
+    usage_type: consumable
   purchases:
     - supplier: "Easy Composites"
       url: "https://www.easycomposites.co.uk/el2-epoxy-laminating-resin"

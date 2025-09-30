@@ -1,6 +1,8 @@
 ---
 title: Rubber Fin Rails
 material:
+  costing:
+    usage_type: consumable
   purchases:
     - supplier: "AliExpress"
       url: "https://www.aliexpress.com/item/1005007590033380.html"

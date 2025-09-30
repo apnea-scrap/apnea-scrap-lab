@@ -1,6 +1,8 @@
 ---
 title: Breather Cloth
 material:
+  costing:
+    usage_type: consumable
   purchases:
     - supplier: "Easy Composites"
       url: "https://www.easycomposites.co.uk/breather-fabric"

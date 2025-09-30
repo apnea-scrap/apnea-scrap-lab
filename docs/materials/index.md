@@ -23,6 +23,57 @@ When new data comes in for other locales we can extend each page with additional
    correct record from the unit you supply. Quantities default to the chosen purchase unit, so you only need to describe
    the amount being used.
 
+## Usage types for the bill of materials
+
+Not every material behaves the same once it has been purchased. Resins, carbon
+cloth, and other supplies are consumed during a build, while acrylic base
+plates or footpockets stay in service for many projects. Rather than tracking
+per-build usage manually, classify each material with a simple `usage_type`
+flag so totals can be split into consumable spend versus reusable assets when a
+BOM is rendered.
+
+### 1. Declare the usage type on each material
+
+Add a `material.costing.usage_type` field to every material page. Use
+`consumable` for items that are spent during a build (the default if omitted)
+and `reusable` for tooling or hardware that comes back after the build.
+
+```yaml
+---
+title: PVA Release Agent
+material:
+  costing:
+    usage_type: consumable
+---
+```
+
+```yaml
+---
+title: Acrylic Base Plate
+material:
+  costing:
+    usage_type: reusable
+---
+```
+
+### 2. Let BOM entries inherit the usage type
+
+BOM items that reference a material page automatically take on that page's
+`usage_type`. If you need to describe a custom part that is not listed in the
+materials directory, set the flag directly on the BOM line so renderers can
+categorise it correctly:
+
+```yaml
+bill_of_materials:
+  - material: materials/pva-release-agent.md  # inherits `consumable`
+  - title: Custom jig
+    usage_type: reusable
+```
+
+This minimal metadata is enough for downstream tooling to distinguish
+consumable purchases from reusable kit without modelling amortisation or
+tracking build counts.
+
 Need a new material? Duplicate the template below.
 
 ```markdown

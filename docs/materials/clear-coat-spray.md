@@ -1,6 +1,8 @@
 ---
 title: Clear Coat Spray
 material:
+  costing:
+    usage_type: consumable
   purchases:
     - supplier: "Amazon"
       url: "https://www.amazon.co.uk/dp/B004SNLNY2"

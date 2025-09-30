@@ -1,6 +1,8 @@
 ---
 title: Bifin Foot Pockets
 material:
+  costing:
+    usage_type: reusable
   purchases:
     - supplier: "AliExpress"
       url: "https://www.aliexpress.com/item/1005008784367959.html"
