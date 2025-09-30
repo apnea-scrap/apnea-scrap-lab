@@ -1,0 +1,26 @@
+.bom-cost-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.25em 0.65em;
+    border-radius: 999px;
+    font: 600 11px/1.2 system-ui, sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: #455a64;
+    color: #fff;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.bom-cost-label--consumable {
+    background: #ef6c00;
+}
+
+.bom-cost-label--reusable {
+    background: #00897b;
+}
+
+.bom-cost-label--custom {
+    background: #5c6bc0;
+}
