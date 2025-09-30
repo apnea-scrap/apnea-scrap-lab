@@ -62,6 +62,31 @@ def define_env(env):
             quantity_text = unit or ""
         return quantity_text, quantity_decimal
 
+    def _resolve_usage_type(entry: dict, material_meta: dict | None) -> dict[str, str]:
+        raw_value = entry.get("usage_type")
+        source_value = raw_value
+
+        if source_value is None and material_meta:
+            costing_block = (material_meta.get("material") or {}).get("costing") or {}
+            source_value = costing_block.get("usage_type")
+
+        normalised = _normalise(str(source_value) if source_value is not None else None)
+
+        if not normalised:
+            return {"key": "consumable", "display": "Consumable", "modifier": "consumable"}
+
+        if normalised == "consumable":
+            return {"key": normalised, "display": "Consumable", "modifier": "consumable"}
+
+        if normalised == "reusable":
+            return {"key": normalised, "display": "Reusable", "modifier": "reusable"}
+
+        display_text = str(source_value).strip() if source_value is not None else ""
+        if not display_text:
+            display_text = normalised.replace("-", " ").title()
+
+        return {"key": normalised, "display": display_text, "modifier": "custom"}
+
     def _tools_required(meta_source: Path) -> list[dict]:
         meta = read_meta(meta_source)
         raw_tools = meta.get("tools_required")
@@ -411,6 +436,8 @@ def define_env(env):
                     line_total_decimal,
                 )
 
+            usage_type_info = _resolve_usage_type(item, material_meta)
+
             results.append(
                 {
                     "material_page": material_page_rel,
@@ -427,6 +454,9 @@ def define_env(env):
                     "unit_cost_label": unit_cost_label,
                     "line_total_decimal": line_total_decimal,
                     "line_total_ranges": line_total_ranges,
+                    "usage_type": usage_type_info.get("key"),
+                    "usage_type_display": usage_type_info.get("display"),
+                    "usage_type_modifier": usage_type_info.get("modifier"),
                 }
             )
 
@@ -755,11 +785,34 @@ def define_env(env):
         elif title:
             material_cell = title
 
+        usage_type_display = item.get("usage_type_display")
+        usage_type_modifier = item.get("usage_type_modifier")
+        label_html = ""
+        if usage_type_display:
+            classes = ["bom-cost-label"]
+            modifier_value = str(usage_type_modifier or "").strip()
+            if modifier_value:
+                safe_modifier = re.sub(r"[^a-z0-9-]", "-", modifier_value)
+                classes.append(f"bom-cost-label--{safe_modifier}")
+            class_attr = " ".join(classes)
+            label_html = f'<span class="{class_attr}">{escape(str(usage_type_display))}</span>'
+
         description = item.get("description")
         notes = item.get("notes")
         if description:
-            suffix = description if notes else description
-            material_cell = f"{material_cell}<br><small>{suffix}</small>" if material_cell else suffix
+            description_html = description
+            if material_cell:
+                if label_html:
+                    material_cell = f"{material_cell}<br>{label_html} <small>{description_html}</small>"
+                else:
+                    material_cell = f"{material_cell}<br><small>{description_html}</small>"
+            else:
+                if label_html:
+                    material_cell = f"{label_html} <small>{description_html}</small>"
+                else:
+                    material_cell = description_html
+        elif label_html:
+            material_cell = f"{material_cell}<br>{label_html}" if material_cell else label_html
 
         if notes:
             note_html = notes if str(notes).startswith("<") else notes
