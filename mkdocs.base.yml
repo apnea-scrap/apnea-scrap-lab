@@ -39,6 +39,7 @@ extra:
 
 extra_css:
   - css/status-banner.css
+  - css/bill-of-materials.css
 
 nav:
   - Home: index.md

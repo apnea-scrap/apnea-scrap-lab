@@ -300,6 +300,14 @@ def define_env(env):
 
             material_info = material_meta or {}
             material_purchases = material_info.get("material", {}).get("purchases", [])
+            usage_type = (
+                material_info.get("material", {})
+                .get("costing", {})
+                .get("usage_type")
+            )
+            if not usage_type:
+                usage_type = item.get("usage_type")
+            usage_type = str(usage_type).strip() if usage_type else ""
             selected_purchase = _select_material_purchase(
                 material_purchases,
                 region=region_hint,
@@ -427,6 +435,7 @@ def define_env(env):
                     "unit_cost_label": unit_cost_label,
                     "line_total_decimal": line_total_decimal,
                     "line_total_ranges": line_total_ranges,
+                    "usage_type": usage_type,
                 }
             )
 
@@ -742,7 +751,9 @@ def define_env(env):
 
         return "\n".join(table_lines)
 
-    def _render_bill_of_material_row(item: dict, page_dir_abs: Path) -> tuple[str, str, str, str]:
+    def _render_bill_of_material_row(
+        item: dict, page_dir_abs: Path
+    ) -> tuple[str, str, str, str, str]:
         material_cell = ""
         material_page_rel: Path | None = item.get("material_page")
         title = item.get("title") or ""
@@ -767,6 +778,8 @@ def define_env(env):
                 material_cell += f"<br><small>{note_html}</small>"
             else:
                 material_cell = f"<small>{note_html}</small>"
+
+        usage_indicator = _format_usage_type_indicator(item.get("usage_type"))
 
         quantity_cell = item.get("quantity_display") or ""
 
@@ -804,7 +817,41 @@ def define_env(env):
         if line_total_decimal is not None and unit_cost_currency:
             line_cost_cell = _format_currency(line_total_decimal, unit_cost_currency)
 
-        return material_cell, quantity_cell, unit_cost_cell, line_cost_cell
+        return material_cell, quantity_cell, unit_cost_cell, line_cost_cell, usage_indicator
+
+    def _format_usage_type_indicator(usage_type: str | None) -> str:
+        if not usage_type:
+            return ""
+
+        raw_text = str(usage_type).strip()
+        if not raw_text:
+            return ""
+
+        usage_key = _normalise(raw_text)
+        class_suffix = re.sub(r"[^a-z0-9]+", "-", usage_key).strip("-") or "other"
+
+        icon = ""
+        label = raw_text.title()
+        title = label
+
+        if usage_key == "reusable":
+            icon = "♻️"
+            label = "Reusable"
+            title = "Reusable material — cost shared across builds"
+        elif usage_key == "consumable":
+            icon = "🧴"
+            label = "Consumable"
+            title = "Consumable material — used up per build"
+        else:
+            icon = raw_text[:1].upper() or "?"
+
+        safe_title = escape(title, quote=True)
+        aria_label = escape(label, quote=True)
+        safe_icon = escape(icon)
+        return (
+            f'<span class="bom-usage-indicator bom-usage-indicator-{class_suffix}"'
+            f' role="img" aria-label="{aria_label}" title="{safe_title}">{safe_icon}</span>'
+        )
 
     def _render_tool_row(tool: dict) -> tuple[str, str]:
         name_value = str(tool.get("name") or "")
@@ -851,16 +898,20 @@ def define_env(env):
         page_dir_abs = docs_dir / page_rel.parent
 
         table_lines = [
-            "| Material | Quantity | Unit Cost | Line Cost |",
-            "| --- | --- | --- | --- |",
+            "| Material | Quantity | Unit Cost | Line Cost | T |",
+            "| --- | --- | --- | --- | :-: |",
         ]
 
         for item in items:
-            material_cell, quantity_cell, unit_cost_cell, line_cost_cell = _render_bill_of_material_row(
-                item, page_dir_abs
-            )
+            (
+                material_cell,
+                quantity_cell,
+                unit_cost_cell,
+                line_cost_cell,
+                usage_cell,
+            ) = _render_bill_of_material_row(item, page_dir_abs)
             table_lines.append(
-                f"| {material_cell} | {quantity_cell} | {unit_cost_cell} | {line_cost_cell} |"
+                f"| {material_cell} | {quantity_cell} | {unit_cost_cell} | {line_cost_cell} | {usage_cell} |"
             )
 
         totals = _bill_of_material_totals(items)
@@ -872,7 +923,7 @@ def define_env(env):
                     f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
                 )
             table_lines.append(
-                f"| **Total** |  |  | **{formatted_total}** |"
+                f"| **Total** |  |  | **{formatted_total}** |  |"
             )
 
         return "\n".join(table_lines)
@@ -888,8 +939,8 @@ def define_env(env):
         page_rel = Path(env.page.file.src_path)
         page_dir_abs = docs_dir / page_rel.parent
         table_lines = [
-            "| Technique | Material | Quantity | Unit Cost | Line Cost |",
-            "| --- | --- | --- | --- | --- |",
+            "| Technique | Material | Quantity | Unit Cost | Line Cost | T |",
+            "| --- | --- | --- | --- | --- | :-: |",
         ]
         aggregated_items: list[dict] = []
         empty_notes: list[str] = []
@@ -924,9 +975,13 @@ def define_env(env):
             note_html = _format_table_cell(str(note)) if note else ""
 
             for item_index, item in enumerate(items):
-                material_cell, quantity_cell, unit_cost_cell, line_cost_cell = _render_bill_of_material_row(
-                    item, page_dir_abs
-                )
+                (
+                    material_cell,
+                    quantity_cell,
+                    unit_cost_cell,
+                    line_cost_cell,
+                    usage_cell,
+                ) = _render_bill_of_material_row(item, page_dir_abs)
                 technique_cell = technique_label if item_index == 0 else ""
                 if item_index == 0 and note_html:
                     if technique_cell:
@@ -935,7 +990,7 @@ def define_env(env):
                         technique_cell = f"<small><em>{note_html}</em></small>"
 
                 table_lines.append(
-                    f"| {technique_cell} | {material_cell} | {quantity_cell} | {unit_cost_cell} | {line_cost_cell} |"
+                    f"| {technique_cell} | {material_cell} | {quantity_cell} | {unit_cost_cell} | {line_cost_cell} | {usage_cell} |"
                 )
 
             technique_totals = _bill_of_material_totals(items)
@@ -947,11 +1002,11 @@ def define_env(env):
                         f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
                     )
                 table_lines.append(
-                    f"| **{_format_table_cell(str(display_title))} total** |  |  |  | **{formatted_total}** |"
+                    f"| **{_format_table_cell(str(display_title))} total** |  |  |  | **{formatted_total}** |  |"
                 )
 
             if index < len(populated_techniques) - 1:
-                table_lines.append("| <small>&nbsp;</small> |  |  |  |  |")
+                table_lines.append("| <small>&nbsp;</small> |  |  |  |  |  |")
 
         if not aggregated_items:
             return "No bill of materials recorded yet."
@@ -965,7 +1020,7 @@ def define_env(env):
                     f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
                 )
             table_lines.append(
-                f"| **Grand total** |  |  |  | **{formatted_total}** |"
+                f"| **Grand total** |  |  |  | **{formatted_total}** |  |"
             )
 
         extra_notes = "\n".join(empty_notes)
