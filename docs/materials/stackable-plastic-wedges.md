@@ -1,6 +1,8 @@
 ---
 title: Stackable Plastic Wedges
 material:
+  costing:
+    usage_type: reusable
   purchases:
     - supplier: "Amazon"
       url: "https://www.amazon.co.uk/dp/B0FC2GMBXH"

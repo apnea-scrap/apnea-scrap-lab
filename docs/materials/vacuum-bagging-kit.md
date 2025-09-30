@@ -1,6 +1,8 @@
 ---
 title: Vacuum Bagging Kit
 material:
+  costing:
+    usage_type: reusable
   purchases:
     - supplier: "Amazon"
       url: "https://www.amazon.co.uk/dp/B07RSCPH4N"

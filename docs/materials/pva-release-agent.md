@@ -1,6 +1,8 @@
 ---
 title: PVA Release Agent
 material:
+  costing:
+    usage_type: consumable
   purchases:
     - supplier: "Easy Composites"
       url: "https://www.easycomposites.co.uk/pva-mould-release-agent"

@@ -1,6 +1,8 @@
 ---
 title: Plastic to Carbon Adhesive
 material:
+  costing:
+    usage_type: consumable
   purchases:
     - supplier: "Amazon"
       url: "https://www.amazon.co.uk/dp/B01IBOK7FE"
