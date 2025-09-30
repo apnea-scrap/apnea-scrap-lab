@@ -15,7 +15,6 @@ readtime: 2
 summary: Exploring dedicated monofin foot pockets versus adapted bifin pockets, plus
   training options and references for DIY builds.
 links:
-- Monofin project: projects/monofin/index.md
 - Short fins project: projects/short-fins/index.md
 - Gluing fin rails technique: techniques/gluing-fin-rails/index.md
 ---

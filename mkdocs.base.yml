@@ -45,9 +45,7 @@ nav:
   - Projects:
       - Short Fins:
           - Short Fins Versions: projects/short-fins/index.md
-          - V1 - Project Sketch: projects/short-fins/v1-project-sketch.md
-      - Monofin:
-          - Monofin Versions: projects/monofin/index.md
+          - V1 - Power Fin: projects/short-fins/v1/power-fin.md
       - Neck Weight:
           - Neck Weight Versions: projects/neck-weight/index.md
           - V2 - Molded Sleeve: projects/neck-weight/v2-molded-sleeve.md

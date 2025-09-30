@@ -14,7 +14,6 @@ tags:
 readtime: 3
 summary: Bill of materials and design notes for building a carbon monofin blade.
 links:
-- Monofin project: projects/monofin/index.md
 - Laminating carbon technique: techniques/laminating-carbon/index.md
 - Measuring flex technique: techniques/measuring-flex/index.md
 ---
