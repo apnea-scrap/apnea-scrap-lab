@@ -39,6 +39,7 @@ extra:
 
 extra_css:
   - css/status-banner.css
+  - css/bom-cost-label.css
 
 nav:
   - Home: index.md
