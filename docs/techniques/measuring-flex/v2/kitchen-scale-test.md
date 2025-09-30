@@ -12,18 +12,18 @@ tools_required:
 ## Goal
 Measure the load required to make the **tip vertical (90°)** and observe where the blade bends (root, mid, tip).
 
+## Reference Images
+
+|  | ![Kitchen Scale Test](t_kitchen_scale.jpeg) |  |
+|--|---------------------------------------------|--|
+|  | Kitchen Scale Test                          |  |
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
 
 ## Tools Required
 {{ render_tools_required() }}
-
-## Reference Images
-
-|  | ![Kitchen Scale Test](t_kitchen_scale.jpeg) |  |
-|--|---------------------------------------------|--|
-|  | Kitchen Scale Test                          |  |
 
 ## Instructions
 

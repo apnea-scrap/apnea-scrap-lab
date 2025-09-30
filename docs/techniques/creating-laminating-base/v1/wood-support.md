@@ -67,18 +67,18 @@ Create a rigid angled surface to support fin blades during lamination.
     - Minimum width: **25cm** (to match blade width).
     - Minimum length: **20cm** (to fit 15cm blade length and extra space).
 
+## Reference Images
+
+| ![Support Structure](support_all.jpeg) | ![Brackets and Side](support_brakets.jpeg) |
+|----------------------------------------|--------------------------------------------|
+| Full Support Structure                 | Brackets and Side Supports                 |
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
 
 ## Tools Required
 {{ render_tools_required() }}
-
-## Reference Images
-
-| ![Support Structure](support_all.jpeg) | ![Brackets and Side](support_brakets.jpeg) |
-|----------------------------------------|--------------------------------------------|
-| Full Support Structure                 | Brackets and Side Supports                 |
 
 ## Instructions (step-by-step)
 
