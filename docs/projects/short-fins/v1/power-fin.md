@@ -15,13 +15,16 @@ techniques:
     path: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
   - title: Cutting Cured Carbon
     focus: Producing the final shape
-    path: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
+    path: techniques/cutting-cured-carbon/v1/junior-hacksaw.md
   - title: Finishing Carbon
     focus: Finishing the carbon laminate surface
     path: techniques/finishing-carbon/v1/epoxy-and-clear-coat.md
-  - title: Gluing Fin Rails 
+  - title: Gluing Fin Rails
     focus: Gluing Fin Rails
     path: techniques/gluing-fin-rails/v1/two-part-plastic-carbon-adhesive.md
+  - title: Measuring Flex
+    focus: Logging blade stiffness
+    path: techniques/measuring-flex/v1/weight-belt-test.md
 
 ---
 
@@ -31,20 +34,40 @@ techniques:
 
 Early outline for producing compact training fins with predictable flex and repeatable templates.
 
-## Planning the laminate layers
-- Capture preliminary layup ideas using the [Manual wet layup stack](../../../techniques/laminating-carbon/v1/wet-layup.md) technique.
-- Record fabric weights, orientations, and any taper adjustments needed for short blades.
-- Note resin targets so we can compare against the predicted flex results later.
+## Planning
 
-## Estimating flex
-- Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md) calculator to estimate the target tip deflection.
-- Plug in the tentative laminate schedule and iterate until the simulated stiffness matches the desired feel.
-- Add comments for expected body weight range or training scenarios this setup should support.
+### Foot pockets ready
+Make sure your foot pockets are on hand before you start. If you still need to choose a pair, follow the steps in [Choosing the foot pockets](../../../techniques/choosing-bifin-footpockets/v1/short-rails.md). Once the pockets are sorted, lay out a fresh cutting template with [Laminated paper cutting template](../../../techniques/cutting-template/v1/paper-laminate.md).
 
-## Planning the cutting sheet
-- Reference the [Laminated paper cutting template](../../../techniques/cutting-template/v1/paper-laminate.md) to prepare blade outlines.
-- Jot down quantities for each size variant and how they fit on the raw carbon sheets.
-- Capture trimming allowances so the cured laminate nests cleanly within the template.
+> **Heads-up:** The dimensions below assume 150 mm of blade will slide into the foot pocket. Measure your pockets to confirm before cutting.
+
+### Specifications / Dimensions
+Target outline for each blade:
+
+- **Width:** 18 cm
+- **Total length:** 40 cm
+  - 0–15 cm: inside the foot pocket (flat section)
+  - 15–23 cm: transition and bend within the rails
+  - 23–40 cm: free blade to the trailing edge
+
+#### Layer schedule (one blade)
+- Reserve 15 cm from the heel line for the bend zone.
+- Layer 1: 20 cm × 40 cm
+- Layer 2: 20 cm × 30 cm
+- Layer 3: two strips at 10 cm × 40 cm each, running along the edges for rail reinforcement
+- Layer 4: 20 cm × 40 cm top ply
+
+- _TODO: add thickness profile graphic_
+- _TODO: add laminate stack table_
+
+#### Cutting plan
+- _TODO: document full cutting plan for two blades_
+
+### Estimating the flex
+Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md) workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.
+
+- _TODO: record bending moment targets_
+- _TODO: capture free-blade bend profile once measured_
 
 ## Bill of Materials
 {{ render_technique_requirements_bill_of_materials() }}
@@ -52,18 +75,27 @@ Early outline for producing compact training fins with predictable flex and repe
 ## Tools Required
 {{ render_technique_requirements_tools() }}
 
+## Reference images
+- _TODO: add foot pocket reference photo_
+- _TODO: add laminate stack photo_
+- _TODO: add finished blade photo_
+
 ## Instructions
-1. Build or update the cutting template using the steps from [Laminated paper cutting template](../../../techniques/cutting-template/v1/paper-laminate.md).
-2. Simulate the layup in [Flex predictor modelling](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md) and lock in the target flex window.
-3. Execute the laminate following [Manual wet layup stack](../../../techniques/laminating-carbon/v1/wet-layup.md), capturing cure notes for future revisions.
-4. Trim and finish the blades, feeding discoveries back into the technique pages as refinements.
+1. Build a 500 mm × 300 mm laminating base following [Creating a laminating base](../../../techniques/creating-laminating-base/v1/wood-support.md) so one blade can be laminated at a time.
+2. Lay up the carbon according to the schedule above, using the steps in [Manual wet layup stack](../../../techniques/laminating-carbon/v1/wet-layup.md).
+3. Pull the stack under vacuum to tighten the fiber volume, referencing [Enclosed bagging](../../../techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md).
+4. Trim the cured laminate to the template with the [Junior hacksaw method](../../../techniques/cutting-cured-carbon/v1/junior-hacksaw.md).
+5. Seal the surface with the approach in [Epoxy and clear coat finish](../../../techniques/finishing-carbon/v1/epoxy-and-clear-coat.md).
+6. Bond the rails using the guidance in [Two-part plastic to carbon adhesive](../../../techniques/gluing-fin-rails/v1/two-part-plastic-carbon-adhesive.md).
 
 ## Results
-### Size targets
-- Placeholder: document blade length, width at the foot pocket, and trailing edge taper once prototypes are cut.
+### Dimensions
+- _TODO: log actual finished width, length, and rail taper_
 
 ### Flex notes
-- Placeholder: summarise measured deflection, bend profile, and any rider feedback compared with predictions.
+Record measured deflection using the [Weight belt test](../../../techniques/measuring-flex/v1/weight-belt-test.md) once prototypes are complete.
+
+- _TODO: compare measured flex against the predictions_
 
 ## Testing Notes
-- Placeholder: record pool and open-water impressions, durability observations, and next steps for iteration.
+- _TODO: add pool, depth session, and durability observations_
