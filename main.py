@@ -904,6 +904,7 @@ def define_env(env):
             ]
             aggregated_items: list[dict] = []
             empty_notes: list[str] = []
+            populated_techniques: list[tuple[dict, list[dict]]] = []
 
             for technique in techniques:
                 display_title = technique["title"]
@@ -924,16 +925,21 @@ def define_env(env):
                     continue
 
                 aggregated_items.extend(items)
+                populated_techniques.append((technique, items))
+
+            for index, (technique, items) in enumerate(populated_techniques):
+                display_title = technique["title"]
+                note = technique.get("notes") or ""
 
                 technique_label = _format_table_cell(str(display_title))
                 note_html = _format_table_cell(str(note)) if note else ""
 
-                for index, item in enumerate(items):
+                for item_index, item in enumerate(items):
                     material_cell, quantity_cell, unit_cost_cell, line_cost_cell = _render_bill_of_material_row(
                         item, page_dir_abs
                     )
-                    technique_cell = technique_label if index == 0 else ""
-                    if index == 0 and note_html:
+                    technique_cell = technique_label if item_index == 0 else ""
+                    if item_index == 0 and note_html:
                         if technique_cell:
                             technique_cell = f"{technique_cell}<br><small><em>{note_html}</em></small>"
                         else:
@@ -955,6 +961,9 @@ def define_env(env):
                         f"| **{_format_table_cell(str(display_title))} total** |  |  |  | **{formatted_total}** |"
                     )
 
+                if index < len(populated_techniques) - 1:
+                    table_lines.append("| <small>&nbsp;</small> |  |  |  |  |")
+
             if not aggregated_items:
                 return "No bill of materials recorded yet."
 
@@ -975,11 +984,11 @@ def define_env(env):
             return f"{table_html}\n\n{extra_notes}".strip()
 
         table_lines = [
-            "| Technique | Tool | Purpose |",
+            "| Tool | Techniques | Purpose |",
             "| --- | --- | --- |",
         ]
         empty_notes: list[str] = []
-        has_rows = False
+        grouped_tools: dict[tuple[str, str, str, str], dict[str, object]] = {}
 
         for technique in techniques:
             display_title = technique["title"]
@@ -1001,23 +1010,47 @@ def define_env(env):
 
             technique_label = _format_table_cell(str(display_title))
             note_html = _format_table_cell(str(note)) if note else ""
+            if note_html:
+                if technique_label:
+                    technique_label = f"{technique_label}<br><small><em>{note_html}</em></small>"
+                else:
+                    technique_label = f"<small><em>{note_html}</em></small>"
 
-            for index, tool in enumerate(tools):
-                name_cell, purpose_cell = _render_tool_row(tool)
-                technique_cell = technique_label if index == 0 else ""
-                if index == 0 and note_html:
-                    if technique_cell:
-                        technique_cell = f"{technique_cell}<br><small><em>{note_html}</em></small>"
-                    else:
-                        technique_cell = f"<small><em>{note_html}</em></small>"
-
-                table_lines.append(
-                    f"| {technique_cell} | {name_cell} | {purpose_cell} |"
+            for tool in tools:
+                key = (
+                    _format_table_cell(str(tool.get("name") or "")),
+                    _format_table_cell(str(tool.get("purpose") or "")),
+                    _format_table_cell(str(tool.get("notes") or "")),
+                    str(tool.get("link") or ""),
                 )
-                has_rows = True
+                entry = grouped_tools.setdefault(
+                    key,
+                    {
+                        "tool": tool,
+                        "techniques": [],
+                    },
+                )
+                if technique_label and technique_label not in entry["techniques"]:
+                    entry["techniques"].append(technique_label)
 
-        if not has_rows:
+        if not grouped_tools:
             return "No tools recorded yet."
+
+        grouped_rows: list[tuple[str, str, str]] = []
+        for key, data in grouped_tools.items():
+            tool = data["tool"]
+            name_cell, purpose_cell = _render_tool_row(tool)
+            techniques_cell = "<br>".join(data["techniques"])
+            grouped_rows.append((name_cell, techniques_cell, purpose_cell))
+
+        grouped_rows.sort(key=lambda row: row[0].lower())
+
+        for index, (name_cell, techniques_cell, purpose_cell) in enumerate(grouped_rows):
+            table_lines.append(
+                f"| {name_cell} | {techniques_cell} | {purpose_cell} |"
+            )
+            if index < len(grouped_rows) - 1:
+                table_lines.append("| <small>&nbsp;</small> |  |  |")
 
         extra_notes = "\n".join(empty_notes)
         table_html = "\n".join(table_lines)
