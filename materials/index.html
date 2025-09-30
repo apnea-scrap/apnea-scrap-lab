@@ -2761,6 +2761,44 @@ When new data comes in for other locales we can extend each page with additional
    correct record from the unit you supply. Quantities default to the chosen purchase unit, so you only need to describe
    the amount being used.</li>
 </ol>
+<h2 id="usage-types-for-the-bill-of-materials">Usage types for the bill of materials<a class="headerlink" href="#usage-types-for-the-bill-of-materials" title="Permanent link">&para;</a></h2>
+<p>Not every material behaves the same once it has been purchased. Resins, carbon
+cloth, and other supplies are consumed during a build, while acrylic base
+plates or footpockets stay in service for many projects. Rather than tracking
+per-build usage manually, classify each material with a simple <code>usage_type</code>
+flag so totals can be split into consumable spend versus reusable assets when a
+BOM is rendered.</p>
+<h3 id="1-declare-the-usage-type-on-each-material">1. Declare the usage type on each material<a class="headerlink" href="#1-declare-the-usage-type-on-each-material" title="Permanent link">&para;</a></h3>
+<p>Add a <code>material.costing.usage_type</code> field to every material page. Use
+<code>consumable</code> for items that are spent during a build (the default if omitted)
+and <code>reusable</code> for tooling or hardware that comes back after the build.</p>
+<pre><code class="language-yaml">---
+title: PVA Release Agent
+material:
+  costing:
+    usage_type: consumable
+---
+</code></pre>
+<pre><code class="language-yaml">---
+title: Acrylic Base Plate
+material:
+  costing:
+    usage_type: reusable
+---
+</code></pre>
+<h3 id="2-let-bom-entries-inherit-the-usage-type">2. Let BOM entries inherit the usage type<a class="headerlink" href="#2-let-bom-entries-inherit-the-usage-type" title="Permanent link">&para;</a></h3>
+<p>BOM items that reference a material page automatically take on that page's
+<code>usage_type</code>. If you need to describe a custom part that is not listed in the
+materials directory, set the flag directly on the BOM line so renderers can
+categorise it correctly:</p>
+<pre><code class="language-yaml">bill_of_materials:
+  - material: materials/pva-release-agent.md  # inherits `consumable`
+  - title: Custom jig
+    usage_type: reusable
+</code></pre>
+<p>This minimal metadata is enough for downstream tooling to distinguish
+consumable purchases from reusable kit without modelling amortisation or
+tracking build counts.</p>
 <p>Need a new material? Duplicate the template below.</p>
 <pre><code class="language-markdown">---
 title: Example Material
