@@ -1025,24 +1025,39 @@ def define_env(env):
         reusable_map = _totals_to_map(reusable_totals)
         grand_map = _totals_to_map(grand_totals)
 
-        def _append_usage_totals(label: str, totals_map: dict[str, tuple[Decimal, Decimal]]):
-            currency_keys = sorted(set(grand_map.keys()) | set(totals_map.keys()))
-            if not currency_keys:
-                return
-            for currency in currency_keys:
-                low_total, high_total = totals_map.get(currency, (Decimal("0"), Decimal("0")))
-                formatted_total = _format_total_display(currency, low_total, high_total)
-                table_lines.append(
-                    f"| **{label}** |  |  |  | **{formatted_total}** |"
-                )
+        currency_keys = sorted(
+            set(grand_map.keys())
+            | set(consumable_map.keys())
+            | set(reusable_map.keys())
+        )
 
-        _append_usage_totals("Consumables subtotal", consumable_map)
-        _append_usage_totals("Reusable subtotal", reusable_map)
+        for currency in currency_keys:
+            consumable_low, consumable_high = consumable_map.get(
+                currency, (Decimal("0"), Decimal("0"))
+            )
+            reusable_low, reusable_high = reusable_map.get(
+                currency, (Decimal("0"), Decimal("0"))
+            )
+            grand_low, grand_high = grand_map.get(currency, (Decimal("0"), Decimal("0")))
 
-        for currency, low_total, high_total in grand_totals:
-            formatted_total = _format_total_display(currency, low_total, high_total)
+            expected_low = consumable_low + reusable_low
+            expected_high = consumable_high + reusable_high
+
+            if expected_low != grand_low or expected_high != grand_high:
+                grand_low, grand_high = expected_low, expected_high
+
+            formatted_consumable = _format_total_display(
+                currency, consumable_low, consumable_high
+            )
+            formatted_reusable = _format_total_display(
+                currency, reusable_low, reusable_high
+            )
+            formatted_grand = _format_total_display(currency, grand_low, grand_high)
+
             table_lines.append(
-                f"| **Grand total** |  |  |  | **{formatted_total}** |"
+                "| **Consumables subtotal:**"
+                f" {formatted_consumable} | + | **Reusable subtotal:**"
+                f" {formatted_reusable} | = | **Grand total:** {formatted_grand} |"
             )
 
         extra_notes = "\n".join(empty_notes)
