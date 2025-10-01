@@ -10,6 +10,7 @@ techniques:
   - title: Laminating Carbon
     focus: Creating the carbon laminate
     path: techniques/laminating-carbon/v1/wet-layup.md
+    consumable_scaling_factor: 2
   - title: Vacuum Bagging
     focus: Reducing the resin percentage of the laminate
     path: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
