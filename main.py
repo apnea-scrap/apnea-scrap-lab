@@ -1063,13 +1063,23 @@ def define_env(env):
             reusable_label = _usage_type_label("Reusable subtotal", "reusable")
             grand_label = "<strong>Grand total</strong>"
 
-            calculation_html = (
-                f"{consumable_label} <strong>{formatted_consumable}</strong> "
-                f"+ {reusable_label} <strong>{formatted_reusable}</strong> "
-                f"= {grand_label} <strong>{formatted_grand}</strong>"
+            consumable_cell = (
+                f"{consumable_label} <strong>{formatted_consumable}</strong>"
             )
+            reusable_cell = (
+                f"{reusable_label} <strong>{formatted_reusable}</strong>"
+            )
+            grand_cell = f"{grand_label} <strong>{formatted_grand}</strong>"
 
-            table_lines.append(f"|  |  |  |  | {calculation_html} |")
+            table_lines.append(
+                "| "
+                + f"{consumable_cell}"
+                + " | <strong>+</strong> | "
+                + f"{reusable_cell}"
+                + " | <strong>=</strong> | "
+                + f"{grand_cell}"
+                + " |"
+            )
 
         extra_notes = "\n".join(empty_notes)
         table_html = "\n".join(table_lines)
