@@ -47,6 +47,11 @@ def define_env(env):
             return f"{currency} {quantised}"
         return str(quantised)
 
+    def _format_total_display(currency: str, low_total: Decimal, high_total: Decimal) -> str:
+        if low_total == high_total:
+            return _format_currency(low_total, currency)
+        return f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
+
     def _format_quantity_display(quantity, unit):
         quantity_decimal: Decimal | None = None
         if quantity is not None:
@@ -772,6 +777,19 @@ def define_env(env):
 
         return "\n".join(table_lines)
 
+    def _usage_type_label(display: str, modifier: str | None = None) -> str:
+        if not display:
+            return ""
+
+        classes = ["bom-cost-label"]
+        modifier_value = str(modifier or "").strip()
+        if modifier_value:
+            safe_modifier = re.sub(r"[^a-z0-9-]", "-", modifier_value)
+            classes.append(f"bom-cost-label--{safe_modifier}")
+
+        class_attr = " ".join(classes)
+        return f'<span class="{class_attr}">{escape(str(display))}</span>'
+
     def _render_bill_of_material_row(item: dict, page_dir_abs: Path) -> tuple[str, str, str, str]:
         material_cell = ""
         material_page_rel: Path | None = item.get("material_page")
@@ -787,15 +805,7 @@ def define_env(env):
 
         usage_type_display = item.get("usage_type_display")
         usage_type_modifier = item.get("usage_type_modifier")
-        label_html = ""
-        if usage_type_display:
-            classes = ["bom-cost-label"]
-            modifier_value = str(usage_type_modifier or "").strip()
-            if modifier_value:
-                safe_modifier = re.sub(r"[^a-z0-9-]", "-", modifier_value)
-                classes.append(f"bom-cost-label--{safe_modifier}")
-            class_attr = " ".join(classes)
-            label_html = f'<span class="{class_attr}">{escape(str(usage_type_display))}</span>'
+        label_html = _usage_type_label(usage_type_display, usage_type_modifier)
 
         description = item.get("description")
         notes = item.get("notes")
@@ -918,12 +928,7 @@ def define_env(env):
 
         totals = _bill_of_material_totals(items)
         for currency, low_total, high_total in totals:
-            if low_total == high_total:
-                formatted_total = _format_currency(low_total, currency)
-            else:
-                formatted_total = (
-                    f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
-                )
+            formatted_total = _format_total_display(currency, low_total, high_total)
             table_lines.append(
                 f"| **Total** |  |  | **{formatted_total}** |"
             )
@@ -993,12 +998,7 @@ def define_env(env):
 
             technique_totals = _bill_of_material_totals(items)
             for currency, low_total, high_total in technique_totals:
-                if low_total == high_total:
-                    formatted_total = _format_currency(low_total, currency)
-                else:
-                    formatted_total = (
-                        f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
-                    )
+                formatted_total = _format_total_display(currency, low_total, high_total)
                 table_lines.append(
                     f"| **{_format_table_cell(str(display_title))} total** |  |  |  | **{formatted_total}** |"
                 )
@@ -1010,15 +1010,75 @@ def define_env(env):
             return "No bill of materials recorded yet."
 
         grand_totals = _bill_of_material_totals(aggregated_items)
-        for currency, low_total, high_total in grand_totals:
-            if low_total == high_total:
-                formatted_total = _format_currency(low_total, currency)
+        consumable_items: list[dict] = []
+        reusable_items: list[dict] = []
+
+        for item in aggregated_items:
+            usage_key = str(item.get("usage_type") or "").lower()
+            if usage_key == "reusable":
+                reusable_items.append(item)
             else:
-                formatted_total = (
-                    f"{_format_currency(low_total, currency)} - {_format_currency(high_total, currency)}"
-                )
+                consumable_items.append(item)
+
+        consumable_totals = _bill_of_material_totals(consumable_items)
+        reusable_totals = _bill_of_material_totals(reusable_items)
+
+        def _totals_to_map(totals: list[tuple[str, Decimal, Decimal]]) -> dict[str, tuple[Decimal, Decimal]]:
+            return {currency: (low_total, high_total) for currency, low_total, high_total in totals}
+
+        consumable_map = _totals_to_map(consumable_totals)
+        reusable_map = _totals_to_map(reusable_totals)
+        grand_map = _totals_to_map(grand_totals)
+
+        currency_keys = sorted(
+            set(grand_map.keys())
+            | set(consumable_map.keys())
+            | set(reusable_map.keys())
+        )
+
+        for currency in currency_keys:
+            consumable_low, consumable_high = consumable_map.get(
+                currency, (Decimal("0"), Decimal("0"))
+            )
+            reusable_low, reusable_high = reusable_map.get(
+                currency, (Decimal("0"), Decimal("0"))
+            )
+            grand_low, grand_high = grand_map.get(currency, (Decimal("0"), Decimal("0")))
+
+            expected_low = consumable_low + reusable_low
+            expected_high = consumable_high + reusable_high
+
+            if expected_low != grand_low or expected_high != grand_high:
+                grand_low, grand_high = expected_low, expected_high
+
+            formatted_consumable = _format_total_display(
+                currency, consumable_low, consumable_high
+            )
+            formatted_reusable = _format_total_display(
+                currency, reusable_low, reusable_high
+            )
+            formatted_grand = _format_total_display(currency, grand_low, grand_high)
+
+            consumable_label = _usage_type_label("Consumables subtotal", "consumable")
+            reusable_label = _usage_type_label("Reusable subtotal", "reusable")
+            grand_label = "<strong>Grand total</strong>"
+
+            consumable_cell = (
+                f"{consumable_label} <strong>{formatted_consumable}</strong>"
+            )
+            reusable_cell = (
+                f"{reusable_label} <strong>{formatted_reusable}</strong>"
+            )
+            grand_cell = f"{grand_label} <strong>{formatted_grand}</strong>"
+
             table_lines.append(
-                f"| **Grand total** |  |  |  | **{formatted_total}** |"
+                "| "
+                + f"{consumable_cell}"
+                + " | <strong>+</strong> | "
+                + f"{reusable_cell}"
+                + " | <strong>=</strong> | "
+                + f"{grand_cell}"
+                + " |"
             )
 
         extra_notes = "\n".join(empty_notes)
