@@ -777,6 +777,19 @@ def define_env(env):
 
         return "\n".join(table_lines)
 
+    def _usage_type_label(display: str, modifier: str | None = None) -> str:
+        if not display:
+            return ""
+
+        classes = ["bom-cost-label"]
+        modifier_value = str(modifier or "").strip()
+        if modifier_value:
+            safe_modifier = re.sub(r"[^a-z0-9-]", "-", modifier_value)
+            classes.append(f"bom-cost-label--{safe_modifier}")
+
+        class_attr = " ".join(classes)
+        return f'<span class="{class_attr}">{escape(str(display))}</span>'
+
     def _render_bill_of_material_row(item: dict, page_dir_abs: Path) -> tuple[str, str, str, str]:
         material_cell = ""
         material_page_rel: Path | None = item.get("material_page")
@@ -792,15 +805,7 @@ def define_env(env):
 
         usage_type_display = item.get("usage_type_display")
         usage_type_modifier = item.get("usage_type_modifier")
-        label_html = ""
-        if usage_type_display:
-            classes = ["bom-cost-label"]
-            modifier_value = str(usage_type_modifier or "").strip()
-            if modifier_value:
-                safe_modifier = re.sub(r"[^a-z0-9-]", "-", modifier_value)
-                classes.append(f"bom-cost-label--{safe_modifier}")
-            class_attr = " ".join(classes)
-            label_html = f'<span class="{class_attr}">{escape(str(usage_type_display))}</span>'
+        label_html = _usage_type_label(usage_type_display, usage_type_modifier)
 
         description = item.get("description")
         notes = item.get("notes")
@@ -1054,11 +1059,17 @@ def define_env(env):
             )
             formatted_grand = _format_total_display(currency, grand_low, grand_high)
 
-            table_lines.append(
-                "| **Consumables subtotal:**"
-                f" {formatted_consumable} | + | **Reusable subtotal:**"
-                f" {formatted_reusable} | = | **Grand total:** {formatted_grand} |"
+            consumable_label = _usage_type_label("Consumables subtotal", "consumable")
+            reusable_label = _usage_type_label("Reusable subtotal", "reusable")
+            grand_label = "<strong>Grand total</strong>"
+
+            calculation_html = (
+                f"{consumable_label} <strong>{formatted_consumable}</strong> "
+                f"+ {reusable_label} <strong>{formatted_reusable}</strong> "
+                f"= {grand_label} <strong>{formatted_grand}</strong>"
             )
+
+            table_lines.append(f"|  |  |  |  | {calculation_html} |")
 
         extra_notes = "\n".join(empty_notes)
         table_html = "\n".join(table_lines)
