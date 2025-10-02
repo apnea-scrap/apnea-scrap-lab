@@ -2954,24 +2954,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#how-to-use-the-numbers" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Use the Numbers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next Steps
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3044,8 +3026,8 @@ R_\text{relative} = \frac{F_\text{fin}}{F_\text{benchmark}}
 <li><strong>Design clarity.</strong> Every experiment, whether you try longer carbon layups, different tapers, or alternative resins, boils down to a single comparable number.</li>
 </ul>
 <h2 id="step-4-worked-example">Step 4: Worked Example<a class="headerlink" href="#step-4-worked-example" title="Permanent link">&para;</a></h2>
-<p>Say you build a carbon bifin that measures <strong>0.20 m wide</strong> and <strong>0.80 m long</strong>. The blade area jumps to <strong>0.16 m²</strong>. On area alone that's a <strong>10.6× increase</strong> over the benchmark.</p>
-<p>Real blades bend. If the carbon blade sheds half its projected area once it’s loaded, the effective resistance lands near <strong>5.0 units</strong>. That lines up with the gut check: "my carbon bifin feels about five times as heavy as a training fin."</p>
+<p>Say you build a carbon bifin that measures <strong>0.20 m wide</strong> and <strong>0.60 m long</strong>. The blade area grows to <strong>0.12 m²</strong>. On area alone that's an <strong>8.0× increase</strong> over the benchmark.</p>
+<p>Real blades bend. A long, soft carbon blade can feel about <strong>5.0 units</strong> right as the kick starts, but as the stroke continues and the blade folds, the effective resistance can relax to roughly <strong>2.5 units</strong>. That matches the in-water feel: heavier to initiate than a swim trainer, then quickly easing into the 2-3× range once the blade is moving.</p>
 <h2 id="resistance-table">Resistance Table<a class="headerlink" href="#resistance-table" title="Permanent link">&para;</a></h2>
 <p>The table below applies the same logic to a range of carbon layups and a couple of well-known polymer fins. The measurements capture two points in the kick cycle: <strong>5 N</strong> to show initial resistance, and <strong>10 N</strong> to show how much stiffness the blade hangs onto deeper in the stroke. The <span class="arithmatex">\(\Delta R\)</span> column highlights how quickly the blade drops off between the two loads.</p>
 <table>
@@ -3133,20 +3115,12 @@ R_\text{relative} = \frac{F_\text{fin}}{F_\text{benchmark}}
 </table>
 <p><strong>Legend</strong></p>
 <ul>
-<li><strong>C\&lt;Length&gt;</strong>: carbon blade with \&lt;Length&gt; mm of free blade beyond the foot pocket.</li>
-<li><strong>T...</strong>: tip load at a 90° bend, reported as kg ×10 (≈ newtons).</li>
-<li><strong>R...</strong>: initiation resistance at 5 N (×10, no decimal).</li>
-<li><strong>F...</strong>: flex drop defined as <span class="arithmatex">\(R_5 - R_{10}\)</span> (×10, no decimal).</li>
+<li><strong>C###</strong> marks a carbon blade with ### mm of free blade beyond the foot pocket.</li>
+<li><strong>T##</strong> gives the tip load at a 90° bend, reported as kg ×10 (≈ newtons).</li>
+<li><strong>R##</strong> shows the initiation resistance at 5 N (×10, no decimal).</li>
+<li><strong>F##</strong> notes how much the resistance drops between 5 N and 10 N (×10, no decimal).</li>
 </ul>
-<h2 id="how-to-use-the-numbers">How to Use the Numbers<a class="headerlink" href="#how-to-use-the-numbers" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Match training to goals.</strong> Want to mimic a heavy competition blade? Hunt for ratios near <strong>5–6 units</strong>. Need technique reps without fatigue? Stay under <strong>3 units</strong>.</li>
-<li><strong>Link the feel between fins.</strong> Pick a trainer with a resistance score close to your target long blade so every pool session reinforces the same kick effort you expect in open water.</li>
-<li><strong>Tune prototypes.</strong> If a test build lands too stiff, you now know how far to trim width or taper the layers to target a ratio.</li>
-<li><strong>Compare across materials.</strong> The polymer fins show that softer plastics can still rival carbon blades on raw resistance when the area is large enough.</li>
-</ul>
-<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
-<p>The <a href="../../20/release-predicting-flex-calculator/">flex prediction calculator</a> now rolls this resistance math into its bend-profile workflow, so you can estimate hydrodynamic resistance straight from a flex test. From here I want to collect more field notes to see how closely the ratios track perceived effort across different divers.</p>
+<p>You can plug your own fin measurements into the <a href="../../../../../techniques/predicting-flex/v1/tapered-cantilever-beam/">Predicting Flex page</a>, which now outputs the same resistance score for quick comparisons.</p>
 
 
 
