@@ -52,9 +52,9 @@ Because the benchmark force \(F_\text{benchmark} = 1\), the ratio reads directly
 
 ## Step 4: Worked Example
 
-Say you build a carbon bifin that measures **0.20 m wide** and **0.80 m long**. The blade area jumps to **0.16 m²**. On area alone that's a **10.6× increase** over the benchmark.
+Say you build a carbon bifin that measures **0.20 m wide** and **0.60 m long**. The blade area grows to **0.12 m²**. On area alone that's an **8.0× increase** over the benchmark.
 
-Real blades bend. If the carbon blade sheds half its projected area once it’s loaded, the effective resistance lands near **5.0 units**. That lines up with the gut check: "my carbon bifin feels about five times as heavy as a training fin."
+Real blades bend. A long, soft carbon blade can feel about **5.0 units** right as the kick starts, but as the stroke continues and the blade folds, the effective resistance can relax to roughly **2.5 units**. That matches the in-water feel: heavier to initiate than a swim trainer, then quickly easing into the 2-3× range once the blade is moving.
 
 ## Resistance Table
 
@@ -82,8 +82,9 @@ The table below applies the same logic to a range of carbon layups and a couple 
 
 ## How to Use the Numbers
 
-- **Match training to goals.** Want to mimic a heavy competition blade? Hunt for ratios near **5–6 units**. Need technique reps without fatigue? Stay under **3 units**.
+- **Match training to goals.** Want to mimic a heavy competition blade? Hunt for ratios near **5-6 units**. Need technique reps without fatigue? Stay under **3 units**.
 - **Link the feel between fins.** Pick a trainer with a resistance score close to your target long blade so every pool session reinforces the same kick effort you expect in open water.
+- **Plan for flex drop.** Soft long blades often start around **5 units** at the first pulse but settle near **2-3 units** mid-stroke, like the long 600 root layout in the table. Pick the trainer that mirrors both the initial hit and the follow-through.
 - **Tune prototypes.** If a test build lands too stiff, you now know how far to trim width or taper the layers to target a ratio.
 - **Compare across materials.** The polymer fins show that softer plastics can still rival carbon blades on raw resistance when the area is large enough.
 
