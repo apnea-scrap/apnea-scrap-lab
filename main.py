@@ -210,11 +210,32 @@ def define_env(env):
             notes_value = entry.get("notes") or entry.get("focus")
             notes = str(notes_value).strip() if notes_value else ""
 
+            raw_scale_factor = (
+                entry.get("consumable_scaling_factor")
+                or entry.get("consumable_scale")
+                or entry.get("scale_factor")
+            )
+
+            scale_factor: Decimal | None = None
+            if raw_scale_factor is not None:
+                try:
+                    scale_factor = Decimal(str(raw_scale_factor))
+                except Exception as exc:  # pragma: no cover - defensive
+                    raise ValueError(
+                        "Consumable scaling factor entries must be numeric values."
+                    ) from exc
+
+                if scale_factor <= 0:
+                    raise ValueError(
+                        "Consumable scaling factors must be greater than zero."
+                    )
+
             resolved.append(
                 {
                     "title": str(display_title),
                     "path": technique_path,
                     "notes": notes,
+                    "consumable_scale_factor": scale_factor,
                 }
             )
 
@@ -953,6 +974,73 @@ def define_env(env):
         empty_notes: list[str] = []
         populated_techniques: list[tuple[dict, list[dict]]] = []
 
+        def _prepare_items_for_technique(
+            source_items: list[dict], factor: Decimal | None
+        ) -> list[dict]:
+            prepared: list[dict] = []
+            for source_item in source_items:
+                item_copy = source_item.copy()
+                range_totals_existing = item_copy.get("line_total_ranges")
+                if range_totals_existing:
+                    item_copy["line_total_ranges"] = dict(range_totals_existing)
+
+                usage_key = str(item_copy.get("usage_type") or "").lower()
+
+                if (
+                    factor is not None
+                    and factor != Decimal("1")
+                    and usage_key != "reusable"
+                ):
+                    quantity_decimal = item_copy.get("quantity_decimal")
+                    unit_value = item_copy.get("unit")
+                    original_display = item_copy.get("quantity_display") or ""
+
+                    scaled_display = ""
+                    if quantity_decimal is not None:
+                        scaled_quantity = quantity_decimal * factor
+                        item_copy["quantity_decimal"] = scaled_quantity
+                        scaled_display, _ = _format_quantity_display(
+                            scaled_quantity, unit_value
+                        )
+
+                    scale_text = _format_decimal(factor)
+                    display_text = scaled_display or original_display
+                    note_parts: list[str] = [f"scaled ×{scale_text}"]
+
+                    if original_display and original_display != display_text:
+                        note_parts.append(f"base {original_display}")
+
+                    note_html = " — ".join(note_parts)
+
+                    if display_text:
+                        item_copy["quantity_display"] = (
+                            f"{display_text}<br><small>{note_html}</small>"
+                        )
+                    else:
+                        item_copy["quantity_display"] = f"<small>{note_html}</small>"
+
+                    line_total_decimal = item_copy.get("line_total_decimal")
+                    if line_total_decimal is not None:
+                        item_copy["line_total_decimal"] = line_total_decimal * factor
+
+                    range_totals = item_copy.get("line_total_ranges")
+                    if range_totals:
+                        scaled_ranges: dict[str, tuple[Decimal | None, Decimal | None]] = {}
+                        for currency_code, values in range_totals.items():
+                            low_value, high_value = values
+                            scaled_low = (
+                                low_value * factor if low_value is not None else None
+                            )
+                            scaled_high = (
+                                high_value * factor if high_value is not None else None
+                            )
+                            scaled_ranges[currency_code] = (scaled_low, scaled_high)
+                        item_copy["line_total_ranges"] = scaled_ranges
+
+                prepared.append(item_copy)
+
+            return prepared
+
         for technique in techniques:
             display_title = technique["title"]
             note = technique.get("notes") or ""
@@ -971,8 +1059,11 @@ def define_env(env):
                     )
                 continue
 
-            aggregated_items.extend(items)
-            populated_techniques.append((technique, items))
+            scale_factor: Decimal | None = technique.get("consumable_scale_factor")
+            prepared_items = _prepare_items_for_technique(items, scale_factor)
+
+            aggregated_items.extend(prepared_items)
+            populated_techniques.append((technique, prepared_items))
 
         for index, (technique, items) in enumerate(populated_techniques):
             display_title = technique["title"]
