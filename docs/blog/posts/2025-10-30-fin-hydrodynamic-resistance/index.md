@@ -75,19 +75,9 @@ The table below applies the same logic to a range of carbon layups and a couple 
 
 **Legend**
 
-- **C\<Length\>**: carbon blade with \<Length\> mm of free blade beyond the foot pocket.
-- **T...**: tip load at a 90° bend, reported as kg ×10 (≈ newtons).
-- **R...**: initiation resistance at 5 N (×10, no decimal).
-- **F...**: flex drop defined as \(R_5 - R_{10}\) (×10, no decimal).
+- **C###** marks a carbon blade with ### mm of free blade beyond the foot pocket.
+- **T##** gives the tip load at a 90° bend, reported as kg ×10 (≈ newtons).
+- **R##** shows the initiation resistance at 5 N (×10, no decimal).
+- **F##** notes how much the resistance drops between 5 N and 10 N (×10, no decimal).
 
-## How to Use the Numbers
-
-- **Match training to goals.** Want to mimic a heavy competition blade? Hunt for ratios near **5-6 units**. Need technique reps without fatigue? Stay under **3 units**.
-- **Link the feel between fins.** Pick a trainer with a resistance score close to your target long blade so every pool session reinforces the same kick effort you expect in open water.
-- **Plan for flex drop.** Soft long blades often start around **5 units** at the first pulse but settle near **2-3 units** mid-stroke, like the long 600 root layout in the table. Pick the trainer that mirrors both the initial hit and the follow-through.
-- **Tune prototypes.** If a test build lands too stiff, you now know how far to trim width or taper the layers to target a ratio.
-- **Compare across materials.** The polymer fins show that softer plastics can still rival carbon blades on raw resistance when the area is large enough.
-
-## Next Steps
-
-The [flex prediction calculator](../2025-10-20-flex-predict-calculator/index.md) now rolls this resistance math into its bend-profile workflow, so you can estimate hydrodynamic resistance straight from a flex test. From here I want to collect more field notes to see how closely the ratios track perceived effort across different divers.
+You can plug your own fin measurements into the [Predicting Flex page](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md), which now outputs the same resistance score for quick comparisons.
