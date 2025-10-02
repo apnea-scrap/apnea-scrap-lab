@@ -40,10 +40,12 @@ extra:
 extra_css:
   - css/status-banner.css
   - css/bom-cost-label.css
+  - css/hero-home.css
 
 nav:
   - Home: index.md
   - Projects:
+      - Projects Overview: projects/index.md
       - Short Fins:
           - Short Fins Versions: projects/short-fins/index.md
           - V1 - Power Fin: projects/short-fins/v1/power-fin.md
