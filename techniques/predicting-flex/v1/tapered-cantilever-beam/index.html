@@ -1783,6 +1783,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Goal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bending-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bending analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hydrodynamic-resistance-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hydrodynamic resistance score
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2847,9 +2871,16 @@
 <h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
 <p>Estimate deflection and curvature profiles for a planned blade using simple inputs such as length, taper, and modulus,
 allowing iterative layup adjustments without material usage.</p>
+<p>The technique relies on two main computations:</p>
+<h3 id="bending-analysis">Bending analysis<a class="headerlink" href="#bending-analysis" title="Permanent link">&para;</a></h3>
 <p>The process involves dividing the blade into many small slices, calculating the bending contribution of each slice based
 on layer thickness, and summing these contributions to determine the overall deflection. The applied load is adjusted
 until the tip reaches the desired angle, after which SVG visualizations and inertia values are generated.</p>
+<h3 id="hydrodynamic-resistance-score">Hydrodynamic resistance score<a class="headerlink" href="#hydrodynamic-resistance-score" title="Permanent link">&para;</a></h3>
+<p>The hydrodynamic resistance estimate follows the same slicing approach. Each slice contributes a push on the water based
+on its local angle, and the model adds those contributions together to get a total resistance figure. A small training
+fin is used as the benchmark: its resistance is defined as one unit, so any other fin is reported as a multiple of that
+baseline score.</p>
 <p>The calculations follow Euler–Bernoulli beam theory principles. You can explore cantilever beam
 calculations <a href="https://calcresource.com/statics-cantilever-beam.html">here</a>.</p>
 <h2 id="calculator">Calculator<a class="headerlink" href="#calculator" title="Permanent link">&para;</a></h2>
