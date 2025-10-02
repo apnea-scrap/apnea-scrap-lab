@@ -1,0 +1,3431 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="DIY Freediving Gear — Techniques, Versions, And Test Results">
+      
+      
+      
+        <link rel="canonical" href="https://lab.apneascrap.com/pr-preview/pr-80/projects/short-fins/v1/power-fin/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../../neck-weight/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>V1 - Power Fin - ApneaScrap Lab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/status-banner.css">
+    
+      <link rel="stylesheet" href="../../../../css/bom-cost-label.css">
+    
+      <link rel="stylesheet" href="../../../../css/hero-home.css">
+    
+      <link rel="stylesheet" href="../../../../css/preview-banner.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+<meta name="robots" content="noindex, nofollow">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#short-fins-v1-power-fin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="ApneaScrap Lab" class="md-header__button md-logo" aria-label="ApneaScrap Lab" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ApneaScrap Lab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              V1 - Power Fin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/apnea-scrap/apnea-scrap-lab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    apnea-scrap/apnea-scrap-lab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../techniques/choosing-bifin-footpockets/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Techniques
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../materials/acrylic-sheet/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Materials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../contact/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contact
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ApneaScrap Lab" class="md-nav__button md-logo" aria-label="ApneaScrap Lab" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.svg" alt="logo">
+
+    </a>
+    ApneaScrap Lab
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/apnea-scrap/apnea-scrap-lab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    apnea-scrap/apnea-scrap-lab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Short Fins
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Short Fins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    V1 - Power Fin
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Power Fin
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foot-pockets-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foot pockets ready
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifications-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifications / Dimensions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Specifications / Dimensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layer-schedule-one-blade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layer schedule (one blade)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutting-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cutting plan
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estimating-the-flex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estimating the flex
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bill of Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools Required
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flex-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flex notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../neck-weight/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Neck Weight
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Neck Weight
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neck-weight/v2-molded-sleeve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V2 - Molded Sleeve
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neck-weight/v1-shot-inner-tube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Shot Inner Tube
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../future-gear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    (Future Gear)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Techniques
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Techniques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../techniques/choosing-bifin-footpockets/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Choosing Bi-fin Foot Pockets
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Choosing Bi-fin Foot Pockets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/choosing-bifin-footpockets/v1/short-rails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Short Rails
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../techniques/creating-laminating-base/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Creating Laminating Base
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Creating Laminating Base
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/creating-laminating-base/v2/acrylic-wedges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V2 - Plastic Wedges
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--research"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/creating-laminating-base/v1/wood-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Wood Support
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../techniques/cutting-cured-carbon/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Cutting Cured Carbon
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cutting Cured Carbon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/cutting-cured-carbon/v1/junior-hacksaw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Junior Hacksaw
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../techniques/cutting-template/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Cutting Template
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Cutting Template
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/cutting-template/v1/paper-laminate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Paper Laminate
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../techniques/finishing-carbon/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Finishing Carbon
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Finishing Carbon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/finishing-carbon/v1/epoxy-and-clear-coat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Epoxy and Clear Coat
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../techniques/gluing-fin-rails/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Gluing Fin Rails
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Gluing Fin Rails
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/gluing-fin-rails/v1/two-part-plastic-carbon-adhesive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Two Part Plastic-to-Carbon Adhesive
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../techniques/laminating-carbon/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Laminating Carbon
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Laminating Carbon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/laminating-carbon/v1/wet-layup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Wet Layup
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../techniques/measuring-flex/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Measuring Flex
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Measuring Flex
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/measuring-flex/v2/kitchen-scale-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V2 - Kitchen Scale Test
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/measuring-flex/v1/weight-belt-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Weight Belt Test
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--superseded"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../techniques/predicting-flex/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Predicting Flex
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            Predicting Flex
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/predicting-flex/v1/tapered-cantilever-beam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Tapered Cantilever Beam
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--research"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../techniques/measuring-vacuum/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Measuring Vacuum
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            Measuring Vacuum
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/measuring-vacuum/v1/syringe-gauge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Syringe Gauge
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--research"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../techniques/vacuum-bagging-carbon/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Vacuum Bagging Carbon
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            Vacuum Bagging Carbon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V2 - Edge-Sealed Bagging
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--research"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../techniques/vacuum-bagging-carbon/v1/enclosed-bagging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V1 - Enclosed Bagging
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../materials/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Materials
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Materials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/acrylic-sheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Acrylic Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/breather-cloth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Breather Cloth
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/bifin-footpockets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bifin Foot Pockets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/butyl-sealing-tape/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Butyl Sealing Tape
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/carbon-fiber-fabric/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Carbon Fiber Fabric
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/clear-coat-spray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clear Coat Spray
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/laminating-epoxy-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Laminating Epoxy System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/pva-release-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PVA Release Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/peel-ply/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Peel Ply
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/plastic-to-carbon-adhesive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plastic-to-Carbon Adhesive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/rubber-fin-rails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rubber Fin Rails
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/stackable-plastic-wedges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stackable Plastic Wedges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../materials/vacuum-bagging-kit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vacuum Bagging Kit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    October 2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    August 2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/build-planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build Planning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/lab-updates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Releases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/research-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Research Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/apnea-scrap/apnea-scrap-lab/edit/main/docs/projects/short-fins/v1/power-fin.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<hr />
+<h1 id="short-fins-v1-power-fin">Short Fins - V1 - Power Fin<a class="headerlink" href="#short-fins-v1-power-fin" title="Permanent link">&para;</a></h1>
+<div class="status-banner status-active">Active</div>
+
+<p>Early outline for producing compact training fins with predictable flex and repeatable templates.</p>
+<h2 id="planning">Planning<a class="headerlink" href="#planning" title="Permanent link">&para;</a></h2>
+<h3 id="foot-pockets-ready">Foot pockets ready<a class="headerlink" href="#foot-pockets-ready" title="Permanent link">&para;</a></h3>
+<p>Make sure your foot pockets are on hand before you start. If you still need to choose a pair, follow the steps in <a href="../../../../techniques/choosing-bifin-footpockets/v1/short-rails/">Choosing the foot pockets</a>. Once the pockets are sorted, lay out a fresh cutting template with <a href="../../../../techniques/cutting-template/v1/paper-laminate/">Laminated paper cutting template</a>.</p>
+<p><strong>Heads-up:</strong> The dimensions below assume 150 mm of blade will slide into the foot pocket. Measure your pockets to confirm before cutting.</p>
+<h3 id="specifications-dimensions">Specifications / Dimensions<a class="headerlink" href="#specifications-dimensions" title="Permanent link">&para;</a></h3>
+<p>Target outline for each blade:</p>
+<ul>
+<li><strong>Width:</strong> 18 cm</li>
+<li><strong>Total length:</strong> 40 cm<ul>
+<li>0–15 cm: inside the foot pocket (flat section)</li>
+<li>15–23 cm: transition and bend within the rails</li>
+<li>23–40 cm: free blade to the trailing edge</li>
+</ul>
+</li>
+</ul>
+<h4 id="layer-schedule-one-blade">Layer schedule (one blade)<a class="headerlink" href="#layer-schedule-one-blade" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Reserve 15 cm from the heel line for the bend zone.</li>
+<li>Layer 1: 20 cm × 40 cm</li>
+<li>Layer 2: 20 cm × 30 cm</li>
+<li>Layer 3: two strips at 10 cm × 40 cm each, running along the edges for rail reinforcement</li>
+<li>Layer 4: 20 cm × 40 cm top ply</li>
+</ul>
+<p><em>TODO: add thickness profile graphic</em>
+<em>TODO: add laminate stack table</em></p>
+<h4 id="cutting-plan">Cutting plan<a class="headerlink" href="#cutting-plan" title="Permanent link">&para;</a></h4>
+<ul>
+<li><em>TODO: document full cutting plan for two blades</em></li>
+</ul>
+<h3 id="estimating-the-flex">Estimating the flex<a class="headerlink" href="#estimating-the-flex" title="Permanent link">&para;</a></h3>
+<p>Start with the <a href="../../../../techniques/predicting-flex/v1/tapered-cantilever-beam/">Flex predictor modelling</a> workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.</p>
+<ul>
+<li><em>TODO: record bending moment targets</em></li>
+<li><em>TODO: capture free-blade bend profile once measured</em></li>
+</ul>
+<h2 id="reference-images">Reference images<a class="headerlink" href="#reference-images" title="Permanent link">&para;</a></h2>
+<p><em>TODO: add foot pocket reference photo</em>
+<em>TODO: add laminate stack photo</em>
+<em>TODO: add finished blade photo</em></p>
+<h2 id="bill-of-materials">Bill of Materials<a class="headerlink" href="#bill-of-materials" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Material</th>
+<th>Quantity</th>
+<th>Unit Cost</th>
+<th>Line Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Foot pockets<br><small><em>Choosing the foot pockets</em></small></td>
+<td><a href="../../../../materials/bifin-footpockets/">Bifin Foot Pockets</a><br><span class="bom-cost-label bom-cost-label--reusable">Reusable</span> <small>Pair of angled freediving pockets with short rails</small></td>
+<td>1 pair</td>
+<td>£36.00 - £58.00 per pair (recorded range)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Foot pockets total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>£36.00 - £58.00</strong></td>
+</tr>
+<tr>
+<td><small>&nbsp;</small></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Base Support<br><small><em>Creating a laminating base</em></small></td>
+<td><a href="../../../../materials/acrylic-sheet/">Acrylic sheet (A3)</a><br><span class="bom-cost-label bom-cost-label--reusable">Reusable</span> <small>3 mm clear sheet cut to 420 × 297 mm</small></td>
+<td>1 1 sheet A3 sheet (2 mm)</td>
+<td>£10.00 per 1 sheet A3 sheet (2 mm)</td>
+<td>£10.00</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="../../../../materials/acrylic-sheet/">Acrylic sheet (A4)</a><br><span class="bom-cost-label bom-cost-label--reusable">Reusable</span> <small>2 mm clear sheet cut to 210 x 297 mm</small></td>
+<td>1 1 sheet A4 sheet (2 mm)</td>
+<td>£5.50 per 1 sheet A4 sheet (2 mm)</td>
+<td>£5.50</td>
+</tr>
+<tr>
+<td></td>
+<td>Softwood board offcuts<br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>1 cm thick timber for base and angled supports</small></td>
+<td>1 set</td>
+<td>£10.00</td>
+<td>£10.00</td>
+</tr>
+<tr>
+<td></td>
+<td>Angle brackets and screws<br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>Two galvanised brackets with matching screws</small></td>
+<td>1 set</td>
+<td>£4.20</td>
+<td>£4.20</td>
+</tr>
+<tr>
+<td></td>
+<td>Double sided-tape<br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>Thin acrylic tape to secure sheets to timber</small></td>
+<td>1 roll</td>
+<td>Inexpensive</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Base Support total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>£29.70</strong></td>
+</tr>
+<tr>
+<td><small>&nbsp;</small></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Laminating Carbon<br><small><em>Creating the carbon laminate</em></small></td>
+<td><a href="../../../../materials/carbon-fiber-fabric/">Carbon Fiber Fabric</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>0.3 m² of 200 g/m² 3K 2/2 twill cloth</small></td>
+<td>0.3 m² (1 m wide)</td>
+<td>£17.00 per m² (1 m wide)</td>
+<td>£5.10</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="../../../../materials/laminating-epoxy-system/">Laminating Epoxy System</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>200 g mixed resin (approx. 200 ml)</small></td>
+<td>0.4 500 ml kit</td>
+<td>£15.00 per 500 ml kit</td>
+<td>£6.00</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="../../../../materials/pva-release-agent/">PVA Release Agent</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>Two thin coats on the laminating base</small></td>
+<td>35 ml (two thin coats)</td>
+<td>£5.00 per 200 ml bottle</td>
+<td>£0.88</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="../../../../materials/peel-ply/">Peel Ply</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>Two layers cut to the blade outline</small></td>
+<td>0.6 m (1.5 m wide)</td>
+<td>£12.00 per 5 m pack (1.5 m wide)</td>
+<td>£1.44</td>
+</tr>
+<tr>
+<td></td>
+<td>Consumables pack<br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>Gloves, mixing sticks, acetone wipes</small></td>
+<td>1 pack</td>
+<td>£3.50</td>
+<td>£3.50</td>
+</tr>
+<tr>
+<td><strong>Laminating Carbon total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>£16.92</strong></td>
+</tr>
+<tr>
+<td><small>&nbsp;</small></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Vacuum Bagging<br><small><em>Reducing the resin percentage of the laminate</em></small></td>
+<td><a href="../../../../materials/vacuum-bagging-kit/">Vacuum Bagging Kit</a><br><span class="bom-cost-label bom-cost-label--reusable">Reusable</span> <small>Heavy-duty storage bag plus compatible hand pump</small></td>
+<td>1 kit</td>
+<td>£9.00 per kit</td>
+<td>£9.00</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="../../../../materials/breather-cloth/">Breather Cloth</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>Wraps part to distribute airflow</small></td>
+<td>0.5 m (1 m wide)</td>
+<td>£12.00 per 5 m pack (1 m wide)</td>
+<td>£1.20</td>
+</tr>
+<tr>
+<td><strong>Vacuum Bagging total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>£10.20</strong></td>
+</tr>
+<tr>
+<td><small>&nbsp;</small></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Finishing Carbon<br><small><em>Finishing the carbon laminate surface</em></small></td>
+<td><a href="../../../../materials/laminating-epoxy-system/">Laminating Epoxy System</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>Thin finishing coat (approx. 100 ml mixed)</small></td>
+<td>0.2 500 ml kit</td>
+<td>£15.00 per 500 ml kit</td>
+<td>£3.00</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="../../../../materials/clear-coat-spray/">Clear Coat Spray</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>Three light lacquer passes for UV protection</small></td>
+<td>0.3 400 ml can</td>
+<td>£8.00 per 400 ml can</td>
+<td>£2.40</td>
+</tr>
+<tr>
+<td></td>
+<td>Sandpaper set<br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>400, 600, and 1000 grit sheets</small></td>
+<td>1 set</td>
+<td>£3.00</td>
+<td>£3.00</td>
+</tr>
+<tr>
+<td></td>
+<td>Printable vinyl decal sheet (optional)<br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>Gloss white adhesive sheet for logos</small><br><small>Optional branding layer</small></td>
+<td>1 sheet</td>
+<td>£1.50</td>
+<td>£1.50</td>
+</tr>
+<tr>
+<td><strong>Finishing Carbon total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>£9.90</strong></td>
+</tr>
+<tr>
+<td><small>&nbsp;</small></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Gluing Fin Rails<br><small><em>Gluing Fin Rails</em></small></td>
+<td><a href="../../../../materials/rubber-fin-rails/">Rubber Fin Rails</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>One pair of soft rubber rails sized for bifin blades</small></td>
+<td>2 m (enough for four rails)</td>
+<td>£6.00 per metre</td>
+<td>£12.00</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="../../../../materials/plastic-to-carbon-adhesive/">Plastic to Carbon Adhesive</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>25 ml of 3M DP420 mixed with nozzle</small></td>
+<td>1 25 ml syringe</td>
+<td>£8.25 per 25 ml syringe</td>
+<td>£8.25</td>
+</tr>
+<tr>
+<td></td>
+<td>Fold-back clips set<br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>20 mm binder clips for clamping rails during cure</small></td>
+<td>1 set</td>
+<td>Inexpensive</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Gluing Fin Rails total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>£20.25</strong></td>
+</tr>
+<tr>
+<td><span class="bom-cost-label bom-cost-label--consumable">Consumables subtotal</span> <strong>£62.47</strong></td>
+<td><strong>+</strong></td>
+<td><span class="bom-cost-label bom-cost-label--reusable">Reusable subtotal</span> <strong>£60.50 - £82.50</strong></td>
+<td><strong>=</strong></td>
+<td><strong>Grand total</strong> <strong>£122.97 - £144.97</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cutting Cured Carbon:</strong> <em>Producing the final shape</em></p>
+
+<h2 id="tools-required">Tools Required<a class="headerlink" href="#tools-required" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Techniques</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brushes</td>
+<td>Laminating Carbon<br>Finishing Carbon</td>
+<td>Apply resin and coatings evenly across the laminate</td>
+</tr>
+<tr>
+<td>Digital scale</td>
+<td>Laminating Carbon</td>
+<td>Weigh resin batches for accurate mix ratios</td>
+</tr>
+<tr>
+<td>Dust mask</td>
+<td>Cutting Cured Carbon</td>
+<td>Prevent inhalation of carbon dust during cutting</td>
+</tr>
+<tr>
+<td>Gloves</td>
+<td>Laminating Carbon<br>Cutting Cured Carbon<br>Finishing Carbon<br>Gluing Fin Rails</td>
+<td>Protect your hands from resin, adhesives, and carbon fibers</td>
+</tr>
+<tr>
+<td>Junior hacksaw with a fine-tooth metal blade</td>
+<td>Cutting Cured Carbon</td>
+<td>Cut the cured carbon cleanly without fraying</td>
+</tr>
+<tr>
+<td>Metal file</td>
+<td>Vacuum Bagging<br>Cutting Cured Carbon</td>
+<td>Smooth cut edges and remove burrs</td>
+</tr>
+<tr>
+<td>Mixing pots</td>
+<td>Laminating Carbon<br>Finishing Carbon</td>
+<td>Measure and combine resin and hardener accurately</td>
+</tr>
+<tr>
+<td>Mixing sticks</td>
+<td>Laminating Carbon</td>
+<td>Blend resin and hardener thoroughly</td>
+</tr>
+<tr>
+<td>Plastic finned roller (75 mm)</td>
+<td>Laminating Carbon</td>
+<td>Consolidate layers and push out trapped air</td>
+</tr>
+<tr>
+<td>Safety goggles</td>
+<td>Cutting Cured Carbon<br>Finishing Carbon</td>
+<td>Protect your eyes from dust and splashes</td>
+</tr>
+<tr>
+<td>Sandpaper</td>
+<td>Base Support<br>Finishing Carbon<br>Gluing Fin Rails</td>
+<td>Prepare and smooth surfaces for better adhesion and finish</td>
+</tr>
+<tr>
+<td>Scissors</td>
+<td>Laminating Carbon<br>Vacuum Bagging</td>
+<td>Cut materials like fabric, film, or templates to size</td>
+</tr>
+<tr>
+<td>Screwdriver</td>
+<td>Base Support</td>
+<td>Drive screws to secure brackets and maintain the angle</td>
+</tr>
+<tr>
+<td>Tape measure</td>
+<td>Base Support</td>
+<td>Check dimensions and spacing during setup</td>
+</tr>
+<tr>
+<td>Window cleaner</td>
+<td>Gluing Fin Rails</td>
+<td>Degrease surfaces before bonding or sealing</td>
+</tr>
+<tr>
+<td>Wood saw</td>
+<td>Base Support</td>
+<td>Cut the laminating base supports to length</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Foot pockets:</strong> <em>Choosing the foot pockets</em></p>
+
+<h2 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Build a 500 mm × 300 mm laminating base following <a href="../../../../techniques/creating-laminating-base/v1/wood-support/">Creating a laminating base</a> so one blade can be laminated at a time.</li>
+<li>Lay up the carbon according to the schedule above, using the steps in <a href="../../../../techniques/laminating-carbon/v1/wet-layup/">Manual wet layup stack</a>.</li>
+<li>Pull the stack under vacuum to tighten the fiber volume, referencing <a href="../../../../techniques/vacuum-bagging-carbon/v1/enclosed-bagging/">Enclosed bagging</a>.</li>
+<li>Trim the cured laminate to the template with the <a href="../../../../techniques/cutting-cured-carbon/v1/junior-hacksaw/">Junior hacksaw method</a>.</li>
+<li>Seal the surface with the approach in <a href="../../../../techniques/finishing-carbon/v1/epoxy-and-clear-coat/">Epoxy and clear coat finish</a>.</li>
+<li>Bond the rails using the guidance in <a href="../../../../techniques/gluing-fin-rails/v1/two-part-plastic-carbon-adhesive/">Two-part plastic to carbon adhesive</a>.</li>
+</ol>
+<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
+<h3 id="dimensions">Dimensions<a class="headerlink" href="#dimensions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><em>TODO: log actual finished width, length, and rail taper</em></li>
+</ul>
+<h3 id="flex-notes">Flex notes<a class="headerlink" href="#flex-notes" title="Permanent link">&para;</a></h3>
+<p>Record measured deflection using the <a href="../../../../techniques/measuring-flex/v1/weight-belt-test/">Weight belt test</a> once prototypes are complete.</p>
+<p><em>TODO: compare measured flex against the predictions</em></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/apnea-scrap/apnea-scrap-lab/discussions" target="_blank" rel="noopener" title="GitHub Discussions" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.highlight", "search.suggest", "content.code.copy", "content.action.edit", "content.action.discuss", "content.action.issue", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../../js/preview-banner.js"></script>
+      
+    
+  </body>
+</html>
