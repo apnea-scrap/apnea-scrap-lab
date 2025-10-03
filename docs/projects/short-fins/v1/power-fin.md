@@ -30,7 +30,7 @@ techniques:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-Early outline for producing compact training fins with predictable flex and repeatable templates.
+Compact training fins, somewhat hard flex but with a small surface.
 
 ## Planning
 
@@ -55,8 +55,11 @@ Target outline for each blade:
 - Layer 3: two strips at 10 cm × 40 cm each, running along the edges for rail reinforcement
 - Layer 4: 20 cm × 40 cm top ply
 
-_TODO: add thickness profile graphic_
-_TODO: add laminate stack table_
+
+
+| ![Expanded Laminate View](expanded.svg) | ![Laminate Thickness Profile](thickness.svg) |
+|-----------------------------------------|----------------------------------------------|
+| Expanded Laminate View                  | Laminate Thickness Profile                   |
 
 #### Cutting plan
 - _TODO: document full cutting plan for two blades_
