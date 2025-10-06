@@ -43,6 +43,10 @@ Measure the load required to make the **tip vertical (90°)** and observe where 
 - Marks at 0.3 L (root), 0.6 L (mid), and 0.9 L (tip)
 - Weights applied in a 2:1 ratio (tip:mid)
 
+## Time needed
+
+{{ render_technique_time_overview() }}
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}

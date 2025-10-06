@@ -75,6 +75,10 @@ Create a rigid angled surface to support fin blades during lamination.
 |----------------------------------------|--------------------------------------------|
 | Full Support Structure                 | Brackets and Side Supports                 |
 
+## Time needed
+
+{{ render_technique_time_overview() }}
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}

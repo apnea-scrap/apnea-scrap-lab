@@ -18,6 +18,10 @@ Measure the load required to make the **tip vertical (90°)** and observe where 
 |--|---------------------------------------------|--|
 |  | Kitchen Scale Test                          |  |
 
+## Time needed
+
+{{ render_technique_time_overview() }}
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}
