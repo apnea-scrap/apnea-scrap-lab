@@ -67,6 +67,17 @@ def define_env(env):
             quantity_text = unit or ""
         return quantity_text, quantity_decimal
 
+    def _normalise_usage_category(value: str | None) -> str:
+        if value is None:
+            return "consumable"
+
+        text = str(value).strip().lower()
+        if text == "reusable":
+            return "reusable"
+        if text == "consumable":
+            return "consumable"
+        return "consumable"
+
     def _resolve_usage_type(entry: dict, material_meta: dict | None) -> dict[str, str]:
         raw_value = entry.get("usage_type")
         source_value = raw_value
@@ -517,6 +528,121 @@ def define_env(env):
             ordered.append((currency_code, data["low"], data["high"]))
         return ordered
 
+    def _bill_of_material_totals_by_usage(
+        items: list[dict],
+    ) -> dict[str, list[tuple[str, Decimal, Decimal]]]:
+        usage_totals: dict[str, dict[str, dict[str, Decimal]]] = {}
+
+        for item in items:
+            usage_key = str(item.get("usage_type") or "").strip().lower()
+            if usage_key == "reusable":
+                usage_bucket = usage_totals.setdefault("reusable", {})
+            else:
+                usage_bucket = usage_totals.setdefault("consumable", {})
+
+            range_totals = item.get("line_total_ranges") or {}
+            if range_totals:
+                for currency_code, (low_value, high_value) in range_totals.items():
+                    if low_value is None or high_value is None:
+                        continue
+                    code = str(currency_code).upper()
+                    bucket = usage_bucket.setdefault(
+                        code, {"low": Decimal("0"), "high": Decimal("0")}
+                    )
+                    bucket["low"] += low_value
+                    bucket["high"] += high_value
+                continue
+
+            currency = item.get("unit_cost_currency")
+            line_total = item.get("line_total_decimal")
+            if not currency or line_total is None:
+                continue
+
+            code = str(currency).upper()
+            bucket = usage_bucket.setdefault(
+                code, {"low": Decimal("0"), "high": Decimal("0")}
+            )
+            bucket["low"] += line_total
+            bucket["high"] += line_total
+
+        result: dict[str, list[tuple[str, Decimal, Decimal]]] = {
+            "consumable": [],
+            "reusable": [],
+        }
+
+        for usage_category, totals in usage_totals.items():
+            ordered_totals: list[tuple[str, Decimal, Decimal]] = []
+            for currency_code in sorted(totals.keys()):
+                data = totals[currency_code]
+                ordered_totals.append((currency_code, data["low"], data["high"]))
+            result[usage_category] = ordered_totals
+
+        return result
+
+    def _partition_cost_by_usage(value) -> dict[str, list]:
+        categories: dict[str, list] = {"consumable": [], "reusable": []}
+
+        def append_to(category: str, entry) -> None:
+            resolved = _normalise_usage_category(category)
+            categories.setdefault(resolved, []).append(entry)
+
+        def process(node, fallback: str) -> None:
+            if node is None:
+                return
+
+            if isinstance(node, list):
+                for item in node:
+                    process(item, fallback)
+                return
+
+            if isinstance(node, dict):
+                lower_keys = {str(key).lower(): key for key in node.keys()}
+                cost_fields = {
+                    "amount",
+                    "amount_low",
+                    "amount_high",
+                    "currency",
+                    "note",
+                    "region",
+                }
+
+                has_cost_values = any(key in lower_keys for key in cost_fields)
+
+                if has_cost_values:
+                    usage_value = None
+                    for candidate in ("usage_type", "usage", "category", "type"):
+                        if candidate in node:
+                            usage_value = node[candidate]
+                            break
+
+                    category = (
+                        _normalise_usage_category(usage_value)
+                        if usage_value is not None
+                        else _normalise_usage_category(fallback)
+                    )
+                    append_to(category, node)
+                    return
+
+                category_keys = [
+                    key_lower
+                    for key_lower in lower_keys.keys()
+                    if key_lower in ("consumable", "reusable")
+                ]
+
+                if category_keys:
+                    for key_lower in category_keys:
+                        original_key = lower_keys[key_lower]
+                        process(node[original_key], key_lower)
+                    return
+
+                append_to(fallback, node)
+                return
+
+            append_to(fallback, node)
+
+        process(value, "consumable")
+        return categories
+
     @env.macro
     def versions_table(path: str | None = None) -> str:
         rel_dir = Path(path) if path else Path(env.page.file.src_path).parent
@@ -554,19 +680,27 @@ def define_env(env):
             link_text = nav_titles.get(nav_key, " ".join(rel_path.with_suffix("").parts).replace("-", " "))
             link = f"[{link_text}]({rel_path.as_posix()})"
             bom_items = _bill_of_material_items(file)
-            bom_totals = _bill_of_material_totals(bom_items)
-            if bom_totals:
-                cost = []
-                for currency, low_total, high_total in bom_totals:
-                    entry: dict[str, object] = {"currency": currency}
-                    if low_total == high_total:
-                        entry["amount"] = low_total
-                    else:
-                        entry["amount_low"] = low_total
-                        entry["amount_high"] = high_total
-                    cost.append(entry)
+            cost_by_usage: dict[str, list] = {"consumable": [], "reusable": []}
+
+            if bom_items:
+                bom_usage_totals = _bill_of_material_totals_by_usage(bom_items)
+                for usage_category, totals in bom_usage_totals.items():
+                    entries: list[dict[str, object]] = []
+                    for currency, low_total, high_total in totals:
+                        entry: dict[str, object] = {"currency": currency}
+                        if low_total == high_total:
+                            entry["amount"] = low_total
+                        else:
+                            entry["amount_low"] = low_total
+                            entry["amount_high"] = high_total
+                        entries.append(entry)
+                    cost_by_usage[usage_category] = entries
             else:
-                cost = meta.get("estimated_cost")
+                partitioned_costs = _partition_cost_by_usage(meta.get("estimated_cost"))
+                for usage_category in cost_by_usage.keys():
+                    cost_by_usage[usage_category] = partitioned_costs.get(
+                        usage_category, []
+                    )
             impl = meta.get("time_to_implement")
             wait = meta.get("waiting_time")
             status = meta.get("status", "")
@@ -638,13 +772,15 @@ def define_env(env):
 
                 return str(value)
 
-            cost_display = format_cost(cost)
+            cost_consumable_display = format_cost(cost_by_usage.get("consumable"))
+            cost_reusable_display = format_cost(cost_by_usage.get("reusable"))
             rows.append(
                 (
                     nav_key,
                     link,
                     status_html,
-                    cost_display,
+                    cost_consumable_display,
+                    cost_reusable_display,
                     f"{impl}h" if impl is not None else "",
                     f"{wait}h" if wait is not None else "",
                 )
@@ -653,11 +789,17 @@ def define_env(env):
         if not rows:
             return "No versions documented yet."
 
-        header = "| Version | Status | Estimated Cost | Implementation Time (h) | Waiting Time (h) |"
-        separator = "|---|---|---|---|---|"
+        header = (
+            "| Version | Status | Consumable Cost | Reusable Cost | Implementation Time (h) | Waiting Time (h) |"
+        )
+        separator = "|---|---|---|---|---|---|"
         lines = [header, separator]
-        for _, link, status, cost, impl, wait in sorted(rows, key=lambda row: row[0], reverse=True):
-            lines.append(f"| {link} | {status} | {cost} | {impl} | {wait} |")
+        for _, link, status, cost_consumable, cost_reusable, impl, wait in sorted(
+            rows, key=lambda row: row[0], reverse=True
+        ):
+            lines.append(
+                f"| {link} | {status} | {cost_consumable} | {cost_reusable} | {impl} | {wait} |"
+            )
         return "\n".join(lines)
 
     def _format_date(value: str | None) -> str | None:
