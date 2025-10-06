@@ -252,6 +252,101 @@ def define_env(env):
 
         return resolved
 
+    def _prepare_technique_requirement_items(
+        source_items: list[dict], factor: Decimal | None
+    ) -> list[dict]:
+        prepared: list[dict] = []
+
+        for source_item in source_items:
+            item_copy = source_item.copy()
+            range_totals_existing = item_copy.get("line_total_ranges")
+            if range_totals_existing:
+                item_copy["line_total_ranges"] = dict(range_totals_existing)
+
+            usage_key = str(item_copy.get("usage_type") or "").lower()
+
+            if (
+                factor is not None
+                and factor != Decimal("1")
+                and usage_key != "reusable"
+            ):
+                quantity_decimal = item_copy.get("quantity_decimal")
+                unit_value = item_copy.get("unit")
+                original_display = item_copy.get("quantity_display") or ""
+
+                scaled_display = ""
+                if quantity_decimal is not None:
+                    scaled_quantity = quantity_decimal * factor
+                    item_copy["quantity_decimal"] = scaled_quantity
+                    scaled_display, _ = _format_quantity_display(
+                        scaled_quantity, unit_value
+                    )
+
+                scale_text = _format_decimal(factor)
+                display_text = scaled_display or original_display
+                note_parts: list[str] = [f"scaled ×{scale_text}"]
+
+                if original_display and original_display != display_text:
+                    note_parts.append(f"base {original_display}")
+
+                note_html = " — ".join(note_parts)
+
+                if display_text:
+                    item_copy["quantity_display"] = (
+                        f"{display_text}<br><small>{note_html}</small>"
+                    )
+                else:
+                    item_copy["quantity_display"] = f"<small>{note_html}</small>"
+
+                line_total_decimal = item_copy.get("line_total_decimal")
+                if line_total_decimal is not None:
+                    item_copy["line_total_decimal"] = line_total_decimal * factor
+
+                range_totals = item_copy.get("line_total_ranges")
+                if range_totals:
+                    scaled_ranges: dict[str, tuple[Decimal | None, Decimal | None]] = {}
+                    for currency_code, values in range_totals.items():
+                        low_value, high_value = values
+                        scaled_low = (
+                            low_value * factor if low_value is not None else None
+                        )
+                        scaled_high = (
+                            high_value * factor if high_value is not None else None
+                        )
+                        scaled_ranges[currency_code] = (scaled_low, scaled_high)
+                    item_copy["line_total_ranges"] = scaled_ranges
+
+            prepared.append(item_copy)
+
+        return prepared
+
+    def _collect_project_requirement_items(
+        techniques: list[dict],
+    ) -> tuple[list[dict], list[tuple[dict, list[dict]]], list[dict]]:
+        aggregated_items: list[dict] = []
+        populated_techniques: list[tuple[dict, list[dict]]] = []
+        empty_notes: list[dict] = []
+
+        for technique in techniques:
+            display_title = technique["title"]
+            note = technique.get("notes")
+            technique_path = technique["path"]
+
+            items = _bill_of_material_items(technique_path)
+            if not items:
+                empty_notes.append({"title": display_title, "note": note})
+                continue
+
+            scale_factor: Decimal | None = technique.get("consumable_scale_factor")
+            prepared_items = _prepare_technique_requirement_items(
+                items, scale_factor
+            )
+
+            aggregated_items.extend(prepared_items)
+            populated_techniques.append((technique, prepared_items))
+
+        return aggregated_items, populated_techniques, empty_notes
+
     def _bill_of_material_items(meta_source: Path) -> list[dict]:
         meta = read_meta(meta_source)
         items = meta.get("bill_of_materials", []) or []
@@ -579,6 +674,14 @@ def define_env(env):
 
         return result
 
+    def _format_usage_totals_display(
+        totals: list[tuple[str, Decimal, Decimal]]
+    ) -> str:
+        parts: list[str] = []
+        for currency, low_total, high_total in totals:
+            parts.append(_format_total_display(currency, low_total, high_total))
+        return "; ".join(part for part in parts if part)
+
     def _partition_cost_by_usage(value) -> dict[str, list]:
         categories: dict[str, list] = {"consumable": [], "reusable": []}
 
@@ -680,27 +783,15 @@ def define_env(env):
             link_text = nav_titles.get(nav_key, " ".join(rel_path.with_suffix("").parts).replace("-", " "))
             link = f"[{link_text}]({rel_path.as_posix()})"
             bom_items = _bill_of_material_items(file)
-            cost_by_usage: dict[str, list] = {"consumable": [], "reusable": []}
-
-            if bom_items:
-                bom_usage_totals = _bill_of_material_totals_by_usage(bom_items)
-                for usage_category, totals in bom_usage_totals.items():
-                    entries: list[dict[str, object]] = []
-                    for currency, low_total, high_total in totals:
-                        entry: dict[str, object] = {"currency": currency}
-                        if low_total == high_total:
-                            entry["amount"] = low_total
-                        else:
-                            entry["amount_low"] = low_total
-                            entry["amount_high"] = high_total
-                        entries.append(entry)
-                    cost_by_usage[usage_category] = entries
-            else:
-                partitioned_costs = _partition_cost_by_usage(meta.get("estimated_cost"))
-                for usage_category in cost_by_usage.keys():
-                    cost_by_usage[usage_category] = partitioned_costs.get(
-                        usage_category, []
+            if not bom_items:
+                techniques = _resolve_project_techniques(file)
+                if techniques:
+                    aggregated_items, _, _ = _collect_project_requirement_items(
+                        techniques
                     )
+                    if aggregated_items:
+                        bom_items = aggregated_items
+
             impl = meta.get("time_to_implement")
             wait = meta.get("waiting_time")
             status = meta.get("status", "")
@@ -772,8 +863,22 @@ def define_env(env):
 
                 return str(value)
 
-            cost_consumable_display = format_cost(cost_by_usage.get("consumable"))
-            cost_reusable_display = format_cost(cost_by_usage.get("reusable"))
+            if bom_items:
+                bom_usage_totals = _bill_of_material_totals_by_usage(bom_items)
+                cost_consumable_display = _format_usage_totals_display(
+                    bom_usage_totals.get("consumable", [])
+                )
+                cost_reusable_display = _format_usage_totals_display(
+                    bom_usage_totals.get("reusable", [])
+                )
+            else:
+                partitioned_costs = _partition_cost_by_usage(meta.get("estimated_cost"))
+                cost_consumable_display = format_cost(
+                    partitioned_costs.get("consumable")
+                )
+                cost_reusable_display = format_cost(
+                    partitioned_costs.get("reusable")
+                )
             rows.append(
                 (
                     nav_key,
@@ -1112,100 +1217,25 @@ def define_env(env):
             "| Technique | Material | Quantity | Unit Cost | Line Cost |",
             "| --- | --- | --- | --- | --- |",
         ]
-        aggregated_items: list[dict] = []
+        (
+            aggregated_items,
+            populated_techniques,
+            empty_note_entries,
+        ) = _collect_project_requirement_items(techniques)
+
         empty_notes: list[str] = []
-        populated_techniques: list[tuple[dict, list[dict]]] = []
-
-        def _prepare_items_for_technique(
-            source_items: list[dict], factor: Decimal | None
-        ) -> list[dict]:
-            prepared: list[dict] = []
-            for source_item in source_items:
-                item_copy = source_item.copy()
-                range_totals_existing = item_copy.get("line_total_ranges")
-                if range_totals_existing:
-                    item_copy["line_total_ranges"] = dict(range_totals_existing)
-
-                usage_key = str(item_copy.get("usage_type") or "").lower()
-
-                if (
-                    factor is not None
-                    and factor != Decimal("1")
-                    and usage_key != "reusable"
-                ):
-                    quantity_decimal = item_copy.get("quantity_decimal")
-                    unit_value = item_copy.get("unit")
-                    original_display = item_copy.get("quantity_display") or ""
-
-                    scaled_display = ""
-                    if quantity_decimal is not None:
-                        scaled_quantity = quantity_decimal * factor
-                        item_copy["quantity_decimal"] = scaled_quantity
-                        scaled_display, _ = _format_quantity_display(
-                            scaled_quantity, unit_value
-                        )
-
-                    scale_text = _format_decimal(factor)
-                    display_text = scaled_display or original_display
-                    note_parts: list[str] = [f"scaled ×{scale_text}"]
-
-                    if original_display and original_display != display_text:
-                        note_parts.append(f"base {original_display}")
-
-                    note_html = " — ".join(note_parts)
-
-                    if display_text:
-                        item_copy["quantity_display"] = (
-                            f"{display_text}<br><small>{note_html}</small>"
-                        )
-                    else:
-                        item_copy["quantity_display"] = f"<small>{note_html}</small>"
-
-                    line_total_decimal = item_copy.get("line_total_decimal")
-                    if line_total_decimal is not None:
-                        item_copy["line_total_decimal"] = line_total_decimal * factor
-
-                    range_totals = item_copy.get("line_total_ranges")
-                    if range_totals:
-                        scaled_ranges: dict[str, tuple[Decimal | None, Decimal | None]] = {}
-                        for currency_code, values in range_totals.items():
-                            low_value, high_value = values
-                            scaled_low = (
-                                low_value * factor if low_value is not None else None
-                            )
-                            scaled_high = (
-                                high_value * factor if high_value is not None else None
-                            )
-                            scaled_ranges[currency_code] = (scaled_low, scaled_high)
-                        item_copy["line_total_ranges"] = scaled_ranges
-
-                prepared.append(item_copy)
-
-            return prepared
-
-        for technique in techniques:
-            display_title = technique["title"]
-            note = technique.get("notes") or ""
-            technique_path = technique["path"]
-
-            items = _bill_of_material_items(technique_path)
-            if not items:
-                if note:
-                    note_html = _format_table_cell(str(note))
-                    empty_notes.append(
-                        f"<p><strong>{escape(display_title)}:</strong> <em>{note_html}</em></p>"
-                    )
-                else:
-                    empty_notes.append(
-                        f"<p><strong>{escape(display_title)}:</strong> <em>No bill of materials recorded yet.</em></p>"
-                    )
-                continue
-
-            scale_factor: Decimal | None = technique.get("consumable_scale_factor")
-            prepared_items = _prepare_items_for_technique(items, scale_factor)
-
-            aggregated_items.extend(prepared_items)
-            populated_techniques.append((technique, prepared_items))
+        for entry in empty_note_entries:
+            display_title = entry.get("title") or ""
+            note_value = entry.get("note")
+            if note_value:
+                note_html = _format_table_cell(str(note_value))
+                empty_notes.append(
+                    f"<p><strong>{escape(display_title)}:</strong> <em>{note_html}</em></p>"
+                )
+            else:
+                empty_notes.append(
+                    f"<p><strong>{escape(display_title)}:</strong> <em>No bill of materials recorded yet.</em></p>"
+                )
 
         for index, (technique, items) in enumerate(populated_techniques):
             display_title = technique["title"]
