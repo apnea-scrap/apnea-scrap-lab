@@ -45,6 +45,10 @@ To enable vacuum bagging of larger parts by sealing a cut vacuum bag directly to
 - Target vacuum level: ~80% vacuum (-0.2 bar relative to atmosphere)
 - Requires a rigid, smooth laminating base for edge sealing
 
+## Time needed
+
+{{ render_technique_time_overview() }}
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}

@@ -32,6 +32,23 @@ def define_env(env):
             text = text.rstrip("0").rstrip(".")
         return text
 
+    def _coerce_decimal(value) -> Decimal | None:
+        if value is None:
+            return None
+
+        if isinstance(value, Decimal):
+            return value
+
+        try:
+            return Decimal(str(value))
+        except Exception:
+            return None
+
+    def _format_hours_display(value: Decimal | None) -> str:
+        if value is None:
+            return ""
+        return f"{_format_decimal(value)} h"
+
     def _format_currency(amount: Decimal, currency: str) -> str:
         currency = (currency or "").upper()
         symbols = {
@@ -251,6 +268,52 @@ def define_env(env):
             )
 
         return resolved
+
+    def _calculate_time_summary(meta_source: Path) -> dict:
+        meta = read_meta(meta_source)
+        implementation_meta = _coerce_decimal(meta.get("time_to_implement"))
+        waiting_meta = _coerce_decimal(meta.get("waiting_time"))
+
+        techniques = _resolve_project_techniques(meta_source)
+        breakdown: list[dict] = []
+        total_impl = Decimal("0")
+        total_wait = Decimal("0")
+        has_impl = False
+        has_wait = False
+
+        for technique in techniques:
+            technique_meta = read_meta(technique["path"])
+            technique_impl = _coerce_decimal(technique_meta.get("time_to_implement"))
+            technique_wait = _coerce_decimal(technique_meta.get("waiting_time"))
+
+            if technique_impl is not None:
+                total_impl += technique_impl
+                has_impl = True
+
+            if technique_wait is not None:
+                total_wait += technique_wait
+                has_wait = True
+
+            breakdown.append(
+                {
+                    "technique": technique,
+                    "implementation": technique_impl,
+                    "waiting": technique_wait,
+                }
+            )
+
+        computed_impl = total_impl if has_impl else None
+        computed_wait = total_wait if has_wait else None
+
+        return {
+            "implementation": implementation_meta if implementation_meta is not None else computed_impl,
+            "waiting": waiting_meta if waiting_meta is not None else computed_wait,
+            "breakdown": breakdown,
+            "computed": {
+                "implementation": computed_impl,
+                "waiting": computed_wait,
+            },
+        }
 
     def _prepare_technique_requirement_items(
         source_items: list[dict], factor: Decimal | None
@@ -792,8 +855,9 @@ def define_env(env):
                     if aggregated_items:
                         bom_items = aggregated_items
 
-            impl = meta.get("time_to_implement")
-            wait = meta.get("waiting_time")
+            summary = _calculate_time_summary(file)
+            impl_display = _format_hours_display(summary.get("implementation"))
+            wait_display = _format_hours_display(summary.get("waiting"))
             status = meta.get("status", "")
             if status:
                 status_class = status.lower().replace(" ", "-")
@@ -886,8 +950,8 @@ def define_env(env):
                     status_html,
                     cost_consumable_display,
                     cost_reusable_display,
-                    f"{impl}h" if impl is not None else "",
-                    f"{wait}h" if wait is not None else "",
+                    impl_display,
+                    wait_display,
                 )
             )
 
@@ -895,7 +959,7 @@ def define_env(env):
             return "No versions documented yet."
 
         header = (
-            "| Version | Status | Consumable Cost | Reusable Cost | Implementation Time (h) | Waiting Time (h) |"
+            "| Version | Status | Consumable Cost | Reusable Cost | Implementation Time | Waiting Time |"
         )
         separator = "|---|---|---|---|---|---|"
         lines = [header, separator]
@@ -1169,6 +1233,70 @@ def define_env(env):
             return ""
         escaped = escape(value)
         return escaped.replace("|", "&#124;").replace("\n", "<br>")
+
+    @env.macro
+    def render_technique_time_overview(path: str | None = None) -> str:
+        meta_source = Path(path) if path else Path(env.page.file.abs_src_path)
+        summary = _calculate_time_summary(meta_source)
+
+        implementation_display = _format_hours_display(summary.get("implementation"))
+        waiting_display = _format_hours_display(summary.get("waiting"))
+
+        if not implementation_display and not waiting_display:
+            return "No time estimates recorded yet."
+
+        header = "| Type | Hours |"
+        separator = "|---|---|"
+        rows = [
+            f"| Implementation | {implementation_display} |",
+            f"| Waiting | {waiting_display} |",
+        ]
+        return "\n".join([header, separator, *rows])
+
+    @env.macro
+    def render_project_time_breakdown(path: str | None = None) -> str:
+        meta_source = Path(path) if path else Path(env.page.file.abs_src_path)
+        summary = _calculate_time_summary(meta_source)
+        breakdown = summary.get("breakdown", [])
+
+        if not breakdown:
+            return render_technique_time_overview(path)
+
+        header = "| Technique | Implementation | Waiting |"
+        separator = "|---|---|---|"
+        lines = [header, separator]
+
+        for entry in breakdown:
+            technique = entry["technique"]
+            label_parts = [_format_table_cell(str(technique.get("title") or ""))]
+
+            notes_value = technique.get("notes")
+            if notes_value:
+                notes_html = _format_table_cell(str(notes_value))
+                if notes_html:
+                    label_parts.append(f"<small><em>{notes_html}</em></small>")
+
+            scale_factor = technique.get("consumable_scale_factor")
+            if scale_factor and scale_factor != Decimal("1"):
+                label_parts.append(f"<small>×{_format_decimal(scale_factor)}</small>")
+
+            label = "<br>".join(part for part in label_parts if part)
+            implementation_display = _format_hours_display(entry.get("implementation"))
+            waiting_display = _format_hours_display(entry.get("waiting"))
+
+            lines.append(
+                f"| {label} | {implementation_display} | {waiting_display} |"
+            )
+
+        totals = summary.get("computed", {})
+        total_impl_display = _format_hours_display(totals.get("implementation"))
+        total_wait_display = _format_hours_display(totals.get("waiting"))
+        if total_impl_display or total_wait_display:
+            impl_cell = f"**{total_impl_display}**" if total_impl_display else ""
+            wait_cell = f"**{total_wait_display}**" if total_wait_display else ""
+            lines.append(f"| **Total** | {impl_cell} | {wait_cell} |")
+
+        return "\n".join(lines)
 
     @env.macro
     def render_bill_of_materials(path: str | None = None) -> str:

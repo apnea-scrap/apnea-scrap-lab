@@ -37,6 +37,10 @@ To create a simple, low-cost vacuum environment for small parts using the manual
 |          | ![Full Bagging](full_bagging.jpeg) |          |
 |----------|------------------------------------|----------|
 
+## Time needed
+
+{{ render_technique_time_overview() }}
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}

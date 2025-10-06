@@ -55,6 +55,10 @@ Provide a modular surface with adjustable wedges to support blades during lamina
 - **Support requirement:** Must be placed on a **flat, rigid surface** such as a table or workbench  
 - **Protection:** Place a **plastic sheet** under the base to protect the table surface  
 
+## Time needed
+
+{{ render_technique_time_overview() }}
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}

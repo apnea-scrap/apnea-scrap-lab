@@ -35,6 +35,10 @@ Produce a durable template that matches the foot pocket outline.
 |-------------------------------------------|----------------------------------------------------|----------------------------------------------------
 | Paper Template Traced                     | Cutting Template Back                              | Cutting Template Front                                 
 
+## Time needed
+
+{{ render_technique_time_overview() }}
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}

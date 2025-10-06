@@ -36,6 +36,10 @@ bill_of_materials:
 To attach rubber fin rails securely to carbon fiber blades using a strong composite adhesive.
 The rails protect the blade edges, improve water flow, and extend the blade’s lifespan.
 
+## Time needed
+
+{{ render_technique_time_overview() }}
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}

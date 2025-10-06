@@ -67,6 +67,10 @@ Produce a basic carbon blade using a manual wet layup.
 |-------------------------------------------|--------------------------------------------------|
 | Wet Carbon Laminate                       | Cured Carbon Laminate                       |
 
+## Time needed
+
+{{ render_technique_time_overview() }}
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}

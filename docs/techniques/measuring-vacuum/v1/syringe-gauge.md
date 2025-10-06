@@ -34,6 +34,10 @@ It uses Boyle’s law: trapped air expands as pressure drops, moving a rubber pl
 ## Goal
 Monitor vacuum level inside a bag using plunger movement.
 
+## Time needed
+
+{{ render_technique_time_overview() }}
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}

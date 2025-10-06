@@ -50,6 +50,10 @@ bill_of_materials:
 To apply a protective and aesthetic finish to cured carbon blades by sealing, smoothing, and clear-coating the surface.
 This improves durability, protects against moisture, enhances gloss, and provides the option for custom decals.
 
+## Time needed
+
+{{ render_technique_time_overview() }}
+
 ## Bill of Materials
 
 {{ render_bill_of_materials() }}

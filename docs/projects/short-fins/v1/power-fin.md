@@ -92,6 +92,10 @@ Predicted:
 | Complete fins                   | Nice and compact              |
 
 
+## Time needed
+
+{{ render_project_time_breakdown() }}
+
 ## Bill of Materials
 {{ render_technique_requirements_bill_of_materials() }}
 
