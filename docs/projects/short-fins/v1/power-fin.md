@@ -74,9 +74,10 @@ Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1
 |-------------------------------------------------|-----------------------------------------|
 | Bending Calculation                             | Bending Profile                         |
 
-Load required for 90° = 35.3 N (3.60 kg)
-Hydrodynamic resistance score  5N = 2.71 units
-Hydrodynamic resistance score 10N = 2.38 units
+Predicted
+- Load required for 90° = 35.3 N (3.60 kg)
+- Hydrodynamic resistance score  5N = 2.71 units
+- Hydrodynamic resistance score 10N = 2.38 units
 
 ## Reference images
 
