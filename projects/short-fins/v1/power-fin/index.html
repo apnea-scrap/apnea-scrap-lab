@@ -736,18 +736,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dimensions" class="md-nav__link">
+  <a href="#desired-vs-predicted-vs-actual" class="md-nav__link">
     <span class="md-ellipsis">
-      Dimensions
+      Desired vs Predicted vs Actual
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#flex-notes" class="md-nav__link">
+  <a href="#water-trial" class="md-nav__link">
     <span class="md-ellipsis">
-      Flex notes
+      Water trial
     </span>
   </a>
   
@@ -3008,14 +3008,52 @@
 </table>
 <h3 id="estimating-the-flex">Estimating the flex<a class="headerlink" href="#estimating-the-flex" title="Permanent link">&para;</a></h3>
 <p>Start with the <a href="../../../../techniques/predicting-flex/v1/tapered-cantilever-beam/">Flex predictor modelling</a> workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.</p>
-<ul>
-<li><em>TODO: record bending moment targets</em></li>
-<li><em>TODO: capture free-blade bend profile once measured</em></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th><img alt="Bending Calculation" src="../bending_calculation.png" /></th>
+<th><img alt="Bending Profile" src="../bending_profile.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bending Calculation</td>
+<td>Bending Profile</td>
+</tr>
+</tbody>
+</table>
+<p>Load required for 90° = 35.3 N (3.60 kg)
+Hydrodynamic resistance score  5N = 2.71 units
+Hydrodynamic resistance score 10N = 2.38 units</p>
 <h2 id="reference-images">Reference images<a class="headerlink" href="#reference-images" title="Permanent link">&para;</a></h2>
-<p><em>TODO: add foot pocket reference photo</em>
-<em>TODO: add laminate stack photo</em>
-<em>TODO: add finished blade photo</em></p>
+<table>
+<thead>
+<tr>
+<th><img alt="Footpockets" src="../sf_footpockets.jpeg" /></th>
+<th><img alt="Cured Laminate" src="../sf_laminate_cured.jpeg" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Footpockets</td>
+<td>Cured Laminate</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><img alt="Complete fins" src="../sf_final.jpeg" /></th>
+<th><img alt="Fit in Bag" src="../fit_small.jpeg" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Complete fins</td>
+<td>Nice and compact</td>
+</tr>
+</tbody>
+</table>
 <h2 id="bill-of-materials">Bill of Materials<a class="headerlink" href="#bill-of-materials" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -3360,13 +3398,54 @@
 <li>Bond the rails using the guidance in <a href="../../../../techniques/gluing-fin-rails/v1/two-part-plastic-carbon-adhesive/">Two-part plastic to carbon adhesive</a>.</li>
 </ol>
 <h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
-<h3 id="dimensions">Dimensions<a class="headerlink" href="#dimensions" title="Permanent link">&para;</a></h3>
-<ul>
-<li><em>TODO: log actual finished width, length, and rail taper</em></li>
-</ul>
-<h3 id="flex-notes">Flex notes<a class="headerlink" href="#flex-notes" title="Permanent link">&para;</a></h3>
-<p>Record measured deflection using the <a href="../../../../techniques/measuring-flex/v1/weight-belt-test/">Weight belt test</a> once prototypes are complete.</p>
-<p><em>TODO: compare measured flex against the predictions</em></p>
+<h3 id="desired-vs-predicted-vs-actual">Desired vs Predicted vs Actual<a class="headerlink" href="#desired-vs-predicted-vs-actual" title="Permanent link">&para;</a></h3>
+<p>I've recorded the flex using the <a href="../../../../techniques/measuring-flex/v1/weight-belt-test/">Weight belt test</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Desired</th>
+<th>Actual</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free blade size</td>
+<td>250mm</td>
+<td>230mm</td>
+<td>The footpocket side turned out bigger</td>
+</tr>
+<tr>
+<td>Load for 90 degrees</td>
+<td>3.6kg</td>
+<td>5.0kg</td>
+<td>Shorter blade is much stiffer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="water-trial">Water trial<a class="headerlink" href="#water-trial" title="Permanent link">&para;</a></h3>
+<p>Overall the fins performed pretty well but favour a particular style of kicking:
+- feels lighter than Cressi Clio 
+- slightly heavier than swim training fins 
+- sprinting feels good as that engages the blade properly
+- feels too light (low surface area) for slow, hip-driven movements</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Desired</th>
+<th>Actual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hydro resistance</td>
+<td>~3 units</td>
+<td>2?</td>
+</tr>
+</tbody>
+</table>
 
 
 
