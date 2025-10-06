@@ -70,13 +70,24 @@ Target outline for each blade:
 ### Estimating the flex
 Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md) workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.
 
-- _TODO: record bending moment targets_
-- _TODO: capture free-blade bend profile once measured_
+| ![Bending Calculation](bending_calculation.png) | ![Bending Profile](bending_profile.png) |
+|-------------------------------------------------|-----------------------------------------|
+| Bending Calculation                             | Bending Profile                         |
+
+Load required for 90° = 35.3 N (3.60 kg)
+Hydrodynamic resistance score  5N = 2.71 units
+Hydrodynamic resistance score 10N = 2.38 units
 
 ## Reference images
-_TODO: add foot pocket reference photo_
-_TODO: add laminate stack photo_
-_TODO: add finished blade photo_
+
+| ![Footpockets](sf_footpockets.jpeg) | ![Cured Laminate](sf_laminate_cured.jpeg) |
+|-------------------------------------|-------------------------------------------|
+| Footpockets                         | Cured Laminate                       |
+
+| ![Complete fins](sf_final.jpeg) | ![Fit in Bag](fit_small.jpeg) |
+|---------------------------------|-------------------------------|
+| Complete fins                   | Nice and compact              |
+
 
 ## Bill of Materials
 {{ render_technique_requirements_bill_of_materials() }}
@@ -93,11 +104,24 @@ _TODO: add finished blade photo_
 6. Bond the rails using the guidance in [Two-part plastic to carbon adhesive](../../../techniques/gluing-fin-rails/v1/two-part-plastic-carbon-adhesive.md).
 
 ## Results
-### Dimensions
-- _TODO: log actual finished width, length, and rail taper_
 
-### Flex notes
-Record measured deflection using the [Weight belt test](../../../techniques/measuring-flex/v1/weight-belt-test.md) once prototypes are complete.
+### Desired vs Predicted vs Actual
 
-_TODO: compare measured flex against the predictions_
+I've recorded the flex using the [Weight belt test](../../../techniques/measuring-flex/v1/weight-belt-test.md).
 
+|                     | Desired  | Actual | Notes                                                                                          |
+|---------------------|----------|--------|------------------------------------------------------------------------------------------------|
+| Free blade size     | 250mm    | 230mm  | The footpocket side turned out bigger                                                          |
+| Load for 90 degrees | 3.6kg    | 5.0kg  | Shorter blade is much stiffer                                                                  |
+
+### Water trial
+
+Overall the fins performed pretty well but favour a particular style of kicking:
+- feels lighter than Cressi Clio 
+- slightly heavier than swim training fins 
+- sprinting feels good as that engages the blade properly
+- feels too light (low surface area) for slow, hip-driven movements
+
+|                     | Desired  | Actual |
+|---------------------|----------|--------|
+| Hydro resistance    | ~3 units | 2?     |
