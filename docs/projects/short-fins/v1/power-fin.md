@@ -62,7 +62,10 @@ Target outline for each blade:
 | Expanded Laminate View                  | Laminate Thickness Profile                   |
 
 #### Cutting plan
-- _TODO: document full cutting plan for two blades_
+
+|  | ![Cutting plan for one blade](cutting_plan.svg) |  |
+|--|-------------------------------------------------|--|
+|  | Cutting plan for one blade                      |  |
 
 ### Estimating the flex
 Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md) workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.
