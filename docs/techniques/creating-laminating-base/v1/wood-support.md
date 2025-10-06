@@ -29,14 +29,16 @@ bill_of_materials:
     quantity:
       amount: 1
       unit: set
+    usage_type: reusable
     unit_cost:
-      amount: 10.00
+      amount: 5.00
       currency: GBP
   - name: Angle brackets and screws
     description: Two galvanised brackets with matching screws
     quantity:
       amount: 1
       unit: set
+    usage_type: reusable
     unit_cost:
       amount: 4.20
       currency: GBP

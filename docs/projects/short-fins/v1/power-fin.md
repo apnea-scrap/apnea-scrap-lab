@@ -74,10 +74,12 @@ Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1
 |-------------------------------------------------|-----------------------------------------|
 | Bending Calculation                             | Bending Profile                         |
 
-Predicted
-  - Load required for 90° = 35.3 N (3.60 kg)
-  - Hydrodynamic resistance score  5N = 2.71 units
-  - Hydrodynamic resistance score 10N = 2.38 units
+
+Predicted:
+
+- Load required for 90° = 35.3 N (3.60 kg)
+- Hydrodynamic resistance score  5N = 2.71 units
+- Hydrodynamic resistance score 10N = 2.38 units
 
 ## Reference images
 
@@ -118,10 +120,11 @@ I've recorded the flex using the [Weight belt test](../../../techniques/measurin
 ### Water trial
 
 Overall the fins performed pretty well but favour a particular style of kicking:
-  - feels lighter than Cressi Clio 
-  - slightly heavier than swim training fins 
-  - sprinting feels good as that engages the blade properly
-  - feels too light (low surface area) for slow, hip-driven movements
+
+- feels lighter than Cressi Clio 
+- slightly heavier than swim training fins 
+- sprinting feels good as that engages the blade properly
+- feels too light (low surface area) for slow, hip-driven movements
 
 |                     | Desired  | Actual |
 |---------------------|----------|--------|
