@@ -28,6 +28,8 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+{{ render_technique_time_overview() }}
+
 A simple gauge to monitor mild vacuum (~81 kPa absolute, −20 kPa gauge) directly **inside** a vacuum bag.
 It uses Boyle’s law: trapped air expands as pressure drops, moving a rubber plunger seal you can read through the bag.
 

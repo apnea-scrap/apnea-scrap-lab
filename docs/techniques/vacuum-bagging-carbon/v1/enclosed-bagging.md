@@ -23,6 +23,8 @@ tools_required:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+{{ render_technique_time_overview() }}
+
 ## Goal
 To create a simple, low-cost vacuum environment for small parts using the manual pump and storage bags from the vacuum bagging kit.
 

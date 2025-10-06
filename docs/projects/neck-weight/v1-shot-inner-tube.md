@@ -12,4 +12,7 @@ waiting_time: 0
 ---
 # Neck weight v1 — shot in inner tube
 {{ status_banner() }}
+
+{{ render_project_time_breakdown() }}
+
 Cheap, tool‑light build; sleeve the tube for safety.

@@ -30,6 +30,8 @@ techniques:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+{{ render_project_time_breakdown() }}
+
 Compact training fins, somewhat hard flex but with a small surface.
 
 ## Planning

@@ -31,6 +31,8 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+{{ render_technique_time_overview() }}
+
 ## Goal
 
 To attach rubber fin rails securely to carbon fiber blades using a strong composite adhesive.

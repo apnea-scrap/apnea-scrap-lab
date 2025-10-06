@@ -52,6 +52,8 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+{{ render_technique_time_overview() }}
+
 25° wooden base with acrylic sheets for laminating carbon fin blades.
 
 ## Goal

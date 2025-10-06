@@ -37,6 +37,8 @@ tools_required:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
+{{ render_technique_time_overview() }}
+
 ## Goal
 To enable vacuum bagging of larger parts by sealing a cut vacuum bag directly to the laminating base using butyl tape, while achieving a controlled and measurable vacuum level.
 

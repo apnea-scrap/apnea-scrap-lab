@@ -12,4 +12,7 @@ waiting_time: 12
 ---
 # Neck weight v2 — molded sleeve
 {{ status_banner() }}
+
+{{ render_project_time_breakdown() }}
+
 Encapsulated core, smooth finish, front quick‑release.
