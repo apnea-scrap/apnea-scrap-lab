@@ -1,5 +1,4 @@
-.status-banner,
-.status-badge {
+.status-banner {
     color: #fff;
     background: #555;
 }
@@ -11,17 +10,6 @@
     margin-bottom: 1em;
 }
 
-.status-badge {
-    display: inline-block;
-    padding: 4px 10px;
-    font: 500 12px/1.2 system-ui, sans-serif;
-    border-radius: 999px;
-    text-align: center;
-}
-
-.status-banner.status-proven,
-.status-badge.status-proven { background: #2e7d32; }
-.status-banner.status-concept,
-.status-badge.status-concept { background: #0277bd; }
-.status-banner.status-legacy,
-.status-badge.status-legacy { background: #cb0f0f; }
+.status-banner.status-proven { background: #2e7d32; }
+.status-banner.status-concept { background: #0277bd; }
+.status-banner.status-legacy { background: #cb0f0f; }
