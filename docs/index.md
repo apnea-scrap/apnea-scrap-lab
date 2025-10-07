@@ -17,7 +17,7 @@ hide:
       <div class="hero-shield__body">
         <h2>Carbon Short Fins</h2>
         <p class="hero-shield__price">Total cost: about £135 per pair</p>
-        <a class="hero-shield__link" href="projects/short-fins/v1/power-fin/">Build the V1 Power Fin-></a>
+        <a class="hero-shield__link" href="projects/short-fins/v1/power-fins/">Build the V1 Power Fin-></a>
       </div>
     </article>
 <!-- 
