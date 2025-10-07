@@ -269,6 +269,55 @@ def define_env(env):
 
         return resolved
 
+    STATUS_LABELS = {
+        "proven": "Proven",
+        "concept": "Concept",
+        "legacy": "Legacy",
+    }
+
+    def _render_status_label(status: str | None) -> str:
+        if not status:
+            return ""
+
+        status_text = str(status).strip()
+        if not status_text:
+            return ""
+
+        normalised = status_text.lower().replace(" ", "-")
+        display = STATUS_LABELS.get(normalised, status_text.title())
+        modifier = re.sub(r"[^a-z0-9-]", "-", normalised) or "default"
+        return (
+            f'<span class="versions-status versions-status--{modifier}">{display}</span>'
+        )
+
+    def _build_nav_metadata() -> dict[str, dict]:
+        entries: dict[str, dict] = {}
+        order = 0
+
+        def visit(items, parents: list[str]):
+            nonlocal order
+
+            for item in items:
+                if isinstance(item, dict):
+                    for title, value in item.items():
+                        if isinstance(value, str):
+                            key = str(Path(value)).replace("\\", "/")
+                            entries[key] = {
+                                "title": title,
+                                "parents": parents,
+                                "order": order,
+                            }
+                            order += 1
+                        elif isinstance(value, list):
+                            visit(value, parents + [title])
+                        else:
+                            visit([value], parents + [title])
+                elif isinstance(item, list):
+                    visit(item, parents)
+
+        visit(env.conf.get("nav", []), [])
+        return entries
+
     def _calculate_time_summary(meta_source: Path) -> dict:
         meta = read_meta(meta_source)
         implementation_meta = _coerce_decimal(meta.get("time_to_implement"))
@@ -813,33 +862,7 @@ def define_env(env):
     def versions_table(path: str | None = None) -> str:
         rel_dir = Path(path) if path else Path(env.page.file.src_path).parent
         base = docs_dir / rel_dir
-
-        def build_nav_lookup():
-            nav_lookup: dict[str, str] = {}
-
-            def visit(items):
-                for item in items:
-                    if isinstance(item, dict):
-                        for title, value in item.items():
-                            if isinstance(value, str):
-                                key = str(Path(value)).replace("\\", "/")
-                                nav_lookup[key] = title
-                            elif isinstance(value, list):
-                                visit(value)
-                            else:
-                                visit([value])
-                    elif isinstance(item, list):
-                        visit(item)
-
-            visit(env.conf.get("nav", []))
-            return nav_lookup
-
-        nav_titles = build_nav_lookup()
-        status_labels = {
-            "proven": "Proven",
-            "concept": "Concept",
-            "legacy": "Legacy",
-        }
+        nav_entries = _build_nav_metadata()
         rows = []
         for file in sorted(base.glob("**/*.md")):
             if file.name == "index.md":
@@ -848,7 +871,12 @@ def define_env(env):
             rel_path = file.relative_to(base)
             full_rel_path = rel_dir / rel_path
             nav_key = full_rel_path.as_posix()
-            link_text = nav_titles.get(nav_key, " ".join(rel_path.with_suffix("").parts).replace("-", " "))
+            nav_info = nav_entries.get(nav_key)
+            link_text = (
+                nav_info.get("title")
+                if nav_info
+                else " ".join(rel_path.with_suffix("").parts).replace("-", " ")
+            )
             link = f"[{link_text}]({rel_path.as_posix()})"
             bom_items = _bill_of_material_items(file)
             if not bom_items:
@@ -863,20 +891,7 @@ def define_env(env):
             summary = _calculate_time_summary(file)
             impl_display = _format_hours_display(summary.get("implementation"))
             wait_display = _format_hours_display(summary.get("waiting"))
-            status = meta.get("status", "")
-            if status:
-                normalized_status = status.strip().lower().replace(" ", "-")
-                status_text = status_labels.get(
-                    normalized_status, status.strip().title()
-                )
-                status_modifier = re.sub(r"[^a-z0-9-]", "-", normalized_status) or "default"
-                status_html = (
-                    f'<span class="versions-status versions-status--{status_modifier}">'
-                    f"{status_text}"
-                    "</span>"
-                )
-            else:
-                status_html = ""
+            status_html = _render_status_label(meta.get("status"))
 
             def format_cost(value):
                 if value is None:
@@ -981,6 +996,98 @@ def define_env(env):
             lines.append(
                 f"| {link} | {status} | {cost_consumable} | {cost_reusable} | {impl} | {wait} |"
             )
+        return "\n".join(lines)
+
+    @env.macro
+    def projects_versions_table(path: str | None = None) -> str:
+        rel_dir = Path(path) if path else Path(env.page.file.src_path).parent
+        base_dir = docs_dir / rel_dir
+
+        if not base_dir.exists():
+            return "No projects documented yet."
+
+        nav_entries = _build_nav_metadata()
+        project_rows: list[tuple[float, str, str]] = []
+
+        for project_dir in sorted(base_dir.iterdir()):
+            if not project_dir.is_dir() or project_dir.name.startswith("."):
+                continue
+
+            index_file = project_dir / "index.md"
+            if not index_file.exists():
+                continue
+
+            index_key = index_file.relative_to(docs_dir).as_posix()
+            nav_info = nav_entries.get(index_key)
+            parents = nav_info.get("parents") if nav_info else []
+
+            if nav_info and len(parents) >= 2:
+                project_title = parents[-1]
+            elif nav_info:
+                project_title = nav_info.get("title") or ""
+            else:
+                project_title = ""
+
+            if not project_title:
+                project_title = project_dir.stem.replace("-", " ").title()
+            else:
+                project_title = str(project_title).strip()
+
+            project_order = nav_info.get("order") if nav_info else float("inf")
+            if project_order is None:
+                project_order = float("inf")
+
+            version_entries: list[tuple[float, str]] = []
+
+            for version_file in sorted(project_dir.glob("**/*.md")):
+                if version_file.name == "index.md":
+                    continue
+
+                nav_key = version_file.relative_to(docs_dir).as_posix()
+                nav_version = nav_entries.get(nav_key)
+                version_order = nav_version.get("order") if nav_version else float("inf")
+                if version_order is None:
+                    version_order = float("inf")
+                if nav_version and nav_version.get("title"):
+                    version_title = str(nav_version.get("title"))
+                else:
+                    version_title = version_file.stem.replace("-", " ").title()
+
+                relative_link = version_file.relative_to(base_dir).as_posix()
+                link = f"[{version_title}]({relative_link})"
+
+                meta = read_meta(version_file)
+                version_label_raw = meta.get("version")
+                label_text = ""
+                if version_label_raw is not None:
+                    version_label_text = str(version_label_raw).strip()
+                    if version_label_text:
+                        label_text = f"**{escape(version_label_text)}** — "
+
+                status_html = _render_status_label(meta.get("status"))
+                version_text = f"{label_text}{link}".strip()
+                if status_html:
+                    version_text = f"{status_html} {version_text}".strip()
+
+                version_entries.append((version_order, version_text))
+
+            if version_entries:
+                version_entries.sort(key=lambda item: (item[0], item[1]))
+                versions_cell = "<br>".join(entry for _, entry in version_entries)
+            else:
+                versions_cell = "No versions documented yet."
+
+            project_rows.append((project_order, project_title, versions_cell))
+
+        if not project_rows:
+            return "No projects documented yet."
+
+        lines = ["| Project | Versions |", "| --- | --- |"]
+        for _, title, versions_cell in sorted(
+            project_rows, key=lambda row: (row[0], row[1].lower())
+        ):
+            lines.append(f"| {title} | {versions_cell} |")
+
         return "\n".join(lines)
 
     def _format_date(value: str | None) -> str | None:
