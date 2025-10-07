@@ -45,44 +45,44 @@ Target outline for each blade:
 - **Width:** 18 cm
 - **Total length:** 17 cm + 43 cm = 60 cm
     - 0–17 cm: inside the foot pocket (flat section)
-    - 17–25 cm: transition and bend within the rails
-    - 25–60 cm: free blade to the trailing edge
+    - 17–60 cm: free blade to the trailing edge
 
 #### Layer schedule (one blade)
 - Reserve 17 cm from the heel line for the bend zone.
 - Layer 1: 20 cm × 60 cm
-- Layer 2: 20 cm × 25 cm
+- Layer 2: 20 cm × 35 cm
 - Layer 3: 20 cm × 45 cm
 - Layer 4: 20 cm × 60 cm top ply
 
 
-| TODO                   | TODO |
-|------------------------|----------------------------------------------|
-| Expanded Laminate View | Laminate Thickness Profile                   |
+| ![Expanded Laminate View](expanded.svg) | ![Laminate Thickness Profile](thickness.svg) |
+|-----------------------------------------|----------------------------------------------|
+| Expanded Laminate View                  | Laminate Thickness Profile                   |
+
 
 #### Cutting plan
 
-|  | TODO |  |
-|--|-------------------------------------------------|--|
-|  | Cutting plan for one blade                      |  |
+|  | ![Cutting plan for both blades](cutting_plan.svg) |  |
+|--|---------------------------------------------------|--|
+|  | Cutting plan for both blades                      |  |
 
 ### Estimating the flex
 Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md) workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.
 
-| TODO | TODO |
+| ![Bending Calculation](bending_calculation.png) | ![Bending Profile](bending_profile.png) |
 |-------------------------------------------------|-----------------------------------------|
 | Bending Calculation                             | Bending Profile                         |
 
 
 Predicted:
 
-- Load required for 90° = 35.3 N (3.60 kg)
-- Hydrodynamic resistance score  5N = 2.71 units
-- Hydrodynamic resistance score 10N = 2.38 units
+- Load required for 90° = 9.7 N (0.99 kg)
+- Hydrodynamic resistance score  5N = 3.54 units
+- Hydrodynamic resistance score 10N = 2.17 units
 
 The predicted code for this fin would be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-C250-T35-R27-F03
+C430-T10-R35-F14
 ```
 
 ## Reference images
