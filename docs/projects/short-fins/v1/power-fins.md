@@ -43,7 +43,7 @@ Make sure your foot pockets are on hand before you start. If you still need to c
 Target outline for each blade:
 
 - **Width:** 18 cm
-- **Total length:** 40 cm
+- **Total length:** 15 cm + 25 cm = 40 cm
     - 0–15 cm: inside the foot pocket (flat section)
     - 15–23 cm: transition and bend within the rails
     - 23–40 cm: free blade to the trailing edge
@@ -119,7 +119,7 @@ C250-T35-R27-F03
 
 ### Desired vs Predicted vs Actual
 
-I've recorded the flex using the [Weight belt test](../../../techniques/measuring-flex/v1/weight-belt-test.md).
+I've recorded the flex using the [Kitchen Scale Test](../../../techniques/measuring-flex/v2/kitchen-scale-test.md).
 
 |                     | Desired  | Actual | Notes                                                                                          |
 |---------------------|----------|--------|------------------------------------------------------------------------------------------------|

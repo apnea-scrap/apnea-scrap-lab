@@ -18,15 +18,12 @@ bill_of_materials:
     quantity:
       amount: 1
       unit: 6 pack A3 sheet (2 mm)
-  - material: materials/stackable-plastic-wedges.md
-    name: Stackable plastic wedges
-    description: Adjustable supports for the angled foot pocket section
+  - name: Thick cardboard
+    description: Cardboard sheet used to form a base
     quantity:
-      amount: 1
-      unit: pack (18 wedges)
-    unit_cost:
-      amount: 7.00
-      currency: GBP
+       amount: 1
+       unit: sqm
+    unit_cost: Inexpensive
   - name: Protective plastic sheet
     description: Disposable sheet to protect the bench surface
     quantity:
@@ -81,11 +78,13 @@ Provide a modular surface with adjustable wedges to support blades during lamina
      - Press tape firmly to remove trapped air and keep surface flush.  
 
 4. **Add wedge supports**  
-     - Place plastic stackable wedges under the footpocket section.  
-     - Adjust wedge height to set the required angle (typically 20–30° for a monofin).
-     - Ensure wedges are stable and evenly distributed.  
+     - From cardboard, cut about 6 triangles angled at 28 degrees, long enough to support the footpocket section
+     - Join the supporting triangles with horizontal cardboard strips to keep them in place
+     - Place the cardboard wedge under the footpocket section and secure in place with a bit of tape  
+
 
 ## Benefits
+- Apart from the sheets, the materials are inexpensive
 - This version does not require a heavy wooden support structure, making it much easier and faster to put together.
 - Modular design — acrylic sheets and wedges can be stored flat and reused for different versions.
 
