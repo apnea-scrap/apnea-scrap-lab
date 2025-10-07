@@ -1,6 +1,6 @@
 ---
 status: active
-time_to_implement: 3
+time_to_implement: 1
 waiting_time: 0
 tools_required:
   - name: Wood saw
