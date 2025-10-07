@@ -84,6 +84,9 @@ nav:
       - Predicting Flex:
           - Predicting Flex Versions: techniques/predicting-flex/index.md
           - V1 - Tapered Cantilever Beam: techniques/predicting-flex/v1/tapered-cantilever-beam.md
+      - Encoding Fin Properties:
+          - Encoding Fin Properties Versions: techniques/encoding-fin-properties/index.md
+          - V1 - Hydrodynamic Resistance Codes: techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md
       - Measuring Vacuum:
           - Measuring Vacuum Versions: techniques/measuring-vacuum/index.md
           - V1 - Syringe Gauge: techniques/measuring-vacuum/v1/syringe-gauge.md
