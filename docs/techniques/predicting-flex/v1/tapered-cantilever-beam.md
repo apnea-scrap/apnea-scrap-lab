@@ -1,5 +1,5 @@
 ---
-status: research
+status: concept
 ---
 # {{ parent_child_title() }}
 {{ status_banner() }}

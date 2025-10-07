@@ -1,5 +1,5 @@
 ---
-status: active
+status: proven
 time_to_implement: 1
 waiting_time: 4
 tools_required:

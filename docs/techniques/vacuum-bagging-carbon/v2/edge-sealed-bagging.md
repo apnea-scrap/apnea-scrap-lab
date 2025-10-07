@@ -1,5 +1,5 @@
 ---
-status: research
+status: concept
 bill_of_materials:
   - material: materials/vacuum-bagging-kit.md
     description: Manual pump with heavy-duty storage bags for low-cost vacuum pulls

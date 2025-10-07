@@ -1,5 +1,5 @@
 ---
-status: active
+status: proven
 bill_of_materials:
   - material: materials/bifin-footpockets.md
     description: Pair of angled freediving pockets with short rails

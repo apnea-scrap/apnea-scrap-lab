@@ -19,9 +19,9 @@
     text-align: center;
 }
 
-.status-banner.status-active,
-.status-badge.status-active { background: #2e7d32; }
-.status-banner.status-research,
-.status-badge.status-research { background: #0277bd; }
-.status-banner.status-superseded,
-.status-badge.status-superseded { background: #cb0f0f; }
+.status-banner.status-proven,
+.status-badge.status-proven { background: #2ecc71; }
+.status-banner.status-concept,
+.status-badge.status-concept { background: #3498db; }
+.status-banner.status-legacy,
+.status-badge.status-legacy { background: #f39c12; }

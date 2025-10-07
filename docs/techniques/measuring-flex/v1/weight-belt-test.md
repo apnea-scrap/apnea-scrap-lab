@@ -1,5 +1,5 @@
 ---
-status: superseded
+status: legacy
 time_to_implement: 0.25
 waiting_time: 0
 tools_required:
