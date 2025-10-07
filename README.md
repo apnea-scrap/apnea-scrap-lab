@@ -139,6 +139,7 @@ Macros live in `main.py`.
 
 - `{{ yt("VIDEO_ID", "Title") }}` embeds a responsive privacy friendly YouTube iframe
 - `{{ versions_table() }}` builds a version comparison table for the current folder based on front matter metadata
+- `{{ projects_versions_table() }}` lists every project and its documented versions with status badges
 - `{{ status_banner() }}` shows a coloured banner with the current page status
 - `{{ render_tools_required() }}` outputs the front matter tools list as a table with optional links and notes;
   each tool entry must provide a `name` and `purpose`
