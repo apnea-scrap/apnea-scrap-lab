@@ -1,5 +1,5 @@
 ---
-status: research
+status: concept
 time_to_implement: 1
 waiting_time: 0
 tools_required:

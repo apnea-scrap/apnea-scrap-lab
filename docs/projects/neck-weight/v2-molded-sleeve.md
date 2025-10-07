@@ -1,7 +1,7 @@
 ---
 title: Neck weight v2 — molded sleeve
 version: v2
-status: active
+status: proven
 maturity: stable
 estimated_cost:
   - amount: 10

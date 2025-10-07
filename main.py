@@ -835,6 +835,16 @@ def define_env(env):
             return nav_lookup
 
         nav_titles = build_nav_lookup()
+        status_icons = {
+            "proven": "✅",
+            "concept": "🧪",
+            "legacy": "⏳",
+        }
+        status_labels = {
+            "proven": "Proven",
+            "concept": "Concept",
+            "legacy": "Legacy",
+        }
         rows = []
         for file in sorted(base.glob("**/*.md")):
             if file.name == "index.md":
@@ -860,9 +870,13 @@ def define_env(env):
             wait_display = _format_hours_display(summary.get("waiting"))
             status = meta.get("status", "")
             if status:
-                status_class = status.lower().replace(" ", "-")
-                status_text = status.title()
-                status_html = f'<span class="status-badge status-{status_class}">{status_text}</span>'
+                normalized_status = status.strip().lower().replace(" ", "-")
+                status_text = status_labels.get(
+                    normalized_status, status.strip().title()
+                )
+                icon = status_icons.get(normalized_status, "")
+                icon_prefix = f"{icon} " if icon else ""
+                status_html = f"{icon_prefix}{status_text}"
             else:
                 status_html = ""
 

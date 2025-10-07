@@ -1,5 +1,5 @@
 ---
-status: active
+status: proven
 bill_of_materials:
   - material: materials/vacuum-bagging-kit.md
     description: Heavy-duty storage bag plus compatible hand pump
