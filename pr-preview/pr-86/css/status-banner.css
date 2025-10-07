@@ -20,8 +20,8 @@
 }
 
 .status-banner.status-proven,
-.status-badge.status-proven { background: #2ecc71; }
+.status-badge.status-proven { background: #2e7d32; }
 .status-banner.status-concept,
-.status-badge.status-concept { background: #3498db; }
+.status-badge.status-concept { background: #0277bd; }
 .status-banner.status-legacy,
-.status-badge.status-legacy { background: #f39c12; }
+.status-badge.status-legacy { background: #cb0f0f; }
