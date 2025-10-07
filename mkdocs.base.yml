@@ -41,6 +41,7 @@ extra_css:
   - css/status-banner.css
   - css/bom-cost-label.css
   - css/hero-home.css
+  - css/versions-table.css
 
 nav:
   - Home: index.md

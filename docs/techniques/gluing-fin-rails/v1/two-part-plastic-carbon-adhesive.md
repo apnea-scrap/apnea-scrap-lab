@@ -80,3 +80,6 @@ The rails protect the blade edges, improve water flow, and extend the blade’s 
 
 ## Inspiration
 - [How to make carbon fibre fins at home (minute 10:00)](https://youtu.be/mB1JW75E_7k?si=SxF3T3McjTknNW6e&t=501)
+
+This forum thread about rails:
+https://spearfishing.world/thread/2440-fin-blade-rails-water-channeling-and-tendon-rails-explanation/

@@ -835,11 +835,6 @@ def define_env(env):
             return nav_lookup
 
         nav_titles = build_nav_lookup()
-        status_icons = {
-            "proven": "✅",
-            "concept": "🧪",
-            "legacy": "⏳",
-        }
         status_labels = {
             "proven": "Proven",
             "concept": "Concept",
@@ -874,9 +869,12 @@ def define_env(env):
                 status_text = status_labels.get(
                     normalized_status, status.strip().title()
                 )
-                icon = status_icons.get(normalized_status, "")
-                icon_prefix = f"{icon} " if icon else ""
-                status_html = f"{icon_prefix}{status_text}"
+                status_modifier = re.sub(r"[^a-z0-9-]", "-", normalized_status) or "default"
+                status_html = (
+                    f'<span class="versions-status versions-status--{status_modifier}">'
+                    f"{status_text}"
+                    "</span>"
+                )
             else:
                 status_html = ""
 
