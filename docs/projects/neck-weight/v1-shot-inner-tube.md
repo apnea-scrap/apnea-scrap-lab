@@ -1,7 +1,7 @@
 ---
 title: Neck weight v1 — shot in inner tube
 version: v1
-status: proven
+status: legacy
 maturity: stable
 estimated_cost:
   - amount: 10

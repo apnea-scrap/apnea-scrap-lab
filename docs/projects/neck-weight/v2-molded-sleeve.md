@@ -1,8 +1,7 @@
 ---
 title: Neck weight v2 — molded sleeve
 version: v2
-status: proven
-maturity: stable
+status: legacy
 estimated_cost:
   - amount: 10
     currency: GBP
