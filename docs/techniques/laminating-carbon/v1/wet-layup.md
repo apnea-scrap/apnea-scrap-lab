@@ -24,9 +24,9 @@ bill_of_materials:
       amount: 0.3
       unit: m² (1 m wide)
   - material: materials/laminating-epoxy-system.md
-    description: 200 g mixed resin (approx. 200 ml)
+    description: 150 g mixed resin (approx. 150 ml)
     quantity:
-      amount: 0.4
+      amount: 0.25
       unit: 500 ml kit
   - material: materials/pva-release-agent.md
     description: Two thin coats on the laminating base
