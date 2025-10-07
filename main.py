@@ -871,16 +871,12 @@ def define_env(env):
             status = meta.get("status", "")
             if status:
                 normalized_status = status.strip().lower().replace(" ", "-")
-                status_class = normalized_status
                 status_text = status_labels.get(
                     normalized_status, status.strip().title()
                 )
                 icon = status_icons.get(normalized_status, "")
                 icon_prefix = f"{icon} " if icon else ""
-                status_html = (
-                    f'{icon_prefix}<span class="status-badge status-{status_class}">' 
-                    f"{status_text}</span>"
-                )
+                status_html = f"{icon_prefix}{status_text}"
             else:
                 status_html = ""
 
