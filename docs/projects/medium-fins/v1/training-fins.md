@@ -51,10 +51,9 @@ Target outline for each blade:
 #### Layer schedule (one blade)
 - Reserve 17 cm from the heel line for the bend zone.
 - Layer 1: 20 cm × 60 cm
-- Layer 2: 20 cm × 50 cm
-- Layer 2: 20 cm × 40 cm
-- Layer 2: 20 cm × 30 cm
-- Layer 5: 20 cm × 60 cm top ply
+- Layer 2: 20 cm × 25 cm
+- Layer 3: 20 cm × 45 cm
+- Layer 4: 20 cm × 60 cm top ply
 
 
 | TODO                   | TODO |

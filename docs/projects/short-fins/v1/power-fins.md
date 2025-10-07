@@ -77,13 +77,13 @@ Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1
 
 Predicted:
 
-- Load required for 90° = 35.3 N (3.60 kg)
-- Hydrodynamic resistance score  5N = 2.71 units
-- Hydrodynamic resistance score 10N = 2.38 units
+- Load required for 90° = 42.4 N (4.32 kg)
+- Hydrodynamic resistance score  5N = 2.77 units
+- Hydrodynamic resistance score 10N = 2.51 units
 
 The predicted code for this fin would be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-C250-T35-R27-F03
+C250-T42-R27-F03
 ```
 
 ## Reference images
@@ -121,10 +121,10 @@ C250-T35-R27-F03
 
 I've recorded the flex using the [Kitchen Scale Test](../../../techniques/measuring-flex/v2/kitchen-scale-test.md).
 
-|                     | Desired  | Actual | Notes                                                                                          |
-|---------------------|----------|--------|------------------------------------------------------------------------------------------------|
-| Free blade size     | 250mm    | 230mm  | The footpocket side turned out bigger                                                          |
-| Load for 90 degrees | 3.6kg    | 5.0kg  | Shorter blade is much stiffer                                                                  |
+|                     | Desired | Predicted | Actual | Notes                                                                                          |
+|---------------------|---------|-----------|--------|------------------------------------------------------------------------------------------------|
+| Free blade size     | 250mm   | 230mm     | 230mm  | The footpocket side turned out bigger                                                          |
+| Load for 90 degrees | 4.2kg   | 5.3kg     | 5.0kg  | Shorter blade is much stiffer                                                                  |
 
 ### Water trial
 
