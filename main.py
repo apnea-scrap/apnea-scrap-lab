@@ -891,6 +891,15 @@ def define_env(env):
             summary = _calculate_time_summary(file)
             impl_display = _format_hours_display(summary.get("implementation"))
             wait_display = _format_hours_display(summary.get("waiting"))
+
+            def _normalise_time_display(value: str) -> str:
+                text = (value or "").strip()
+                if not text or text == "0 h":
+                    return "-"
+                return value
+
+            impl_display = _normalise_time_display(impl_display)
+            wait_display = _normalise_time_display(wait_display)
             status_html = _render_status_label(meta.get("status"))
 
             def format_cost(value):
