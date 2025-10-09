@@ -13,8 +13,8 @@ bill_of_materials:
     quantity:
       amount: 1
     unit_cost: Inexpensive
-  - name: Baloon
-    description: A simple baloon, small preferred
+  - name: Balloon
+    description: A simple balloon, small preferred
     quantity:
       amount: 1
     unit_cost: Inexpensive
@@ -59,9 +59,9 @@ Detect when we've hit 80% of atmospheric pressure.
 |--------------------------------------|----------------------------------------------|
 | Container with holes                 | Measure Displaced Volume                     |
 
-| ![Trapped Baloon at atmospheric pressure](bl_atm.jpeg) | ![Trapped Baloon at atmospheric pressure ](bl_vacuum.jpeg) |
+| ![Trapped Balloon at atmospheric pressure](bl_atm.jpeg) | ![Trapped Balloon at atmospheric pressure ](bl_vacuum.jpeg) |
 |--------------------------------------------------------|------------------------------------------------------------|
-| Trapped Baloon at atmospheric pressure                 | Trapped Baloon at 80% atmospheric pressure                 |
+| Trapped Balloon at atmospheric pressure                 | Trapped Balloon at 80% atmospheric pressure                 |
 
 ## Time needed
 

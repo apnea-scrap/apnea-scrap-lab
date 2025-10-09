@@ -53,7 +53,7 @@ To enable vacuum bagging of larger parts by sealing a cut vacuum bag directly to
 ## Tools Required
 {{ render_tools_required() }}
 
-See this page for how to make a DIY Vacuum Gauge: [Trapped Baloon Vacuum Gauge](../../measuring-vacuum/v2/trapped-baloon.md)
+See this page for how to make a DIY Vacuum Gauge: [Trapped Balloon Vacuum Gauge](../../measuring-vacuum/v2/trapped-balloon.md)
 
 ## Instructions (step-by-step)
 
