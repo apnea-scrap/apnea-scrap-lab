@@ -1,0 +1,41 @@
+<svg width="420" height="320" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="320" rx="32" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <path d="M210 68c56 0 102 42 102 94 0 26-12 50-34 66-24 18-54 26-68 26s-44-8-68-26c-22-16-34-40-34-66 0-52 46-94 102-94z" fill="url(#ring)"/>
+    <path d="M210 104c33 0 60 25 60 56 0 16-8 30-22 40-15 11-32 16-38 16s-23-5-38-16c-14-10-22-24-22-40 0-31 27-56 60-56z" fill="url(#inner)"/>
+    <path d="M210 132c16 0 30 12 30 28 0 8-4 15-10 20-7 5-14 8-20 8s-13-3-20-8c-6-5-10-12-10-20 0-16 14-28 30-28z" fill="#0E1632" opacity="0.35"/>
+    <path d="M210 68c-56 0-102 42-102 94 0 26 12 50 34 66 10 7 21 13 32 18-22-16-38-43-38-74 0-56 42-96 94-104z" fill="url(#shine)" opacity="0.65"/>
+    <path d="M270 44c10 0 20 6 24 16l14 32c5 12-5 24-18 24h-158c-13 0-23-12-18-24l14-32c4-10 14-16 24-16h118z" fill="url(#strap)"/>
+    <path d="M170 44c-12 0-22 8-26 18l-12 30c-4 10 4 22 16 22h24l10-70h-12z" fill="url(#strapHighlight)" opacity="0.5"/>
+    <rect x="186" y="36" width="48" height="24" rx="12" fill="#0E1632" opacity="0.6"/>
+  </g>
+  <defs>
+    <linearGradient id="bg" x1="60" y1="24" x2="360" y2="296" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#031122"/>
+      <stop offset="1" stop-color="#052646"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="122" y1="90" x2="298" y2="246" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFAF3D"/>
+      <stop offset="1" stop-color="#FF703D"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="150" y1="140" x2="270" y2="230" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD6A0"/>
+      <stop offset="1" stop-color="#FF9350"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="120" y1="84" x2="200" y2="206" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE4B8" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#FF9350" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="strap" x1="128" y1="44" x2="292" y2="132" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#323C6D"/>
+      <stop offset="1" stop-color="#1B2449"/>
+    </linearGradient>
+    <linearGradient id="strapHighlight" x1="144" y1="52" x2="204" y2="114" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6575A9"/>
+      <stop offset="1" stop-color="#1B2449" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="shadow" x="64" y="24" width="292" height="260" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#020914" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+</svg>
