@@ -57,11 +57,20 @@ nav:
           - Neck Weight Versions: projects/neck-weight/index.md
           - V2 - Molded Sleeve: projects/neck-weight/v2-molded-sleeve.md
           - V1 - Shot Inner Tube: projects/neck-weight/v1-shot-inner-tube.md
+      - Nose Clip:
+          - Nose Clip Versions: projects/nose-clip/index.md
+          - V1 - Bike Spoke: projects/nose-clip/v1/bike-spoke.md
       - (Future Gear): projects/future-gear/index.md
   - Techniques:
+      - Bending Steel Wire:
+          - Bending Steel Wire Versions: techniques/bending-steel-wire/index.md
+          - V1 - Pliers: techniques/bending-steel-wire/v1/pliers.md
       - Choosing Bi-fin Foot Pockets:
           - Choosing Bi-fin Foot Pockets Versions: techniques/choosing-bifin-footpockets/index.md
           - V1 - Short Rails: techniques/choosing-bifin-footpockets/v1/short-rails.md
+      - Coating Steel Wire:
+          - Coating Steel Wire Versions: techniques/coating-steel-wire/index.md
+          - V1 - Heat Shrink Tubing: techniques/coating-steel-wire/v1/heat-shrink-tubing.md
       - Creating Laminating Base:
           - Creating Laminating Base Versions: techniques/creating-laminating-base/index.md
           - V3 - Cardboard Support: techniques/creating-laminating-base/v3/cardboard-support.md
@@ -108,6 +117,7 @@ nav:
       - Carbon Fiber Fabric: materials/carbon-fiber-fabric.md
       - Clear Coat Spray: materials/clear-coat-spray.md
       - Laminating Epoxy System: materials/laminating-epoxy-system.md
+      - Liquid Electrical Tape: materials/liquid-electrical-tape.md
       - Marine Adhesive: materials/marine-adhesive.md
       - Materials Directory: materials/index.md
       - PVA Release Agent: materials/pva-release-agent.md
