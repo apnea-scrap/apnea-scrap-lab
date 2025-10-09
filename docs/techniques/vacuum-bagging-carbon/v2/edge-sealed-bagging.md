@@ -39,7 +39,7 @@ To enable vacuum bagging of larger parts by sealing a cut vacuum bag directly to
 
 ## Specifications / Dimensions
 - Suitable for medium to large parts (size limited only by base and bag film availability)
-- Target vacuum level: ~80% vacuum (-0.2 bar relative to atmosphere)
+- Target vacuum level: ~80% atmospheric pressure
 - Requires a rigid, smooth laminating base for edge sealing
 
 ## Time needed
