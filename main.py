@@ -792,7 +792,10 @@ def define_env(env):
         parts: list[str] = []
         for currency, low_total, high_total in totals:
             parts.append(_format_total_display(currency, low_total, high_total))
-        return "; ".join(part for part in parts if part)
+        filtered_parts = [part for part in parts if part]
+        if not filtered_parts:
+            return "-"
+        return "; ".join(filtered_parts)
 
     def _partition_cost_by_usage(value) -> dict[str, list]:
         categories: dict[str, list] = {"consumable": [], "reusable": []}
@@ -891,7 +894,22 @@ def define_env(env):
             summary = _calculate_time_summary(file)
             impl_display = _format_hours_display(summary.get("implementation"))
             wait_display = _format_hours_display(summary.get("waiting"))
+
+            def _normalise_time_display(value: str) -> str:
+                text = (value or "").strip()
+                if not text or text == "0 h":
+                    return "-"
+                return value
+
+            impl_display = _normalise_time_display(impl_display)
+            wait_display = _normalise_time_display(wait_display)
             status_html = _render_status_label(meta.get("status"))
+
+            def _normalise_cost_display(value: str) -> str:
+                text = (value or "").strip()
+                if not text or text in {"0", "0.0", "0.00"}:
+                    return "-"
+                return value
 
             def format_cost(value):
                 if value is None:
@@ -970,6 +988,8 @@ def define_env(env):
                 cost_reusable_display = format_cost(
                     partitioned_costs.get("reusable")
                 )
+            cost_consumable_display = _normalise_cost_display(cost_consumable_display)
+            cost_reusable_display = _normalise_cost_display(cost_reusable_display)
             rows.append(
                 (
                     nav_key,
