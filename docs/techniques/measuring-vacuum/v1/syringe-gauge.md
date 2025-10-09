@@ -1,6 +1,6 @@
 ---
-status: concept
-time_to_implement: 1
+status: legacy
+time_to_implement: 0.5
 waiting_time: 0
 tools_required:
   - name: Knife or scissors
@@ -93,4 +93,4 @@ Target positions relative to **start volume**:
 
 ## Limitations
 
-- The friction between the plunger and the barrel might affect precision
+- The friction between the plunger and the barrel limits the precision greatly

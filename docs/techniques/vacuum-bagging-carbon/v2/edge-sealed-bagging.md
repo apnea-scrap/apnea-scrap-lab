@@ -17,18 +17,15 @@ bill_of_materials:
       amount: 0.12
       unit: 5 m pack (1 m wide)
       display: 0.6 m (1 m wide)
-  - name: DIY Vacuum gauge
-    description: Inline gauge to monitor vacuum level
-    quantity:
-      amount: 1
-      unit: gauge
-    unit_cost: Inexpensive
+
 
 time_to_implement: 0.5
 waiting_time: 0
 tools_required:
   - name: Metal roller or rounded tool
     purpose: Press the butyl sealing tape firmly to the base
+  - name: DIY Vacuum gauge
+    purpose: Estimate when vacuum reaches 80% atmospheric pressure
   - name: Scissors
     purpose: Cut materials like fabric, film, or templates to size
   - name: Window cleaner
@@ -56,6 +53,8 @@ To enable vacuum bagging of larger parts by sealing a cut vacuum bag directly to
 ## Tools Required
 {{ render_tools_required() }}
 
+See this page for how to make a DIY Vacuum Gauge: [Trapped Baloon Vacuum Gauge](../../measuring-vacuum/v2/trapped-baloon.md)
+
 ## Instructions (step-by-step)
 
 1. Clean the laminating base edges thoroughly using a cloth and window cleaner to ensure the butyl tape adheres
@@ -65,7 +64,7 @@ To enable vacuum bagging of larger parts by sealing a cut vacuum bag directly to
 4. Lay the vacuum bag film over the base, pressing it firmly into the butyl tape to create an airtight seal.
 5. Ensure the vacuum valve is positioned away from critical laminate parts such as the free blade.
 6. Arrange breather cloth around the part to support airflow under the bag, and place an extra layer beneath the valve.
-7. Pump manually while monitoring the gauge, stopping once ~80% vacuum (-0.2 bar) is achieved.
+7. Pump manually while monitoring the gauge, stopping once ~80% atmospheric pressure (-0.2 bar) is achieved.
 8. Check for leaks by verifying the gauge holds steady for at least 10 minutes. If vacuum drops, inspect and reseal the
    edges as needed.
 
