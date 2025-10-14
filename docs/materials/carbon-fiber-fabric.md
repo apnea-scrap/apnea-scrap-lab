@@ -1,5 +1,4 @@
 ---
-title: Carbon Fiber Fabric
 material:
   costing:
     usage_type: consumable
@@ -14,7 +13,6 @@ material:
         currency: GBP
       notes: "200 g/m² 3K 2/2 twill, supplied off the roll"
 ---
-# Carbon Fiber Fabric
 
 ## Overview
 Carbon cloth forms the structural backbone of the blades. A 200–240 g/m² 3K twill or plain weave is flexible enough for

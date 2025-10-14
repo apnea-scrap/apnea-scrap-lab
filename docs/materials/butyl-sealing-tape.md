@@ -1,5 +1,4 @@
 ---
-title: Butyl Sealing Tape
 material:
   costing:
     usage_type: consumable
@@ -14,7 +13,6 @@ material:
         currency: GBP
       notes: "Butyl sealant tape used for sealing vacuum bags"
 ---
-# Butyl Sealing Tape
 
 ## Overview
 Tacky butyl sealant used to close vacuum bags. Sticks well to plastics and peel ply without leaving residue when removed

@@ -1,5 +1,4 @@
 ---
-title: Peel Ply
 material:
   costing:
     usage_type: consumable
@@ -14,8 +13,6 @@ material:
         currency: GBP
       notes: "Peel ply suitable for vacuum bagging of wet-lay laminates"
 ---
-# Peel Ply
-
 ## Overview
 Breathable nylon layer that wicks away excess resin and leaves a keyed surface for secondary bonding or finishing. Scoured
 peel ply releases cleanly from cured laminates.

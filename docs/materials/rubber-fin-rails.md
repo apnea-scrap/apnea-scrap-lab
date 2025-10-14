@@ -1,5 +1,4 @@
 ---
-title: Rubber Fin Rails
 material:
   costing:
     usage_type: consumable
@@ -23,8 +22,6 @@ material:
         currency: GBP
       notes: "Soft rubber rails suitable for 2 mm blade edges"
 ---
-# Rubber Fin Rails
-
 ## Overview
 Rubber side rails improve hydrodynamics and protect blade edges. Choose rails with an internal slot that matches the blade
 thickness after finishing.

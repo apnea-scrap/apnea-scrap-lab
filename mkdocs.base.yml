@@ -55,8 +55,7 @@ nav:
           - V1 - Training Fins: projects/medium-fins/v1/training-fins.md
       - Neck Weight:
           - Neck Weight Versions: projects/neck-weight/index.md
-          - V2 - Molded Sleeve: projects/neck-weight/v2-molded-sleeve.md
-          - V1 - Shot Inner Tube: projects/neck-weight/v1-shot-inner-tube.md
+          - V1 - Modular Lead Tube: projects/neck-weight/v1/modular-lead-tube.md
       - Nose Clip:
           - Nose Clip Versions: projects/nose-clip/index.md
           - V1 - Bike Spoke: projects/nose-clip/v1/bike-spoke.md
@@ -76,6 +75,12 @@ nav:
           - V3 - Cardboard Support: techniques/creating-laminating-base/v3/cardboard-support.md
           - V2 - Plastic Wedges: techniques/creating-laminating-base/v2/acrylic-wedges.md
           - V1 - Wood Support: techniques/creating-laminating-base/v1/wood-support.md
+      - Creating Modular Weights:
+          - Creating Modular Weights Versions: techniques/creating-modular-weights/index.md
+          - V1 - Hook Buckle Inner Tube: techniques/creating-modular-weights/v1/hook-buckle-inner-tube.md
+      - Creating Neck Collar:
+          - Creating Neck Collar Versions: techniques/creating-neck-collar/index.md
+          - V1 - Lead Tube: techniques/creating-neck-collar/v1/lead-tube.md
       - Cutting Cured Carbon:
           - Cutting Cured Carbon Versions: techniques/cutting-cured-carbon/index.md
           - V1 - Junior Hacksaw: techniques/cutting-cured-carbon/v1/junior-hacksaw.md
@@ -112,18 +117,22 @@ nav:
           - V1 - Enclosed Bagging: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
   - Materials:
       - Acrylic Sheet: materials/acrylic-sheet.md
-      - Breather Cloth: materials/breather-cloth.md
       - Bifin Foot Pockets: materials/bifin-footpockets.md
+      - Bike Inner Tube: materials/bike-inner-tube.md
+      - Breather Cloth: materials/breather-cloth.md
       - Butyl Sealing Tape: materials/butyl-sealing-tape.md
       - Carbon Fiber Fabric: materials/carbon-fiber-fabric.md
       - Clear Coat Spray: materials/clear-coat-spray.md
+      - Hook Buckle: materials/hook-buckle.md
       - Laminating Epoxy System: materials/laminating-epoxy-system.md
       - Liquid Electrical Tape: materials/liquid-electrical-tape.md
+      - Loose Lead: materials/loose-lead.md
       - Marine Adhesive: materials/marine-adhesive.md
       - Materials Directory: materials/index.md
       - PVA Release Agent: materials/pva-release-agent.md
       - Peel Ply: materials/peel-ply.md
       - Plastic-to-Carbon Adhesive: materials/plastic-to-carbon-adhesive.md
+      - Quick Release Buckle: materials/quick-release-buckle.md
       - Rubber Fin Rails: materials/rubber-fin-rails.md
       - Stackable Plastic Wedges: materials/stackable-plastic-wedges.md
       - Vacuum Bagging Kit: materials/vacuum-bagging-kit.md

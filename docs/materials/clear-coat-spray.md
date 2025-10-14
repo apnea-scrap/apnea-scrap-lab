@@ -1,5 +1,4 @@
 ---
-title: Clear Coat Spray
 material:
   costing:
     usage_type: consumable
@@ -14,7 +13,6 @@ material:
         currency: GBP
       notes: "Acrylic Spray Paint, Clear Lacquer"
 ---
-# Clear Coat Spray
 
 ## Overview
 Protective lacquer applied after sanding and polishing to seal exposed fibres and add gloss. 

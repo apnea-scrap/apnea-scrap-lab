@@ -1,5 +1,4 @@
 ---
-title: Marine Adhesive
 material:
   costing:
     usage_type: consumable
@@ -14,7 +13,6 @@ material:
         currency: GBP
       notes: "3M 5200 Marine Adhesive"
 ---
-# Marine Adhesive
 
 ## Overview
 

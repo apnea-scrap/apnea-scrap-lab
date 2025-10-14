@@ -1,5 +1,4 @@
 ---
-title: Breather Cloth
 material:
   costing:
     usage_type: consumable
@@ -14,7 +13,6 @@ material:
         currency: GBP
       notes: "Polyester breather felt, 140 g/m²"
 ---
-# Breather Cloth
 
 ## Overview
 Breather cloth spreads vacuum pressure evenly and channels air to the resin trap. Polyester felt is reusable for small

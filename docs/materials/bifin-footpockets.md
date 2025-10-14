@@ -1,5 +1,4 @@
 ---
-title: Bifin Foot Pockets
 material:
   costing:
     usage_type: reusable
@@ -32,7 +31,6 @@ material:
         currency: GBP
       notes: "Retail pricing for the Picasso Supreme"
 ---
-# Bifin Foot Pockets
 
 ## Overview
 Freediving foot pockets lock the blade angle, transfer load through the rails, and define comfort. Look for pockets with

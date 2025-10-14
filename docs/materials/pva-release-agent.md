@@ -1,5 +1,4 @@
 ---
-title: PVA Release Agent
 material:
   costing:
     usage_type: consumable
@@ -14,8 +13,6 @@ material:
         currency: GBP
       notes: "PVA is a traditional mould release agent"
 ---
-# PVA Release Agent
-
 ## Overview
 Polyvinyl alcohol release agent brushed onto laminating bases to prevent epoxy from sticking. Leaves a thin film that
 washes away with water after the cure.

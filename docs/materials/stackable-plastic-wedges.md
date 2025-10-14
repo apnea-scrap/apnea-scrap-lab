@@ -1,5 +1,4 @@
 ---
-title: Stackable Plastic Wedges
 material:
   costing:
     usage_type: reusable
@@ -14,8 +13,6 @@ material:
         currency: GBP
       notes: "Stackable plastic shims used to set angles on laminating bases"
 ---
-# Stackable Plastic Wedges
-
 ## Overview
 Interlocking plastic shims used to raise and angle the foot pocket section when building modular laminating bases. They are
 lightweight, quick to reposition, and resist epoxy drips so they can be reused.

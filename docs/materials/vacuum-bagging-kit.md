@@ -1,5 +1,4 @@
 ---
-title: Vacuum Bagging Kit
 material:
   costing:
     usage_type: reusable
@@ -14,8 +13,6 @@ material:
         currency: GBP
       notes: "Vacuum Compression Bags and Hand Pump, Jumbo, 6 pack"
 ---
-# Vacuum Bagging Kit
-
 ## Overview
 Budget-friendly bagging setup built from consumer-grade storage bags and a Status hand pump. Effective for small laminate
 trials where a full vacuum system would be overkill.

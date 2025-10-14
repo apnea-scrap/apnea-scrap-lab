@@ -1,5 +1,4 @@
 ---
-title: Plastic to Carbon Adhesive
 material:
   costing:
     usage_type: consumable
@@ -14,8 +13,6 @@ material:
         currency: GBP
       notes: "50139 J-B Weld PlasticBonder- Black"
 ---
-# Plastic to Carbon Adhesive
-
 ## Overview
 Two-part structural adhesive ideal for bonding plastic fin rails to cured carbon blades. J-B Weld PlasticBonder high peel and
 shear strength while remaining slightly flexible.

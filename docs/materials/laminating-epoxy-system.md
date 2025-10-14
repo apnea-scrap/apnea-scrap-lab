@@ -1,5 +1,4 @@
 ---
-title: Laminating Epoxy System
 material:
   costing:
     usage_type: consumable
@@ -14,7 +13,6 @@ material:
         currency: GBP
       notes: "EL2 resin with AT30 hardener, room-temperature cure"
 ---
-# Laminating Epoxy System
 
 ## Overview
 Two-part epoxy system for wet layups. EL2 resin with AT30 hardener delivers a manageable pot life and cures at room

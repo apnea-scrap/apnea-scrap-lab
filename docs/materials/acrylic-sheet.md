@@ -1,5 +1,4 @@
 ---
-title: Acrylic Sheet
 material:
   costing:
     usage_type: reusable
@@ -32,7 +31,6 @@ material:
         currency: GBP
       notes: "Clear cast acrylic cut to 210 x 297 mm for laminating bases"
 ---
-# Acrylic Sheet
 
 ## Overview
 Rigid, smooth base material for laminating setups. Cast acrylic is flat, resists acetone wipe-downs, and maintains

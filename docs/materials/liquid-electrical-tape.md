@@ -1,5 +1,4 @@
 ---
-title: Liquid Electrical Tape
 material:
   costing:
     usage_type: consumable
@@ -14,7 +13,6 @@ material:
         currency: GBP
       notes: "Liquid Insulating Rubber Coat"
 ---
-# Liquid Insulating Rubber Coat
 
 ## Overview
 
