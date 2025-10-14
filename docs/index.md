@@ -25,7 +25,7 @@ hide:
       <div class="hero-shield__body">
         <h2>Modular neck weight</h2>
         <p class="hero-shield__price">Total: about £60 for collar + module</p>
-        <a class="hero-shield__link" href="projects/neck-weight/index.md">Build your Modular Neck Weight </a>
+        <a class="hero-shield__link" href="projects/neck-weight/v1/modular-lead-tube">Build your Modular Neck Weight </a>
       </div>
     </article>
     <article class="hero-shield">
