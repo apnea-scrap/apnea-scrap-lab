@@ -16,7 +16,6 @@ summary: Snapshot of common long and short bifin blade lengths for travel vs. de
   training.
 links:
 - Short fins project: projects/short-fins/index.md
-- Future gear roadmap: projects/future-gear/index.md
 - Measuring flex technique: techniques/measuring-flex/index.md
 ---
 
