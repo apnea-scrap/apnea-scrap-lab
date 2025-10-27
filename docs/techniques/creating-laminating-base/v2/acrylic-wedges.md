@@ -55,6 +55,18 @@ Provide a modular surface with adjustable wedges to support blades during lamina
 - **Support requirement:** Must be placed on a **flat, rigid surface** such as a table or workbench  
 - **Protection:** Place a **plastic sheet** under the base to protect the table surface  
 
+## Reference Images
+
+| ![Stackable Wedges Pack](wedges_all.jpeg) | ![stacked_wedges.jpeg](stacked_wedges.jpeg) |
+|-------------------------------------------|---------------------------------------------|
+| Stackable Wedges Pack                     | Stacked Wedges                              |
+
+| ![Angled Base Desired Angle](angled_base_bottom.jpeg) | ![Stacked Wedges Support](stacked_wedges_final.jpeg) |
+|-------------------------------------------------------|------------------------------------------------------|
+| Angled Base Desired Angle                             | Stacked Wedges Support                                |
+
+
+
 ## Time needed
 
 {{ render_technique_time_overview() }}
@@ -73,16 +85,16 @@ Provide a modular surface with adjustable wedges to support blades during lamina
 
 2. **Arrange acrylic sheets**  
      - Flat blade section: 4 A3 sheets in a 2 × 2 layout (~59 × 84 cm).  
-     - Footpocket section: 2 A3 sheets side by side (~29.7 × 84 cm).  
+     - Footpocket section: 2 A4 sheets side by side - cut one A3 in half (~29.7 × 84 cm).  
 
 3. **Join sheets**  
      - Clean edges with isopropyl alcohol.  
-     - Bridge each joint with electrical tape, overlapping slightly (1–2 mm).  
+     - Bridge each joint with electrical tape
      - Press tape firmly to remove trapped air and keep surface flush.  
 
 4. **Add wedge supports**  
-     - Place plastic stackable wedges under the footpocket section.  
-     - Adjust wedge height to set the required angle (typically 20–30° for a monofin).
+     - Stick the wedged together using the double-sided tape until you achieve the target angle, typically 20–30°
+     - Place plastic stackable wedges under the footpocket section.
      - Ensure wedges are stable and evenly distributed.  
 
 ## Benefits
