@@ -1,6 +1,6 @@
 ---
-status: concept
-time_to_implement: 1
+status: legacy
+time_to_implement: 0.5
 waiting_time: 0
 tools_required:
   - name: Isopropyl alcohol
@@ -9,12 +9,12 @@ tools_required:
     purpose: Cut materials like fabric, film, or templates to size
   - name: Tape measure
     purpose: Check dimensions and spacing during setup
-  - name: Hand roller or squeegee
-    purpose: Press the tape firmly onto the acrylic for a flat seal
+  - name: Protractor
+    purpose: Measure angles
 bill_of_materials:
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A3, 2 mm)
-    description: Six panels for modular monofin base
+    description: Six panels for laminating base
     quantity:
       amount: 1
       unit: 6 pack A3 sheet (2 mm)
@@ -43,15 +43,12 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-This document describes how to build a modular acrylic base with wedge supports for laminating carbon fins.
-The example shown is for a **70 × 70 cm monofin**, but the same technique can be adapted for **bifins** or other blade sizes.
-
 ## Goal
 Provide a modular surface with adjustable wedges to support blades during lamination.
 
 ## Specifications / Dimensions
-- **Target working area (monofin example):** ~80 × 90 cm  
-- **Purpose:** Provides enough surface for a 70 × 70 cm monofin blade plus sealing margin  
+- **Target working area:** ~60 × 90 cm  
+- **Purpose:** Provides enough surface for a two long fins plus sealing margin  
 - **Support requirement:** Must be placed on a **flat, rigid surface** such as a table or workbench  
 - **Protection:** Place a **plastic sheet** under the base to protect the table surface  
 

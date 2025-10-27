@@ -45,4 +45,5 @@ transparency so you can spot trapped air or debris while assembling the layup.
 
 ## Related techniques
 - [Creating Laminating Base – V1 Wood Support](../techniques/creating-laminating-base/v1/wood-support.md)
-- [Creating Laminating Base – V2 Acrylic Wedges](../techniques/creating-laminating-base/v2/acrylic-wedges.md)
+- [Creating Laminating Base – V2 Plastic Wedges](../techniques/creating-laminating-base/v2/plastic-wedges.md)
+- [Creating Laminating Base – V3 Cardboard Support](../techniques/creating-laminating-base/v3/cardboard-support.md)

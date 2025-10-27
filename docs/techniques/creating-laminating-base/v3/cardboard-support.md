@@ -1,6 +1,6 @@
 ---
-status: concept
-time_to_implement: 1
+status: proven
+time_to_implement: 0.75
 waiting_time: 0
 tools_required:
   - name: Isopropyl alcohol
@@ -9,12 +9,12 @@ tools_required:
     purpose: Cut materials like fabric, film, or templates to size
   - name: Tape measure
     purpose: Check dimensions and spacing during setup
-  - name: Hand roller or squeegee
-    purpose: Press the tape firmly onto the acrylic for a flat seal
+  - name: Protractor
+    purpose: Measure angles
 bill_of_materials:
   - material: materials/acrylic-sheet.md
     name: Acrylic sheet (A3, 2 mm)
-    description: Six panels for modular monofin base
+    description: Six panels for laminating base
     quantity:
       amount: 1
       unit: 6 pack A3 sheet (2 mm)
@@ -40,17 +40,25 @@ bill_of_materials:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-This document describes how to build a modular acrylic base with wedge supports for laminating carbon fins.
-The example shown is for a **70 × 70 cm monofin**, but the same technique can be adapted for **bifins** or other blade sizes.
-
 ## Goal
 Provide a modular surface with adjustable wedges to support blades during lamination.
 
 ## Specifications / Dimensions
-- **Target working area (monofin example):** ~80 × 90 cm  
-- **Purpose:** Provides enough surface for a 70 × 70 cm monofin blade plus sealing margin  
+- **Target working area:** ~60 × 90 cm  
+- **Purpose:** Provides enough surface for a two long fins plus sealing margin  
 - **Support requirement:** Must be placed on a **flat, rigid surface** such as a table or workbench  
 - **Protection:** Place a **plastic sheet** under the base to protect the table surface  
+
+## Reference Images
+
+| ![Cardboard Wedges](carboard_wedges.png) | ![Cardboard Stabiliser](cardboard_stabiliser.png) |
+|------------------------------------------|---------------------------------------------------|
+| Cardboard Wedges                         | Cardboard Stabiliser                              |
+
+| ![Cardboard Stabiliser In Place](cardboard_stabiliser_in_place.png) | ![Cardboard Support Final](carboard_final.png) |
+|---------------------------------------------------------------------|------------------------------------------------|
+| Cardboard Stabiliser In Place                                       | Cardboard Support Final                        |
+
 
 ## Time needed
 
@@ -70,16 +78,16 @@ Provide a modular surface with adjustable wedges to support blades during lamina
 
 2. **Arrange acrylic sheets**  
      - Flat blade section: 4 A3 sheets in a 2 × 2 layout (~59 × 84 cm).  
-     - Footpocket section: 2 A3 sheets side by side (~29.7 × 84 cm).  
+     - Footpocket section: 2 A4 sheets side by side (cut one A3 sheet).  
 
 3. **Join sheets**  
      - Clean edges with isopropyl alcohol.  
-     - Bridge each joint with electrical tape, overlapping slightly (1–2 mm).  
+     - Bridge each joint with electrical tape
      - Press tape firmly to remove trapped air and keep surface flush.  
 
 4. **Add wedge supports**  
-     - From cardboard, cut about 6 triangles angled at 28 degrees, long enough to support the footpocket section
-     - Join the supporting triangles with horizontal cardboard strips to keep them in place
+     - From cardboard, cut about 12 triangles angled at 27 degrees, long enough to support the footpocket section
+     - Join the supporting triangles with a horizontal cardboard stabiliser strip to keep them in place
      - Place the cardboard wedge under the footpocket section and secure in place with a bit of tape  
 
 

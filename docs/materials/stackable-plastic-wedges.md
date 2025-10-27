@@ -25,4 +25,4 @@ lightweight, quick to reposition, and resist epoxy drips so they can be reused.
 - Stack wedges under the elevated area in opposing directions so the teeth interlock and prevent creep under load.
 
 ## Related techniques
-- [Creating Laminating Base – V2 Acrylic Wedges](../techniques/creating-laminating-base/v2/acrylic-wedges.md)
+- [Creating Laminating Base – V2 Plastic Wedges](../techniques/creating-laminating-base/v2/plastic-wedges.md)
