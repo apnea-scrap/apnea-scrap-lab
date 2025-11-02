@@ -91,6 +91,7 @@ Produce a basic carbon blade using a manual wet layup.
 1. Pour a small amount of the **PVA mold release agent** into a cup.
 2. Using a **brush**, apply the release agent **thinly and evenly** over the working surface or mold.
    - Tip: see this **[video at 2:00](https://youtu.be/neh6zDt7vD8?si=0ocFH4VtYBHPhHzH)** for guidance.
+3. Allow the PVA to dry fully (around 15mins) before you begin laminating.
 
 ---
 
