@@ -138,7 +138,9 @@ Use the `yt` macro defined in `main.py`.
 Macros live in `main.py`.
 
 - `{{ yt("VIDEO_ID", "Title") }}` embeds a responsive privacy friendly YouTube iframe
-- `{{ versions_table() }}` builds a version comparison table for the current folder based on front matter metadata
+- `{{ versions_table() }}` builds a version comparison table for the current folder based on front matter metadata; add a
+  `versions_table:` block in a version’s front matter to provide a `notes` field or highlight specific columns (for
+  example `highlights: { reusable_cost: pastel-green }`)
 - `{{ projects_versions_table() }}` lists every project and its documented versions with status badges
 - `{{ status_banner() }}` shows a coloured banner with the current page status
 - `{{ render_tools_required() }}` outputs the front matter tools list as a table with optional links and notes;

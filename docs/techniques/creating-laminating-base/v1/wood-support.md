@@ -2,6 +2,11 @@
 status: legacy
 time_to_implement: 1
 waiting_time: 0
+versions_table:
+  notes: >-
+    Timber framing and bracket hardware make this build costly and awkward to scale for larger blades.
+  highlights:
+    reusable_cost: pastel-red
 tools_required:
   - name: Wood saw
     purpose: Cut the laminating base supports to length

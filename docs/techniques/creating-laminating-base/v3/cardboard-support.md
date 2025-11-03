@@ -2,6 +2,11 @@
 status: proven
 time_to_implement: 0.75
 waiting_time: 0
+versions_table:
+  notes: >-
+    Inexpensive cardboard wedges and tape keep costs low while still reusing the acrylic sheets.
+  highlights:
+    reusable_cost: pastel-green
 tools_required:
   - name: Isopropyl alcohol
     purpose: Clean acrylic edges before applying tape

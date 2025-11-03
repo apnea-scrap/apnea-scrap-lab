@@ -867,6 +867,117 @@ def define_env(env):
         base = docs_dir / rel_dir
         nav_entries = _build_nav_metadata()
         rows = []
+        highlight_palette = {
+            "pastel-red": "#fde2e1",
+            "pastel-green": "#e6f4ea",
+            "pastel-yellow": "#fff4ce",
+            "pastel-blue": "#e3f2fd",
+        }
+
+        column_aliases = {
+            "version": "version",
+            "title": "version",
+            "status": "status",
+            "consumable": "consumable_cost",
+            "consumables": "consumable_cost",
+            "consumable_cost": "consumable_cost",
+            "reusable": "reusable_cost",
+            "reusable_cost": "reusable_cost",
+            "implementation": "implementation_time",
+            "implementation_time": "implementation_time",
+            "waiting": "waiting_time",
+            "wait": "waiting_time",
+            "waiting_time": "waiting_time",
+            "notes": "notes",
+            "note": "notes",
+        }
+
+        def _normalise_notes(value) -> str:
+            if value is None:
+                return ""
+            if isinstance(value, (list, tuple)):
+                parts = [str(item).strip() for item in value if str(item).strip()]
+                return "<br>".join(parts)
+            text = str(value).strip()
+            if not text:
+                return ""
+            if "\n" in text:
+                text = "<br>".join(part.strip() for part in text.splitlines() if part.strip())
+            return text
+
+        def _normalise_highlight_attrs(spec) -> dict[str, str]:
+            attrs: dict[str, str] = {}
+            if spec is None:
+                return attrs
+            if isinstance(spec, (int, float)):
+                spec = str(spec)
+
+            if isinstance(spec, str):
+                spec_text = spec.strip()
+                if not spec_text:
+                    return attrs
+                lookup = highlight_palette.get(spec_text.lower())
+                if lookup:
+                    attrs["style"] = f"background-color: {lookup};"
+                    return attrs
+                if re.match(r"^#([0-9a-f]{3}|[0-9a-f]{6})$", spec_text, re.IGNORECASE):
+                    attrs["style"] = f"background-color: {spec_text};"
+                    return attrs
+                lowered = spec_text.lower()
+                if lowered.startswith("style=") or lowered.startswith("class="):
+                    try:
+                        key, value = spec_text.split("=", 1)
+                        attrs[key.strip()] = value.strip().strip('"\'')
+                    except ValueError:
+                        return {}
+                    return {k: v for k, v in attrs.items() if v}
+                attrs["class"] = spec_text
+                return attrs
+
+            if isinstance(spec, dict):
+                style_bits: list[str] = []
+                background = spec.get("background") or spec.get("background_color")
+                if background:
+                    colour_value = highlight_palette.get(str(background).lower(), str(background))
+                    style_bits.append(f"background-color: {colour_value};")
+                color_value = spec.get("color") or spec.get("colour")
+                if color_value:
+                    style_bits.append(f"color: {color_value};")
+                if style_bits:
+                    attrs["style"] = " ".join(style_bits)
+                class_value = spec.get("class") or spec.get("classes")
+                if class_value:
+                    attrs["class"] = str(class_value).strip()
+                for key, value in spec.items():
+                    if key in {"background", "background_color", "color", "colour", "class", "classes"}:
+                        continue
+                    attrs[str(key)] = str(value)
+                return {k: v for k, v in attrs.items() if v}
+
+            return attrs
+
+        def _escape_table_cell(text: str) -> str:
+            return text.replace("|", "\\|")
+
+        def _apply_cell_attributes(value: str, attrs: dict[str, str]) -> str:
+            if not attrs:
+                return value
+            attr_parts: list[str] = []
+            style_value = attrs.get("style")
+            if style_value:
+                attr_parts.append(f'style="{style_value.strip()}"')
+            class_value = attrs.get("class")
+            if class_value:
+                attr_parts.append(f'class="{class_value.strip()}"')
+            for key, attr_value in attrs.items():
+                if key in {"style", "class"}:
+                    continue
+                attr_parts.append(f'{key}="{str(attr_value).strip()}"')
+            if not attr_parts:
+                return value
+            attrs_text = " ".join(attr_parts)
+            return f"{value} {{: {attrs_text} }}"
+
         for file in sorted(base.glob("**/*.md")):
             if file.name == "index.md":
                 continue
@@ -904,6 +1015,39 @@ def define_env(env):
             impl_display = _normalise_time_display(impl_display)
             wait_display = _normalise_time_display(wait_display)
             status_html = _render_status_label(meta.get("status"))
+
+            table_meta_raw = meta.get("versions_table")
+            table_meta = table_meta_raw if isinstance(table_meta_raw, dict) else {}
+
+            notes_source = None
+            if isinstance(table_meta_raw, str):
+                notes_source = table_meta_raw
+            elif isinstance(table_meta_raw, dict):
+                for key in ("notes", "note"):
+                    if table_meta_raw.get(key) is not None:
+                        notes_source = table_meta_raw.get(key)
+                        break
+            if notes_source is None:
+                for key in ("versions_table_notes", "versions_table_note", "version_notes"):
+                    if meta.get(key) is not None:
+                        notes_source = meta.get(key)
+                        break
+            notes_display = _normalise_notes(notes_source) if notes_source is not None else ""
+
+            highlight_raw = {}
+            if isinstance(table_meta, dict):
+                highlight_raw = table_meta.get("highlights") or table_meta.get("highlight") or {}
+            if not isinstance(highlight_raw, dict):
+                highlight_raw = {}
+
+            highlight_map: dict[str, dict[str, str]] = {}
+            for key, spec in highlight_raw.items():
+                canonical = column_aliases.get(str(key).lower())
+                if not canonical:
+                    continue
+                attrs = _normalise_highlight_attrs(spec)
+                if attrs:
+                    highlight_map[canonical] = attrs
 
             def _normalise_cost_display(value: str) -> str:
                 text = (value or "").strip()
@@ -991,30 +1135,66 @@ def define_env(env):
             cost_consumable_display = _normalise_cost_display(cost_consumable_display)
             cost_reusable_display = _normalise_cost_display(cost_reusable_display)
             rows.append(
-                (
-                    nav_key,
-                    link,
-                    status_html,
-                    cost_consumable_display,
-                    cost_reusable_display,
-                    impl_display,
-                    wait_display,
-                )
+                {
+                    "order_key": nav_key,
+                    "version": link,
+                    "status": status_html,
+                    "consumable_cost": cost_consumable_display,
+                    "reusable_cost": cost_reusable_display,
+                    "implementation_time": impl_display,
+                    "waiting_time": wait_display,
+                    "notes": notes_display,
+                    "highlights": highlight_map,
+                }
             )
 
         if not rows:
             return "No versions documented yet."
 
         header = (
-            "| Version | Status | Consumable Cost | Reusable Cost | Implementation Time | Waiting Time |"
+            "| Version | Status | Consumable Cost | Reusable Cost | Implementation Time | Waiting Time | Notes |"
         )
-        separator = "|---|---|---|---|---|---|"
+        separator = "|---|---|---|---|---|---|---|"
         lines = [header, separator]
-        for _, link, status, cost_consumable, cost_reusable, impl, wait in sorted(
-            rows, key=lambda row: row[0], reverse=True
-        ):
+        for row in sorted(rows, key=lambda item: item["order_key"], reverse=True):
+            highlights = row.get("highlights", {})
+            version_cell = _apply_cell_attributes(
+                row["version"], highlights.get("version", {})
+            )
+            status_cell = _apply_cell_attributes(
+                row["status"], highlights.get("status", {})
+            )
+            consumable_cell = _apply_cell_attributes(
+                row["consumable_cost"], highlights.get("consumable_cost", {})
+            )
+            reusable_cell = _apply_cell_attributes(
+                row["reusable_cost"], highlights.get("reusable_cost", {})
+            )
+            implementation_cell = _apply_cell_attributes(
+                row["implementation_time"], highlights.get("implementation_time", {})
+            )
+            waiting_cell = _apply_cell_attributes(
+                row["waiting_time"], highlights.get("waiting_time", {})
+            )
+            notes_value = row.get("notes", "")
+            notes_cell_text = _escape_table_cell(notes_value) if notes_value else "-"
+            notes_cell = _apply_cell_attributes(
+                notes_cell_text, highlights.get("notes", {})
+            )
             lines.append(
-                f"| {link} | {status} | {cost_consumable} | {cost_reusable} | {impl} | {wait} |"
+                "| "
+                + " | ".join(
+                    [
+                        version_cell,
+                        status_cell,
+                        consumable_cell,
+                        reusable_cell,
+                        implementation_cell,
+                        waiting_cell,
+                        notes_cell,
+                    ]
+                )
+                + " |"
             )
         return "\n".join(lines)
 
