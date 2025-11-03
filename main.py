@@ -1601,29 +1601,14 @@ def define_env(env):
         if not techniques:
             return ""
 
-        table_lines = [
-            "| Tool | Techniques | Purpose |",
-            "| --- | --- | --- |",
-        ]
-        empty_notes: list[str] = []
         grouped_tools: dict[str, dict[str, object]] = {}
 
         for technique in techniques:
             display_title = technique["title"]
-            note = technique.get("notes") or ""
             technique_path = technique["path"]
 
             tools = _tools_required(technique_path)
             if not tools:
-                if note:
-                    note_html = _format_table_cell(str(note))
-                    empty_notes.append(
-                        f"<p><strong>{escape(display_title)}:</strong> <em>{note_html}</em></p>"
-                    )
-                else:
-                    empty_notes.append(
-                        f"<p><strong>{escape(display_title)}:</strong> <em>No tools recorded yet.</em></p>"
-                    )
                 continue
 
             technique_label = _format_table_cell(str(display_title))
@@ -1673,6 +1658,11 @@ def define_env(env):
             for normalized_name in sorted(grouped_tools.keys())
         ]
 
+        table_lines = [
+            "| Tool | Techniques | Purpose |",
+            "| --- | --- | --- |",
+        ]
+
         for entry in grouped_entries:
             name_value = str(entry["name"])
             name_cell = _format_table_cell(name_value)
@@ -1680,7 +1670,7 @@ def define_env(env):
             if link_value:
                 href = escape(str(link_value), quote=True)
                 label = name_cell or escape(str(link_value))
-                name_cell = f"<a href=\"{href}\">{label}</a>"
+                name_cell = f'<a href="{href}">{label}</a>'
 
             techniques_cell = "<br>".join(entry["techniques"])
 
@@ -1712,11 +1702,7 @@ def define_env(env):
                 f"| {name_cell} | {techniques_cell} | {purpose_cell} |"
             )
 
-        extra_notes = "\n".join(empty_notes)
-        table_html = "\n".join(table_lines)
-        if extra_notes:
-            return f"{table_html}\n\n{extra_notes}".strip()
-        return table_html
+        return "\n".join(table_lines)
 
     @env.macro
     def render_technique_requirements_bill_of_materials(
