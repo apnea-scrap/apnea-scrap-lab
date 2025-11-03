@@ -1484,25 +1484,7 @@ def define_env(env):
             "| Technique | Material | Quantity | Unit Cost | Line Cost |",
             "| --- | --- | --- | --- | --- |",
         ]
-        (
-            aggregated_items,
-            populated_techniques,
-            empty_note_entries,
-        ) = _collect_project_requirement_items(techniques)
-
-        empty_notes: list[str] = []
-        for entry in empty_note_entries:
-            display_title = entry.get("title") or ""
-            note_value = entry.get("note")
-            if note_value:
-                note_html = _format_table_cell(str(note_value))
-                empty_notes.append(
-                    f"<p><strong>{escape(display_title)}:</strong> <em>{note_html}</em></p>"
-                )
-            else:
-                empty_notes.append(
-                    f"<p><strong>{escape(display_title)}:</strong> <em>No bill of materials recorded yet.</em></p>"
-                )
+        aggregated_items, populated_techniques, _ = _collect_project_requirement_items(techniques)
 
         for index, (technique, items) in enumerate(populated_techniques):
             display_title = technique["title"]
@@ -1611,9 +1593,7 @@ def define_env(env):
                 + " |"
             )
 
-        extra_notes = "\n".join(empty_notes)
-        table_html = "\n".join(table_lines)
-        return f"{table_html}\n\n{extra_notes}".strip()
+        return "\n".join(table_lines)
 
     def _render_technique_requirements_tools(meta_source: Path) -> str:
         techniques = _resolve_project_techniques(meta_source)
