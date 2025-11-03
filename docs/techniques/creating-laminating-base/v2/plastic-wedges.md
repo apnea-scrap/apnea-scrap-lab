@@ -2,6 +2,11 @@
 status: legacy
 time_to_implement: 0.5
 waiting_time: 0
+versions_table:
+   notes: >-
+      The stackable wedges are pretty expensive.
+   highlights:
+      reusable_cost: pastel-yellow
 tools_required:
   - name: Isopropyl alcohol
     purpose: Clean acrylic edges before applying tape
