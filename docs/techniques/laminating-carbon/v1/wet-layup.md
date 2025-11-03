@@ -1,6 +1,6 @@
 ---
 status: proven
-time_to_implement: 1
+time_to_implement: 1.5
 waiting_time: 12
 tools_required:
   - name: Gloves

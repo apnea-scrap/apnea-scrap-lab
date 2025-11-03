@@ -19,7 +19,7 @@ bill_of_materials:
       display: 0.6 m (1 m wide)
 
 
-time_to_implement: 0.5
+time_to_implement: 0.75
 waiting_time: 0
 tools_required:
   - name: Metal roller or rounded tool
