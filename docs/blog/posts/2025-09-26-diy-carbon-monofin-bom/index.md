@@ -110,6 +110,7 @@ Most high-end monofins use **reinforcement structures**:
 - [Cetma Taras monofin breakdown](https://apneapassion.com/equipment/dossier-and-xrays/cetma-taras-freediving-monofin/)
 - [Oceaner carbon monofin layering](https://www.monofinshop.com/wp-content/uploads/2022/07/Oceaner-3-scaled.jpg)
 - [Bluewater Freediving internal ribs example](https://www.bluewaterfreediving.com/wp-content/uploads/2024/02/monofin__45463_zoom.jpg)
+- [How to make carbon fibre fins at home (video walkthrough)](https://www.youtube.com/watch?app=desktop&v=8n-ved-DRr4)
 
 ---
 
