@@ -57,6 +57,10 @@ Adding small beads of CA after seating the rails should change how each primary 
 | **Tire Glue** | Better peel resistance and smoother stress distribution | **7.5 /10** |
 | **3M 5200** | Slightly faster handling during cure | **3 /10** |
 
+## Inspiration
+
+- [How to make carbon fibre fins at home (video walkthrough)](https://www.youtube.com/watch?app=desktop&v=8n-ved-DRr4)
+
 ## Takeaways
 
 - **SC-2000 + CA** should land closest to factory rails, though the setup will still be messy and slow.
