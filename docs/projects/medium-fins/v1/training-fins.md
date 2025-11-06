@@ -76,24 +76,37 @@ Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1
 
 Predicted:
 
-- Load required for 90° = 9.7 N (0.99 kg)
-- Hydrodynamic resistance score  5N = 3.54 units
-- Hydrodynamic resistance score 10N = 2.17 units
+- Load required for 90° = 10.4 N (1.06 kg)
+- Hydrodynamic resistance score  5N = 3.41 units
+- Hydrodynamic resistance score 10N = 2.16 units
 
 The predicted code for this fin would be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-C430-T10-R35-F14
+C430-T10-R34-F13
 ```
 
 ## Reference images
 
-| TODO |TODO |
-|-------------------------------------|-------------------------------------------|
-| Footpockets                         | Cured Laminate                       |
+| ![Base Preparation and Seall](mf_base_seal.jpeg) | ![Base Ready](mf_base_ready.jpeg)   |
+|--------------------------------------------------|-------------------------------------|
+| Base Preparation and Seal                        | Base Ready                          |
 
-| TODO | TODO |
-|---------------------------------|-------------------------------|
-| Complete fins                   | Nice and compact              |
+| ![Carbon Cloth](mf_carbon_sheet.jpeg) | ![Carbon Layers](mf_carbon_cutouts.jpeg) |
+|---------------------------------------|------------------------------------------|
+| Carbon Cloth                          | Carbon Layers                            |
+
+| ![Wet Carbon Laminate](mf_wet_laminate.jpeg) | ![Cured Carbon Laminate](mf_cured_laminate.jpeg) |
+|----------------------------------------------|--------------------------------------------------|
+| Wet Carbon Laminate                          | Cured Carbon Laminate                            |
+
+| ![Cut Carbon To Shape](mf_prep_the_cut.jpeg) | ![Glued Rails](mf_glued_rails.jpeg) |
+|----------------------------------------------|-------------------------------------|
+| Cut Carbon To Shape                          | Glued Rails                         |
+
+| ![Footpockets](mf_footpockets.jpeg) | ![Complete fins](mf_complete_fins.jpeg)          |
+|-------------------------------------|---------------|
+| Footpockets                         | Complete fins |
+
 
 
 ## Time needed
@@ -120,30 +133,29 @@ C430-T10-R35-F14
 
 I've recorded the flex using the [Kitchen Scale Test](../../../techniques/measuring-flex/v2/kitchen-scale-test.md).
 
-|                     | Desired  | Actual | Notes                                                                                          |
-|---------------------|----------|--------|------------------------------------------------------------------------------------------------|
-| Free blade size     | TODO    | TODO   |                                                           |
-| Load for 90 degrees | TODO    | TODO  |       |
+|                     | Desired | Actual | Notes                                         |
+|---------------------|---------|--------|-----------------------------------------------|
+| Free blade size     | 430mm   | 410mm  | Ok                                            |
+| Blade width         | 180mm   | 190mm  | Ok                                            |
+| Load for 90 degrees | 1.1kg   | 1.4kg  | Smaller blade and maybe the rails add tension |
 
 ### Water trial
 
-Overall the fins performed pretty well but favour a particular style of kicking:
+Overall the fins performed pretty well:
+- feels good with hip-driven movements
+- feels heavier (expected) than the Power Fins but lighter (expected) than full-length carbon blades
+- the blade felt soft in the water, the fin was bending gradually with the kick
 
-- feels lighter than Cressi Clio 
-- slightly heavier than swim training fins 
-- sprinting feels good as that engages the blade properly
-- feels too light (low surface area) for slow, hip-driven movements
-
-|                     | Desired    | Actual |
-|---------------------|------------|--------|
-| Hydro resistance    | ~2.7 units | 2?     |
+|                     | Desired    | Actual     | Notes             |
+|---------------------|------------|------------|-------------------|
+| Hydro resistance    | ~3.4 units | ~3.4 units | feels about right |
 
 Plugging the numbers into the [Flex calculator](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md), I get the following numbers:
 
-- Hydrodynamic resistance score  5N = 2.54 units
-- Hydrodynamic resistance score 10N = 2.30 units
+- Hydrodynamic resistance score  5N = 3.66 units
+- Hydrodynamic resistance score 10N = 2.32 units
 
 Judging from the above, the code for this turned out to be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-C230-T50-R25-F02
+C410-T14-R36-F13
 ```

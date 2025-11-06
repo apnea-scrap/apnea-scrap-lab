@@ -77,13 +77,13 @@ Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1
 
 Predicted:
 
-- Load required for 90° = 42.4 N (4.32 kg)
-- Hydrodynamic resistance score  5N = 2.77 units
-- Hydrodynamic resistance score 10N = 2.51 units
+- Load required for 90° = 40.6 N (4.14 kg)
+- Hydrodynamic resistance score  5N = 2.76 units
+- Hydrodynamic resistance score 10N = 2.49 units
 
 The predicted code for this fin would be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-C250-T42-R27-F03
+C250-T41-R27-F03
 ```
 
 ## Reference images
@@ -137,9 +137,9 @@ Overall the fins performed pretty well but favour a particular style of kicking:
 - sprinting feels good as that engages the blade properly
 - feels too light (low surface area) for slow, hip-driven movements
 
-|                     | Desired    | Actual |
-|---------------------|------------|--------|
-| Hydro resistance    | ~2.7 units | 2?     |
+|                     | Desired    | Actual     |
+|---------------------|------------|------------|
+| Hydro resistance    | ~2.7 units | ~2.0 units |
 
 Plugging the numbers into the [Flex calculator](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md), I get the following numbers:
 
