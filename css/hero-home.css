@@ -99,7 +99,7 @@
 .hero-shield__body {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.6rem;
   text-align: center;
   width: 100%;
 }
@@ -112,14 +112,28 @@
 
 .hero-shield__cta {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: clamp(0.75rem, 1vw, 1.25rem);
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 100%;
   border-top: 1px solid rgba(46, 75, 166, 0.12);
   padding-top: 0.9rem;
   margin-top: 0.35rem;
+}
+
+.hero-shield__price {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: rgba(17, 24, 39, 0.78);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  flex: 1 1 auto;
+}
+
+.hero-shield__price--placeholder {
+  color: rgba(17, 24, 39, 0.55);
+  font-style: italic;
 }
 
 .hero-shield__button,
@@ -152,15 +166,18 @@
   box-shadow: 0 12px 26px rgba(32, 59, 130, 0.3);
 }
 
-.hero-shield__price {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: rgba(17, 24, 39, 0.75);
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  flex: 1 1 auto;
-  min-width: max-content;
-  text-transform: none;
+.hero-shield__button--disabled,
+.hero-shield__button--disabled span {
+  color: #4b5563;
+}
+
+.hero-shield__button--disabled {
+  background: #e5e7eb;
+  border-color: rgba(107, 114, 128, 0.35);
+  box-shadow: none;
+  transform: none;
+  cursor: default;
+  pointer-events: none;
 }
 
 .hero-link-arrow {
@@ -241,6 +258,12 @@
   100% {
     transform: translateY(-4px);
     opacity: 0.4;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-shields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
