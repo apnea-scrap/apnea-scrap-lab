@@ -101,6 +101,7 @@
   flex-direction: column;
   gap: 0.65rem;
   text-align: center;
+  width: 100%;
 }
 
 .hero-shield__body h2 {
@@ -111,11 +112,14 @@
 
 .hero-shield__cta {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: clamp(0.75rem, 1vw, 1.25rem);
   flex-wrap: nowrap;
   width: 100%;
+  border-top: 1px solid rgba(46, 75, 166, 0.12);
+  padding-top: 0.9rem;
+  margin-top: 0.35rem;
 }
 
 .hero-shield__button,
@@ -149,13 +153,14 @@
 }
 
 .hero-shield__price {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  color: #4a4a4a;
+  color: rgba(17, 24, 39, 0.75);
   letter-spacing: 0.01em;
   white-space: nowrap;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   min-width: max-content;
+  text-transform: none;
 }
 
 .hero-link-arrow {
@@ -278,10 +283,5 @@
 
   .hero-shield {
     border-radius: 22px;
-  }
-
-  .hero-shield__cta {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
