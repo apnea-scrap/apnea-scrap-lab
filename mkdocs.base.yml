@@ -41,6 +41,7 @@ extra_css:
   - css/status-banner.css
   - css/bom-cost-label.css
   - css/hero-home.css
+  - css/modern-refresh.css
   - css/versions-table.css
 
 nav:
@@ -155,6 +156,7 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - js/scroll-animations.js
 
 plugins:
   - search
