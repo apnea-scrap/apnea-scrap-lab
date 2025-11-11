@@ -1,3 +1,3 @@
-# Short fins — compare versions
+# Medium fins — compare versions
 
 {{ versions_table() }}

@@ -1,5 +1,5 @@
 ---
-status: concept
+status: proven
 techniques:
   - title: Foot pockets
     focus: Choosing the foot pockets
