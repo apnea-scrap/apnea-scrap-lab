@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="css/hero-home.css">
     
+      <link rel="stylesheet" href="css/modern-refresh.css">
+    
       <link rel="stylesheet" href="css/versions-table.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -3639,13 +3641,13 @@
 
 
 <div class="hero-home">
-  <section class="hero-intro">
+  <section class="hero-intro" data-animate="fade-up">
     <h1>DIY Freediving Gear</h1>
     <p class="hero-subtitle">For the makers beneath the surface</p>
   </section>
 
   <section class="hero-shields" aria-label="Featured projects">
-    <article class="hero-shield">
+    <article class="hero-shield" data-animate="fade-up">
       <img src="assets/hero/short-fins.png" alt="Illustration of the compress short fins project" loading="lazy" />
       <div class="hero-shield__body">
         <h2>Carbon Power Fins</h2>
@@ -3658,7 +3660,7 @@
         </div>
       </div>
     </article>
-    <article class="hero-shield">
+    <article class="hero-shield" data-animate="fade-up">
       <img src="assets/hero/neck-weight.png" alt="Illustration of the modular neck weight" loading="lazy" />
       <div class="hero-shield__body">
         <h2>Modular Neck Weight</h2>
@@ -3671,7 +3673,7 @@
         </div>
       </div>
     </article>
-    <article class="hero-shield">
+    <article class="hero-shield" data-animate="fade-up">
       <img src="assets/hero/nose-clip.png" alt="Illustration of the low-profile nose clip" loading="lazy" />
       <div class="hero-shield__body">
         <h2>Strong-Grip Nose Clip</h2>
@@ -3686,13 +3688,15 @@
     </article>
   </section>
 
-  <section class="hero-projects-cta">
+  <section class="hero-projects-cta" data-animate="fade-up">
     <p>Ready for more? Dive into every iteration we have documented so far</p>
     <a class="hero-projects-cta__link" href="projects/">
       <span>Browse all projects</span>
       <span class="hero-link-arrow" aria-hidden="true">→</span>
     </a>
   </section>
+
+  <div class="hero-scroll-cue" data-animate="fade-up" aria-hidden="true"></div>
 </div>
 
 
@@ -3731,6 +3735,10 @@
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer__cta">
+        <p class="md-footer__cta-text">Ready for the next build?</p>
+        <a class="md-footer__cta-link" href="projects/">Explore more builds &rarr;</a>
+      </div>
       <div class="md-copyright">
   
   
@@ -3775,6 +3783,8 @@
         <script src="javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="js/scroll-animations.js"></script>
       
     
   </body>
