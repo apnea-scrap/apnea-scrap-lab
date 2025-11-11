@@ -17,11 +17,11 @@ hide:
       <div class="hero-shield__body">
         <h2>Carbon Power Fins</h2>
         <div class="hero-shield__cta">
+          <span class="hero-shield__price">from £135 / pair</span>
           <a class="hero-shield__button" href="projects/short-fins/v1/power-fins/" aria-label="Build the Carbon Power Fins project">
             <span>Build</span>
             <span class="hero-link-arrow" aria-hidden="true">→</span>
           </a>
-          <span class="hero-shield__price">~£135 per pair</span>
         </div>
       </div>
     </article>
@@ -30,11 +30,11 @@ hide:
       <div class="hero-shield__body">
         <h2>Modular Neck Weight</h2>
         <div class="hero-shield__cta">
+          <span class="hero-shield__price">from £60 / set</span>
           <a class="hero-shield__button" href="projects/neck-weight/v1/modular-lead-tube" aria-label="Build the Modular Neck Weight project">
             <span>Build</span>
             <span class="hero-link-arrow" aria-hidden="true">→</span>
           </a>
-          <span class="hero-shield__price">~£60 collar + modules</span>
         </div>
       </div>
     </article>
@@ -43,11 +43,11 @@ hide:
       <div class="hero-shield__body">
         <h2>Strong-Grip Nose Clip</h2>
         <div class="hero-shield__cta">
+          <span class="hero-shield__price">from £3 / clip</span>
           <a class="hero-shield__button" href="projects/nose-clip/v1/bike-spoke/" aria-label="Build the Strong-Grip Nose Clip project">
             <span>Build</span>
             <span class="hero-link-arrow" aria-hidden="true">→</span>
           </a>
-          <span class="hero-shield__price">~£3 per clip</span>
         </div>
       </div>
     </article>
