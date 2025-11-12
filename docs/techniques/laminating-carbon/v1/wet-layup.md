@@ -46,7 +46,7 @@ bill_of_materials:
       amount: 1
       unit: pack
     unit_cost:
-      amount: 3.50
+      amount: 1.00
       currency: GBP
 ---
 # {{ parent_child_title() }}

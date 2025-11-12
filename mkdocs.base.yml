@@ -54,6 +54,9 @@ nav:
       - Medium Fins:
           - Medium Fins Versions: projects/medium-fins/index.md
           - V1 - Training Fins: projects/medium-fins/v1/training-fins.md
+      - Long Fins:
+          - Long Fins Versions: projects/long-fins/index.md
+          - V1 - Competition Fins: projects/long-fins/v1/competition-fins.md
       - Neck Weight:
           - Neck Weight Versions: projects/neck-weight/index.md
           - V1 - Modular Lead Tube: projects/neck-weight/v1/modular-lead-tube.md
