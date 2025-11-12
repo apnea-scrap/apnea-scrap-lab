@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1000"
+   height="800"
+   viewBox="0 0 1000 800"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="cutting_plan_black.svg"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.47552911"
+     inkscape:cx="400.60639"
+     inkscape:cy="642.44226"
+     inkscape:window-width="1440"
+     inkscape:window-height="870"
+     inkscape:window-x="0"
+     inkscape:window-y="34"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="cutting-plan" />
+  <g
+     transform="matrix(0,1,1,0,0,0)"
+     id="g13">
+    <g
+       id="cutting-plan">
+      <g
+         inkscape:groupmode="layer"
+         id="layer2"
+         inkscape:label="g2x"
+         style="display:inline">
+        <path
+           d="m 799.13035,196.29061 -2.5954,1.7341 -3.0615,0.609 h -612 H 9.4734514 l -3.0615,-0.609 -2.5954,-1.7341 -1.7341,-2.5954 -0.609,-3.0615 V 6.6337052 l 0.609,-3.0615 1.7341,-2.59540005 z"
+           fill="#d2c589"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L2"
+           data-role="layer"
+           id="path1-2"
+           sodipodi:nodetypes="ccccccccccccc" />
+      </g>
+      <g
+         data-layer="L2"
+         id="g2"
+         style="display:inline">
+        <path
+           d="m 180,0 h 612 l 3.0615,0.609 2.5954,1.7341 1.7341,2.5954 L 800,8 v 184 l -0.609,3.0615 -1.7341,2.5954 L 2.3431,2.3431 4.9385,0.609 8,0 Z"
+           fill="#d2c589"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L2"
+           data-role="layer"
+           id="path1"
+           sodipodi:nodetypes="ccccccccccccc" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g1">
+          <text
+             x="100"
+             y="400"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24px"
+             fill="#1a1a1a"
+             id="text1">L2</text>
+        </g>
+      </g>
+      <g
+         inkscape:groupmode="layer"
+         id="layer1"
+         inkscape:label="g4x"
+         style="display:inline">
+        <path
+           d="m 180.0607,199.2449 h 612 l 3.0615,0.609 2.5954,1.7341 1.7341,2.5954 0.609,3.0615 v 184 l -0.609,3.0615 -1.7341,2.5954 L 2.4037965,201.588 l 2.5954,-1.7341 3.0615,-0.609 z"
+           fill="#d2c589"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L2"
+           data-role="layer"
+           id="path2-2"
+           sodipodi:nodetypes="ccccccccccccc" />
+      </g>
+      <g
+         transform="translate(0,200)"
+         data-layer="L2 #2"
+         id="g4"
+         style="display:inline">
+        <path
+           d="M 797.6569,197.6569 795.0615,199.391 792,200 H 180 8 L 4.9385,199.391 2.3431,197.6569 0.609,195.0615 0,192 V 8 L 0.609,4.9385 2.3431,2.3431 Z"
+           fill="#d2c589"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L2"
+           data-role="layer"
+           id="path2"
+           sodipodi:nodetypes="ccccccccccccc" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g3">
+          <text
+             x="100"
+             y="400"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24px"
+             fill="#1a1a1a"
+             id="text2">L2 #2</text>
+        </g>
+      </g>
+      <g
+         transform="translate(0, 400)"
+         data-layer="L3"
+         id="g6">
+        <path
+           d="M180,0 L592,0 L595.0615,0.609 L597.6569,2.3431 L599.391,4.9385 L600,8 L600,192 L599.391,195.0615 L597.6569,197.6569 L595.0615,199.391 L592,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#e3e5e5"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L3"
+           data-role="layer"
+           id="path4" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g5">
+          <text
+             x="100"
+             y="300"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24"
+             fill="#1a1a1a"
+             id="text4">L3</text>
+        </g>
+      </g>
+      <g
+         transform="translate(0, 600)"
+         data-layer="L3 #2"
+         id="g8">
+        <path
+           d="M180,0 L592,0 L595.0615,0.609 L597.6569,2.3431 L599.391,4.9385 L600,8 L600,192 L599.391,195.0615 L597.6569,197.6569 L595.0615,199.391 L592,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#e3e5e5"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L3"
+           data-role="layer"
+           id="path6" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g7">
+          <text
+             x="100"
+             y="300"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24"
+             fill="#1a1a1a"
+             id="text6">L3 #2</text>
+        </g>
+      </g>
+      <g
+         transform="translate(0, 800)"
+         data-layer="L4"
+         id="g10">
+        <path
+           d="M180,0 L392,0 L395.0615,0.609 L397.6569,2.3431 L399.391,4.9385 L400,8 L400,192 L399.391,195.0615 L397.6569,197.6569 L395.0615,199.391 L392,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#84d6f4"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L4"
+           data-role="layer"
+           id="path8" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g9">
+          <text
+             x="100"
+             y="200"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24"
+             fill="#1a1a1a"
+             id="text8">L4</text>
+        </g>
+      </g>
+      <g
+         transform="translate(400, 800)"
+         data-layer="L4 #2"
+         id="g12">
+        <path
+           d="M180,0 L392,0 L395.0615,0.609 L397.6569,2.3431 L399.391,4.9385 L400,8 L400,192 L399.391,195.0615 L397.6569,197.6569 L395.0615,199.391 L392,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#84d6f4"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L4"
+           data-role="layer"
+           id="path10" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g11">
+          <text
+             x="100"
+             y="200"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24"
+             fill="#1a1a1a"
+             id="text10">L4 #2</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
