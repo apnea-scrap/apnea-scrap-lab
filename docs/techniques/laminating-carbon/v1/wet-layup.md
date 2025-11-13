@@ -37,7 +37,7 @@ bill_of_materials:
   - material: materials/peel-ply.md
     description: Two layers cut to the blade outline
     quantity:
-      amount: 0.12
+      amount: 0.10
       unit: 5 m pack (1.5 m wide)
       display: 0.6 m (1.5 m wide)
   - name: Consumables pack

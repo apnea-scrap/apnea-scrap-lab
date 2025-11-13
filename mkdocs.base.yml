@@ -57,6 +57,9 @@ nav:
       - Long Fins:
           - Long Fins Versions: projects/long-fins/index.md
           - V1 - Competition Fins: projects/long-fins/v1/competition-fins.md
+      - Monofin:
+          - Monofin Versions: projects/monofin/index.md
+          - V1 - Competition Monofin: projects/monofin/v1/competition-monofin.md
       - Neck Weight:
           - Neck Weight Versions: projects/neck-weight/index.md
           - V1 - Modular Lead Tube: projects/neck-weight/v1/modular-lead-tube.md
@@ -70,6 +73,9 @@ nav:
       - Choosing Bi-fin Foot Pockets:
           - Choosing Bi-fin Foot Pockets Versions: techniques/choosing-bifin-footpockets/index.md
           - V1 - Short Rails: techniques/choosing-bifin-footpockets/v1/short-rails.md
+      - Choosing Monofin Foot Pockets:
+          - Choosing Monofin Foot Pockets Versions: techniques/choosing-monofin-footpockets/index.md
+          - V1 - Long Rails: techniques/choosing-monofin-footpockets/v1/long-rails.md
       - Coating Steel Wire:
           - Coating Steel Wire Versions: techniques/coating-steel-wire/index.md
           - V1 - Heat Shrink Tubing: techniques/coating-steel-wire/v1/heat-shrink-tubing.md
@@ -132,6 +138,7 @@ nav:
       - Loose Lead: materials/loose-lead.md
       - Marine Adhesive: materials/marine-adhesive.md
       - Materials Directory: materials/index.md
+      - Monofin Foot Pockets: materials/monofin-footpockets.md
       - PVA Release Agent: materials/pva-release-agent.md
       - Peel Ply: materials/peel-ply.md
       - Plastic-to-Carbon Adhesive: materials/plastic-to-carbon-adhesive.md
