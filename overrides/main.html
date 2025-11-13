@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% block extrahead %}
 {{ super() }}
+{% set status_banner_variant = config.extra.status_banner_variant | default('', true) %}
+{% if status_banner_variant == 'preview' %}
 <meta name="robots" content="noindex, nofollow">
+{% endif %}
 {% endblock %}
