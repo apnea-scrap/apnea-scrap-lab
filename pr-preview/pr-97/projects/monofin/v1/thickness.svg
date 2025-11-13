@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" width="1160" height="892" viewBox="0 0 1160 892" version="1.1">
+  <g transform="translate(220 72)" opacity="0.25" data-layer="L1" data-index="1">
+    <path d="M 200.61336,152.90939 V 549.13611 H 7.4357154 L 4.3554377,548.7914 1.7441187,547.80982 -6.1741011e-4,546.34072 -0.61335272,544.60779 V 157.43771 l 0.61273530989,-1.73293 1.74473611011,-1.46911 2.611319,-0.98156 3.0802777,-0.34472 z" fill="#000000" stroke="#000000" stroke-width="3.77329" fill-opacity="0.85" stroke-linejoin="round" data-layer="L1" data-role="footpocket" data-join-x="200" id="path1" />
+    <path d="M 350.56636,0 H 712 l 3.0615,0.609 2.5954,1.7341 1.7341,2.5954 L 720,8 v 684 l -0.609,3.0615 -1.7341,2.5954 -2.5954,1.7341 L 712,700 H 349.53342 L 200,549.73566 V 152.79951 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L1" data-role="blade" id="path2" ns1:nodetypes="ccccccccccccccc" />
+  </g>
+  <g transform="translate(220 72)" opacity="0.25" data-layer="L2" data-index="2">
+    <path d="m 200.61334,151.60103 v 396.2267 H 7.4357156 L 4.3554379,547.48302 1.7441189,546.50145 -6.1728993e-4,545.03236 -0.6133526,543.29943 V 156.12933 L -6.1728993e-4,154.3964 1.7441189,152.9273 l 2.611319,-0.98156 3.0802777,-0.34471 z" fill="#000000" stroke="#000000" stroke-width="3.77329" fill-opacity="0.85" stroke-linejoin="round" data-layer="L2" data-role="footpocket" data-join-x="200" id="path1" />
+    <path d="M 350.05405,0 H 492 l 3.0615,0.609 2.5954,1.7341 1.7341,2.5954 L 500,8 v 684 l -0.609,3.0615 -1.7341,2.5954 -2.5954,1.7341 L 492,700 H 349.82378 L 200,547.42695 V 151.37473 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L2" data-role="blade" id="path2" ns1:nodetypes="ccccccccccccccc" />
+  </g>
+  <g transform="translate(220 72)" opacity="0.25" data-layer="L3" data-index="3">
+    <path d="M 200.61336,154.3567 V 550.5834 H 7.4357152 L 4.3554375,550.23868 1.7441184,549.25711 -6.1769981e-4,547.78802 -0.61335303,546.0551 V 158.88501 L -6.1769981e-4,157.15208 1.7441184,155.68299 4.3554375,154.70142 7.4357152,154.3567 Z" fill="#000000" stroke="#000000" stroke-width="3.7733" fill-opacity="0.85" stroke-linejoin="round" data-layer="L3" data-role="footpocket" data-join-x="200" id="path1" />
+    <path d="M 349.9939,0 H 712 l 3.0615,0.609 2.5954,1.7341 1.7341,2.5954 L 720,8 721.02326,50.139613 350.44258,153.49102 720.71657,242.51581 354.23545,345.86293 720.4001,441.02561 361.06383,552.56692 720.09668,631.35427 720,692 l -0.609,3.0615 -1.7341,2.5954 -2.5954,1.7341 L 712,700 H 350.36862 L 200,550.4722 V 153.63758 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L3" data-role="blade" id="path2" ns1:nodetypes="cccccccccccccccccccccc" />
+  </g>
+  <g transform="translate(220 72)" opacity="0.25" data-layer="L4" data-index="4">
+    <path d="M 200.61335,151.1976 V 547.4243 H 7.4357152 L 4.3554374,547.07958 1.7441185,546.09802 -6.1772101e-4,544.62892 -0.61335304,542.896 V 155.7259 l 0.61273531899,-1.73292 1.74473622101,-1.4691 2.6113189,-0.98157 3.0802778,-0.34471 z" fill="#000000" stroke="#000000" stroke-width="3.7733" fill-opacity="0.85" stroke-linejoin="round" data-layer="L4" data-role="footpocket" data-join-x="200" id="path1" />
+    <path d="M 349.8598,0 566.09148,1.1848075 297.97858,153.994 564.33137,254.20933 306.57243,357.04146 564.86921,449.87928 311.34568,545.09377 566.19107,699.13209 349.9294,700 200,547.71558 V 150.66955 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L4" data-role="blade" id="path2" ns1:nodetypes="cccccccccccc" />
+  </g>
+  <g transform="translate(220 72)" opacity="0.25" data-layer="L5" data-index="5">
+    <path d="M200,0 L200,700 L8,700 L4.9385,699.391 L2.3431,697.6569 L0.609,695.0615 L0,692 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L5" data-role="footpocket" data-join-x="200" />
+    <path d="M200,0 L342,0 L345.0615,0.609 L347.6569,2.3431 L349.391,4.9385 L350,8 L350,692 L349.391,695.0615 L347.6569,697.6569 L345.0615,699.391 L342,700 L200,700 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L5" data-role="blade" />
+  </g>
+  <g transform="translate(220 72)" opacity="0.25" data-layer="L6" data-index="6">
+    <path d="M 200.61336,152.53022 V 548.75693 H 7.4357153 L 4.3554376,548.41221 1.7441186,547.43064 -6.1754931e-4,545.96155 -0.61335287,544.22862 V 157.05853 L -6.1754931e-4,155.3256 1.7441186,153.85651 l 2.611319,-0.98157 3.0802777,-0.34472 z" fill="#000000" stroke="#000000" stroke-width="3.77329" fill-opacity="0.85" stroke-linejoin="round" data-layer="L6" data-role="footpocket" data-join-x="200" id="path1" />
+    <path d="M 349.85121,0 H 712 l 3.0615,0.609 2.5954,1.7341 1.7341,2.5954 L 720,8 v 684 l -0.609,3.0615 -1.7341,2.5954 -2.5954,1.7341 L 712,700 H 350.31521 L 200,548.90449 200,152.18992 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L6" data-role="blade" id="path2" ns1:nodetypes="ccccccccccccccc" />
+  </g>
+  <g data-role="dimension" data-orientation="horizontal">
+    <line x1="220" y1="772" x2="220" y2="800" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <line x1="940" y1="772" x2="940" y2="800" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <line x1="220" y1="800" x2="940" y2="800" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <path d="M 220 800 l 6 -6 M 220 800 l 6 6" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <path d="M 940 800 l -6 -6 M 940 800 l -6 6" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <text x="580" y="788" font-family="'DejaVu Sans', Arial, sans-serif" font-size="16" text-anchor="middle">Laminate length</text>
+    <text x="580" y="814" font-family="'DejaVu Sans', Arial, sans-serif" font-size="16" text-anchor="middle">720 mm</text>
+  </g>
+  <g data-role="dimension" data-orientation="horizontal">
+    <line x1="220" y1="72" x2="220" y2="28" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <line x1="420" y1="72" x2="420" y2="28" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <line x1="220" y1="28" x2="420" y2="28" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <path d="M 220 28 l 6 -6 M 220 28 l 6 6" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <path d="M 420 28 l -6 -6 M 420 28 l -6 6" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <text x="320" y="16" font-family="'DejaVu Sans', Arial, sans-serif" font-size="16" text-anchor="middle">Footpocket length</text>
+    <text x="320" y="42" font-family="'DejaVu Sans', Arial, sans-serif" font-size="16" text-anchor="middle">200 mm</text>
+  </g>
+  <g data-role="dimension" data-orientation="horizontal">
+    <line x1="420" y1="72" x2="420" y2="28" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <line x1="940" y1="72" x2="940" y2="28" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <line x1="420" y1="28" x2="940" y2="28" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <path d="M 420 28 l 6 -6 M 420 28 l 6 6" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <path d="M 940 28 l -6 -6 M 940 28 l -6 6" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <text x="680" y="16" font-family="'DejaVu Sans', Arial, sans-serif" font-size="16" text-anchor="middle">Free blade length</text>
+    <text x="680" y="42" font-family="'DejaVu Sans', Arial, sans-serif" font-size="16" text-anchor="middle">520 mm</text>
+  </g>
+  <g data-role="dimension" data-orientation="vertical">
+    <line x1="220" y1="72" x2="184" y2="72" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <line x1="220" y1="772" x2="184" y2="772" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <line x1="184" y1="72" x2="184" y2="772" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <path d="M 184 72 l -6 6 M 184 72 l 6 6" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <path d="M 184 772 l -6 -6 M 184 772 l 6 -6" stroke="#1a1a1a" stroke-width="1.5" fill="none" />
+    <text x="174" y="422" font-family="'DejaVu Sans', Arial, sans-serif" font-size="16" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 174 422)">Laminate width 700 mm</text>
+  </g>
+</svg>
