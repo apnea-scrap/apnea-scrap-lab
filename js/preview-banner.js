@@ -5,10 +5,13 @@
             const header = document.querySelector('.md-header');
             if (!header) return;
 
-            var m = document.createElement('meta');
-            m.setAttribute('name', 'robots');
+            var m = document.querySelector('meta[name="robots"]');
+            if (!m) {
+                m = document.createElement('meta');
+                m.setAttribute('name', 'robots');
+                document.head.appendChild(m);
+            }
             m.setAttribute('content', 'noindex,nofollow');
-            document.head.appendChild(m);
 
             var ref = (window.location.pathname.match(/\/preview\/([^/]+)/) || [,'preview'])[1];
             const bar = document.createElement('div');
