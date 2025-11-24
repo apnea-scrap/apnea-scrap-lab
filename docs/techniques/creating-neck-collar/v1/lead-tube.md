@@ -60,6 +60,20 @@ https://www.youtube.com/watch?v=4JpFWPSaKNs
 
 {{ render_tools_required() }}
 
+## Inner tube width calculations
+
+The tube width determines how much lead the main collar can hold. Use the table below to match the inner tube size to your target weight; the deltas show how much heavier each option is compared to a 2.5" baseline section of tube. Wider tubes may also need a larger buckle so the closed collar isn’t pinched or stressed.
+
+| Tube label | Mass (kg) | Delta vs base |
+|------------|-----------|---------------|
+| 2.5"       | 3.38      | baseline      |
+| 2.6"       | 3.57      | +0.19         |
+| 2.7"       | 3.97      | +0.59         |
+| 2.75"      | 4.14      | +0.76         |
+| 3.0"       | 4.75      | +1.37         |
+
+Pick the tube width that gets you closest to the weight you want before you start pouring lead. If you need to fine-tune the weight later, adjust the length of the filled section slightly rather than switching to a different width.
+
 ## Instructions (step-by-step)
 
 **Step 1 – Add the First Buckle**
