@@ -11,6 +11,19 @@ hide:
     <p class="hero-subtitle">For the makers beneath the surface</p>
   </section>
 
+  <section class="rafas-ribbon" data-animate="fade-up" aria-labelledby="rafas-ribbon-title">
+    <div class="rafas-ribbon__shimmer" aria-hidden="true"></div>
+    <div class="rafas-ribbon__content">
+      <p class="rafas-ribbon__eyebrow">Rafa’s shiny surprise</p>
+      <h2 id="rafas-ribbon-title">Launch the Aurora Lab</h2>
+      <p class="rafas-ribbon__blurb">Summon a glittering trail that follows your cursor and see every project glow brighter.</p>
+      <div class="rafas-ribbon__actions">
+        <a class="rafas-ribbon__button" href="projects/" aria-label="Open the full list of ApneaScrap Lab projects">Ignite the projects</a>
+        <span class="rafas-ribbon__sparkles" aria-hidden="true">✨ ✦ ✨</span>
+      </div>
+    </div>
+  </section>
+
   <section class="hero-shields" aria-label="Featured projects">
     <article class="hero-shield hero-shield--concept" data-animate="fade-up">
       <img src="assets/hero/long-fins.png" alt="Concept render of the long fins" loading="lazy" />
