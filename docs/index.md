@@ -11,6 +11,18 @@ hide:
     <p class="hero-subtitle">For the makers beneath the surface</p>
   </section>
 
+  <div class="hero-highlight" data-animate="fade-up">
+    <div class="hero-highlight__spark" aria-hidden="true">✨</div>
+    <div class="hero-highlight__body">
+      <p class="hero-highlight__eyebrow">Shiny new drop</p>
+      <p class="hero-highlight__title">Flex calculator v2 is live with carbon layups</p>
+    </div>
+    <a class="hero-highlight__link" href="blog/posts/2025-10-20-flex-predict-calculator/" aria-label="Read about the flex predict calculator update">
+      <span>See the latest tool</span>
+      <span class="hero-link-arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+
   <section class="hero-shields" aria-label="Featured projects">
     <article class="hero-shield hero-shield--concept" data-animate="fade-up">
       <img src="assets/hero/long-fins.png" alt="Concept render of the long fins" loading="lazy" />
