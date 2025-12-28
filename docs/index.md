@@ -32,6 +32,16 @@ hide:
         </div>
       </div>
     </article>
+    <article class="hero-shield hero-shield--concept hero-shield--goggles" data-animate="fade-up">
+      <img src="assets/hero/fancy-goggles.svg" alt="Concept render of the fancy goggles" loading="lazy" />
+      <div class="hero-shield__body">
+        <h2>Răzvan &amp; Horia Fancy Goggles</h2>
+        <div class="hero-shield__cta">
+          <span class="hero-shield__price hero-shield__price--placeholder">Concept pricing for Răzvan &amp; Horia</span>
+          <span class="hero-shield__button hero-shield__button--disabled" role="status" aria-label="Fancy goggles design in progress">In design</span>
+        </div>
+      </div>
+    </article>
     <article class="hero-shield" data-animate="fade-up">
       <img src="assets/hero/neck-weight.png" alt="Render of the modular neck weight" loading="lazy" />
       <div class="hero-shield__body">

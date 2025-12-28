@@ -1,0 +1,21 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fancy goggles concept">
+  <defs>
+    <linearGradient id="lens" x1="120" y1="120" x2="520" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7cc8ff" />
+      <stop offset="1" stop-color="#2f5bff" />
+    </linearGradient>
+    <linearGradient id="rim" x1="80" y1="80" x2="560" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f4f7ff" />
+      <stop offset="1" stop-color="#c7d2ff" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="210" fill="#f6f8ff" />
+  <rect x="50" y="150" width="540" height="120" rx="60" fill="url(#rim)" stroke="#9fb2ff" stroke-width="6" />
+  <rect x="105" y="175" width="185" height="70" rx="35" fill="url(#lens)" opacity="0.9" />
+  <rect x="350" y="175" width="185" height="70" rx="35" fill="url(#lens)" opacity="0.9" />
+  <rect x="292" y="185" width="56" height="50" rx="25" fill="#2a4fb0" />
+  <path d="M70 210C40 210 20 200 0 190" stroke="#2a4fb0" stroke-width="12" stroke-linecap="round" />
+  <path d="M570 210C600 210 620 200 640 190" stroke="#2a4fb0" stroke-width="12" stroke-linecap="round" />
+  <circle cx="170" cy="210" r="6" fill="#e9f4ff" />
+  <circle cx="420" cy="210" r="6" fill="#e9f4ff" />
+</svg>

@@ -180,6 +180,11 @@
   pointer-events: none;
 }
 
+.hero-shield--goggles {
+  background: linear-gradient(145deg, rgba(86, 134, 255, 0.12), rgba(255, 255, 255, 0.95));
+  border-color: rgba(38, 90, 210, 0.2);
+}
+
 .hero-link-arrow {
   font-size: 1.1em;
   transition: transform 0.2s ease;
