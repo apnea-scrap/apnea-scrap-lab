@@ -8,7 +8,7 @@ hide:
 <div class="hero-home">
   <section class="hero-intro" data-animate="fade-up">
     <h1>DIY Freediving Gear</h1>
-    <p class="hero-subtitle">For the makers beneath the surface</p>
+    <p class="hero-subtitle">For the makers beneath the surface · Apnea Revolution</p>
   </section>
 
   <section class="hero-shields" aria-label="Featured projects">
