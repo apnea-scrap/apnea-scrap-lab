@@ -67,20 +67,18 @@ For this build I am going to be using a triangles to smooth the transition betwe
 
 #### Cutting plan
 
-For this build I am going to use carbon cloth in a different colour for the top layers in order to create a better visual effect.
-
-|  | ![Cutting plan for top layers](cutting_plan_green.svg) | ![Cutting plan for the internal layers](cutting_plan_black.svg) |
-|--|--------------------------------------------------------|-----------------------------------------------------------------|
-|  | Cutting plan for top layers                            | Cutting plan for the internal layers                            |
+|  | ![Cutting plan for one blade](cutting_plan.svg) | ![Cutting plan for one blade](cutting_plan.svg) |  |
+|--|-------------------------------------------------|-------------------------------------------------|--|
+|  | Cutting plan for first blade                    | Cutting plan for second blade (identical)       |  |
 
 ### Estimating the flex
 Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md) workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.
 
 Free blade length [mm]: 580
 Blade width [mm]: 180
-Layers at foot: 5
+Layers at foot: 6
 Layers at tip: 3
-Min layer length [mm]: 200
+Min layer length [mm]: 150
 
 | ![Bending Calculation](bending_calculation.png) | ![Bending Profile](bending_profile.png) |
 |-------------------------------------------------|-----------------------------------------|
@@ -89,13 +87,13 @@ Min layer length [mm]: 200
 
 Predicted:
 
-- Load required for 90° = 11.9 N (1.21 kg)
-- Hydrodynamic resistance score 5N = 5.00 units
-- Hydrodynamic resistance score 10N = 3.11 units
+- Load required for 90° = 16.7 N (1.70 kg)
+- Hydrodynamic resistance score 5N = 5.71 units
+- Hydrodynamic resistance score 10N = 4.32 units
 
 The predicted code for this fin would be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-C580-T12-R50-F19
+C580-T17-R57-F15
 ```
 
 ## Reference images
