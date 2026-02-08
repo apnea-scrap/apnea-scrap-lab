@@ -4200,20 +4200,21 @@
 </tbody>
 </table>
 <h4 id="cutting-plan">Cutting plan<a class="headerlink" href="#cutting-plan" title="Permanent link">&para;</a></h4>
-<p>For this build I am going to use carbon cloth in a different colour for the top layers in order to create a better visual effect.</p>
 <table>
 <thead>
 <tr>
 <th></th>
-<th><img alt="Cutting plan for top layers" src="../cutting_plan_green.svg" /></th>
-<th><img alt="Cutting plan for the internal layers" src="../cutting_plan_black.svg" /></th>
+<th><img alt="Cutting plan for one blade" src="../cutting_plan.svg" /></th>
+<th><img alt="Cutting plan for one blade" src="../cutting_plan.svg" /></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td></td>
-<td>Cutting plan for top layers</td>
-<td>Cutting plan for the internal layers</td>
+<td>Cutting plan for first blade</td>
+<td>Cutting plan for second blade (identical)</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -4221,9 +4222,9 @@
 <p>Start with the <a href="../../../../techniques/predicting-flex/v1/tapered-cantilever-beam/">Flex predictor modelling</a> workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.</p>
 <p>Free blade length [mm]: 580
 Blade width [mm]: 180
-Layers at foot: 5
+Layers at foot: 6
 Layers at tip: 3
-Min layer length [mm]: 200</p>
+Min layer length [mm]: 150</p>
 <table>
 <thead>
 <tr>
@@ -4240,12 +4241,12 @@ Min layer length [mm]: 200</p>
 </table>
 <p>Predicted:</p>
 <ul>
-<li>Load required for 90° = 11.9 N (1.21 kg)</li>
-<li>Hydrodynamic resistance score 5N = 5.00 units</li>
-<li>Hydrodynamic resistance score 10N = 3.11 units</li>
+<li>Load required for 90° = 16.7 N (1.70 kg)</li>
+<li>Hydrodynamic resistance score 5N = 5.71 units</li>
+<li>Hydrodynamic resistance score 10N = 4.32 units</li>
 </ul>
 <p>The predicted code for this fin would be (see <a href="../../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes/">hydrodynamic resistance codes</a>): </p>
-<pre><code>C580-T12-R50-F19
+<pre><code>C580-T17-R57-F15
 </code></pre>
 <h2 id="reference-images">Reference images<a class="headerlink" href="#reference-images" title="Permanent link">&para;</a></h2>
 <p>TODO after build</p>

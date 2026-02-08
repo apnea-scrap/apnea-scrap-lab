@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1000"
+   height="800"
+   viewBox="0 0 1000 800"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="cutting_plan.svg"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0111323"
+     inkscape:cx="642.3492"
+     inkscape:cy="167.63385"
+     inkscape:window-width="1184"
+     inkscape:window-height="656"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g15" />
+  <g
+     transform="matrix(0,1,1,0,0,0)"
+     id="g13">
+    <rect
+       x="0"
+       y="0"
+       width="800"
+       height="1000"
+       fill="#f8f9fa"
+       stroke="#b0b0b0"
+       stroke-width="1.5"
+       id="rect1" />
+    <g
+       id="cutting-plan">
+      <g
+         transform="translate(0, 0)"
+         data-layer="L1"
+         id="g2">
+        <path
+           d="M180,0 L792,0 L795.0615,0.609 L797.6569,2.3431 L799.391,4.9385 L800,8 L800,192 L799.391,195.0615 L797.6569,197.6569 L795.0615,199.391 L792,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#a9d8bb"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L1"
+           data-role="layer"
+           id="path1" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g1">
+          <text
+             x="100"
+             y="400"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24"
+             fill="#1a1a1a"
+             id="text1">L1</text>
+        </g>
+      </g>
+      <g
+         transform="translate(0, 200)"
+         data-layer="L3"
+         id="g4">
+        <path
+           d="M180,0 L503.2759,1.7237 L523.2929,15.4003 L756.9667,78.8298 L800,99.87 L761.1952,113.4507 L530.7861,193.5939 L504.9669,198.7299 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#e3e5e5"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L3"
+           data-role="layer"
+           id="path2" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g3">
+          <text
+             x="100"
+             y="400"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24"
+             fill="#1a1a1a"
+             id="text2">L3</text>
+        </g>
+      </g>
+      <g
+         transform="translate(0, 400)"
+         data-layer="L6"
+         id="g6">
+        <path
+           d="M180,0 L792,0 L795.0615,0.609 L797.6569,2.3431 L799.391,4.9385 L800,8 L800,192 L799.391,195.0615 L797.6569,197.6569 L795.0615,199.391 L792,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#b7bcdd"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L6"
+           data-role="layer"
+           id="path4" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g5">
+          <text
+             x="100"
+             y="400"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24"
+             fill="#1a1a1a"
+             id="text4">L6</text>
+        </g>
+      </g>
+      <g
+         transform="translate(0, 600)"
+         data-layer="L2"
+         id="g8">
+        <path
+           d="M 185.20474,48.129536 792,200 H 180 8 L 4.9385,199.391 2.3431,197.6569 0.609,195.0615 0,192 V 8 0 137.6718 43.8595 180.2202 L 1.5617895,5.7800263 185.16515,49.338626 Z"
+           fill="#d2c589"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L2"
+           data-role="layer"
+           id="path6"
+           sodipodi:nodetypes="cccccccccccccccc" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g7">
+          <text
+             x="100"
+             y="396"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24"
+             fill="#1a1a1a"
+             id="text6">L2</text>
+        </g>
+      </g>
+      <g
+         transform="translate(0,600)"
+         data-layer="L2"
+         id="g15">
+        <path
+           d="M 600.85933,152.39248 -0.00198844,2.5 H 611.99801 h 172 l 3.0615,0.609 2.5954,1.7341 1.7341,2.5954 0.609,3.0615 v 184 8 V 64.8282 158.6405 22.2798 l -1.56179,174.44017 -187.71593,-45.48294 z"
+           fill="#d2c589"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L2"
+           data-role="layer"
+           id="path13"
+           sodipodi:nodetypes="cccccccccccccccc" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g14">
+          <text
+             x="100"
+             y="396"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24"
+             fill="#1a1a1a"
+             id="text13">L2</text>
+        </g>
+      </g>
+      <g
+         transform="translate(0, 800)"
+         data-layer="L4"
+         id="g10">
+        <path
+           d="M180,0 L442,0 L445.0615,0.609 L447.6569,2.3431 L449.391,4.9385 L450,8 L450,192 L449.391,195.0615 L447.6569,197.6569 L445.0615,199.391 L442,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#84d6f4"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L4"
+           data-role="layer"
+           id="path8" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g9">
+          <text
+             x="100"
+             y="225"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24"
+             fill="#1a1a1a"
+             id="text8">L4</text>
+        </g>
+      </g>
+      <g
+         transform="translate(450, 800)"
+         data-layer="L5"
+         id="g12">
+        <path
+           d="M180,0 L342,0 L345.0615,0.609 L347.6569,2.3431 L349.391,4.9385 L350,8 L350,192 L349.391,195.0615 L347.6569,197.6569 L345.0615,199.391 L342,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#9da584"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L5"
+           data-role="layer"
+           id="path10" />
+        <g
+           transform="matrix(0,1,1,0,0,0)"
+           id="g11">
+          <text
+             x="100"
+             y="175"
+             text-anchor="middle"
+             dominant-baseline="middle"
+             font-size="24"
+             fill="#1a1a1a"
+             id="text10">L5</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
