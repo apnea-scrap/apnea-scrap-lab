@@ -98,7 +98,29 @@ C580-T17-R57-F15
 
 ## Reference images
 
-TODO after build
+| ![Laminating Support](lf_base.jpeg) | ![Laminating Base](lf_base_and_epoxy.jpeg) |
+|-------------------------------------|--------------------------------------------|
+| Laminating Support                  | Laminating Base                                |
+
+| ![Carbon Cloth](lf_cloth.jpeg) | ![Wet Laminate](lf_laminate.jpeg) |
+|--------------------------------|-----------------------------------|
+| Base Ready                     | Wet Laminate                      |
+
+| ![Laminate Peel Ply](lf_laminate_ply.jpeg) | ![Vacuum Bagging](lf_vacuum.jpeg) |
+|--------------------------------------------|-----------------------------------|
+| Laminate Peel Ply                          | Vacuum Bagging                    |
+
+| ![Prepping to Cut](lf_cutting_start.jpeg) | ![Cutting Done](lf_cutting_done.jpeg) |
+|-------------------------------------------|---------------------------------------|
+| Prepping to Cut                           | Cutting Done                          |
+
+| ![Glueing Fin Rails](lf_glueing.jpeg) | ![Finishing Layer](lf_finishing.jpeg) |
+|---------------------------------------|---------------------------------------|
+| Glueing Fin Rails                     | Finishing Layer                       |
+
+| ![Footpockets](lf_footpockets.png) | ![lf_final.jpeg](lf_final.jpeg)  |
+|------------------------------------|----------------------------------|
+| Footpockets                        | Complete Fins                    |
 
 ## Time needed
 
