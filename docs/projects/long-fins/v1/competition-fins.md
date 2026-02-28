@@ -1,12 +1,12 @@
 ---
-status: concept
+status: proven
 techniques:
   - title: Foot pockets
     focus: Choosing the foot pockets
     path: techniques/choosing-bifin-footpockets/v1/short-rails.md
   - title: Base Support
     focus: Creating a laminating base
-    path: techniques/creating-laminating-base/v3/cardboard-support.md
+    path: techniques/creating-laminating-base/v4/plywood-corner-brace.md
   - title: Laminating Carbon
     focus: Creating the carbon laminate
     path: techniques/laminating-carbon/v1/wet-layup.md
@@ -133,7 +133,7 @@ C580-T17-R57-F15
 {{ render_technique_requirements_tools() }}
 
 ## Instructions
-1. Build a 1000 mm × 600 mm laminating base following [Creating a laminating base](../../../techniques/creating-laminating-base/v3/cardboard-support.md) so both blades can be laminated at the same time.
+1. Build a 1000 mm × 600 mm laminating base following [Creating a laminating base](../../../techniques/creating-laminating-base/v4/plywood-corner-brace.md) so both blades can be laminated at the same time.
 2. Lay up the carbon according to the schedule above, using the steps in [Manual wet layup stack](../../../techniques/laminating-carbon/v1/wet-layup.md).
 3. Pull the stack under vacuum to tighten the fiber volume, referencing [Edge-sealed bagging](../../../techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md).
 4. Trim the cured laminate to the template with the [Junior hacksaw method](../../../techniques/cutting-cured-carbon/v1/junior-hacksaw.md).

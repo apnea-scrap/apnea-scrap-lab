@@ -81,6 +81,7 @@ nav:
           - V1 - Heat Shrink Tubing: techniques/coating-steel-wire/v1/heat-shrink-tubing.md
       - Creating Laminating Base:
           - Creating Laminating Base Versions: techniques/creating-laminating-base/index.md
+          - V4 - Plywood Corner Brace: techniques/creating-laminating-base/v4/plywood-corner-brace.md
           - V3 - Cardboard Support: techniques/creating-laminating-base/v3/cardboard-support.md
           - V2 - Plastic Wedges: techniques/creating-laminating-base/v2/plastic-wedges.md
           - V1 - Wood Support: techniques/creating-laminating-base/v1/wood-support.md
@@ -126,6 +127,9 @@ nav:
           - V1 - Enclosed Bagging: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
   - Materials:
       - Acrylic Sheet: materials/acrylic-sheet.md
+      - Plastic Corner Braces: materials/plastic-corner-braces.md
+      - Plywood Sheet (300 × 200 × 1.5 mm): materials/plywood-sheet-300x200x1-5mm.md
+      - Super Glue: materials/super-glue.md
       - Bifin Foot Pockets: materials/bifin-footpockets.md
       - Bike Inner Tube: materials/bike-inner-tube.md
       - Breather Cloth: materials/breather-cloth.md
