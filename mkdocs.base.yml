@@ -102,9 +102,11 @@ nav:
           - V1 - Hydrodynamic Resistance Codes: techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md
       - Finishing Carbon:
           - Finishing Carbon Versions: techniques/finishing-carbon/index.md
+          - V2 - Clear Coat and Acrylic Paint: techniques/finishing-carbon/v2/clear-coat-and-acrylic-paint.md
           - V1 - Epoxy and Clear Coat: techniques/finishing-carbon/v1/epoxy-and-clear-coat.md
       - Gluing Fin Rails:
           - Gluing Fin Rails Versions: techniques/gluing-fin-rails/index.md
+          - V3 - Two-Part Adhesive + Super Glue: techniques/gluing-fin-rails/v3/two-part-plus-superglue.md
           - V2 - Marine Adhesive: techniques/gluing-fin-rails/v2/marine-adhesive.md
           - V1 - Two Part Plastic-to-Carbon Adhesive: techniques/gluing-fin-rails/v1/two-part-plastic-carbon-adhesive.md
       - Laminating Carbon:
@@ -126,6 +128,7 @@ nav:
           - V2 - Edge-Sealed Bagging: techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md
           - V1 - Enclosed Bagging: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
   - Materials:
+      - Acrylic Car Paint: materials/acrylic-car-paint.md
       - Acrylic Sheet: materials/acrylic-sheet.md
       - Plastic Corner Braces: materials/plastic-corner-braces.md
       - Plywood Sheet (300 × 200 × 1.5 mm): materials/plywood-sheet-300x200x1-5mm.md

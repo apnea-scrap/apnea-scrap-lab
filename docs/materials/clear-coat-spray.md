@@ -26,3 +26,4 @@ Protective lacquer applied after sanding and polishing to seal exposed fibres an
 
 ## Related techniques
 - [Finishing Carbon – V1 Epoxy and Clear Coat](../techniques/finishing-carbon/v1/epoxy-and-clear-coat.md)
+- [Finishing Carbon – V2 Clear Coat and Acrylic Paint](../techniques/finishing-carbon/v2/clear-coat-and-acrylic-paint.md)

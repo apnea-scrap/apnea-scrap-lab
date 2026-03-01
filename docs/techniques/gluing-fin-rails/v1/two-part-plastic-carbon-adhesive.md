@@ -1,5 +1,10 @@
 ---
-status: proven
+status: legacy
+versions_table:
+  notes: >-
+    Deprecated: two-part adhesive alone can peel; prefer V3 with super glue gap-wicking.
+  highlights:
+    reliability: pastel-red
 time_to_implement: 0.5
 waiting_time: 12
 tools_required:

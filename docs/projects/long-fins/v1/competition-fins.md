@@ -13,16 +13,16 @@ techniques:
     consumable_scaling_factor: 6
   - title: Vacuum Bagging
     focus: Reducing the resin percentage of the laminate
-    path: techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md
+    path: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
   - title: Cutting Cured Carbon
     focus: Producing the final shape
     path: techniques/cutting-cured-carbon/v1/junior-hacksaw.md
   - title: Finishing Carbon
     focus: Finishing the carbon laminate surface
-    path: techniques/finishing-carbon/v1/epoxy-and-clear-coat.md
+    path: techniques/finishing-carbon/v2/clear-coat-and-acrylic-paint.md
   - title: Gluing Fin Rails
     focus: Gluing Fin Rails
-    path: techniques/gluing-fin-rails/v2/marine-adhesive.md
+    path: techniques/gluing-fin-rails/v3/two-part-plus-superglue.md
 
 ---
 
@@ -135,10 +135,10 @@ C580-T17-R57-F15
 ## Instructions
 1. Build a 1000 mm × 600 mm laminating base following [Creating a laminating base](../../../techniques/creating-laminating-base/v4/plywood-corner-brace.md) so both blades can be laminated at the same time.
 2. Lay up the carbon according to the schedule above, using the steps in [Manual wet layup stack](../../../techniques/laminating-carbon/v1/wet-layup.md).
-3. Pull the stack under vacuum to tighten the fiber volume, referencing [Edge-sealed bagging](../../../techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md).
+3. Pull the stack under vacuum to tighten the fiber volume, referencing [Enclosed bagging](../../../techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md).
 4. Trim the cured laminate to the template with the [Junior hacksaw method](../../../techniques/cutting-cured-carbon/v1/junior-hacksaw.md).
-5. Seal the surface with the approach in [Epoxy and clear coat finish](../../../techniques/finishing-carbon/v1/epoxy-and-clear-coat.md).
-6. Bond the rails using the guidance in [Marine adhesive](../../../techniques/gluing-fin-rails/v2/marine-adhesive.md).
+5. Seal the surface with the approach in [Clear coat and acrylic paint](../../../techniques/finishing-carbon/v2/clear-coat-and-acrylic-paint.md).
+6. Bond the rails using the guidance in [Two-part adhesive plus super glue](../../../techniques/gluing-fin-rails/v3/two-part-plus-superglue.md).
 
 ## Results
 
@@ -146,12 +146,22 @@ C580-T17-R57-F15
 
 I've recorded the flex using the [Kitchen Scale Test](../../../techniques/measuring-flex/v2/kitchen-scale-test.md).
 
-|                     | Desired | Actual  | Notes |
-|---------------------|---------|---------|-------|
-| Free blade size     | 580mm   | TODO    | Ok    |
-| Blade width         | 180mm   | TODO    | Ok    |
-| Load for 90 degrees | 1.2kg   | TODO    | Ok    |
+|                     | Desired | Predicted | Actual | Notes                                                      |
+|---------------------|---------|-----------|--------|------------------------------------------------------------|
+| Free blade size     | 580mm   | 580mm     | 580mm  | Matched                                                    |
+| Blade width         | 180mm   | 180mm     | 180mm  | Matched                                                    |
+| Load for 90 degrees | 1.2kg   | 1.70kg    | 1.30kg | Lower actual due to tapered cuts shifting bend to mid-blade |
 
 ### Water trial
 
-TODO after build
+Feels a bit soft but heavier than the training fins.
+
+|                     | Desired | Actual | Notes                      |
+|---------------------|---------|--------|----------------------------|
+| Hydro resistance 5N | 5.0     | 5.0    | Soft but acceptable feel   |
+| Hydro resistance 10N| 4.0     | 4.0    | Heavier than training fins |
+
+Judging from the above, the code for this turned out to be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
+```
+C580-T13-R50-F10
+```

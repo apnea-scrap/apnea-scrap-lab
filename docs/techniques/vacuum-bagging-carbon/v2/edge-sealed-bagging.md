@@ -1,5 +1,10 @@
 ---
-status: concept
+status: legacy
+versions_table:
+  notes: >-
+    Deprecated: DIY edge seal is unreliable; use enclosed bagging instead.
+  highlights:
+    reliability: pastel-red
 bill_of_materials:
   - material: materials/vacuum-bagging-kit.md
     description: Manual pump with heavy-duty storage bags for low-cost vacuum pulls
@@ -35,7 +40,9 @@ tools_required:
 {{ status_banner() }}
 
 ## Goal
-To enable vacuum bagging of larger parts by sealing a cut vacuum bag directly to the laminating base using butyl tape, while achieving a controlled and measurable vacuum level.
+To enable vacuum bagging of larger parts by sealing a cut vacuum bag directly to the laminating base using butyl tape, while achieving a controlled and measurable vacuum level.  
+
+**Deprecated:** Hard to achieve a reliable DIY seal; recommended to use enclosed bagging instead.
 
 ## Specifications / Dimensions
 - Suitable for medium to large parts (size limited only by base and bag film availability)
@@ -69,5 +76,7 @@ See this page for how to make a DIY Vacuum Gauge: [Trapped Balloon Vacuum Gauge]
    edges as needed.
 
 ## Limitations
+- Hard to get consistent airtight seals in a DIY setup; leaks are common.
 - Requires a clean and smooth base surface for proper sealing; dust, grease, or moisture will cause leaks
 - More setup time compared to enclosed bagging
+- Superseded by enclosed bagging for reliability and ease.

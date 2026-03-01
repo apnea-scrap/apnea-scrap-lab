@@ -12,13 +12,16 @@ hide:
   </section>
 
   <section class="hero-shields" aria-label="Featured projects">
-    <article class="hero-shield hero-shield--concept" data-animate="fade-up">
+    <article class="hero-shield" data-animate="fade-up">
       <img src="assets/hero/long-fins.png" alt="Concept render of the long fins" loading="lazy" />
       <div class="hero-shield__body">
         <h2>Carbon Long Fins</h2>
         <div class="hero-shield__cta">
-          <span class="hero-shield__price hero-shield__price--placeholder">Pricing TBR</span>
-          <span class="hero-shield__button hero-shield__button--disabled" role="status" aria-label="Long Glide Fins design in progress">In design</span>
+          <span class="hero-shield__price">from £172 / pair</span>
+          <a class="hero-shield__button" href="projects/long-fins/v1/competition-fins/" aria-label="Build the Carbon Long Fins project">
+            <span>Build</span>
+            <span class="hero-link-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </article>

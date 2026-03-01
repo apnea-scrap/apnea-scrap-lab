@@ -1,5 +1,10 @@
 ---
-status: proven
+status: legacy
+versions_table:
+  notes: >-
+    Deprecated: marine adhesive is messy to handle; prefer V3 two-part plus super glue.
+  highlights:
+    reliability: pastel-red
 time_to_implement: 0.5
 waiting_time: 12
 tools_required:

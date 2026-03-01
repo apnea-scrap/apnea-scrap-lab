@@ -1,5 +1,10 @@
 ---
 status: proven
+versions_table:
+  notes: >-
+    Very reliable DIY-friendly method; fits inside off-the-shelf vacuum storage bags.
+  highlights:
+    time_to_implement: pastel-green
 bill_of_materials:
   - material: materials/vacuum-bagging-kit.md
     description: Heavy-duty storage bag plus compatible hand pump

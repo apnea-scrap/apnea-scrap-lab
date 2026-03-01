@@ -1,5 +1,10 @@
 ---
-status: proven
+status: legacy
+versions_table:
+  notes: >-
+    Deprecated in favour of V2 spray-only finish; this version needs resin, sanding, and longer cure.
+  highlights:
+    time_to_implement: pastel-red
 time_to_implement: 1
 waiting_time: 4
 tools_required:
