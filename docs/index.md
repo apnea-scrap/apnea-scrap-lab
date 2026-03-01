@@ -40,8 +40,8 @@ hide:
       <div class="hero-shield__body">
         <h2>Modular Neck Weight</h2>
         <div class="hero-shield__cta">
-          <span class="hero-shield__price">from £60 / set</span>
-          <a class="hero-shield__button" href="projects/neck-weight/v1/modular-lead-tube" aria-label="Build the Modular Neck Weight project">
+          <span class="hero-shield__price">from £70 / set</span>
+          <a class="hero-shield__button" href="projects/neck-weight/v2/belt-loop-neck-weight/" aria-label="Build the Modular Neck Weight project">
             <span>Build</span>
             <span class="hero-link-arrow" aria-hidden="true">→</span>
           </a>

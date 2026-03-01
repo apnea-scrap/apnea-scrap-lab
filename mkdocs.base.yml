@@ -62,6 +62,7 @@ nav:
           - V1 - Competition Monofin: projects/monofin/v1/competition-monofin.md
       - Neck Weight:
           - Neck Weight Versions: projects/neck-weight/index.md
+          - V2 - Belt Loop Modular: projects/neck-weight/v2/belt-loop-neck-weight.md
           - V1 - Modular Lead Tube: projects/neck-weight/v1/modular-lead-tube.md
       - Nose Clip:
           - Nose Clip Versions: projects/nose-clip/index.md
@@ -87,6 +88,7 @@ nav:
           - V1 - Wood Support: techniques/creating-laminating-base/v1/wood-support.md
       - Creating Modular Weights:
           - Creating Modular Weights Versions: techniques/creating-modular-weights/index.md
+          - V2 - Belt Loop Weights: techniques/creating-modular-weights/v2/belt-loop-weight.md
           - V1 - Hook Buckle Inner Tube: techniques/creating-modular-weights/v1/hook-buckle-inner-tube.md
       - Creating Neck Collar:
           - Creating Neck Collar Versions: techniques/creating-neck-collar/index.md
@@ -128,6 +130,10 @@ nav:
           - V2 - Edge-Sealed Bagging: techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md
           - V1 - Enclosed Bagging: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
   - Materials:
+      - 500 g Dive Weight: materials/lead-weight-500g.md
+      - Quick-Release Buckle (60 mm): materials/quick-release-buckle-60mm.md
+      - Slide Stopper (60 mm): materials/slide-stopper-60mm.md
+      - Weight Belt (60 mm): materials/weight-belt-60mm.md
       - Acrylic Car Paint: materials/acrylic-car-paint.md
       - Acrylic Sheet: materials/acrylic-sheet.md
       - Plastic Corner Braces: materials/plastic-corner-braces.md
