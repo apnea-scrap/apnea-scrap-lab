@@ -301,10 +301,20 @@
 @media (max-width: 640px) {
   .hero-home {
     border-radius: 28px;
-    padding: 1.75rem;
+    padding: 1.35rem;
   }
 
   .hero-shield {
     border-radius: 22px;
+    width: 100%;
+  }
+
+  .hero-shields {
+    margin-inline: clamp(-0.35rem, -2vw, -0.75rem);
+    gap: clamp(1rem, 3vw, 1.35rem);
+  }
+
+  .hero-shield img {
+    width: min(320px, 88%);
   }
 }

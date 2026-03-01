@@ -255,3 +255,28 @@ body {
     padding-inline: clamp(1rem, 3vw, 2.5rem);
   }
 }
+
+/* Keep page action buttons from shrinking hero content on small screens */
+@media (max-width: 720px) {
+  .md-content__inner {
+    display: flow-root;
+  }
+
+  .md-content__button {
+    float: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin: 0 0 0.5rem auto;
+    border-radius: 999px;
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.14);
+    border: 1px solid rgba(46, 75, 166, 0.12);
+    background: #ffffff;
+  }
+
+  .md-content__button[rel="edit"] {
+    display: none;
+  }
+}
