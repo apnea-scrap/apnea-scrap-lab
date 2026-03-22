@@ -4645,8 +4645,8 @@ This v2 keeps the v1 process and geometry, while targeting a 90-degree bend load
 <p>Free blade length [mm]: 580
 Blade width [mm]: 180
 Layers at foot: 7
-Layers at tip: 3
-Min layer length [mm]: 150</p>
+Layers at tip: 2
+Min layer length [mm]: 200</p>
 <table>
 <thead>
 <tr>
@@ -4661,14 +4661,16 @@ Min layer length [mm]: 150</p>
 </tr>
 </tbody>
 </table>
+<p>Note: In the real blade, the actual bending point will move toward mid-blade. We are cutting out triangles to push more stiffness toward the foot.</p>
 <p>Predicted:</p>
 <ul>
-<li>Load required for 90° = 18.6 N (1.90 kg) <em>(provisional)</em></li>
-<li>Hydrodynamic resistance score 5N = TODO</li>
-<li>Hydrodynamic resistance score 10N = TODO</li>
+<li>Load required for 90° = 18.3 N (1.87 kg)</li>
+<li>Hydrodynamic resistance score 5N = 6.12 units</li>
+<li>Hydrodynamic resistance score 10N = 5.18 units</li>
+<li>Hydrodynamic resistance score MaxLoad = 3.84 units</li>
 </ul>
 <p>The predicted code for this fin would be (see <a href="../../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes/">hydrodynamic resistance codes</a>): </p>
-<pre><code>TODO
+<pre><code>C580-18-R61-F10
 </code></pre>
 <h2 id="reference-images">Reference images<a class="headerlink" href="#reference-images" title="Permanent link">&para;</a></h2>
 <p>TODO after build.</p>
@@ -5116,7 +5118,7 @@ Min layer length [mm]: 150</p>
 <tr>
 <td>Load for 90 degrees</td>
 <td>1.8-2.0kg</td>
-<td>1.90kg (provisional)</td>
+<td>1.87kg</td>
 <td>TODO</td>
 <td>Validate after first flex test</td>
 </tr>

@@ -4643,8 +4643,8 @@
 <p>Free blade length [mm]: 580
 Blade width [mm]: 180
 Layers at foot: 6
-Layers at tip: 3
-Min layer length [mm]: 150</p>
+Layers at tip: 2
+Min layer length [mm]: 200</p>
 <table>
 <thead>
 <tr>
@@ -4659,14 +4659,16 @@ Min layer length [mm]: 150</p>
 </tr>
 </tbody>
 </table>
+<p>Note: In the real blade, the actual bending point will move toward mid-blade. We are cutting out triangles to push more stiffness toward the foot.</p>
 <p>Predicted:</p>
 <ul>
-<li>Load required for 90° = 16.7 N (1.70 kg)</li>
-<li>Hydrodynamic resistance score 5N = 5.71 units</li>
-<li>Hydrodynamic resistance score 10N = 4.32 units</li>
+<li>Load required for 90° = 12.8 N (1.31 kg)</li>
+<li>Hydrodynamic resistance score 5N = 5.62 units</li>
+<li>Hydrodynamic resistance score 10N = 4.23 units</li>
+<li>Hydrodynamic resistance score MaxLoad = 3.61 units</li>
 </ul>
 <p>The predicted code for this fin would be (see <a href="../../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes/">hydrodynamic resistance codes</a>): </p>
-<pre><code>C580-T17-R57-F15
+<pre><code>C580-T13-R56-F14
 </code></pre>
 <h2 id="reference-images">Reference images<a class="headerlink" href="#reference-images" title="Permanent link">&para;</a></h2>
 <table>
