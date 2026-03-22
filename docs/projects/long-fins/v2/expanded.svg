@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" width="1102.8002" height="576.5793" viewBox="0 0 1102.8002 576.5793" version="1.1">
+  <g transform="matrix(1, 0, 0.433, -0.25, 77.4593, 544.5793)" data-layer="L1" data-index="1">
+    <path d="M180,0 L180,200 L-101.7883,490.7614 L-106.804,495.3277 L-111.056,497.9811 L-113.897,498.3172 L-114.8947,496.2851 L-114.8947,312.2851 L-113.897,308.1942 L-111.056,302.6673 L-106.804,296.5457 L-101.7883,290.7614 Z" fill="#a9d8bb" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L1" data-role="footpocket" data-join-x="180" data-footpocket-angle="-25" />
+    <path d="M180,0 L792,0 L795.0615,0.609 L797.6569,2.3431 L799.391,4.9385 L800,8 L800,192 L799.391,195.0615 L797.6569,197.6569 L795.0615,199.391 L792,200 L180,200 Z" fill="#a9d8bb" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L1" data-role="blade" />
+  </g>
+  <g transform="matrix(1, 0, 0.433, -0.25, 77.4593, 484.5793)" data-layer="L2" data-index="2">
+    <path d="M180,0 L181.9101,139.1522 L-114.8947,496.2851 L-114.8947,312.2851 L-113.897,308.1942 L-111.056,302.6673 L-106.804,296.5457 L-101.7883,290.7614 Z" fill="#d2c589" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L2" data-role="footpocket" data-join-x="180" id="path1" ns1:nodetypes="ccccccccc" data-footpocket-angle="-25" />
+    <path d="M180,0 L798.8991,0 L180.862,139.7582 Z" fill="#d2c589" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L2" data-role="blade" id="path2" ns1:nodetypes="cccc" />
+  </g>
+  <g transform="matrix(1, 0, 0.433, -0.25, 77.4593, 424.5793)" data-layer="L2" data-index="3">
+    <path d="M180.3608,61.8233 L180,200 L-101.7883,490.7614 L-106.804,495.3277 L-111.056,497.9811 L-113.897,498.3172 L-114.8947,496.2851 L-114.8947,312.2851 L-114.8947,304.2851 L-114.8947,441.9569 L-114.8947,348.1446 L-114.8947,484.5053 L-114.8947,358.4806 Z" fill="#d2c589" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L2" data-role="footpocket" data-join-x="180" id="path1" ns1:nodetypes="ccccccccc" data-footpocket-angle="-25" />
+    <path d="M179.2708,61.9754 L792,200 L180,200 Z" fill="#d2c589" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L2" data-role="blade" id="path2" ns1:nodetypes="cccc" />
+  </g>
+  <g transform="matrix(1, 0, 0.433, -0.25, 77.4593, 364.5793)" data-layer="L3" data-index="4">
+    <path d="M180,0 L180,200 L-101.7883,490.7614 L-106.804,495.3277 L-111.056,497.9811 L-113.897,498.3172 L-114.8947,496.2851 L-114.8947,312.2851 L-113.897,308.1942 L-111.056,302.6673 L-106.804,296.5457 L-101.7883,290.7614 Z" fill="#e3e5e5" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L3" data-role="footpocket" data-join-x="180" id="path1" data-footpocket-angle="-25" />
+    <path d="M180,0 L503.2759,1.7237 L523.2929,15.4003 L756.9667,78.8298 L800,99.87 L761.1952,113.4507 L530.7861,193.5939 L504.9669,198.7299 L180,200 Z" fill="#e3e5e5" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L3" data-role="blade" id="path2" ns1:nodetypes="cccccc" />
+  </g>
+  <g transform="matrix(1, 0, 0.433, -0.25, 77.4593, 304.5793)" data-layer="L4" data-index="5">
+    <path d="M180,0 L180,200 L-101.7883,490.7614 L-106.804,495.3277 L-111.056,497.9811 L-113.897,498.3172 L-114.8947,496.2851 L-114.8947,312.2851 L-113.897,308.1942 L-111.056,302.6673 L-106.804,296.5457 L-101.7883,290.7614 Z" fill="#84d6f4" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L4" data-role="footpocket" data-join-x="180" id="path1" data-footpocket-angle="-25" />
+    <path d="M180,0 L742,0 L745.0615,0.609 L747.6569,2.3431 L749.391,4.9385 L750,8 L598.3582,97.2599 L750,192 L749.391,195.0615 L747.6569,197.6569 L745.0615,199.391 L742,200 L180,200 Z" fill="#84d6f4" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L4" data-role="blade" id="path2" ns1:nodetypes="cccccccccccccc" />
+  </g>
+  <g transform="matrix(1, 0, 0.433, -0.25, 77.4593, 244.5793)" data-layer="L5" data-index="6">
+    <path d="M180,0 L180,200 L-101.7883,490.7614 L-106.804,495.3277 L-111.056,497.9811 L-113.897,498.3172 L-114.8947,496.2851 L-114.8947,312.2851 L-113.897,308.1942 L-111.056,302.6673 L-106.804,296.5457 L-101.7883,290.7614 Z" fill="#9da584" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L5" data-role="footpocket" data-join-x="180" id="path1" data-footpocket-angle="-25" />
+    <path d="M180,0 L542,0 L545.0615,0.609 L547.6569,2.3431 L549.391,4.9385 L550,8 L450.7707,94.915 L550,192 L549.391,195.0615 L547.6569,197.6569 L545.0615,199.391 L542,200 L180,200 Z" fill="#9da584" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L5" data-role="blade" id="path2" ns1:nodetypes="cccccccccccccc" />
+  </g>
+  <g transform="matrix(1, 0, 0.433, -0.25, 77.4593, 184.5793)" data-layer="L6" data-index="7">
+    <path d="M180,0 L180,200 L-101.7883,490.7614 L-106.804,495.3277 L-111.056,497.9811 L-113.897,498.3172 L-114.8947,496.2851 L-114.8947,312.2851 L-113.897,308.1942 L-111.056,302.6673 L-106.804,296.5457 L-101.7883,290.7614 Z" fill="#b7bcdd" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L6" data-role="footpocket" data-join-x="180" id="path1" data-footpocket-angle="-25" />
+    <path d="M180,0 L442,0 L445.0615,0.609 L447.6569,2.3431 L449.391,4.9385 L450,8 L352.7501,97.8933 L450,192 L449.391,195.0615 L447.6569,197.6569 L445.0615,199.391 L442,200 L180,200 Z" fill="#b7bcdd" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L6" data-role="blade" id="path2" ns1:nodetypes="cccccccccccccc" />
+  </g>
+  <g transform="matrix(1, 0, 0.433, -0.25, 77.4593, 124.5793)" data-layer="L6" data-index="8">
+    <path d="M180,0 L180,200 L-101.7883,490.7614 L-106.804,495.3277 L-111.056,497.9811 L-113.897,498.3172 L-114.8947,496.2851 L-114.8947,312.2851 L-113.897,308.1942 L-111.056,302.6673 L-106.804,296.5457 L-101.7883,290.7614 Z" fill="#b7bcdd" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L6" data-role="footpocket" data-join-x="180" data-footpocket-angle="-25" />
+    <path d="M180,0 L792,0 L795.0615,0.609 L797.6569,2.3431 L799.391,4.9385 L800,8 L800,192 L799.391,195.0615 L797.6569,197.6569 L795.0615,199.391 L792,200 L180,200 Z" fill="#b7bcdd" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L6" data-role="blade" />
+  </g>
+</svg>

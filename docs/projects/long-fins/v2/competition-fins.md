@@ -1,5 +1,5 @@
 ---
-status: proven
+status: in design
 techniques:
   - title: Foot pockets
     focus: Choosing the foot pockets
@@ -30,7 +30,8 @@ techniques:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-Full-length competition fins, long and flexible to maximise efficiency.
+Full-length competition fins tuned to the stiffer side for a stronger kick response.
+This v2 keeps the v1 process and geometry, while targeting a 90-degree bend load in the 1.8-2.0 kg range.
 
 ## Planning
 
@@ -55,10 +56,11 @@ For this build I am going to be using a triangles to smooth the transition betwe
 - Layer 1: 20 cm × 80 cm
 - Layer 2a: 20 cm × 80 cm half triangle
 - Layer 2b: 20 cm × 80 cm the other half triangle
-- Layer 3: 20 cm × 80 cm (-20cm pointed triangle)
-- Layer 4: 20 cm × 45 cm
-- Layer 5: 20 cm × 35 cm
-- Layer 6: 20 cm × 80 cm top ply
+- Layer 3: 20 cm x 80(-35) ^ mid shape triangle
+- Layer 4: 20 cm x 75(-15) V side shape
+- Layer 5: 20 cm x 55(-10) V side shape
+- Layer 6: 20 cm x 45(-10) V side shape
+- Layer 7: 20 cm × 80 cm top ply
 
 
 | ![Expanded Laminate View](expanded.svg) | ![Laminate Thickness Profile](thickness.svg) |
@@ -77,7 +79,7 @@ Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1
 
 Free blade length [mm]: 580
 Blade width [mm]: 180
-Layers at foot: 6
+Layers at foot: 7
 Layers at tip: 3
 Min layer length [mm]: 150
 
@@ -88,40 +90,18 @@ Min layer length [mm]: 150
 
 Predicted:
 
-- Load required for 90° = 16.7 N (1.70 kg)
-- Hydrodynamic resistance score 5N = 5.71 units
-- Hydrodynamic resistance score 10N = 4.32 units
+- Load required for 90° = 18.6 N (1.90 kg) *(provisional)*
+- Hydrodynamic resistance score 5N = TODO
+- Hydrodynamic resistance score 10N = TODO
 
 The predicted code for this fin would be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-C580-T17-R57-F15
+TODO
 ```
 
 ## Reference images
 
-| ![Laminating Support](lf_base.jpeg) | ![Laminating Base](lf_base_and_epoxy.jpeg) |
-|-------------------------------------|--------------------------------------------|
-| Laminating Support                  | Laminating Base                                |
-
-| ![Carbon Cloth](lf_cloth.jpeg) | ![Wet Laminate](lf_laminate.jpeg) |
-|--------------------------------|-----------------------------------|
-| Base Ready                     | Wet Laminate                      |
-
-| ![Laminate Peel Ply](lf_laminate_ply.jpeg) | ![Vacuum Bagging](lf_vacuum.jpeg) |
-|--------------------------------------------|-----------------------------------|
-| Laminate Peel Ply                          | Vacuum Bagging                    |
-
-| ![Prepping to Cut](lf_cutting_start.jpeg) | ![Cutting Done](lf_cutting_done.jpeg) |
-|-------------------------------------------|---------------------------------------|
-| Prepping to Cut                           | Cutting Done                          |
-
-| ![Glueing Fin Rails](lf_glueing.jpeg) | ![Finishing Layer](lf_finishing.jpeg) |
-|---------------------------------------|---------------------------------------|
-| Glueing Fin Rails                     | Finishing Layer                       |
-
-| ![Footpockets](lf_footpockets.png) | ![lf_final.jpeg](lf_final.jpeg)  |
-|------------------------------------|----------------------------------|
-| Footpockets                        | Complete Fins                    |
+TODO after build.
 
 ## Time needed
 
@@ -145,24 +125,24 @@ C580-T17-R57-F15
 
 ### Desired vs Predicted vs Actual
 
-I've recorded the flex using the [Kitchen Scale Test](../../../techniques/measuring-flex/v2/kitchen-scale-test.md).
+Record the flex after fabrication using the [Kitchen Scale Test](../../../techniques/measuring-flex/v2/kitchen-scale-test.md).
 
-|                     | Desired | Predicted | Actual | Notes                                                      |
-|---------------------|---------|-----------|--------|------------------------------------------------------------|
-| Free blade size     | 580mm   | 580mm     | 580mm  | Matched                                                    |
-| Blade width         | 180mm   | 180mm     | 180mm  | Matched                                                    |
-| Load for 90 degrees | 1.2kg   | 1.70kg    | 1.30kg | Lower actual due to tapered cuts shifting bend to mid-blade |
+|                     | Desired   | Predicted            | Actual | Notes                            |
+|---------------------|-----------|----------------------|--------|----------------------------------|
+| Free blade size     | 580mm     | 580mm                | TODO   | Copied from v1 baseline geometry |
+| Blade width         | 180mm     | 180mm                | TODO   | Copied from v1 baseline geometry |
+| Load for 90 degrees | 1.8-2.0kg | 1.90kg (provisional) | TODO   | Validate after first flex test   |
 
 ### Water trial
 
-Feels a bit soft but heavier than the training fins.
+TODO after build.
 
-|                     | Desired | Actual | Notes                      |
-|---------------------|---------|--------|----------------------------|
-| Hydro resistance 5N | 5.0     | 5.0    | Soft but acceptable feel   |
-| Hydro resistance 10N| 4.0     | 4.0    | Heavier than training fins |
+|                     | Desired | Actual | Notes                            |
+|---------------------|---------|--------|----------------------------------|
+| Hydro resistance 5N | TODO    | TODO   | Measure after first water trial  |
+| Hydro resistance 10N| TODO    | TODO   | Measure after first water trial  |
 
-Judging from the above, the code for this turned out to be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
+Final code after build and testing (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-C580-T13-R50-F10
+TODO
 ```
