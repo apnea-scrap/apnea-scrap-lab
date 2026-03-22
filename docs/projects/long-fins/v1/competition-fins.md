@@ -78,23 +78,25 @@ Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1
 Free blade length [mm]: 580
 Blade width [mm]: 180
 Layers at foot: 6
-Layers at tip: 3
-Min layer length [mm]: 150
+Layers at tip: 2
+Min layer length [mm]: 200
 
 | ![Bending Calculation](bending_calculation.png) | ![Bending Profile](bending_profile.png) |
 |-------------------------------------------------|-----------------------------------------|
 | Bending Calculation                             | Bending Profile                         |
 
+Note: In the real blade, the actual bending point will move toward mid-blade. We are cutting out triangles to push more stiffness toward the foot.
 
 Predicted:
 
-- Load required for 90° = 16.7 N (1.70 kg)
-- Hydrodynamic resistance score 5N = 5.71 units
-- Hydrodynamic resistance score 10N = 4.32 units
+- Load required for 90° = 12.8 N (1.31 kg)
+- Hydrodynamic resistance score 5N = 5.62 units
+- Hydrodynamic resistance score 10N = 4.23 units
+- Hydrodynamic resistance score MaxLoad = 3.61 units
 
 The predicted code for this fin would be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-C580-T17-R57-F15
+C580-T13-R56-F14
 ```
 
 ## Reference images

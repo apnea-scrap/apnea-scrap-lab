@@ -80,23 +80,25 @@ Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1
 Free blade length [mm]: 580
 Blade width [mm]: 180
 Layers at foot: 7
-Layers at tip: 3
-Min layer length [mm]: 150
+Layers at tip: 2
+Min layer length [mm]: 200
 
 | ![Bending Calculation](bending_calculation.png) | ![Bending Profile](bending_profile.png) |
 |-------------------------------------------------|-----------------------------------------|
 | Bending Calculation                             | Bending Profile                         |
 
+Note: In the real blade, the actual bending point will move toward mid-blade. We are cutting out triangles to push more stiffness toward the foot.
 
 Predicted:
 
-- Load required for 90° = 18.6 N (1.90 kg) *(provisional)*
-- Hydrodynamic resistance score 5N = TODO
-- Hydrodynamic resistance score 10N = TODO
+- Load required for 90° = 18.3 N (1.87 kg)
+- Hydrodynamic resistance score 5N = 6.12 units
+- Hydrodynamic resistance score 10N = 5.18 units
+- Hydrodynamic resistance score MaxLoad = 3.84 units
 
 The predicted code for this fin would be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-TODO
+C580-18-R61-F10
 ```
 
 ## Reference images
@@ -131,7 +133,7 @@ Record the flex after fabrication using the [Kitchen Scale Test](../../../techni
 |---------------------|-----------|----------------------|--------|----------------------------------|
 | Free blade size     | 580mm     | 580mm                | TODO   | Copied from v1 baseline geometry |
 | Blade width         | 180mm     | 180mm                | TODO   | Copied from v1 baseline geometry |
-| Load for 90 degrees | 1.8-2.0kg | 1.90kg (provisional) | TODO   | Validate after first flex test   |
+| Load for 90 degrees | 1.8-2.0kg | 1.87kg               | TODO   | Validate after first flex test   |
 
 ### Water trial
 
