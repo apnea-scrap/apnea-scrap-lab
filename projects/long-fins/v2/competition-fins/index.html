@@ -4605,7 +4605,8 @@ This v2 keeps the v1 process and geometry, while targeting a 90-degree bend load
 <li>Layer 4: 20 cm x 75(-15) V side shape</li>
 <li>Layer 5: 20 cm x 55(-10) V side shape</li>
 <li>Layer 6: 20 cm x 45(-10) V side shape</li>
-<li>Layer 7: 20 cm × 80 cm top ply</li>
+<li>Layer 7: 20 cm x 35(-10) V side shape</li>
+<li>Layer 8: 20 cm × 80 cm top ply</li>
 </ul>
 <table>
 <thead>
@@ -4627,7 +4628,6 @@ This v2 keeps the v1 process and geometry, while targeting a 90-degree bend load
 <tr>
 <th></th>
 <th><img alt="Cutting plan for one blade" src="../cutting_plan.svg" /></th>
-<th><img alt="Cutting plan for one blade" src="../cutting_plan.svg" /></th>
 <th></th>
 </tr>
 </thead>
@@ -4635,7 +4635,6 @@ This v2 keeps the v1 process and geometry, while targeting a 90-degree bend load
 <tr>
 <td></td>
 <td>Cutting plan for first blade</td>
-<td>Cutting plan for second blade (identical)</td>
 <td></td>
 </tr>
 </tbody>
@@ -4644,9 +4643,9 @@ This v2 keeps the v1 process and geometry, while targeting a 90-degree bend load
 <p>Start with the <a href="../../../../techniques/predicting-flex/v1/tapered-cantilever-beam/">Flex predictor modelling</a> workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.</p>
 <p>Free blade length [mm]: 580
 Blade width [mm]: 180
-Layers at foot: 7
+Layers at foot: 8
 Layers at tip: 2
-Min layer length [mm]: 200</p>
+Min layer length [mm]: 100</p>
 <table>
 <thead>
 <tr>
@@ -4664,10 +4663,10 @@ Min layer length [mm]: 200</p>
 <p>Note: In the real blade, the actual bending point will move toward mid-blade. We are cutting out triangles to push more stiffness toward the foot.</p>
 <p>Predicted:</p>
 <ul>
-<li>Load required for 90° = 18.3 N (1.87 kg)</li>
-<li>Hydrodynamic resistance score 5N = 6.12 units</li>
-<li>Hydrodynamic resistance score 10N = 5.18 units</li>
-<li>Hydrodynamic resistance score MaxLoad = 3.84 units</li>
+<li>Load required for 90° = 17.8 N (1.82 kg)</li>
+<li>Hydrodynamic resistance score 5N = 6.14 units</li>
+<li>Hydrodynamic resistance score 10N = 5.22 units</li>
+<li>Hydrodynamic resistance score MaxLoad = 4.00 units</li>
 </ul>
 <p>The predicted code for this fin would be (see <a href="../../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes/">hydrodynamic resistance codes</a>): </p>
 <pre><code>C580-18-R61-F10
