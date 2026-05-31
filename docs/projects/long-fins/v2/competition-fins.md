@@ -60,28 +60,29 @@ For this build I am going to be using a triangles to smooth the transition betwe
 - Layer 4: 20 cm x 75(-15) V side shape
 - Layer 5: 20 cm x 55(-10) V side shape
 - Layer 6: 20 cm x 45(-10) V side shape
-- Layer 7: 20 cm × 80 cm top ply
+- Layer 7: 20 cm x 35(-10) V side shape
+- Layer 8: 20 cm × 80 cm top ply
 
 
-| ![Expanded Laminate View](expanded.svg) | ![Laminate Thickness Profile](thickness.svg) |
-|-----------------------------------------|----------------------------------------------|
-| Expanded Laminate View                  | Laminate Thickness Profile                   |
+| ![Expanded Laminate View](expanded.svg)  | ![Laminate Thickness Profile](thickness.svg) |
+|------------------------------------------|----------------------------------------------|
+| Expanded Laminate View                   | Laminate Thickness Profile                   |
 
 
 #### Cutting plan
 
-|  | ![Cutting plan for one blade](cutting_plan.svg) | ![Cutting plan for one blade](cutting_plan.svg) |  |
-|--|-------------------------------------------------|-------------------------------------------------|--|
-|  | Cutting plan for first blade                    | Cutting plan for second blade (identical)       |  |
+|  | ![Cutting plan for one blade](cutting_plan.svg) |  |
+|--|-------------------------------------------------|--|
+|  | Cutting plan for first blade                    |  |
 
 ### Estimating the flex
 Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md) workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.
 
 Free blade length [mm]: 580
 Blade width [mm]: 180
-Layers at foot: 7
+Layers at foot: 8
 Layers at tip: 2
-Min layer length [mm]: 200
+Min layer length [mm]: 100
 
 | ![Bending Calculation](bending_calculation.png) | ![Bending Profile](bending_profile.png) |
 |-------------------------------------------------|-----------------------------------------|
@@ -91,10 +92,10 @@ Note: In the real blade, the actual bending point will move toward mid-blade. We
 
 Predicted:
 
-- Load required for 90° = 18.3 N (1.87 kg)
-- Hydrodynamic resistance score 5N = 6.12 units
-- Hydrodynamic resistance score 10N = 5.18 units
-- Hydrodynamic resistance score MaxLoad = 3.84 units
+- Load required for 90° = 17.8 N (1.82 kg)
+- Hydrodynamic resistance score 5N = 6.14 units
+- Hydrodynamic resistance score 10N = 5.22 units
+- Hydrodynamic resistance score MaxLoad = 4.00 units
 
 The predicted code for this fin would be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
