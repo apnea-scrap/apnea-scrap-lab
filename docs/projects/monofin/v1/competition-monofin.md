@@ -51,13 +51,15 @@ Target outline for the monofin:
 
 For this build I am going to be using a triangles to smooth the transition between the various thickness levels.
 
-- Reserve 17 cm (+3cm tolerance) from the heel line for the bend zone.
+- Reserve 20 cm (17+3cm tolerance) from the heel line for the bend zone.
 - Layer 1: 20 cm × 70 cm
-- Layer 2: 20 cm × 50 cm
-- Layer 3: 20 cm × 70 cm cutout triangles
-- Layer 4: 20 cm × 50 cm cutout triangles
-- Layer 5: 20 cm × 35 cm
-- Layer 6: 20 cm × 70 cm top ply
+- Layer 2: 20 cm × 70 cm cutout triangles
+- Layer 3: 20 cm × 70 cm ^ mid shape triangle
+- Layer 4: 20 cm x 65(-10) V side shape
+- Layer 5: 20 cm x 55(-10) V side shape
+- Layer 6: 20 cm x 45(-10) V side shape
+- Layer 7: 20 cm x 35(-10) V side shape
+- Layer 8: 20 cm × 70 cm top ply
 
 
 | ![Expanded Laminate View](expanded.svg) | ![Laminate Thickness Profile](thickness.svg) |
@@ -67,28 +69,29 @@ For this build I am going to be using a triangles to smooth the transition betwe
 
 #### Cutting plan
 
-For this build I am going to use carbon cloth in a different colour for the top layers in order to create a better visual effect.
-
-|  | ![Cutting plan for top layers](cutting_plan_green.svg) | ![Cutting plan for the internal layers](cutting_plan_black.svg) |
-|--|--------------------------------------------------------|-----------------------------------------------------------------|
-|  | Cutting plan for top layers                            |  Cutting plan for the internal layers                                                               |
+|  | ![Cutting plan](cutting_plan.svg) |  |
+|--|---------------------------------------------------|--|
+|  | Cutting plan                     |  |
 
 ### Estimating the flex
 Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md) workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.
 
 Free blade length [mm]: 520
 Blade width [mm]: 700
-Layers at foot: 6
+Layers at foot: 8
 Layers at tip: 2
-Min layer length [mm]: 150
+Min layer length [mm]: 100
 
 | ![Bending Calculation](bending_calculation.png) | ![Bending Profile](bending_profile.png) |
 |-------------------------------------------------|-----------------------------------------|
 | Bending Calculation                             | Bending Profile                         |
 
+Notes: 
+- As we are cutting the monofin shape, the stiffness and hydrodynamic resistance is going to be lower
+- The actual bending point will move toward mid-blade as we are cutting out triangles to taper the stiffness
+
 
 Predicted:
-
 - Load required for 90° = 55.8 N (5.68 kg)
 - Hydrodynamic resistance score 5N = 23.32 units
 - Hydrodynamic resistance score 10N = 22.28 units

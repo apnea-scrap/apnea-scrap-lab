@@ -52,7 +52,7 @@ Target outline for each blade:
 
 For this build I am going to be using a triangles to smooth the transition between the various thickness levels.
 
-- Reserve 17 cm from the heel line for the bend zone.
+- Reserve 20 cm (17+3cm tolerance) from the heel line for the bend zone.
 - Layer 1: 20 cm × 80 cm
 - Layer 2a: 20 cm × 80 cm half triangle
 - Layer 2b: 20 cm × 80 cm the other half triangle
@@ -71,9 +71,9 @@ For this build I am going to be using a triangles to smooth the transition betwe
 
 #### Cutting plan
 
-|  | ![Cutting plan for one blade](cutting_plan.svg) |  |
-|--|-------------------------------------------------|--|
-|  | Cutting plan for first blade                    |  |
+|  | ![Cutting plan for both blades](cutting_plan.svg) |  |
+|--|---------------------------------------------------|--|
+|  | Cutting plan for both blades                      |  |
 
 ### Estimating the flex
 Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md) workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.
