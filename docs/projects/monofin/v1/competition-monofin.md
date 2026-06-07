@@ -9,8 +9,8 @@ techniques:
     path: techniques/creating-laminating-base/v3/cardboard-support.md
   - title: Laminating Carbon
     focus: Creating the carbon laminate
-    path: techniques/laminating-carbon/v1/wet-layup.md
-    consumable_scaling_factor: 17
+    path: techniques/laminating-carbon/v2/wet-layup-1250mm-cloth.md
+    consumable_scaling_factor: 3
   - title: Vacuum Bagging
     focus: Reducing the resin percentage of the laminate
     path: techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md
@@ -117,7 +117,7 @@ TODO after build
 
 ## Instructions
 1. Build a 900 mm × 800 mm laminating base following [Creating a laminating base](../../../techniques/creating-laminating-base/v3/cardboard-support.md) so both blades can be laminated at the same time.
-2. Lay up the carbon according to the schedule above, using the steps in [Manual wet layup stack](../../../techniques/laminating-carbon/v1/wet-layup.md).
+2. Lay up the carbon according to the schedule above, using the steps in [1250 mm cloth wet layup stack](../../../techniques/laminating-carbon/v2/wet-layup-1250mm-cloth.md).
 3. Pull the stack under vacuum to tighten the fiber volume, referencing [Edge-sealed bagging](../../../techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md).
 4. Trim the cured laminate to the template with the [Junior hacksaw method](../../../techniques/cutting-cured-carbon/v1/junior-hacksaw.md).
 5. Seal the surface with the approach in [Epoxy and clear coat finish](../../../techniques/finishing-carbon/v1/epoxy-and-clear-coat.md).

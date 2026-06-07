@@ -9,8 +9,8 @@ techniques:
     path: techniques/creating-laminating-base/v4/plywood-corner-brace.md
   - title: Laminating Carbon
     focus: Creating the carbon laminate
-    path: techniques/laminating-carbon/v1/wet-layup.md
-    consumable_scaling_factor: 8
+    path: techniques/laminating-carbon/v2/wet-layup-1250mm-cloth.md
+    consumable_scaling_factor: 2
   - title: Vacuum Bagging
     focus: Reducing the resin percentage of the laminate
     path: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
@@ -118,7 +118,7 @@ TODO after build.
 
 ## Instructions
 1. Build a 1000 mm × 600 mm laminating base following [Creating a laminating base](../../../techniques/creating-laminating-base/v4/plywood-corner-brace.md) so both blades can be laminated at the same time.
-2. Lay up the carbon according to the schedule above, using the steps in [Manual wet layup stack](../../../techniques/laminating-carbon/v1/wet-layup.md).
+2. Lay up the carbon according to the schedule above, using the steps in [1250 mm cloth wet layup stack](../../../techniques/laminating-carbon/v2/wet-layup-1250mm-cloth.md).
 3. Pull the stack under vacuum to tighten the fiber volume, referencing [Enclosed bagging](../../../techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md).
 4. Trim the cured laminate to the template with the [Junior hacksaw method](../../../techniques/cutting-cured-carbon/v1/junior-hacksaw.md).
 5. Seal the surface with the approach in [Clear coat and acrylic paint](../../../techniques/finishing-carbon/v2/clear-coat-and-acrylic-paint.md).

@@ -12,6 +12,15 @@ material:
         amount: 17.00
         currency: GBP
       notes: "200 g/m² 3K 2/2 twill, supplied off the roll"
+    - supplier: "Easy Composites"
+      url: "https://www.easycomposites.co.uk/200g-black-stuff-22-twill-3k-carbon-fibre-cloth"
+      region: UK
+      date: 2026-06
+      unit: linear m (1.25 m wide)
+      price:
+        amount: 21.00
+        currency: GBP
+      notes: "200 g/m² 3K 2/2 twill, 1250 mm width, supplied off the roll"
 ---
 
 ## Overview
@@ -27,5 +36,6 @@ bifins while still providing strength. Choose fabric widths that cover the full 
 
 ## Related techniques
 - [Laminating Carbon – V1 Wet Layup](../techniques/laminating-carbon/v1/wet-layup.md)
+- [Laminating Carbon – V2 Wet Layup, 1250 mm Cloth](../techniques/laminating-carbon/v2/wet-layup-1250mm-cloth.md)
 - [Vacuum Bagging Carbon – V1 Enclosed Bagging](../techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md)
 - [Vacuum Bagging Carbon – V2 Edge-Sealed Bagging](../techniques/vacuum-bagging-carbon/v2/edge-sealed-bagging.md)
