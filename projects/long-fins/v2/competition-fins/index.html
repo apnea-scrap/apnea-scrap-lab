@@ -4597,7 +4597,7 @@ This v2 keeps the v1 process and geometry, while targeting a 90-degree bend load
 <h4 id="layer-schedule-one-blade">Layer schedule (one blade)<a class="headerlink" href="#layer-schedule-one-blade" title="Permanent link">&para;</a></h4>
 <p>For this build I am going to be using a triangles to smooth the transition between the various thickness levels.</p>
 <ul>
-<li>Reserve 17 cm from the heel line for the bend zone.</li>
+<li>Reserve 20 cm (17+3cm tolerance) from the heel line for the bend zone.</li>
 <li>Layer 1: 20 cm × 80 cm</li>
 <li>Layer 2a: 20 cm × 80 cm half triangle</li>
 <li>Layer 2b: 20 cm × 80 cm the other half triangle</li>
@@ -4627,14 +4627,14 @@ This v2 keeps the v1 process and geometry, while targeting a 90-degree bend load
 <thead>
 <tr>
 <th></th>
-<th><img alt="Cutting plan for one blade" src="../cutting_plan.svg" /></th>
+<th><img alt="Cutting plan for both blades" src="../cutting_plan.svg" /></th>
 <th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td></td>
-<td>Cutting plan for first blade</td>
+<td>Cutting plan for both blades</td>
 <td></td>
 </tr>
 </tbody>
@@ -4694,7 +4694,7 @@ Min layer length [mm]: 100</p>
 <td>0 h</td>
 </tr>
 <tr>
-<td>Laminating Carbon<br><small><em>Creating the carbon laminate</em></small><br><small>×6</small></td>
+<td>Laminating Carbon<br><small><em>Creating the carbon laminate</em></small><br><small>×8</small></td>
 <td>1.5 h</td>
 <td>12 h</td>
 </tr>
@@ -4817,44 +4817,44 @@ Min layer length [mm]: 100</p>
 <tr>
 <td>Laminating Carbon<br><small><em>Creating the carbon laminate</em></small></td>
 <td><a href="../../../../materials/carbon-fiber-fabric/">Carbon Fiber Fabric</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>0.3 m² of 200 g/m² 3K 2/2 twill cloth</small></td>
-<td>1.8 m² (1 m wide)<br><small>scaled ×6 — base 0.3 m² (1 m wide)</small></td>
+<td>2.4 m² (1 m wide)<br><small>scaled ×8 — base 0.3 m² (1 m wide)</small></td>
 <td>£17.00 per m² (1 m wide)</td>
-<td>£30.60</td>
+<td>£40.80</td>
 </tr>
 <tr>
 <td></td>
 <td><a href="../../../../materials/laminating-epoxy-system/">Laminating Epoxy System</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>150 g mixed resin (approx. 150 ml)</small></td>
-<td>1.5 500 ml kit<br><small>scaled ×6 — base 0.25 500 ml kit</small></td>
+<td>2 500 ml kit<br><small>scaled ×8 — base 0.25 500 ml kit</small></td>
 <td>£15.00 per 500 ml kit</td>
-<td>£22.50</td>
+<td>£30.00</td>
 </tr>
 <tr>
 <td></td>
 <td><a href="../../../../materials/pva-release-agent/">Pva Release Agent</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>Two thin coats on the laminating base</small></td>
-<td>1.05 200 ml bottle<br><small>scaled ×6 — base 35 ml (two thin coats)</small></td>
+<td>1.4 200 ml bottle<br><small>scaled ×8 — base 35 ml (two thin coats)</small></td>
 <td>£5.00 per 200 ml bottle</td>
-<td>£5.25</td>
+<td>£7.00</td>
 </tr>
 <tr>
 <td></td>
 <td><a href="../../../../materials/peel-ply/">Peel Ply</a><br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>Two layers cut to the blade outline</small></td>
-<td>0.6 5 m pack (1.5 m wide)<br><small>scaled ×6 — base 0.6 m (1.5 m wide)</small></td>
+<td>0.8 5 m pack (1.5 m wide)<br><small>scaled ×8 — base 0.6 m (1.5 m wide)</small></td>
 <td>£12.00 per 5 m pack (1.5 m wide)</td>
-<td>£7.20</td>
+<td>£9.60</td>
 </tr>
 <tr>
 <td></td>
 <td>Consumables pack<br><span class="bom-cost-label bom-cost-label--consumable">Consumable</span> <small>Gloves, mixing sticks, acetone wipes</small></td>
-<td>6 pack<br><small>scaled ×6 — base 1 pack</small></td>
+<td>8 pack<br><small>scaled ×8 — base 1 pack</small></td>
 <td>£1.00</td>
-<td>£6.00</td>
+<td>£8.00</td>
 </tr>
 <tr>
 <td><strong>Laminating Carbon total</strong></td>
 <td></td>
 <td></td>
 <td></td>
-<td><strong>£71.55</strong></td>
+<td><strong>£95.40</strong></td>
 </tr>
 <tr>
 <td><small>&nbsp;</small></td>
@@ -4962,11 +4962,11 @@ Min layer length [mm]: 100</p>
 <td><strong>£20.25</strong></td>
 </tr>
 <tr>
-<td><span class="bom-cost-label bom-cost-label--consumable">Consumables subtotal</span> <strong>£98.30</strong></td>
+<td><span class="bom-cost-label bom-cost-label--consumable">Consumables subtotal</span> <strong>£122.15</strong></td>
 <td><strong>+</strong></td>
 <td><span class="bom-cost-label bom-cost-label--reusable">Reusable subtotal</span> <strong>£74.37 - £96.37</strong></td>
 <td><strong>=</strong></td>
-<td><strong>Grand total</strong> <strong>£172.67 - £194.67</strong></td>
+<td><strong>Grand total</strong> <strong>£196.52 - £218.52</strong></td>
 </tr>
 </tbody>
 </table>
