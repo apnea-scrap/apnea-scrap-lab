@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1800"
+   height="1200"
+   viewBox="0 0 1800 1200"
+   version="1.1"
+   id="svg26"
+   sodipodi:docname="cutting_plan.svg"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs26" />
+  <sodipodi:namedview
+     id="namedview26"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.42154139"
+     inkscape:cx="525.45256"
+     inkscape:cy="334.48673"
+     inkscape:window-width="1440"
+     inkscape:window-height="875"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="cutting-plan" />
+  <rect
+     x="0"
+     y="0"
+     width="1800"
+     height="1200"
+     fill="#f8f9fa"
+     stroke="#b0b0b0"
+     stroke-width="1.5"
+     id="rect1" />
+  <g
+     id="cutting-plan">
+    <g
+       transform="translate(0, 0)"
+       data-layer="L1"
+       id="g1">
+      <path
+         d="M180,0 L792,0 L795.0615,0.609 L797.6569,2.3431 L799.391,4.9385 L800,8 L800,192 L799.391,195.0615 L797.6569,197.6569 L795.0615,199.391 L792,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+         fill="#a9d8bb"
+         stroke="#000000"
+         stroke-width="5"
+         fill-opacity="0.85"
+         stroke-linejoin="round"
+         data-layer="L1"
+         data-role="layer"
+         id="path1" />
+      <text
+         x="400"
+         y="100"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text1">L1</text>
+    </g>
+    <g
+       transform="translate(0, 200)"
+       data-layer="L3"
+       data-rotated="true"
+       id="g3">
+      <g
+         transform="translate(200, 0) rotate(90)"
+         id="g2">
+        <path
+           d="M180,0 L503.2759,1.7237 L523.2929,15.4003 L756.9667,78.8298 L800,99.87 L761.1952,113.4507 L530.7861,193.5939 L504.9669,198.7299 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#e3e5e5"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L3"
+           data-role="layer"
+           id="path2" />
+      </g>
+      <text
+         x="100"
+         y="400"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text2">L3</text>
+    </g>
+    <g
+       transform="translate(0, 1000)"
+       data-layer="L5 #2"
+       id="g4">
+      <path
+         d="M180,0 L542,0 L545.0615,0.609 L547.6569,2.3431 L549.391,4.9385 L550,8 L450.7707,94.915 L550,192 L549.391,195.0615 L547.6569,197.6569 L545.0615,199.391 L542,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+         fill="#9da584"
+         stroke="#000000"
+         stroke-width="5"
+         fill-opacity="0.85"
+         stroke-linejoin="round"
+         data-layer="L5"
+         data-role="layer"
+         id="path3" />
+      <text
+         x="275"
+         y="100"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text3">L5 #2</text>
+    </g>
+    <g
+       transform="translate(200, 200)"
+       data-layer="L8"
+       data-rotated="true"
+       id="g6">
+      <g
+         transform="translate(200, 0) rotate(90)"
+         id="g5">
+        <path
+           d="M180,0 L792,0 L795.0615,0.609 L797.6569,2.3431 L799.391,4.9385 L800,8 L800,192 L799.391,195.0615 L797.6569,197.6569 L795.0615,199.391 L792,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#b7bcdd"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L6"
+           data-role="layer"
+           id="path4" />
+      </g>
+      <text
+         x="100"
+         y="400"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text5">L8</text>
+    </g>
+    <g
+       transform="translate(400, 200)"
+       data-layer="L1 #2"
+       data-rotated="true"
+       id="g8">
+      <g
+         transform="translate(200, 0) rotate(90)"
+         id="g7">
+        <path
+           d="M180,0 L792,0 L795.0615,0.609 L797.6569,2.3431 L799.391,4.9385 L800,8 L800,192 L799.391,195.0615 L797.6569,197.6569 L795.0615,199.391 L792,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#a9d8bb"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L1"
+           data-role="layer"
+           id="path6" />
+      </g>
+      <text
+         x="100"
+         y="400"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text7">L1 #2</text>
+    </g>
+    <g
+       transform="translate(550, 1000)"
+       data-layer="L6 #2"
+       id="g9">
+      <path
+         d="M180,0 L442,0 L445.0615,0.609 L447.6569,2.3431 L449.391,4.9385 L450,8 L352.7501,97.8933 L450,192 L449.391,195.0615 L447.6569,197.6569 L445.0615,199.391 L442,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+         fill="#b7bcdd"
+         stroke="#000000"
+         stroke-width="5"
+         fill-opacity="0.85"
+         stroke-linejoin="round"
+         data-layer="L6"
+         data-role="layer"
+         id="path8" />
+      <text
+         x="225"
+         y="100"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text8">L6 #2</text>
+    </g>
+    <g
+       transform="translate(600, 200)"
+       data-layer="L3 #2"
+       data-rotated="true"
+       id="g11">
+      <g
+         transform="translate(200, 0) rotate(90)"
+         id="g10">
+        <path
+           d="M180,0 L503.2759,1.7237 L523.2929,15.4003 L756.9667,78.8298 L800,99.87 L761.1952,113.4507 L530.7861,193.5939 L504.9669,198.7299 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#e3e5e5"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L3"
+           data-role="layer"
+           id="path9" />
+      </g>
+      <text
+         x="100"
+         y="400"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text10">L3 #2</text>
+    </g>
+    <g
+       transform="translate(800, 0)"
+       data-layer="L5"
+       id="g12">
+      <path
+         d="M180,0 L542,0 L545.0615,0.609 L547.6569,2.3431 L549.391,4.9385 L550,8 L450.7707,94.915 L550,192 L549.391,195.0615 L547.6569,197.6569 L545.0615,199.391 L542,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+         fill="#9da584"
+         stroke="#000000"
+         stroke-width="5"
+         fill-opacity="0.85"
+         stroke-linejoin="round"
+         data-layer="L5"
+         data-role="layer"
+         id="path11" />
+      <text
+         x="275"
+         y="100"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text11">L5</text>
+    </g>
+    <g
+       transform="translate(800, 200)"
+       data-layer="L8 #2"
+       data-rotated="true"
+       id="g14">
+      <g
+         transform="translate(200, 0) rotate(90)"
+         id="g13">
+        <path
+           d="M180,0 L792,0 L795.0615,0.609 L797.6569,2.3431 L799.391,4.9385 L800,8 L800,192 L799.391,195.0615 L797.6569,197.6569 L795.0615,199.391 L792,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#b7bcdd"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L6"
+           data-role="layer"
+           id="path12" />
+      </g>
+      <text
+         x="100"
+         y="400"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text13">L8 #2</text>
+    </g>
+    <g
+       transform="translate(1000, 200)"
+       data-layer="L2"
+       data-rotated="true"
+       id="g16">
+      <g
+         transform="translate(200, 0) rotate(90)"
+         id="g15">
+        <path
+           d="M 792,200 H 180 8 L 4.9385,199.391 2.3431,197.6569 0.609,195.0615 0,192 V 8 0 137.6718 43.8595 180.2202 5.0794707 C 0,5.0794707 527.1394,138.96134 792,200 Z"
+           fill="#d2c589"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L2"
+           data-role="layer"
+           id="path14"
+           sodipodi:nodetypes="cccccccccccccc"
+           style="display:inline" />
+      </g>
+      <text
+         x="100"
+         y="396"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text15">L2</text>
+    </g>
+    <g
+       transform="translate(1000, 1000)"
+       data-layer="L7"
+       id="g17">
+      <path
+         d="M180,0 L312.325,0 L321.838,1.2541 L326.3689,1.0528 L332.619,3.6482 L334.5183,8.6451 L248.8811,98.5384 L330.6474,187.484 L333.2642,194.4163 L331.5301,197.6569 L325.7089,199.391 L314.2605,198.7097 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+         fill="#b7bcdd"
+         stroke="#000000"
+         stroke-width="5"
+         fill-opacity="0.85"
+         stroke-linejoin="round"
+         data-layer="L7"
+         data-role="layer"
+         id="path16"
+         sodipodi:nodetypes="ccccccccccccc"
+         style="fill:#ff9955" />
+      <text
+         x="167.2592"
+         y="100"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text16">L7</text>
+    </g>
+    <g
+       transform="translate(1200, 200)"
+       data-layer="L2 #2"
+       data-rotated="true"
+       id="g19">
+      <g
+         transform="translate(200, 0) rotate(90)"
+         id="g18" />
+      <text
+         x="100"
+         y="396"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text18">L2 #2</text>
+    </g>
+    <g
+       transform="translate(1334.5183, 1000)"
+       data-layer="L7 #2"
+       id="g20">
+      <path
+         d="M180,0 L312.325,0 L321.838,1.2541 L326.3689,1.0528 L332.619,3.6482 L334.5183,8.6451 L248.8811,98.5384 L330.6474,187.484 L333.2642,194.4163 L331.5301,197.6569 L325.7089,199.391 L314.2605,198.7097 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+         fill="#b7bcdd"
+         stroke="#000000"
+         stroke-width="5"
+         fill-opacity="0.85"
+         stroke-linejoin="round"
+         data-layer="L7"
+         data-role="layer"
+         id="path19"
+         sodipodi:nodetypes="ccccccccccccc"
+         style="fill:#ff9955" />
+      <text
+         x="167.2592"
+         y="100"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text19">L7 #2</text>
+    </g>
+    <g
+       transform="translate(1350, 0)"
+       data-layer="L6"
+       id="g21">
+      <path
+         d="M180,0 L442,0 L445.0615,0.609 L447.6569,2.3431 L449.391,4.9385 L450,8 L352.7501,97.8933 L450,192 L449.391,195.0615 L447.6569,197.6569 L445.0615,199.391 L442,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+         fill="#b7bcdd"
+         stroke="#000000"
+         stroke-width="5"
+         fill-opacity="0.85"
+         stroke-linejoin="round"
+         data-layer="L6"
+         data-role="layer"
+         id="path20" />
+      <text
+         x="225"
+         y="100"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text20">L6</text>
+    </g>
+    <g
+       transform="translate(1400, 200)"
+       data-layer="L4"
+       data-rotated="true"
+       id="g23">
+      <g
+         transform="translate(200, 0) rotate(90)"
+         id="g22">
+        <path
+           d="M180,0 L742,0 L745.0615,0.609 L747.6569,2.3431 L749.391,4.9385 L750,8 L598.3582,97.2599 L750,192 L749.391,195.0615 L747.6569,197.6569 L745.0615,199.391 L742,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#84d6f4"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L4"
+           data-role="layer"
+           id="path21" />
+      </g>
+      <text
+         x="100"
+         y="375"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text22">L4</text>
+    </g>
+    <g
+       transform="translate(1600, 200)"
+       data-layer="L4 #2"
+       data-rotated="true"
+       id="g25">
+      <g
+         transform="translate(200, 0) rotate(90)"
+         id="g24">
+        <path
+           d="M180,0 L742,0 L745.0615,0.609 L747.6569,2.3431 L749.391,4.9385 L750,8 L598.3582,97.2599 L750,192 L749.391,195.0615 L747.6569,197.6569 L745.0615,199.391 L742,200 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 L180,0 Z"
+           fill="#84d6f4"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L4"
+           data-role="layer"
+           id="path23" />
+      </g>
+      <text
+         x="100"
+         y="375"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24"
+         fill="#1a1a1a"
+         id="text24">L4 #2</text>
+    </g>
+    <g
+       transform="rotate(180,598.75,495.99903)"
+       data-layer="L2"
+       data-rotated="true"
+       id="g28">
+      <g
+         transform="rotate(90,100,100)"
+         id="g27">
+        <path
+           d="M 792,200 H 180 8 L 4.9385,199.391 2.3431,197.6569 0.609,195.0615 0,192 V 8 0 137.6718 43.8595 180.2202 5.0794707 C 0,5.0794707 527.1394,138.96134 792,200 Z"
+           fill="#d2c589"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L2"
+           data-role="layer"
+           id="path26"
+           sodipodi:nodetypes="cccccccccccccc"
+           style="display:inline" />
+      </g>
+      <text
+         x="100"
+         y="396"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24px"
+         fill="#1a1a1a"
+         id="text27">L2</text>
+    </g>
+    <g
+       transform="translate(1199.2687,202.37225)"
+       data-layer="L2"
+       data-rotated="true"
+       id="g30">
+      <g
+         transform="rotate(90,100,100)"
+         id="g29">
+        <path
+           d="M 792,200 H 180 8 L 4.9385,199.391 2.3431,197.6569 0.609,195.0615 0,192 V 8 0 137.6718 43.8595 180.2202 5.0794707 C 0,5.0794707 527.1394,138.96134 792,200 Z"
+           fill="#d2c589"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L2"
+           data-role="layer"
+           id="path28"
+           sodipodi:nodetypes="cccccccccccccc"
+           style="display:inline" />
+      </g>
+      <text
+         x="100"
+         y="396"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24px"
+         fill="#1a1a1a"
+         id="text29">L2</text>
+    </g>
+    <g
+       transform="rotate(180,698.38435,495.99903)"
+       data-layer="L2"
+       data-rotated="true"
+       id="g32">
+      <g
+         transform="rotate(90,100,100)"
+         id="g31">
+        <path
+           d="M 792,200 H 180 8 L 4.9385,199.391 2.3431,197.6569 0.609,195.0615 0,192 V 8 0 137.6718 43.8595 180.2202 5.0794707 C 0,5.0794707 527.1394,138.96134 792,200 Z"
+           fill="#d2c589"
+           stroke="#000000"
+           stroke-width="5"
+           fill-opacity="0.85"
+           stroke-linejoin="round"
+           data-layer="L2"
+           data-role="layer"
+           id="path30"
+           sodipodi:nodetypes="cccccccccccccc"
+           style="display:inline" />
+      </g>
+      <text
+         x="100"
+         y="396"
+         text-anchor="middle"
+         dominant-baseline="middle"
+         font-size="24px"
+         fill="#1a1a1a"
+         id="text31">L2</text>
+    </g>
+  </g>
+  <g
+     data-role="sheet-dimensions"
+     id="g26">
+    <line
+       x1="8"
+       y1="24"
+       x2="1792"
+       y2="24"
+       stroke="#2f3437"
+       stroke-width="1.5"
+       fill="none"
+       id="line25" />
+    <text
+       x="900"
+       y="18"
+       font-family="'DejaVu Sans', Arial, sans-serif"
+       font-size="16"
+       fill="#1a1a1a"
+       text-anchor="middle"
+       id="text25">1800 mm</text>
+    <line
+       x1="24"
+       y1="8"
+       x2="24"
+       y2="1192"
+       stroke="#2f3437"
+       stroke-width="1.5"
+       fill="none"
+       id="line26" />
+    <text
+       x="42"
+       y="600"
+       dominant-baseline="middle"
+       transform="rotate(-90 42 600)"
+       font-family="'DejaVu Sans', Arial, sans-serif"
+       font-size="16"
+       fill="#1a1a1a"
+       text-anchor="middle"
+       id="text26">1200 mm</text>
+  </g>
+</svg>
