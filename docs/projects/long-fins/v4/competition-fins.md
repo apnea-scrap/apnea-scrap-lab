@@ -9,8 +9,8 @@ techniques:
     path: techniques/creating-laminating-base/v4/plywood-corner-brace.md
   - title: Laminating Carbon
     focus: Creating the carbon laminate
-    path: techniques/laminating-carbon/v1/wet-layup.md
-    consumable_scaling_factor: 6
+    path: techniques/laminating-carbon/v2/wet-layup-1250mm-cloth.md
+    consumable_scaling_factor: 2
   - title: Vacuum Bagging
     focus: Reducing the resin percentage of the laminate
     path: techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md
@@ -30,8 +30,8 @@ techniques:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-Full-length competition fins tuned for a medium competition response.
-This v2 keeps the v1 process and geometry, while targeting a firmer response than the proven v1 build.
+Full-length competition fins tuned to the extra-stiff side for a stronger kick response.
+This v4 builds on the stiff v3 concept with the updated layup and 1250 mm carbon cloth plan.
 
 ## Planning
 
@@ -52,7 +52,7 @@ Target outline for each blade:
 
 For this build I am going to be using a triangles to smooth the transition between the various thickness levels.
 
-- Reserve 17 cm from the heel line for the bend zone.
+- Reserve 20 cm (17+3cm tolerance) from the heel line for the bend zone.
 - Layer 1: 20 cm × 80 cm
 - Layer 2a: 20 cm × 80 cm half triangle
 - Layer 2b: 20 cm × 80 cm the other half triangle
@@ -60,28 +60,29 @@ For this build I am going to be using a triangles to smooth the transition betwe
 - Layer 4: 20 cm x 75(-15) V side shape
 - Layer 5: 20 cm x 55(-10) V side shape
 - Layer 6: 20 cm x 45(-10) V side shape
-- Layer 7: 20 cm × 80 cm top ply
+- Layer 7: 20 cm x 35(-10) V side shape
+- Layer 8: 20 cm × 80 cm top ply
 
 
-| ![Expanded Laminate View](expanded.svg) | ![Laminate Thickness Profile](thickness.svg) |
-|-----------------------------------------|----------------------------------------------|
-| Expanded Laminate View                  | Laminate Thickness Profile                   |
+| ![Expanded Laminate View](expanded.svg)  | ![Laminate Thickness Profile](thickness.svg) |
+|------------------------------------------|----------------------------------------------|
+| Expanded Laminate View                   | Laminate Thickness Profile                   |
 
 
 #### Cutting plan
 
-|  | ![Cutting plan for one blade](cutting_plan.svg) | ![Cutting plan for one blade](cutting_plan.svg) |  |
-|--|-------------------------------------------------|-------------------------------------------------|--|
-|  | Cutting plan for first blade                    | Cutting plan for second blade (identical)       |  |
+|  | ![Cutting plan for both blades](cutting_plan.svg) |  |
+|--|---------------------------------------------------|--|
+|  | Cutting plan for both blades                      |  |
 
 ### Estimating the flex
 Start with the [Flex predictor modelling](../../../techniques/predicting-flex/v1/tapered-cantilever-beam.md) workflow to sanity-check the layup. Adjust the layer stack and bend allowance until the predicted deflection matches your training goal.
 
 Free blade length [mm]: 580
 Blade width [mm]: 180
-Layers at foot: 7
+Layers at foot: 8
 Layers at tip: 2
-Min layer length [mm]: 200
+Min layer length [mm]: 100
 
 | ![Bending Calculation](bending_calculation.png) | ![Bending Profile](bending_profile.png) |
 |-------------------------------------------------|-----------------------------------------|
@@ -91,10 +92,10 @@ Note: In the real blade, the actual bending point will move toward mid-blade. We
 
 Predicted:
 
-- Load required for 90° = 18.3 N (1.87 kg)
-- Hydrodynamic resistance score 5N = 6.12 units
-- Hydrodynamic resistance score 10N = 5.18 units
-- Hydrodynamic resistance score MaxLoad = 3.84 units
+- Load required for 90° = 17.8 N (1.82 kg)
+- Hydrodynamic resistance score 5N = 6.14 units
+- Hydrodynamic resistance score 10N = 5.22 units
+- Hydrodynamic resistance score MaxLoad = 4.00 units
 
 The predicted code for this fin would be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
@@ -107,9 +108,13 @@ C580-18-R61-F10
 |-------------------------------------|--------------------------------------------|
 | Laminating Support                  | Laminating Base                            |
 
-| ![Carbon Cloth](lf_cloth.jpeg) | ![Wet Laminate](lf_laminate.jpeg) |
-|--------------------------------|-----------------------------------|
-| Carbon Cloth                   | Wet Laminate                      |
+| ![Carbon Cloth](lf_cloth.jpeg) | ![Cutting Carbon Cloth](v4-cutting-cloth.png) |
+|--------------------------------|-----------------------------------------------|
+| Carbon Cloth                   | Cutting Carbon Cloth                          |
+
+| ![Wet Laminate](lf_laminate.jpeg) | ![Extra Stiff Layer Stack](v4-layers.png) |
+|-----------------------------------|-------------------------------------------|
+| Wet Laminate                      | Extra Stiff Layer Stack                   |
 
 | ![Laminate Peel Ply](lf_laminate_ply.jpeg) | ![Vacuum Bagging](lf_vacuum.jpeg) |
 |--------------------------------------------|-----------------------------------|
@@ -123,9 +128,9 @@ C580-18-R61-F10
 |------------------------------------|---------------------------------------|
 | Footpockets                        | Glueing Fin Rails                     |
 
-| | ![Finished Medium Competition Fins](v2-final.png) |  |
-|-|---------------------------------------------------|--|
-| | Finished Medium Competition Fins                  |  |
+| | ![Finished Extra Stiff Competition Fins](v4-final.png) |  |
+|-|--------------------------------------------------------|--|
+| | Finished Extra Stiff Competition Fins                  |  |
 
 ## Time needed
 
@@ -139,7 +144,7 @@ C580-18-R61-F10
 
 ## Instructions
 1. Build a 1000 mm × 600 mm laminating base following [Creating a laminating base](../../../techniques/creating-laminating-base/v4/plywood-corner-brace.md) so both blades can be laminated at the same time.
-2. Lay up the carbon according to the schedule above, using the steps in [Manual wet layup stack](../../../techniques/laminating-carbon/v1/wet-layup.md).
+2. Lay up the carbon according to the schedule above, using the steps in [1250 mm cloth wet layup stack](../../../techniques/laminating-carbon/v2/wet-layup-1250mm-cloth.md).
 3. Pull the stack under vacuum to tighten the fiber volume, referencing [Enclosed bagging](../../../techniques/vacuum-bagging-carbon/v1/enclosed-bagging.md).
 4. Trim the cured laminate to the template with the [Junior hacksaw method](../../../techniques/cutting-cured-carbon/v1/junior-hacksaw.md).
 5. Seal the surface with the approach in [Clear coat and acrylic paint](../../../techniques/finishing-carbon/v2/clear-coat-and-acrylic-paint.md).
@@ -151,23 +156,23 @@ C580-18-R61-F10
 
 Record the flex after fabrication using the [Kitchen Scale Test](../../../techniques/measuring-flex/v2/kitchen-scale-test.md).
 
-|                     | Desired   | Predicted            | Actual | Notes            |
-|---------------------|-----------|----------------------|--------|------------------|
-| Free blade size     | 580mm     | 580mm                | 580mm  | Matched          |
-| Blade width         | 180mm     | 180mm                | 180mm  | Matched          |
-| Load for 90 degrees | 1.8-2.0kg | 1.87kg               | 1.80kg | Feels just right |
+|                     | Desired   | Predicted  | Actual | Notes                                                                                |
+|---------------------|-----------|------------|--------|--------------------------------------------------------------------------------------|
+| Free blade size     | 580mm     | 580mm      | 580mm  | Matched                                                                              |
+| Blade width         | 180mm     | 180mm      | 180mm  | Matched                                                                              |
+| Load for 90 degrees | 1.8-2.0kg | 1.82kg     | 2.8kg  | Proper stiff, had issues with the vacuum, laminated during high external temperature |
 
 ### Water trial
 
-Blades performed well in the water. Definitely stiffer than the v1 soft fin.
-They could be made a little harder for my legs.s
+Felt much stiffer than expected, the fins where delivering good power into the water, kick from the hip.
+But it was hard to turn with them in the pool, this is because they where not bending when retrieving the legs.s
 
-|                     | Desired | Actual | Notes                                                        |
-|---------------------|---------|--------|--------------------------------------------------------------|
-| Hydro resistance 5N | 5.0     | 4.5    | Slightly stiffer than v1, feels right, maybe titchy bit soft |
-| Hydro resistance 10N| 4.0     | 3.8    | Bends a lot, gives way                                       |
+|                     | Desired | Actual | Notes                                                                   |
+|---------------------|---------|--------|-------------------------------------------------------------------------|
+| Hydro resistance 5N | 5.0     | 6.0    | Very stiff in the water, the feel got close to the Seac Sub Talent fins |
+| Hydro resistance 10N| 4.0     | 5.5    | The fins where only bending under high load                             |
 
 Final code after build and testing (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-C580-T17-R45-F07
+C580-T28-R60-F05
 ```

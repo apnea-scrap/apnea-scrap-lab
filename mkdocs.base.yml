@@ -56,7 +56,9 @@ nav:
           - V1 - Training Fins: projects/medium-fins/v1/training-fins.md
       - Long Fins:
           - Long Fins Versions: projects/long-fins/index.md
-          - V2 - Stiff Competition: projects/long-fins/v2/competition-fins.md
+          - V4 - Extra Stiff Competition: projects/long-fins/v4/competition-fins.md
+          - V3 - Stiff Competition: projects/long-fins/v3/competition-fins.md
+          - V2 - Medium Competition: projects/long-fins/v2/competition-fins.md
           - V1 - Competition Fins: projects/long-fins/v1/competition-fins.md
       - Monofin:
           - Monofin Versions: projects/monofin/index.md

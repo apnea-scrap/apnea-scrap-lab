@@ -159,12 +159,12 @@ I've recorded the flex using the [Kitchen Scale Test](../../../techniques/measur
 
 Feels a bit soft but heavier than the training fins.
 
-|                     | Desired | Actual | Notes                      |
-|---------------------|---------|--------|----------------------------|
-| Hydro resistance 5N | 5.0     | 5.0    | Soft but acceptable feel   |
-| Hydro resistance 10N| 4.0     | 4.0    | Heavier than training fins |
+|                     | Desired | Actual | Notes                               |
+|---------------------|---------|--------|-------------------------------------|
+| Hydro resistance 5N | 5.0     | 4.2    | Soft but acceptable feel            |
+| Hydro resistance 10N| 4.0     | 3.5    | Slightly heavier than training fins |
 
 Judging from the above, the code for this turned out to be (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-C580-T13-R50-F10
+C580-T13-R42-F07
 ```

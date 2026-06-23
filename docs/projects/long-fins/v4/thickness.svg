@@ -28,7 +28,11 @@
     <path d="M180,0 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L6" data-role="footpocket" data-join-x="180" id="path1" />
     <path d="m 180,0 h 262 l 3.0615,0.609 2.5954,1.7341 1.7341,2.5954 L 450,8 352.75014,97.893272 450,192 l -0.609,3.0615 -1.7341,2.5954 -2.5954,1.7341 L 442,200 H 180 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L6" data-role="blade" id="path2" ns1:nodetypes="cccccccccccccc" />
   </g>
-  <g transform="translate(220 72)" opacity="0.25" data-layer="L6" data-index="8">
+  <g transform="translate(220 72)" opacity="0.25" data-layer="L7" data-index="8">
+    <path d="M 180,0 V 200 H 8 L 4.9385,199.391 2.3431,197.6569 0.609,195.0615 0,192 V 8 L 0.609,4.9385 2.3431,2.3431 4.9385,0.609 8,0 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L7" data-role="footpocket" data-join-x="180" id="path1" ns1:nodetypes="ccccccccccccc" />
+    <path d="m 180,0 h 132.32502 l 9.51299,1.2541491 4.53085,-0.2013474 6.25015,2.5954 1.89929,4.9969474 -85.63717,89.8932719 81.76628,88.945539 2.61675,6.93239 -1.7341,3.24055 -5.82115,1.7341 -11.44844,-0.6813 L 180,200 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L7" data-role="blade" id="path2" ns1:nodetypes="cccccccccccccc" />
+  </g>
+  <g transform="translate(220 72)" opacity="0.25" data-layer="L8" data-index="9">
     <path d="M180,0 L180,200 L8,200 L4.9385,199.391 L2.3431,197.6569 L0.609,195.0615 L0,192 L0,8 L0.609,4.9385 L2.3431,2.3431 L4.9385,0.609 L8,0 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L6" data-role="footpocket" data-join-x="180" />
     <path d="M180,0 L792,0 L795.0615,0.609 L797.6569,2.3431 L799.391,4.9385 L800,8 L800,192 L799.391,195.0615 L797.6569,197.6569 L795.0615,199.391 L792,200 L180,200 Z" fill="#000000" stroke="#000000" stroke-width="5" fill-opacity="0.85" stroke-linejoin="round" data-layer="L6" data-role="blade" />
   </g>

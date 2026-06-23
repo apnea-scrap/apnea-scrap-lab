@@ -1,5 +1,5 @@
 ---
-status: proven
+status: in design
 techniques:
   - title: Foot pockets
     focus: Choosing the foot pockets
@@ -30,8 +30,8 @@ techniques:
 # {{ parent_child_title() }}
 {{ status_banner() }}
 
-Full-length competition fins tuned for a medium competition response.
-This v2 keeps the v1 process and geometry, while targeting a firmer response than the proven v1 build.
+Full-length competition fins tuned to the stiffer side for a stronger kick response.
+This v3 copies the medium v2 geometry and process, while preserving the firmer layup as the stiff competition version.
 
 ## Planning
 
@@ -103,29 +103,7 @@ C580-18-R61-F10
 
 ## Reference images
 
-| ![Laminating Support](lf_base.jpeg) | ![Laminating Base](lf_base_and_epoxy.jpeg) |
-|-------------------------------------|--------------------------------------------|
-| Laminating Support                  | Laminating Base                            |
-
-| ![Carbon Cloth](lf_cloth.jpeg) | ![Wet Laminate](lf_laminate.jpeg) |
-|--------------------------------|-----------------------------------|
-| Carbon Cloth                   | Wet Laminate                      |
-
-| ![Laminate Peel Ply](lf_laminate_ply.jpeg) | ![Vacuum Bagging](lf_vacuum.jpeg) |
-|--------------------------------------------|-----------------------------------|
-| Laminate Peel Ply                          | Vacuum Bagging                    |
-
-| ![Prepping to Cut](lf_cutting_start.jpeg) | ![Cutting Done](lf_cutting_done.jpeg) |
-|-------------------------------------------|---------------------------------------|
-| Prepping to Cut                           | Cutting Done                          |
-
-| ![Footpockets](lf_footpockets.png) | ![Glueing Fin Rails](lf_glueing.jpeg) |
-|------------------------------------|---------------------------------------|
-| Footpockets                        | Glueing Fin Rails                     |
-
-| | ![Finished Medium Competition Fins](v2-final.png) |  |
-|-|---------------------------------------------------|--|
-| | Finished Medium Competition Fins                  |  |
+TODO after build.
 
 ## Time needed
 
@@ -151,23 +129,22 @@ C580-18-R61-F10
 
 Record the flex after fabrication using the [Kitchen Scale Test](../../../techniques/measuring-flex/v2/kitchen-scale-test.md).
 
-|                     | Desired   | Predicted            | Actual | Notes            |
-|---------------------|-----------|----------------------|--------|------------------|
-| Free blade size     | 580mm     | 580mm                | 580mm  | Matched          |
-| Blade width         | 180mm     | 180mm                | 180mm  | Matched          |
-| Load for 90 degrees | 1.8-2.0kg | 1.87kg               | 1.80kg | Feels just right |
+|                     | Desired   | Predicted            | Actual | Notes                            |
+|---------------------|-----------|----------------------|--------|----------------------------------|
+| Free blade size     | 580mm     | 580mm                | TODO   | Copied from v1 baseline geometry |
+| Blade width         | 180mm     | 180mm                | TODO   | Copied from v1 baseline geometry |
+| Load for 90 degrees | 1.8-2.0kg | 1.87kg               | TODO   | Validate after first flex test   |
 
 ### Water trial
 
-Blades performed well in the water. Definitely stiffer than the v1 soft fin.
-They could be made a little harder for my legs.s
+TODO after build.
 
-|                     | Desired | Actual | Notes                                                        |
-|---------------------|---------|--------|--------------------------------------------------------------|
-| Hydro resistance 5N | 5.0     | 4.5    | Slightly stiffer than v1, feels right, maybe titchy bit soft |
-| Hydro resistance 10N| 4.0     | 3.8    | Bends a lot, gives way                                       |
+|                     | Desired | Actual | Notes                            |
+|---------------------|---------|--------|----------------------------------|
+| Hydro resistance 5N | TODO    | TODO   | Measure after first water trial  |
+| Hydro resistance 10N| TODO    | TODO   | Measure after first water trial  |
 
 Final code after build and testing (see [hydrodynamic resistance codes](../../../techniques/encoding-fin-properties/v1/hydrodynamic-resistance-codes.md)): 
 ```
-C580-T17-R45-F07
+TODO
 ```
